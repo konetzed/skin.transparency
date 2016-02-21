@@ -1,3 +1,6 @@
+Transparency! v9.1.3
+- fix digital font
+
 Transparency! v9.1.2
 - cleanup
 
