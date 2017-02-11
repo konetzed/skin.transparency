@@ -1,3 +1,7 @@
+Transparency! v10.3.1
+- fix artist slideshow startup
+- fix missing label in skin settings
+
 Transparency! v10.3.0
 - fix watched icon for videos
 
