@@ -13,7 +13,7 @@
 		<invalidcolor>red</invalidcolor>
 		<textoffsetx>10</textoffsetx>
 		<aligny>center</aligny>
-		<pulseonselect>true</pulseonselect>
+		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="edit">
 		<left>0</left>

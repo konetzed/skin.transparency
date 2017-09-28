@@ -3,21 +3,7 @@
 	<defaultcontrol always="true">6000</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(HideVideoBackgrounds)">CommonVideoPlayingBackground</include>
-		<control type="multiimage">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<imagepath fallback="special://skin/backgrounds/background-weather.jpg" background="true">$VAR[WeatherFanartPath]</imagepath>
-			<aspectratio>scale</aspectratio>
-			<timeperimage>5000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>2000</fadetime>
-			<include condition="Skin.HasSetting(AnimateBackgrounds)">backgroundanimation</include>
-			<visible>![Player.HasVideo + !Skin.HasSetting(HideVideoBackgrounds)]</visible>
-		</control>
-		<include condition="!Skin.HasSetting(HideVisBackgrounds)">CommonVisualizationBackground</include>
+		<include>DefaultBackground</include>
 		<control type="group">
 			<include>ContentFade</include>
 			<include>weather</include>

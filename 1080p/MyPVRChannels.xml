@@ -4,28 +4,7 @@
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(HideVideoBackgrounds)">CommonVideoPlayingBackground</include>
-		<control type="multiimage">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<imagepath fallback="special://skin/backgrounds/background-tv.jpg" background="true">$INFO[Skin.String(Custom_Back_TV_Folder)]</imagepath>
-			<aspectratio>scale</aspectratio>
-			<timeperimage>5000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>2000</fadetime>
-			<include condition="Skin.HasSetting(AnimateBackgrounds)">backgroundanimation</include>
-			<visible>![Player.HasVideo + !Skin.HasSetting(HideVideoBackgrounds)]</visible>
-		</control>
-		<control type="videowindow">
-			<left>38</left>
-			<top>33</top>
-			<width>1238</width>
-			<height>758</height>
-			<visible>Player.HasVideo + !!Skin.HasSetting(HideVideoBackgrounds)</visible>
-		</control>
-		<include condition="!Skin.HasSetting(HideVisBackgrounds)">CommonVisualizationBackground</include>
+		<include>DefaultBackground</include>
 		<control type="group">
 			<include>ContentFade</include>
 			<include>Window_OpenClose_Right_Panel_Animation</include>

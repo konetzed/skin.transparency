@@ -55,7 +55,11 @@ msgctxt "#31009"
 msgid "Memory usage"
 msgstr ""
 
-#empty strings from id 31007 to 31023
+msgctxt "#31010"
+msgid "Power off"
+msgstr ""
+
+#empty strings from id 31011 to 31023
 #Page labels
 
 msgctxt "#31024"
@@ -368,43 +372,47 @@ msgid "Change Your Settings..."
 msgstr ""
 
 msgctxt "#31159"
-msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR]Set video and audio playback options, set subtitle fonts[CR]Configure slideshows"
+msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]• Set video and audio playback options[CR]• Configure subtitle fonts[CR]• Configure slideshows"
 msgstr ""
 
 msgctxt "#31160"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR]Change fullscreen info - Manage EPG data settings[CR]Configure recording options"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]• Change fullscreen info[CR]• Manage EPG data settings[CR]• Configure recording options"
 msgstr ""
 
 msgctxt "#31161"
-msgid "[B]CONFIGURE LIBRARY SETTINGS[/B][CR]Manage your video and music library[CR]Set picture listing options"
+msgid "[B]CONFIGURE MEDIA SETTINGS[/B][CR][CR]• Manage your video and music library[CR]• Set picture listing options"
+msgstr ""
+
+msgctxt "#31162"
+msgid "[B]CONFIGURE GAME SETTINGS[/B][CR][CR]• Enable game rewind[CR]• Configure keyboard[CR]• Set number of players"
 msgstr ""
 
 msgctxt "#31164"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR]Setup and calibrate displays - Configure audio output[CR]Set power saving options - Enable debugging"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]• Setup and calibrate displays[CR]• Configure audio output[CR]• Set power saving options[CR]• Enable debugging"
 msgstr ""
 
 msgctxt "#31165"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR]Setup control of Kodi via UPnP and HTTP - Configure file sharing[CR]Select a weather addon"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]• Setup control of Kodi via UPnP and HTTP[CR]• Configure file sharing[CR]• Select a weather addon"
 msgstr ""
 
 msgctxt "#31166"
-msgid "[B]CONFIGURE PROFILE SETTINGS[/B][CR]Select your Kodi user Profile[CR]to login and continue"
+msgid "[B]CONFIGURE PROFILES[/B][CR][CR]• Select your Kodi user profile[CR]• Enable password protection"
 msgstr ""
 
 msgctxt "#31167"
-msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR]Select a skin - Set language and region - Change file listing options[CR]Manage input devices"
+msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR][CR]• Select a skin[CR]• Set language and region[CR]• Change file listing options[CR]• Manage input devices"
 msgstr ""
 
 msgctxt "#31168"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR]Setup the Transparency! skin - Add and remove home menu items[CR]Change skin backgrounds"
+msgid "[B]OPEN THE FILE MANAGER[/B][CR][CR]• Add sources[CR]• Browse folders[CR]• Copy or move files[CR]• Delete files and folders"
 msgstr ""
 
 msgctxt "#31169"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR]Manage your installed Add-ons - Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]• Manage your installed Add-ons[CR]• Browse for and install Add-ons from kodi.tv[CR]• Modify Add-on settings"
 msgstr ""
 
 msgctxt "#31170"
-msgid "[B]CHECK SYTEM INFORMATION[/B][CR]Display your hardware - Check current network settings[CR]Monitor free discspace"
+msgid "[B]CHECK SYTEM INFORMATION[/B][CR][CR]• Display your hardware[CR]• Check current network settings[CR]• Monitor free discspace"
 msgstr ""
 
 msgctxt "#31171"
@@ -550,9 +558,6 @@ msgstr ""
 msgctxt "#31211"
 msgid "Enable NextAired add-on"
 msgstr ""
-
-msgctxt "#31212"
-msgid "Enable Qlock add-on"
 msgstr ""
 
 msgctxt "#31215"
@@ -608,6 +613,7 @@ msgid "DiscArt"
 msgstr ""
 
 #empty strings from id 31230 to 31300
+# Game labels
 
 msgctxt "#31301"
 msgid "PLAYER"
@@ -652,7 +658,27 @@ msgctxt "#31400"
 msgid "New:"
 msgstr ""
 
-#empty strings from id 31401 to 31408
+msgctxt "#31401"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#31402"
+msgid "Favourite add-ons"
+msgstr ""
+
+msgctxt "#31403"
+msgid "Favourite picture add-ons"
+msgstr ""
+
+msgctxt "#31404"
+msgid "Favourite game add-ons"
+msgstr ""
+
+msgctxt "#31405"
+msgid "PVR timers"
+msgstr ""
+
+#empty strings from id 31402 to 31408
 
 msgctxt "#31409"
 msgid "Player Controls"
@@ -671,7 +697,7 @@ msgid "Sort:"
 msgstr ""
 
 #empty strings from id 31412 to 31500
-#Temp PVR labels
+#PVR labels
 
 msgctxt "#31501"
 msgid "Show tv info"
@@ -707,20 +733,4 @@ msgstr ""
 
 msgctxt "#31702"
 msgid "Arial"
-msgstr ""
-
-msgctxt "#31703"
-msgid "Default Big"
-msgstr ""
-
-msgctxt "#31704"
-msgid "Arial Big"
-msgstr ""
-
-msgctxt "#31705"
-msgid "Default Big Bold"
-msgstr ""
-
-msgctxt "#31706"
-msgid "Arial Big Bold"
 msgstr ""

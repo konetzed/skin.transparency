@@ -12,7 +12,7 @@
 			<top>0</top>
 			<width>48</width>
 			<height>48</height>
-			<texture>pointer-nofocus.png</texture>
+			<texture>pointer.png</texture>
 			<visible>!Skin.HasSetting(TouchScreenMode)</visible>
 		</control>
 		<control type="image" id="2">
@@ -21,7 +21,7 @@
 			<top>0</top>
 			<width>48</width>
 			<height>48</height>
-			<texture>pointer-focus.png</texture>
+			<texture>pointer.png</texture>
 			<visible>!Skin.HasSetting(TouchScreenMode)</visible>
 		</control>
 		<control type="image" id="3">
@@ -30,7 +30,7 @@
 			<top>0</top>
 			<width>48</width>
 			<height>48</height>
-			<texture>pointer-focus-drag.png</texture>
+			<texture>pointer.png</texture>
 			<visible>!Skin.HasSetting(TouchScreenMode)</visible>
 		</control>
 		<control type="image" id="4">
@@ -39,7 +39,7 @@
 			<top>0</top>
 			<width>48</width>
 			<height>48</height>
-			<texture>pointer-focus-click.png</texture>
+			<texture>pointer.png</texture>
 			<visible>!Skin.HasSetting(TouchScreenMode)</visible>
 		</control>
 	</controls>

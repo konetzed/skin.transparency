@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.transparency" version="11.0.2" name="Transparency!" provider-name="ronie">
+<addon id="skin.transparency" version="11.1.0" name="Transparency!" provider-name="ronie">
 	<requires>
 		<import	addon="xbmc.gui" version="5.13.0"/>
 		<import addon="script.favourites" version="6.0.2"/>
 		<import addon="script.artwork.downloader" version="12.0.29"/>
 		<import addon="script.globalsearch" version="5.0.0"/>
-		<import addon="service.skin.widgets" version="0.0.30"/>
-		<import addon="script.image.resource.select" version="0.0.5"/>
 		<import addon="resource.images.studios.white" version="0.0.5"/>
 		<import addon="resource.images.recordlabels.white" version="0.0.5"/>
-		<import addon="resource.images.moviegenreicons.coloured" version="0.0.5"/>
-		<import addon="resource.images.musicgenreicons.poster" version="0.0.5"/>
-		<import addon="resource.images.weathericons.animated" version="0.0.4"/>
-		<import addon="resource.images.weatherfanart.prairie" version="0.0.4"/>
-		<import addon="resource.images.weatherfanart.multi" version="0.0.4"/>
+		<import addon="resource.images.weathericons.outline" version="0.0.4"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="1" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p"/>
@@ -95,16 +89,8 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
-		<news>Includes the latest changes for Kodi v17 Krypton</news>
+		<news>Includes the latest changes for Kodi v18 Leia</news>
 	</extension>
 </addon>
 

@@ -3,39 +3,12 @@
 	<defaultcontrol always="true">100</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(HideVideoBackgrounds)">CommonVideoPlayingBackground</include>
-		<control type="multiimage">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<imagepath fallback="special://skin/backgrounds/background-settings.jpg" background="true">$INFO[Skin.String(Custom_Back_Settings_Folder)]</imagepath>
-			<aspectratio>scale</aspectratio>
-			<timeperimage>5000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>2000</fadetime>
-			<include condition="Skin.HasSetting(AnimateBackgrounds)">backgroundanimation</include>
-			<visible>![Player.HasVideo + !Skin.HasSetting(HideVideoBackgrounds)]</visible>
-		</control>
-		<control type="image">
-			<left>266</left>
-			<top>169</top>
-			<width>1391</width>
-			<height>744</height>
-			<texture diffuse="panel-diffuse.png">special://skin/backgrounds/skin.jpg</texture>
-			<animation effect="zoom" start="788,458,345,208" end="266,169,1391,744" time="300">WindowOpen</animation>
-			<animation effect="zoom" start="266,169,1391,744" end="788,458,345,208" time="300" delay="350">WindowClose</animation>
-			<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(SkinSettings) + [Skin.String(SkinSettings,8) | Skin.String(SkinSettings,9)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="Skin.HasSetting(WideSideMenuButtons) + ControlGroup(9000).HasFocus">Conditional</animation>
-			<include>ContentFade</include>
-			<visible>![Player.HasVideo + !Skin.HasSetting(HideVideoBackgrounds)]</visible>
-		</control>
-		<include condition="!Skin.HasSetting(HideVisBackgrounds)">CommonVisualizationBackground</include>
+		<include>DefaultBackground</include>
 		<control type="group">
 			<include>ContentFade</include>
 			<include>ContentPanel</include>
 			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="Skin.HasSetting(WideSideMenuButtons) + ControlGroup(9000).HasFocus">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="350" delay="350">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="350">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="350">WindowClose</animation>
 			<control type="group">
 				<control type="label">
@@ -318,12 +291,6 @@
 						<onclick>Skin.ToggleSetting(HorizontalHomeMenu)</onclick>
 						<selected>Skin.HasSetting(HorizontalHomeMenu)</selected>
 					</control>
-					<control type="radiobutton" id="203">
-						<description>Wide Home Buttons</description>
-						<label>31117</label>
-						<onclick>Skin.ToggleSetting(WideHomeMenu)</onclick>
-						<selected>Skin.HasSetting(WideHomeMenu)</selected>
-					</control>
 					<control type="image" id="208">
 						<width>1320</width>
 						<height>3</height>
@@ -495,407 +462,6 @@
 				</control>
 				<control type="group">
 					<visible>Skin.String(SkinSettings,3)</visible>
-					<control type="radiobutton" id="301">
-						<description>video backgrounds</description>
-						<left>300</left>
-						<top>278</top>
-						<width>488</width>
-						<height>52</height>
-						<label>31123</label>
-						<onclick>Skin.ToggleSetting(HideVideoBackgrounds)</onclick>
-						<selected>Skin.HasSetting(HideVideoBackgrounds)</selected>
-						<onleft>9000</onleft>
-						<onright>399</onright>
-						<onup>302</onup>
-						<ondown>311</ondown>
-					</control>
-					<control type="radiobutton" id="311">
-						<description>visualisation backgrounds</description>
-						<left>300</left>
-						<top>330</top>
-						<width>488</width>
-						<height>52</height>
-						<label>31119</label>
-						<onclick>Skin.ToggleSetting(HideVisBackgrounds)</onclick>
-						<selected>Skin.HasSetting(HideVisBackgrounds)</selected>
-						<onleft>9000</onleft>
-						<onright>399</onright>
-						<onup>301</onup>
-						<ondown>312</ondown>
-					</control>
-					<control type="radiobutton" id="312">
-						<description>animate backgrounds</description>
-						<left>300</left>
-						<top>382</top>
-						<width>488</width>
-						<height>52</height>
-						<label>31134</label>
-						<onclick>Skin.ToggleSetting(AnimateBackgrounds)</onclick>
-						<selected>Skin.HasSetting(AnimateBackgrounds)</selected>
-						<onleft>9000</onleft>
-						<onright>399</onright>
-						<onup>311</onup>
-						<ondown>313</ondown>
-					</control>
-					<control type="radiobutton" id="313">
-						<description>animate fanart</description>
-						<left>300</left>
-						<top>435</top>
-						<width>488</width>
-						<height>52</height>
-						<label>31110</label>
-						<onclick>Skin.ToggleSetting(AnimateFanart)</onclick>
-						<selected>Skin.HasSetting(AnimateFanart)</selected>
-						<onleft>9000</onleft>
-						<onright>399</onright>
-						<onup>312</onup>
-						<ondown>302</ondown>
-					</control>
-					<control type="image" id="314">
-						<left>300</left>
-						<top>488</top>
-						<width>488</width>
-						<height>3</height>
-						<texture>separator.png</texture>
-					</control>
-					<control type="list" id="302">
-						<left>300</left>
-						<top>490</top>
-						<width>518</width>
-						<height>420</height>
-						<onleft>9000</onleft>
-						<onright>303</onright>
-						<onup>313</onup>
-						<ondown>302</ondown>
-						<pagecontrol>399</pagecontrol>
-						<scrolltime>200</scrolltime>
-						<itemlayout width="488" height="52">
-							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>488</width>
-								<height>52</height>
-								<texture border="7">list-nofocus.png</texture>
-							</control>
-							<control type="label">
-								<left>15</left>
-								<top>0</top>
-								<width>458</width>
-								<height>52</height>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						</itemlayout>
-						<focusedlayout width="488" height="52">
-							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>488</width>
-								<height>52</height>
-								<texture border="7">list-nofocus.png</texture>
-							</control>
-							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>488</width>
-								<height>52</height>
-								<texture border="7">list-focus2.png</texture>
-								<include>ListFocusScroll2</include>
-								<visible>Control.HasFocus(302)</visible>
-							</control>
-							<control type="label">
-								<left>15</left>
-								<top>0</top>
-								<width>458</width>
-								<height>52</height>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						</focusedlayout>
-						<content>
-							<item id="1">
-								<label>$LOCALIZE[10000] - $LOCALIZE[3]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/videos.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
-							</item>
-							<item id="2">
-								<label>$LOCALIZE[10000] - $LOCALIZE[342]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/movies.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-								<visible>!Skin.HasSetting(Home_Movies_Fanart_Background)</visible>
-							</item>
-							<item id="2">
-								<label>$LOCALIZE[10000] - $LOCALIZE[342]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/movies.png</icon>
-								<thumb>special://skin/backgrounds/movies.png</thumb>
-								<visible>Skin.HasSetting(Home_Movies_Fanart_Background)</visible>
-							</item>
-							<item id="3">
-								<label>$LOCALIZE[10000] - $LOCALIZE[20343]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/tvshows.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</thumb>
-								<visible>!Skin.HasSetting(Home_TVShows_Fanart_Background)</visible>
-							</item>
-							<item id="3">
-								<label>$LOCALIZE[10000] - $LOCALIZE[20343]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/tvshows.png</icon>
-								<thumb>special://skin/backgrounds/tvshows.png</thumb>
-								<visible>Skin.HasSetting(Home_TVShows_Fanart_Background)</visible>
-							</item>
-							<item id="4">
-								<label>$LOCALIZE[10000] - $LOCALIZE[20389]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/musicvideos.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_MusicVideos_Folder)]</thumb>
-							</item>
-							<item id="5">
-								<label>$LOCALIZE[10000] - $LOCALIZE[19020]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/tv.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
-							</item>
-							<item id="6">
-								<label>$LOCALIZE[10000] - $LOCALIZE[2]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/music.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-								<visible>!Skin.HasSetting(Home_Music_Fanart_Background)</visible>
-							</item>
-							<item id="6">
-								<label>$LOCALIZE[10000] - $LOCALIZE[2]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/music.png</icon>
-								<thumb>special://skin/backgrounds/music.png</thumb>
-								<visible>Skin.HasSetting(Home_Music_Fanart_Background)</visible>
-							</item>
-							<item id="7">
-								<label>$LOCALIZE[10000] - $LOCALIZE[1]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/pictures.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-							</item>
-							<item id="8">
-								<label>$LOCALIZE[10000] - $LOCALIZE[24001]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/programs.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
-							</item>
-							<item id="27">
-								<label>$LOCALIZE[10000] - $LOCALIZE[15016]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/games.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Games_Folder)]</thumb>
-							</item>
-							<item id="9">
-								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>resource://resource.images.weatherfanart.prairie/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</thumb>
-								<visible>String.IsEmpty(Skin.String(resource.images.homeweatherfanart.path)) + String.IsEmpty(Skin.String(HomeWeatherPath))</visible>
-							</item>
-							<item id="9">
-								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>$INFO[Skin.String(HomeWeatherPath)]</thumb>
-								<visible>!String.IsEmpty(Skin.String(HomeWeatherPath))</visible>
-							</item>
-							<item id="9">
-								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>$INFO[Skin.String(resource.images.homeweatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
-								<visible>!String.IsEmpty(Skin.String(resource.images.homeweatherfanart.path)) + Skin.HasSetting(resource.images.homeweatherfanart.multi)</visible>
-							</item>
-							<item id="9">
-								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>$INFO[Skin.String(resource.images.homeweatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</thumb>
-								<visible>!String.IsEmpty(Skin.String(resource.images.homeweatherfanart.path)) + !Skin.HasSetting(resource.images.homeweatherfanart.multi)</visible>
-							</item>
-							<item id="10">
-								<label>$LOCALIZE[10000] - $LOCALIZE[1036]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/favourites.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
-							</item>
-							<item id="11">
-								<label>$LOCALIZE[10000] - $LOCALIZE[5]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/settings.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
-							</item>
-							<item id="12">
-								<label>$LOCALIZE[10000] - $LOCALIZE[341]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/playdisc.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
-							</item>
-							<item id="13">
-								<label>$LOCALIZE[10000] - $LOCALIZE[636] 1</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/settings.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Custom1_Folder)]</thumb>
-							</item>
-							<item id="14">
-								<label>$LOCALIZE[10000] - $LOCALIZE[636] 2</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/settings.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Custom2_Folder)]</thumb>
-							</item>
-							<item id="15">
-								<label>$LOCALIZE[10000] - $LOCALIZE[636] 3</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/settings.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Custom3_Folder)]</thumb>
-							</item>
-							<item id="16">
-								<label>$LOCALIZE[3]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-videos.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Videos_Folder)]</thumb>
-							</item>
-							<item id="17">
-								<label>$LOCALIZE[342]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-movies.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Movies_Folder)]</thumb>
-							</item>
-							<item id="18">
-								<label>$LOCALIZE[20343]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-tvshows.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_TVShows_Folder)]</thumb>
-							</item>
-							<item id="19">
-								<label>$LOCALIZE[20389]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-musicvideos.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_MusicVideos_Folder)]</thumb>
-							</item>
-							<item id="20">
-								<label>$LOCALIZE[19020]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-tv.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_TV_Folder)]</thumb>
-							</item>
-							<item id="21">
-								<label>$LOCALIZE[2]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-music.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Music_Folder)]</thumb>
-							</item>
-							<item id="22">
-								<label>$LOCALIZE[1]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-pictures.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Pictures_Folder)]</thumb>
-							</item>
-							<item id="23">
-								<label>$LOCALIZE[24001]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-programs.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Programs_Folder)]</thumb>
-							</item>
-							<item id="28">
-								<label>$LOCALIZE[15016]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-games.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Games_Folder)]</thumb>
-							</item>
-							<item id="24">
-								<label>$LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
-								<visible>String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + String.IsEmpty(Skin.String(WeatherPath))</visible>
-							</item>
-							<item id="24">
-								<label>$LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>$INFO[Skin.String(WeatherPath)]</thumb>
-								<visible>!String.IsEmpty(Skin.String(WeatherPath))</visible>
-							</item>
-							<item id="24">
-								<label>$LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
-								<visible>!String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + Skin.HasSetting(resource.images.weatherfanart.multi)</visible>
-							</item>
-							<item id="24">
-								<label>$LOCALIZE[8]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-weather.jpg</icon>
-								<thumb>$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</thumb>
-								<visible>!String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + !Skin.HasSetting(resource.images.weatherfanart.multi)</visible>
-							</item>
-							<item id="25">
-								<label>$LOCALIZE[5]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-settings.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Settings_Folder)]</thumb>
-							</item>
-							<item id="26">
-								<label>$LOCALIZE[20096]</label>
-								<onclick>noop</onclick>
-								<icon>special://skin/backgrounds/background-login.jpg</icon>
-								<thumb>$INFO[Skin.String(Custom_Back_Login_Folder)]</thumb>
-							</item>
-						</content>
-					</control>
-					<control type="image">
-						<left>832</left>
-						<top>262</top>
-						<width>788</width>
-						<height>615</height>
-						<texture>black.png</texture>
-						<colordiffuse>77FFFFFF</colordiffuse>
-					</control>
-					<control type="label">
-						<left>848</left>
-						<top>262</top>
-						<width>758</width>
-						<height>52</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[Container(302).ListItem.label]</label>
-						<textcolor>lightblue</textcolor>
-					</control>
-					<include>SkinSettingsImageButtonGroup</include>
-					<include>SkinSettingsImageFanartButtonGroup</include>
-					<control type="label">
-						<left>848</left>
-						<top>874</top>
-						<width>758</width>
-						<height>30</height>
-						<aligny>center</aligny>
-						<haspath>true</haspath>
-						<align>center</align>
-						<label fallback="571">$INFO[Container(302).ListItem.Thumb]</label>
-						<textcolor>blue</textcolor>
-					</control>
-					<control type="multiimage">
-						<left>848</left>
-						<top>442</top>
-						<width>758</width>
-						<height>426</height>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<imagepath background="true" diffuse="weather-diffuse.png">$INFO[Container(302).ListItem.Icon]</imagepath>
-						<timeperimage>6000</timeperimage>
-						<randomize>true</randomize>
-						<fadetime>400</fadetime>
-						<animation effect="fade" start="100" end="0" time="200" condition="[Container(302).HasFocus(2) + Skin.HasSetting(Home_Movies_Fanart_Options) + Skin.HasSetting(Home_Movies_Fanart_Background)] | [Container(302).HasFocus(3) + Skin.HasSetting(Home_TVShows_Fanart_Options) + Skin.HasSetting(Home_TVShows_Fanart_Background)] | [Container(302).HasFocus(6) + Skin.HasSetting(Home_Music_Fanart_Options) + Skin.HasSetting(Home_Music_Fanart_Background)]">conditional</animation>
-					</control>
 				</control>
 				<control type="scrollbar" id="399">
 					<left>1624</left>
@@ -1089,12 +655,6 @@
 						<width>1320</width>
 						<height>3</height>
 						<texture>separator.png</texture>
-					</control>
-					<control type="radiobutton" id="515">
-						<label>31212</label>
-						<selected>Skin.HasSetting(Qlock)</selected>
-						<enable>System.HasAddon(service.qlock)</enable>
-						<onclick>Skin.ToggleSetting(Qlock)</onclick>
 					</control>
 					<control type="image" id="516">
 						<width>1320</width>
@@ -3629,12 +3189,12 @@
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
 					<control type="radiobutton" id="8109">
-						<description>Menu Settings Sub Network</description>
-						<label>[B]$LOCALIZE[705][/B]</label>
+						<description>Menu Settings Sub Service</description>
+						<label>[B]$LOCALIZE[14036][/B]</label>
 						<include>ButtonMenuSettings2</include>
 						<onfocus>Skin.SetString(SettingsCustom,0)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Settings_Sub_Network)</onclick>
-						<selected>Skin.HasSetting(Menu_Settings_Sub_Network)</selected>
+						<onclick>Skin.ToggleSetting(Menu_Settings_Sub_Service)</onclick>
+						<selected>Skin.HasSetting(Menu_Settings_Sub_Service)</selected>
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
 					<control type="radiobutton" id="8110">
@@ -3647,7 +3207,7 @@
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
 					<control type="radiobutton" id="8111">
-						<description>Menu Settings Sub Appearance</description>
+						<description>Menu Settings Sub Interface</description>
 						<label>[B]$LOCALIZE[14206][/B]</label>
 						<include>ButtonMenuSettings2</include>
 						<onfocus>Skin.SetString(SettingsCustom,0)</onfocus>
@@ -3656,6 +3216,15 @@
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
 					<control type="radiobutton" id="8112">
+						<description>Menu Settings Sub Games</description>
+						<label>[B]$LOCALIZE[15016][/B]</label>
+						<include>ButtonMenuSettings2</include>
+						<onfocus>Skin.SetString(SettingsCustom,0)</onfocus>
+						<onclick>Skin.ToggleSetting(Menu_Settings_Sub_Games)</onclick>
+						<selected>Skin.HasSetting(Menu_Settings_Sub_Games)</selected>
+						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
+					</control>
+					<control type="radiobutton" id="8113">
 						<description>Menu Settings Sub Addons</description>
 						<label>[B]$LOCALIZE[24001][/B]</label>
 						<include>ButtonMenuSettings2</include>
@@ -3664,7 +3233,7 @@
 						<selected>Skin.HasSetting(Menu_Settings_Sub_Addons)</selected>
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
-					<control type="radiobutton" id="8113">
+					<control type="radiobutton" id="8114">
 						<description>Menu Settings Sub System Info</description>
 						<label>[B]$LOCALIZE[130][/B]</label>
 						<include>ButtonMenuSettings2</include>
@@ -3673,7 +3242,7 @@
 						<selected>!Skin.HasSetting(Menu_Settings_Sub_SystemInfo)</selected>
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
-					<control type="radiobutton" id="8114">
+					<control type="radiobutton" id="8115">
 						<description>Menu Settings Sub File Manager</description>
 						<label>[B]$LOCALIZE[10003][/B]</label>
 						<include>ButtonMenuSettings2</include>
@@ -3682,7 +3251,7 @@
 						<selected>!Skin.HasSetting(Menu_Settings_Sub_FileManager)</selected>
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
-					<control type="radiobutton" id="8115">
+					<control type="radiobutton" id="8116">
 						<description>Menu Settings Sub Custom1</description>
 						<label>[B]$LOCALIZE[31156] 1$INFO[Skin.String(Menu_Settings_Sub_Custom1.Label), - ][/B]</label>
 						<include>ButtonMenuSettings2</include>
@@ -3691,7 +3260,7 @@
 						<selected>Skin.HasSetting(Menu_Settings_Sub_Custom1)</selected>
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
-					<control type="radiobutton" id="8116">
+					<control type="radiobutton" id="8117">
 						<description>Menu Settings Sub Custom2</description>
 						<label>[B]$LOCALIZE[31156] 2$INFO[Skin.String(Menu_Settings_Sub_Custom2.Label), - ][/B]</label>
 						<include>ButtonMenuSettings2</include>
@@ -3700,7 +3269,7 @@
 						<selected>Skin.HasSetting(Menu_Settings_Sub_Custom2)</selected>
 						<enable>!Skin.HasSetting(Menu_Settings_Sub)</enable>
 					</control>
-					<control type="radiobutton" id="8117">
+					<control type="radiobutton" id="8118">
 						<description>Menu Settings Sub Custom3</description>
 						<label>[B]$LOCALIZE[31156] 3$INFO[Skin.String(Menu_Settings_Sub_Custom3.Label), - ][/B]</label>
 						<include>ButtonMenuSettings2</include>

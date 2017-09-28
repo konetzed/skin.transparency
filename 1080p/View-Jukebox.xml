@@ -185,7 +185,7 @@
 					<height>22</height>
 					<font>font-15</font>
 					<textcolor>black</textcolor>
-					<selectedcolor>verydarkblue</selectedcolor>
+					<selectedcolor>darkblue</selectedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
@@ -197,7 +197,7 @@
 					<height>22</height>
 					<font>font-15</font>
 					<textcolor>black</textcolor>
-					<selectedcolor>verydarkblue</selectedcolor>
+					<selectedcolor>darkblue</selectedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
@@ -218,7 +218,7 @@
 					<height>22</height>
 					<font>font-15</font>
 					<textcolor>black</textcolor>
-					<selectedcolor>verydarkblue</selectedcolor>
+					<selectedcolor>darkblue</selectedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
@@ -230,7 +230,7 @@
 					<height>22</height>
 					<font>font-15</font>
 					<textcolor>black</textcolor>
-					<selectedcolor>verydarkblue</selectedcolor>
+					<selectedcolor>darkblue</selectedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>

@@ -8,6 +8,10 @@
 		<value condition="Container.Content(Actors)">$LOCALIZE[31226]</value>
 		<value condition="Container.Content(Directors)">$LOCALIZE[31227]</value>
 	</variable>
+	<variable name="DateTime">
+		<value condition="Skin.HasSetting(MonthDay)">$INFO[System.Date(ddd mmm dd)], $INFO[System.Time]</value>
+		<value condition="!Skin.HasSetting(MonthDay)">$INFO[System.Date(ddd dd mmm)], $INFO[System.Time]</value>
+	</variable>
 	<variable name="DialogAlbumInfoTitle">
 		<value condition="Container.Content(Artists)">$INFO[Listitem.Artist]</value>
 		<value condition="Container.Content(Albums)">$INFO[Listitem.Album]</value>
@@ -101,10 +105,6 @@
 	<variable name="DialogVideoInfoLabel">
 		<value condition="!Control.IsVisible(50)">[UPPERCASE][B]$LOCALIZE[207]:[/B][/UPPERCASE]</value>
 		<value condition="Control.HasFocus(50)">[B]$INFO[Container(50).Listitem.Label]$INFO[Container(50).Listitem.Label2, (,)][/B]</value>
-	</variable>
-	<variable name="HomePowerButton">
-		<value condition="!Control.HasFocus(20) + !Window.IsVisible(ShutdownMenu)">home-power.png</value>
-		<value condition="Control.HasFocus(20) | Window.IsVisible(ShutdownMenu)">home-power-focus.png</value>
 	</variable>
 	<variable name="IconBanner">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
@@ -414,10 +414,6 @@
 		<value condition="!String.IsEmpty(Skin.String(WeatherPath))">$INFO[Skin.String(WeatherPath)]</value>
 		<value condition="!String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 		<value condition="!String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + !Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
-	</variable>
-	<variable name="WeatherIconPath">
-		<value condition="String.IsEmpty(Skin.String(resource.images.weathericons.path))">resource://resource.images.weathericons.animated/</value>
-		<value condition="!String.IsEmpty(Skin.String(resource.images.weathericons.path))">$INFO[Skin.String(resource.images.weathericons.path)]</value>
 	</variable>
 	<variable name="IncludesMediaFlagsVideoStudio">
 		<value condition="String.IsEmpty(Skin.String(resource.images.studios.path))">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
