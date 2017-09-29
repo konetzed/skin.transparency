@@ -5,162 +5,101 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>ContentFade</include>
-			<include>ContentPanel</include>
-			<animation effect="fade" start="0" end="100" time="350">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="350">WindowClose</animation>
+			<left>120</left>
 			<control type="image">
-				<left>300</left>
-				<top>68</top>
-				<width>1320</width>
-				<height>98</height>
-				<texture diffuse="underlay5-diffuse.png" border="0,10,0,10">underlay4.png</texture>
+				<left>0</left>
+				<top>80</top>
+				<width>1680</width>
+				<height>920</height>
+				<texture border="5">panel-light.png</texture>
 			</control>
-			<control type="button" id="20">
-				<left>-15</left>
-				<top>-15</top>
-				<width>1</width>
-				<height>1</height>
-				<visible>false</visible>
+			<control type="image">
+				<left>356</left>
+				<top>81</top>
+				<width>3</width>
+				<height>918</height>
+				<texture colordiffuse="grey">white.png</texture>
 			</control>
-			<control type="button" id="99">
-				<left>660</left>
-				<top>90</top>
-				<width>600</width>
-				<height>52</height>
-				<label>$LOCALIZE[31100] $INFO[Control.GetLabel(20)]</label>
-				<font>font-23</font>
-				<textcolor>white</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<texturenofocus border="7">button-nofocus.png</texturenofocus>
-				<texturefocus border="7">button-focus.png</texturefocus>
-				<onup>5</onup>
-				<ondown>5</ondown>
-				<onclick>settingslevelchange</onclick>
-			</control>
-			<control type="grouplist" id="5">
-				<description>control area</description>
-				<left>300</left>
-				<top>202</top>
-				<width>1320</width>
-				<height>682</height>
-				<itemgap>-2</itemgap>
-				<pagecontrol>90</pagecontrol>
-				<onleft>3</onleft>
-				<onright>90</onright>
-				<onup>99</onup>
-				<ondown>5</ondown>
-			</control>
-			<control type="scrollbar" id="90">
-				<left>1624</left>
-				<top>195</top>
-				<width>30</width>
-				<height>710</height>
-				<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-				<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-				<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-				<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-				<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-				<onleft>5</onleft>
-				<onright>3</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-			</control>
-			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="Skin.HasSetting(WideSideMenuButtons) + !Control.HasFocus(90) + !ControlGroup(5).HasFocus">Conditional</animation>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>ContentFade</include>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<control type="group">
-				<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
-				<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
-				<include>SideMenuAnim3</include>
-				<control type="image">
-					<left>0</left>
-					<top>-24</top>
-					<height>24</height>
-					<texture border="0,0,10,0">shadow-top2.png</texture>
-					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
-					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>ContentFade</include>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
-			<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
-			<include>SideMenuAnim3</include>
 			<control type="grouplist" id="3">
 				<description>button area</description>
-				<left>0</left>
-				<top>165</top>
-				<width>375</width>
+				<left>1</left>
+				<top>106</top>
+				<width>355</width>
 				<height>675</height>
 				<itemgap>-2</itemgap>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>3</onup>
+				<ondown>20</ondown>
+			</control>
+			<control type="togglebutton" id="10">
+				<description>Default Category Button</description>
+				<alttexturefocus colordiffuse="fadecolor">button-focus.png</alttexturefocus>
+				<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
+				<usealttexture>ControlGroup(5).HasFocus | Control.HasFocus(20) | Control.HasFocus(90)</usealttexture>
+				<onback>SetFocus(5)</onback>
+			</control>
+			<control type="button" id="20">
+				<left>20</left>
+				<top>909</top>
+				<width>315</width>
+				<height>70</height>
+				<textoffsetx>70</textoffsetx>
+				<font>font-20</font>
+				<texturefocus colordiffuse="darkcolor">button-focus.png</texturefocus>
+				<texturenofocus border="2">dialogbutton-nofocus.png</texturenofocus>
+				<onup>3</onup>
 				<ondown>3</ondown>
+				<onclick>settingslevelchange</onclick>
+			</control>
+			<control type="image">
+				<left>39</left>
+				<top>928</top>
+				<width>32</width>
+				<height>32</height>
+				<texture>icon-settings.png</texture>
 			</control>
 		</control>
-		<control type="togglebutton" id="10">
-			<description>Default Category Button</description>
-			<include>ButtonCommonValues</include>
-			<onback>SetFocus(5)</onback>
-			<usealttexture>false</usealttexture>
+		<control type="group">
+			<left>125</left>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<left>354</left>
+				<top>106</top>
+				<width>1320</width>
+				<height>868</height>
+				<itemgap>-2</itemgap>
+				<pagecontrol>90</pagecontrol>
+				<onleft>3</onleft>
+				<onright>90</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="scrollbar" id="90">
+				<left>1675</left>
+				<top>80</top>
+				<width>12</width>
+				<height>920</height>
+				<texturesliderbackground></texturesliderbackground>
+				<texturesliderbar colordiffuse="strongfade" border="6">scrollbar.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="darkcolor" border="6">scrollbar.png</texturesliderbarfocus>
+				<textureslidernib></textureslidernib>
+				<textureslidernibfocus></textureslidernibfocus>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
 		</control>
 		<control type="button" id="7">
-			<description>Default Button</description>
-			<left>0</left>
-			<top>0</top>
-			<height>52</height>
-			<font>font-20</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="7">list-focus.png</texturefocus>
-			<texturenofocus border="7">list-nofocus.png</texturenofocus>
 		</control>
 		<control type="radiobutton" id="8">
-			<description>Default RadioButton</description>
-			<left>0</left>
-			<top>0</top>
-			<height>52</height>
-			<font>font-20</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="7">list-focus.png</texturefocus>
-			<texturenofocus border="7">list-nofocus.png</texturenofocus>
 		</control>
 		<control type="spincontrolex" id="9">
-			<description>Default SpinControlex</description>
-			<left>0</left>
-			<top>0</top>
-			<height>52</height>
-			<font>font-20</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="7">list-focus.png</texturefocus>
-			<texturenofocus border="7">list-nofocus.png</texturenofocus>
-			<aligny>center</aligny>
-			<reverse>yes</reverse>
 		</control>
 		<control type="sliderex" id="13">
-			<description>Default Sliderex</description>
-			<left>0</left>
-			<top>0</top>
-			<height>52</height>
-			<font>font-20</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<texturefocus border="7">list-focus.png</texturefocus>
-			<texturenofocus border="7">list-nofocus.png</texturenofocus>
 		</control>
 		<control type="label" id="14">
-			<description>Default Label</description>
 			<left>0</left>
 			<top>0</top>
 			<height>52</height>
@@ -169,45 +108,20 @@
 			<align>center</align>
 		</control>
 		<control type="image" id="11">
-			<description>separator image</description>
 			<height>3</height>
-			<texture>separator.png</texture>
+			<texture colordiffuse="grey">white.png</texture>
 		</control>
 		<control type="group">
-			<include>ContentFade</include>
-			<include>Window_OpenClose_Settings_Bottom_Animation</include>
-			<control type="image">
-				<left>360</left>
-				<top>960</top>
-				<width>1200</width>
-				<height>150</height>
-				<texture diffuse="underlay-diffuse.png" border="0,10,0,10">underlay4.png</texture>
-			</control>
-			<control type="textbox" id="6">
-				<left>360</left>
-				<top>981</top>
-				<width>1200</width>
-				<height>96</height>
-				<align>center</align>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>font-20</font>
-				<include>VisibleFadeEffect</include>
-				<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-		</control>
-		<control type="group">
-			<include>ContentFade</include>
 			<include>Window_OpenClose_Header_Animation</include>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>82</height>
-				<texture border="1">Header.png</texture>
+				<height>50</height>
+				<texture border="1">header.png</texture>
 			</control>
 			<control type="label" id="2">
-				<description>Fake Label so we can pass it's value down to the one below</description>
+				<description>Fake Label</description>
 				<left>0</left>
 				<top>0</top>
 				<width>0</width>
@@ -221,5 +135,6 @@
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
+		<include>ContentFade</include>
 	</controls>
 </window>

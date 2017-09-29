@@ -78,7 +78,7 @@
 						<label></label>
 						<font></font>
 						<texturenofocus>home-power.png</texturenofocus>
-						<texturefocus colordiffuse="blue">home-power.png</texturefocus>
+						<texturefocus colordiffuse="color">home-power.png</texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<onleft>10</onleft>
 						<onright>10</onright>

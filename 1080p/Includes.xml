@@ -606,25 +606,6 @@
 			<include>WindowTitleCommons</include>
 		</control>
 	</include>
-	<include name="ButtonCommonValues">
-		<height>70</height>
-		<font>font-20bc</font>
-		<textcolor>white</textcolor>
-		<focusedcolor>blue</focusedcolor>
-		<shadowcolor>black</shadowcolor>
-		<align>left</align>
-		<aligny>center</aligny>
-		<textoffsetx>15</textoffsetx>
-		<include>ButtonCommonValues1</include>
-		<pulseonselect>true</pulseonselect>
-		<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
-		<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
-		<onback>50</onback>
-	</include>
-	<include name="ButtonCommonValues1">
-		<texturefocus border="10">Button_Side_Focus.png</texturefocus>
-		<texturenofocus border="10">Button_Side_NoFocus.png</texturenofocus>
-	</include>
 	<include name="ButtonToggleCommonValues">
 		<alttexturefocus border="10">Button_Side_Focus.png</alttexturefocus>
 		<alttexturenofocus border="10">Button_Side_NoFocus.png</alttexturenofocus>
@@ -634,37 +615,6 @@
 	</include>
 	<include name="ButtonCommonValuesWide">
 		<width>387</width>
-	</include>
-	<include name="ButtonMenuSettings1">
-		<width>375</width>
-		<font>font-20c</font>
-		<focusedcolor>blue</focusedcolor>
-		<shadowcolor>black</shadowcolor>
-		<textoffsetx>27</textoffsetx>
-		<radioposx>315</radioposx>
-		<texturefocus border="10">Button_Side_Focus.png</texturefocus>
-		<texturenofocus border="10">Button_Side_NoFocus.png</texturenofocus>
-	</include>
-	<include name="ButtonMenuSettings2">
-		<width>525</width>
-		<height>45</height>
-		<font>font-20</font>
-		<focusedcolor>blue</focusedcolor>
-		<shadowcolor>black</shadowcolor>
-		<textoffsetx>27</textoffsetx>
-		<radioposx>465</radioposx>
-		<texturefocus border="10">Button_Side_Focus.png</texturefocus>
-		<texturenofocus border="10">Button_Side_NoFocus.png</texturenofocus>
-	</include>
-	<include name="ButtonMenuSettings3">
-		<width>600</width>
-		<height>45</height>
-		<font>font-19</font>
-		<focusedcolor>blue</focusedcolor>
-		<shadowcolor>black</shadowcolor>
-		<textoffsetx>27</textoffsetx>
-		<texturefocus border="10">Button_Side_Focus.png</texturefocus>
-		<texturenofocus border="10">Button_Side_NoFocus.png</texturenofocus>
 	</include>
 	<include name="CommonFileCount">
 		<control type="grouplist">
@@ -1445,8 +1395,6 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>VisibleFadeEffect</include>
-			<animation effect="fade" start="100" end="20" time="0" condition="!Skin.HasSetting(HideVisBackground) + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)] + !Skin.HasSetting(Vis-Visualization)">Conditional</animation>
-			<include condition="Skin.HasSetting(Vis-Animation)">backgroundanimation</include>
 			<visible>Player.HasAudio</visible>
 		</control>
 		<control type="multiimage">
@@ -1459,10 +1407,7 @@
 			<timeperimage>5000</timeperimage>
 			<fadetime>2000</fadetime>
 			<randomize>true</randomize>
-			<animation effect="fade" start="100" end="20" time="0" condition="!Skin.HasSetting(HideVisBackground) + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)] + !Skin.HasSetting(Vis-Visualization)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
-			<include condition="Skin.HasSetting(Vis-Animation)">backgroundanimation2</include>
+			<include>VisibleFadeEffect</include>
 			<visible>Player.HasAudio + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh))</visible>
 		</control>
 		<control type="visualisation">
@@ -1496,58 +1441,6 @@
 	<include name="FanartShortBanners">
 		<top>168</top>
 		<height>522</height>
-	</include>
-	<include name="game-button">
-		<texturenofocus></texturenofocus>
-		<texturefocus></texturefocus>
-		<onfocus>Skin.ToggleSetting(switchplayer)</onfocus>
-		<onfocus>Skin.Reset(cross1)</onfocus>
-		<onfocus>Skin.Reset(cross2)</onfocus>
-		<onfocus>Skin.Reset(cross3)</onfocus>
-		<onfocus>Skin.Reset(cross4)</onfocus>
-		<onfocus>Skin.Reset(cross5)</onfocus>
-		<onfocus>Skin.Reset(cross6)</onfocus>
-		<onfocus>Skin.Reset(cross7)</onfocus>
-		<onfocus>Skin.Reset(cross8)</onfocus>
-		<onfocus>Skin.Reset(cross9)</onfocus>
-		<onfocus>Skin.Reset(circle1)</onfocus>
-		<onfocus>Skin.Reset(circle2)</onfocus>
-		<onfocus>Skin.Reset(circle3)</onfocus>
-		<onfocus>Skin.Reset(circle4)</onfocus>
-		<onfocus>Skin.Reset(circle5)</onfocus>
-		<onfocus>Skin.Reset(circle6)</onfocus>
-		<onfocus>Skin.Reset(circle7)</onfocus>
-		<onfocus>Skin.Reset(circle8)</onfocus>
-		<onfocus>Skin.Reset(circle9)</onfocus>
-		<onfocus>SetFocus(74)</onfocus>
-	</include>
-	<include name="game-scorebutton">
-		<left>-15</left>
-		<top>-15</top>
-		<width>1</width>
-		<height>1</height>
-		<texturenofocus></texturenofocus>
-		<texturefocus></texturefocus>
-		<onfocus>Skin.ToggleSetting(switchplayer)</onfocus>
-		<onfocus>Skin.Reset(cross1)</onfocus>
-		<onfocus>Skin.Reset(cross2)</onfocus>
-		<onfocus>Skin.Reset(cross3)</onfocus>
-		<onfocus>Skin.Reset(cross4)</onfocus>
-		<onfocus>Skin.Reset(cross5)</onfocus>
-		<onfocus>Skin.Reset(cross6)</onfocus>
-		<onfocus>Skin.Reset(cross7)</onfocus>
-		<onfocus>Skin.Reset(cross8)</onfocus>
-		<onfocus>Skin.Reset(cross9)</onfocus>
-		<onfocus>Skin.Reset(circle1)</onfocus>
-		<onfocus>Skin.Reset(circle2)</onfocus>
-		<onfocus>Skin.Reset(circle3)</onfocus>
-		<onfocus>Skin.Reset(circle4)</onfocus>
-		<onfocus>Skin.Reset(circle5)</onfocus>
-		<onfocus>Skin.Reset(circle6)</onfocus>
-		<onfocus>Skin.Reset(circle7)</onfocus>
-		<onfocus>Skin.Reset(circle8)</onfocus>
-		<onfocus>Skin.Reset(circle9)</onfocus>
-		<onfocus>SetFocus(74)</onfocus>
 	</include>
 	<include name="keyboard-charbutton">
 		<left>0</left>
@@ -1831,26 +1724,76 @@
 			</control>
 		</control>
 	</include>
-	<include name="SettingsMenuList3">
-		<left>1266</left>
-		<width>600</width>
-		<height>90</height>
-		<itemgap>-3</itemgap>
+	<include name="SettingsMenu">
+		<left>352</left>
+		<top>52</top>
+		<width>967</width>
+		<height>969</height>
+		<itemgap>-2</itemgap>
 		<pagecontrol></pagecontrol>
-		<onleft>8100</onleft>
-		<onright>9000</onright>
-		<onup>8200</onup>
-		<ondown>8200</ondown>
+		<onleft>401</onleft>
+		<onup>4100</onup>
+		<ondown>4100</ondown>
 		<include>VisibleFadeEffect</include>
+		<control type="radiobutton" id="4101">
+			<width>967</width>
+			<label>[B]$LOCALIZE[31180][/B]</label>
+			<font>font-20c</font>
+			<onfocus>Skin.SetString($PARAM[section]Custom,0)</onfocus>
+			<onclick>Skin.ToggleSetting(Menu$PARAM[section]Sub)</onclick>
+			<selected>Skin.HasSetting(Menu$PARAM[section]Sub)</selected>
+		</control>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="01"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="02"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="03"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="04"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="05"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="06"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="07"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="08"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="09"/>
+		</include>
+		<include content="SettingsMenuButton">
+			<param name="section" value="$PARAM[section]"/>
+			<param name="id" value="10"/>
+		</include>
 	</include>
-	<include name="ShutdownMenuLabel">
-		<left>0</left>
-		<top>0</top>
-		<width>840</width>
-		<height>68</height>
-		<align>center</align>
-		<aligny>center</aligny>
-		<font>font-25</font>
+	<include name="SettingsMenuButton">
+		<control type="radiobutton" id="42$PARAM[id]">
+			<label>[B]$LOCALIZE[31157]$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Label), - ][/B]</label>
+			<width>967</width>
+			<onfocus>Skin.SetString($PARAM[section]Custom,$PARAM[id])</onfocus>
+			<onclick>Skin.ToggleSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</onclick>
+			<onclick condition="!Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])">RunScript(script.favourites,changetitle=true&amp;property=Menu$PARAM[section]Sub_Custom$PARAM[id])</onclick>
+			<selected>Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</selected>
+			<enable>Skin.HasSetting(Menu$PARAM[section]Sub)</enable>
+		</control>
 	</include>
 	<include name="SideMenuAnim">
 		<include condition="!Skin.HasSetting(WideSideMenuButtons)">SideMenuAnimNormal</include>
@@ -1875,17 +1818,56 @@
 	<include name="SideMenuAnim2Wide">
 		<animation effect="slide" start="0,0" end="378,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 	</include>
-	<include name="SideMenuAnim3">
-		<include condition="!Skin.HasSetting(WideSideMenuButtons)">SideMenuAnim3Normal</include>
-		<include condition="Skin.HasSetting(WideSideMenuButtons)">SideMenuAnim3Wide</include>
-		<animation effect="fade" start="100" end="0" time="100" delay="400" condition="ControlGroup(5).HasFocus | Control.HasFocus(90)">Conditional</animation>
-		<animation effect="fade" start="100" end="100" time="0" condition="!ControlGroup(5).HasFocus + !Control.HasFocus(90)">Conditional</animation>
+	<include name="SubMenuButtons">
+		<content>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="01"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="02"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="03"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="04"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="05"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="06"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="07"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="08"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="09"/>
+			</include>
+			<include content="SubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="10"/>
+			</include>
+		</content>
 	</include>
-	<include name="SideMenuAnim3Normal">
-		<animation effect="slide" start="0,0" end="266,0" time="400" tween="quadratic" easing="out" condition="!ControlGroup(5).HasFocus + !Control.HasFocus(90)">Conditional</animation>
-	</include>
-	<include name="SideMenuAnim3Wide">
-		<animation effect="slide" start="0,0" end="378,0" time="400" tween="quadratic" easing="out" condition="!ControlGroup(5).HasFocus + !Control.HasFocus(90)">Conditional</animation>
+	<include name="SubMenuButton">
+		<item id="81$PARAM[id]">
+			<label>$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Label)]</label>
+			<onclick>$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Path)]</onclick>
+			<visible>Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</visible>
+		</item>
 	</include>
 	<include name="ToggleButtonNormal">
 		<left>236</left>
@@ -1895,9 +1877,8 @@
 	</include>
 	<include name="TouchScreenControls">
 		<control type="group">
-			<left>38</left>
-			<top>68</top>
-			<include>ContentFade</include>
+			<left>1540</left>
+			<top>1010</top>
 			<control type="button">
 				<left>0</left>
 				<top>0</top>
@@ -1937,34 +1918,15 @@
 				<onclick>ActivateWindow(PlayerControls)</onclick>
 				<visible>Player.Playing</visible>
 			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<left>0</left>
-				<top>63</top>
-				<width>262</width>
-				<height>22</height>
-				<info>Player.Volume</info>
-				<visible>Player.Playing</visible>
-			</control>
-			<control type="slider" id="888">
-				<description>Slider</description>
-				<left>0</left>
-				<top>63</top>
-				<width>262</width>
-				<height>22</height>
-				<action>volume</action>
-				<visible>Player.Playing</visible>
-			</control>
 		</control>
 	</include>
 	<include name="TouchScreenControlsHome">
 		<control type="group">
-			<left>38</left>
-			<top>68</top>
-			<include>ContentFade</include>
+			<left>1675</left>
+			<top>78</top>
 			<control type="button">
-				<left>1597</left>
-				<top>36</top>
+				<left>0</left>
+				<top>0</top>
 				<width>60</width>
 				<height>60</height>
 				<texturefocus>touch-menu.png</texturefocus>
@@ -1972,31 +1934,13 @@
 				<onclick>SetFocus(8001)</onclick>
 			</control>
 			<control type="button">
-				<left>1665</left>
-				<top>36</top>
+				<left>68</left>
+				<top>0</top>
 				<width>60</width>
 				<height>60</height>
 				<texturefocus>touch-player.png</texturefocus>
 				<texturenofocus>touch-player.png</texturenofocus>
 				<onclick>ActivateWindow(PlayerControls)</onclick>
-				<visible>Player.Playing</visible>
-			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<left>1598</left>
-				<top>99</top>
-				<width>195</width>
-				<height>22</height>
-				<info>Player.Volume</info>
-				<visible>Player.Playing</visible>
-			</control>
-			<control type="slider" id="888">
-				<description>Slider</description>
-				<left>1598</left>
-				<top>99</top>
-				<width>195</width>
-				<height>22</height>
-				<action>volume</action>
 				<visible>Player.Playing</visible>
 			</control>
 		</control>

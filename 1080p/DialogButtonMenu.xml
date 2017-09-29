@@ -83,12 +83,12 @@
 				</control>
 			</control>
 			<control type="button">
-				<left>1353</left>
+				<left>700</left>
 				<top>18</top>
 				<width>30</width>
 				<height>30</height>
-				<texturefocus>close-window-focus.png</texturefocus>
-				<texturenofocus>close-window-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">close-window.png</texturefocus>
+				<texturenofocus>close-window.png</texturenofocus>
 				<onclick>Dialog.Close(buttonmenu)</onclick>
 				<visible>Skin.HasSetting(TouchScreenMode)</visible>
 			</control>

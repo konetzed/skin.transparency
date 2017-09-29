@@ -10,16 +10,15 @@
 			<control type="image">
 				<description>Top Weather image</description>
 				<left>1820</left>
-				<top>50</top>
+				<top>55</top>
 				<width>80</width>
 				<height>80</height>
-				<texture>resource://resource.images.weathericons.outline/$INFO[Window(Weather).Property(Current.OutlookIcon)]</texture>
-				<colordiffuse>BFFFFFFF</colordiffuse>
+				<texture colordiffuse="lightfade">resource://resource.images.weathericons.outline/$INFO[Window(Weather).Property(Current.OutlookIcon)]</texture>
 			</control>
 			<control type="label">
 				<description>Conditions Label</description>
 				<left>1820</left>
-				<top>125</top>
+				<top>130</top>
 				<width>80</width>
 				<height>15</height>
 				<label>[B]$INFO[Weather.Temperature][/B]</label>
@@ -60,7 +59,7 @@
 				<include>PVRTimer</include>
 				<include>InfoWeather</include>
 				<include>InfoSystem</include>
-				<include>PlayingVideos</include>
+				<include>PlayingVideo</include>
 				<include>PlayingMusic</include>
 			</control>
 		</control>
@@ -88,8 +87,7 @@
 					<top>0</top>
 					<width>70</width>
 					<height>70</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<colordiffuse>verylightgrey</colordiffuse>
+					<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
 				</control>
 			</itemlayout>
 			<focusedlayout width="130" height="70">
@@ -98,8 +96,7 @@
 					<top>0</top>
 					<width>70</width>
 					<height>70</height>
-					<texture>circle.png</texture>
-					<colordiffuse>darkblue</colordiffuse>
+					<texture colordiffuse="darkcolor">circle.png</texture>
 					<visible>Control.HasFocus(5030)</visible>
 				</control>
 				<control type="image">
@@ -107,8 +104,7 @@
 					<top>0</top>
 					<width>70</width>
 					<height>70</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<colordiffuse>verylightgrey</colordiffuse>
+					<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
 					<visible>!Control.HasFocus(5030)</visible>
 				</control>
 				<control type="image">
@@ -162,8 +158,7 @@
 					<top>0</top>
 					<width>88</width>
 					<height>88</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<colordiffuse>verylightgrey</colordiffuse>
+					<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<top>0</top>
@@ -183,8 +178,7 @@
 					<top>0</top>
 					<width>449</width>
 					<height>88</height>
-					<texture>white.png</texture>
-					<colordiffuse>darkblue</colordiffuse>
+					<texture colordiffuse="darkcolor">button-focus.png</texture>
 					<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(5040)">Conditional</animation>
 				</control>
 				<control type="image">
@@ -224,7 +218,7 @@
 				<include condition="!Skin.HasSetting(Menu_TVShows)">HomeTVShowsButton</include>
 				<include condition="Skin.HasSetting(Menu_MusicVideos)">HomeMusicVideosButton</include>
 				<include condition="!Skin.HasSetting(Menu_Videos)">HomeVideosButton</include>
-				<include condition="!Skin.HasSetting(Menu_TV)">HomeTVButton</include>
+				<include condition="Skin.HasSetting(Menu_TV)">HomeTVButton</include>
 				<include condition="!Skin.HasSetting(Menu_Music)">HomeMusicButton</include>
 				<include condition="!Skin.HasSetting(Menu_Pictures)">HomePicturesButton</include>
 				<include condition="!Skin.HasSetting(Menu_Programs)">HomeProgramsButton</include>
@@ -316,1141 +310,101 @@
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(1)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Movies Sub Library</description>
-					<label>$LOCALIZE[14022]</label>
-					<onclick>ActivateWindow(Videos)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_Library)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Movies Sub Genres</description>
-					<label>$LOCALIZE[135]</label>
-					<onclick>ActivateWindow(Videos,moviegenres,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_Genres)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Movies Sub Year</description>
-					<label>$LOCALIZE[345]</label>
-					<onclick>ActivateWindow(Videos,movieyears,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_Years)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Movies Sub Actors</description>
-					<label>$LOCALIZE[344]</label>
-					<onclick>ActivateWindow(Videos,movieactors,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_Actors)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Movies Sub Directors</description>
-					<label>$LOCALIZE[20348]</label>
-					<onclick>ActivateWindow(Videos,moviedirectors,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_Directors)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu Movies Sub Studio</description>
-					<label>$LOCALIZE[20388]</label>
-					<onclick>ActivateWindow(Videos,moviestudios,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_Studios)</visible>
-				</item>
-				<item id="8108">
-					<description>Menu Movies Sub Countries</description>
-					<label>$LOCALIZE[20451]</label>
-					<onclick>ActivateWindow(Videos,moviecountries,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Countries)</visible>
-				</item>
-				<item id="8109">
-					<description>Menu Movies Sub Sets</description>
-					<label>$LOCALIZE[20434]</label>
-					<onclick>ActivateWindow(Videos,moviesets,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Sets)</visible>
-				</item>
-				<item id="8110">
-					<description>Menu Movies Sub Tags</description>
-					<label>$LOCALIZE[20459]</label>
-					<onclick>ActivateWindow(Videos,movietags,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Tags)</visible>
-				</item>
-				<item id="8111">
-					<description>Menu Movies Sub RecentlyAdded</description>
-					<label>$LOCALIZE[31410]</label>
-					<onclick>ActivateWindow(Videos,recentlyaddedmovies,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_RecentlyAdded)</visible>
-				</item>
-				<item id="8112">
-					<description>Menu Movies Sub Playlists</description>
-					<label>$LOCALIZE[136]</label>
-					<onclick>ActivateWindow(Videos,special://videoplaylists/,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Playlists)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu Movies Sub Recordings</description>
-					<label>$LOCALIZE[20007]</label>
-					<onclick>ActivateWindow(Videos,movierecordings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Recordings)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu Movies Sub VideoPlugins</description>
-					<label>$LOCALIZE[1037]</label>
-					<onclick>ActivateWindow(Videos,Addons,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Movies_Sub_VideoPlugins)</visible>
-				</item>
-				<item id="8115">
-					<description>Menu Movies Sub MusicVideos</description>
-					<label>$LOCALIZE[20389]</label>
-					<onclick>ActivateWindow(Videos,musicvideotitles,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_MusicVideos)</visible>
-				</item>
-				<item id="8116">
-					<description>Menu Movies Sub VideoPartyMode</description>
-					<label>$LOCALIZE[589]</label>
-					<onclick>PlayerControl(Partymode(video),return)</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_VideoPartyMode)</visible>
-				</item>
-				<item id="8117">
-					<description>Menu Movies Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Movies_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Movies_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Custom1)</visible>
-				</item>
-				<item id="8118">
-					<description>Menu Movies Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Movies_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Movies_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Custom2)</visible>
-				</item>
-				<item id="8119">
-					<description>Menu Movies Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Movies_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Movies_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Custom3)</visible>
-				</item>
-				<item id="8120">
-					<description>Menu Movies Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Movies_Sub_Custom4_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Movies_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Custom4)</visible>
-				</item>
-				<item id="8121">
-					<description>Menu Movies Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Movies_Sub_Custom5_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Movies_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Movies_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Movies"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubTVShows">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(2)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu TVShows Sub TVGuide</description>
-					<label>$LOCALIZE[4]</label>
-					<onclick>RunAddon(script.tv.show.next.aired)</onclick>
-					<visible>Skin.HasSetting(Menu_TVShows_Sub_TVGuide)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu TVShows Sub Genres</description>
-					<label>$LOCALIZE[135]</label>
-					<onclick>ActivateWindow(Videos,tvshowgenres)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_Genres)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu TVShows Sub Year</description>
-					<label>$LOCALIZE[345]</label>
-					<onclick>ActivateWindow(Videos,tvshowyears,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_Years)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu TVShows Sub Actors</description>
-					<label>$LOCALIZE[344]</label>
-					<onclick>ActivateWindow(Videos,tvshowactors,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_Actors)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu TVShows Sub Studio</description>
-					<label>$LOCALIZE[20388]</label>
-					<onclick>ActivateWindow(Videos,tvshowstudio,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_Studio)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu TVShows Sub RecentlyAdded</description>
-					<label>$LOCALIZE[31410]</label>
-					<onclick>ActivateWindow(Videos,recentlyaddedepisodes,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_RecentlyAdded)</visible>
-				</item>
-				<item id="8108">
-					<description>Menu TVShows Sub InProgress</description>
-					<label>$LOCALIZE[575]</label>
-					<onclick>ActivateWindow(Videos,inprogresstvshows,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_InProgress)</visible>
-				</item>
-				<item id="8109">
-					<description>Menu TVShows Sub VideoPlugins</description>
-					<label>$LOCALIZE[1037]</label>
-					<onclick>ActivateWindow(Videos,Addons,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_TVShows_Sub_VideoPlugins)</visible>
-				</item>
-				<item id="8110">
-					<description>Menu TVShows Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_TVShows_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TVShows_Sub_Custom1_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TVShows_Sub_Custom1)</visible>
-				</item>
-				<item id="8111">
-					<description>Menu TVShows Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_TVShows_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TVShows_Sub_Custom2_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TVShows_Sub_Custom2)</visible>
-				</item>
-				<item id="8112">
-					<description>Menu TVShows Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_TVShows_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TVShows_Sub_Custom3_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TVShows_Sub_Custom3)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu TVShows Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_TVShows_Sub_Custom4_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TVShows_Sub_Custom4_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TVShows_Sub_Custom4)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu TVShows Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_TVShows_Sub_Custom5_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TVShows_Sub_Custom5_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TVShows_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="TVShows"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubMusicVideos">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(3)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu MusicVideos Sub Genres</description>
-					<label>$LOCALIZE[135]</label>
-					<onclick>ActivateWindow(Videos,musicvideogenres,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_Genres)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu MusicVideos Sub Year</description>
-					<label>$LOCALIZE[345]</label>
-					<onclick>ActivateWindow(Videos,musicvideoyears,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_Years)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu MusicVideos Sub Artists</description>
-					<label>$LOCALIZE[133]</label>
-					<onclick>ActivateWindow(Videos,musicvideoartists,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_Artists)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu MusicVideos Sub Albums</description>
-					<label>$LOCALIZE[132]</label>
-					<onclick>ActivateWindow(Videos,musicvideoalbums)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_Albums)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu MusicVideos Sub Directors</description>
-					<label>$LOCALIZE[20348]</label>
-					<onclick>ActivateWindow(Videos,musicvideodirectors,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_Directors)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu MusicVideos Sub Studio</description>
-					<label>$LOCALIZE[20388]</label>
-					<onclick>ActivateWindow(Videos,musicvideostudios,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_Studio)</visible>
-				</item>
-				<item id="8108">
-					<description>Menu MusicVideos Sub RecentlyAdded</description>
-					<label>$LOCALIZE[31410]</label>
-					<onclick>ActivateWindow(Videos,recentlyaddedmusicvideos,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_RecentlyAdded)</visible>
-				</item>
-				<item id="8109">
-					<description>Menu MusicVideos Sub VideoPlugins</description>
-					<label>$LOCALIZE[1037]</label>
-					<onclick>ActivateWindow(Videos,Addons,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_MusicVideos_Sub_VideoPlugins)</visible>
-				</item>
-				<item id="8110">
-					<description>Menu MusicVideos Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom1_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_MusicVideos_Sub_Custom1)</visible>
-				</item>
-				<item id="8111">
-					<description>Menu MusicVideos Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom2_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_MusicVideos_Sub_Custom2)</visible>
-				</item>
-				<item id="8112">
-					<description>Menu MusicVideos Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom3_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_MusicVideos_Sub_Custom3)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu MusicVideos Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom4_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom4_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_MusicVideos_Sub_Custom4)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu MusicVideos Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom5_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_MusicVideos_Sub_Custom5_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_MusicVideos_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="MusicVideos"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubVideos">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(4)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Videos Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Videos_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Videos_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Videos_Sub_Custom1)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Videos Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Videos_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Videos_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Videos_Sub_Custom2)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Videos Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Videos_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Videos_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Videos_Sub_Custom3)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Videos Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Videos_Sub_Custom4_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Videos_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Videos_Sub_Custom4)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Videos Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Videos_Sub_Custom5_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Videos_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Videos_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Videos"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubTV">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(5)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu TV Sub TVGuide</description>
-					<label>$LOCALIZE[31191]</label>
-					<onclick>ActivateWindow(TVGuide)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_TVGuide)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu TV Sub TVRecordings</description>
-					<label>$LOCALIZE[31193]</label>
-					<onclick>ActivateWindow(TVRecordings)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_TVRecordings)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu TV Sub TVSearch</description>
-					<label>$LOCALIZE[31195]</label>
-					<onclick>ActivateWindow(TVSearch)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_TVSearch)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu TV Sub TVTimers</description>
-					<label>$LOCALIZE[31197]</label>
-					<onclick>ActivateWindow(TVTimers)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_TVTimers)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu TV Sub TVTimerRules</description>
-					<label>$LOCALIZE[31183]</label>
-					<onclick>ActivateWindow(TVTimerRules)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_TVTimerRules)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu TV Sub RadioChannels</description>
-					<label>$LOCALIZE[19024]</label>
-					<onclick>ActivateWindow(RadioChannels)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_RadioChannels)</visible>
-				</item>
-				<item id="8108">
-					<description>Menu TV Sub RadioGuide</description>
-					<label>$LOCALIZE[31192]</label>
-					<onclick>ActivateWindow(RadioGuide)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_RadioGuide)</visible>
-				</item>
-				<item id="8109">
-					<description>Menu TV Sub RadioRecordings</description>
-					<label>$LOCALIZE[31194]</label>
-					<onclick>ActivateWindow(RadioRecordings)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_RadioRecordings)</visible>
-				</item>
-				<item id="8110">
-					<description>Menu TV Sub RadioSearch</description>
-					<label>$LOCALIZE[31196]</label>
-					<onclick>ActivateWindow(RadioSearch)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_RadioSearch)</visible>
-				</item>
-				<item id="8111">
-					<description>Menu TV Sub RadioTimers</description>
-					<label>$LOCALIZE[31198]</label>
-					<onclick>ActivateWindow(RadioTimers)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_RadioTimers)</visible>
-				</item>
-				<item id="8112">
-					<description>Menu TV Sub RadioTimerRules</description>
-					<label>$LOCALIZE[31199]</label>
-					<onclick>ActivateWindow(RadioTimerRules)</onclick>
-					<visible>!Skin.HasSetting(Menu_TV_Sub_RadioTimerRules)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu TV Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_TV_Sub_Custom1.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TV_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TV_Sub_Custom1)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu TV Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_TV_Sub_Custom2.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TV_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TV_Sub_Custom2)</visible>
-				</item>
-				<item id="8115">
-					<description>Menu TV Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_TV_Sub_Custom3.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TV_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TV_Sub_Custom3)</visible>
-				</item>
-				<item id="8116">
-					<description>Menu TV Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_TV_Sub_Custom4.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TV_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TV_Sub_Custom4)</visible>
-				</item>
-				<item id="8117">
-					<description>Menu TV Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_TV_Sub_Custom5.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_TV_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_TV_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="TV"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubMusic">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(6)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Music Sub Files</description>
-					<label>$LOCALIZE[744]</label>
-					<onclick>ActivateWindow(Music,Files,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_Files)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Music Sub Library</description>
-					<label>$LOCALIZE[15100]</label>
-					<onclick>ActivateWindow(Music)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_Library)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Music Sub Albums</description>
-					<label>$LOCALIZE[132]</label>
-					<onclick>ActivateWindow(Music,albums,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_Albums)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Music Sub Songs</description>
-					<label>$LOCALIZE[134]</label>
-					<onclick>ActivateWindow(Music,songs,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_Songs)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Music Sub Singles</description>
-					<label>$LOCALIZE[1050]</label>
-					<onclick>ActivateWindow(Music,singles,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Singles)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu Music Sub Genres</description>
-					<label>$LOCALIZE[135]</label>
-					<onclick>ActivateWindow(Music,genres,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_Genres)</visible>
-				</item>
-				<item id="8108">
-					<description>Menu Music Sub Years</description>
-					<label>$LOCALIZE[652]</label>
-					<onclick>ActivateWindow(Music,years,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_Years)</visible>
-				</item>
-				<item id="8109">
-					<description>Menu Music Sub Top100</description>
-					<label>$LOCALIZE[271]</label>
-					<onclick>ActivateWindow(Music,top100,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Top100)</visible>
-				</item>
-				<item id="8110">
-					<description>Menu Music Sub RecentlyAdded</description>
-					<label>$LOCALIZE[31410]</label>
-					<onclick>ActivateWindow(Music,recentlyaddedalbums,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Music_Sub_RecentlyAdded)</visible>
-				</item>
-				<item id="8111">
-					<description>Menu Music Sub RecentlyPlayed</description>
-					<label>$LOCALIZE[31411]</label>
-					<onclick>ActivateWindow(Music,recentlyplayedalbums,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_RecentlyPlayed)</visible>
-				</item>
-				<item id="8112">
-					<description>Menu Music Sub Playlists</description>
-					<label>$LOCALIZE[136]</label>
-					<onclick>ActivateWindow(Music,playlists,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Playlists)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu Music Sub Compilations</description>
-					<label>$LOCALIZE[521]</label>
-					<onclick>ActivateWindow(Music,compilations,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Compilations)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu Music Sub MusicPlugins</description>
-					<label>$LOCALIZE[1038]</label>
-					<onclick>ActivateWindow(Music,Addons,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_MusicPlugins)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu Music Sub MusicVideos</description>
-					<label>$LOCALIZE[20389]</label>
-					<onclick>ActivateWindow(Music,videodb://musicvideos/titles/,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_MusicVideos)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu Music Sub MusicPartyMode</description>
-					<label>$LOCALIZE[589]</label>
-					<onclick>PlayerControl(Partymode(music),return)</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_MusicPartyMode)</visible>
-				</item>
-				<item id="8115">
-					<description>Menu Music Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Music_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Music_Sub_Custom1_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Custom1)</visible>
-				</item>
-				<item id="8116">
-					<description>Menu Music Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Music_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Music_Sub_Custom2_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Custom2)</visible>
-				</item>
-				<item id="8117">
-					<description>Menu Music Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Music_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Music_Sub_Custom3_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Custom3)</visible>
-				</item>
-				<item id="8118">
-					<description>Menu Music Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Music_Sub_Custom4_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Music_Sub_Custom4_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Custom4)</visible>
-				</item>
-				<item id="8119">
-					<description>Menu Music Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Music_Sub_Custom5_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Music_Sub_Custom5_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Music_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Music"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubPictures">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(7)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Pictures Sub PicturePlugins</description>
-					<label>$LOCALIZE[1039]</label>
-					<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Pictures_Sub_PicturePlugins)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Pictures Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Pictures_Sub_Custom1_Label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(Menu_Pictures_Sub_Custom1_Path)])</onclick>
-					<visible>Skin.HasSetting(Menu_Pictures_Sub_Custom1)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Pictures Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Pictures_Sub_Custom2_Label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(Menu_Pictures_Sub_Custom2_Path)])</onclick>
-					<visible>Skin.HasSetting(Menu_Pictures_Sub_Custom2)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Pictures Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Pictures_Sub_Custom3_Label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(Menu_Pictures_Sub_Custom3_Path)])</onclick>
-					<visible>Skin.HasSetting(Menu_Pictures_Sub_Custom3)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Pictures Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Pictures_Sub_Custom4_Label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(Menu_Pictures_Sub_Custom4_Path)])</onclick>
-					<visible>Skin.HasSetting(Menu_Pictures_Sub_Custom4)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu Pictures Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Pictures_Sub_Custom5_Label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(Menu_Pictures_Sub_Custom5_Path)])</onclick>
-					<visible>Skin.HasSetting(Menu_Pictures_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Pictures"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubPrograms">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(8)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Programs Sub Files</description>
-					<label>$LOCALIZE[1214]</label>
-					<onclick>ActivateWindow(Programs)</onclick>
-					<visible>Skin.HasSetting(Menu_Programs_Sub_Files)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Programs Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Programs_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Programs_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Programs_Sub_Custom1)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Programs Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Programs_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Programs_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Programs_Sub_Custom2)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Programs Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Programs_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Programs_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Programs_Sub_Custom3)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Programs Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Programs_Sub_Custom4_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Programs_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Programs_Sub_Custom4)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu Programs Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Programs_Sub_Custom5_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Programs_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Programs_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Programs"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubGames">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(9)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Games Sub Addons</description>
-					<label>$LOCALIZE[35049]</label>
-					<onclick>ActivateWindow(Games,Addons,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Games_Sub_Addons)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Games Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Games_Sub_Custom1.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Games_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Games_Sub_Custom1)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Games Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Games_Sub_Custom2.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Games_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Games_Sub_Custom2)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Games Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Games_Sub_Custom3.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Games_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Games_Sub_Custom3)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Games Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Games_Sub_Custom4.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Games_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Games_Sub_Custom4)</visible>
-				</item>
-				<item id="8107">
-					<description>Menu Games Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Games_Sub_Custom5.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Games_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Games_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Games"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubWeather">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(10)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Weather Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Weather_Sub_Custom1_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Weather_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Weather_Sub_Custom1)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Weather Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Weather_Sub_Custom2_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Weather_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Weather_Sub_Custom2)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Weather Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Weather_Sub_Custom3_Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Weather_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Weather_Sub_Custom3)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Weather Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Weather_Sub_Custom4.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Weather_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Weather_Sub_Custom4)</visible>
-				</item>
-				<item id="8106">
-					<description>Menu Weather Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Weather_Sub_Custom5.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Weather_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Weather_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Weather"/>
+			</include>
 		</control>
 	</include>
 	<include name="HomeSubSettings">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(11)</visible>
 			<include>SubMenuLayout</include>
-			<content>
-				<item id="8102">
-					<description>Menu Settings Sub Skin Settings</description>
-					<label>$LOCALIZE[20077]</label>
-					<onclick>ActivateWindow(SkinSettings),return</onclick>
-					<visible>!Skin.HasSetting(Menu_Settings_Sub_SkinSettings)</visible>
-				</item>
-				<item id="8103">
-					<description>Menu Settings Sub Player</description>
-					<label>$LOCALIZE[14200]</label>
-					<onclick>ActivateWindow(PlayerSettings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Player)</visible>
-				</item>
-				<item id="8104">
-					<description>Menu Settings Sub TV</description>
-					<label>$LOCALIZE[19020]</label>
-					<onclick>ActivateWindow(PVRSettings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_TV)</visible>
-				</item>
-				<item id="8105">
-					<description>Menu Settings Sub Media</description>
-					<label>$LOCALIZE[14211]</label>
-					<onclick>ActivateWindow(MediaSettings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Library)</visible>
-				</item>
-				<item id="8108">
-					<description>Menu Settings Sub System</description>
-					<label>$LOCALIZE[13000]</label>
-					<onclick>ActivateWindow(SystemSettings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_System)</visible>
-				</item>
-				<item id="8109">
-					<description>Menu Settings Sub Service</description>
-					<label>$LOCALIZE[14036]</label>
-					<onclick>ActivateWindow(ServiceSettings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Service)</visible>
-				</item>
-				<item id="8110">
-					<description>Menu Settings Sub Profiles</description>
-					<label>$LOCALIZE[13200]</label>
-					<onclick>ActivateWindow(Profiles,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Profiles)</visible>
-				</item>
-				<item id="8111">
-					<description>Menu Settings Sub Games</description>
-					<label>$LOCALIZE[15016]</label>
-					<onclick>ActivateWindow(GameSettings)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Games)</visible>
-				</item>
-				<item id="8112">
-					<description>Menu Settings Sub Addons</description>
-					<label>$LOCALIZE[24001]</label>
-					<onclick>ActivateWindow(AddonBrowser)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Addons)</visible>
-				</item>
-				<item id="8113">
-					<description>Menu Settings Sub Interface</description>
-					<label>$LOCALIZE[14206]</label>
-					<onclick>ActivateWindow(InterfaceSettings,return)</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Interface)</visible>
-				</item>
-				<item id="8114">
-					<description>Menu Settings Sub System Info</description>
-					<label>$LOCALIZE[130]</label>
-					<onclick>ActivateWindow(SystemInfo,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Settings_Sub_SystemInfo)</visible>
-				</item>
-				<item id="8115">
-					<description>Menu Settings Sub File Manager</description>
-					<label>$LOCALIZE[10003]</label>
-					<onclick>ActivateWindow(FileManager,return)</onclick>
-					<visible>!Skin.HasSetting(Menu_Settings_Sub_FileManager)</visible>
-				</item>
-				<item id="8116">
-					<description>Menu Settings Sub Custom1</description>
-					<label>$INFO[Skin.String(Menu_Settings_Sub_Custom1.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Settings_Sub_Custom1.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Custom1)</visible>
-				</item>
-				<item id="8117">
-					<description>Menu Settings Sub Custom2</description>
-					<label>$INFO[Skin.String(Menu_Settings_Sub_Custom2.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Settings_Sub_Custom2.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Custom2)</visible>
-				</item>
-				<item id="8118">
-					<description>Menu Settings Sub Custom3</description>
-					<label>$INFO[Skin.String(Menu_Settings_Sub_Custom3.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Settings_Sub_Custom3.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Custom3)</visible>
-				</item>
-				<item id="8119">
-					<description>Menu Settings Sub Custom4</description>
-					<label>$INFO[Skin.String(Menu_Settings_Sub_Custom4.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Settings_Sub_Custom4.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Custom4)</visible>
-				</item>
-				<item id="8120">
-					<description>Menu Settings Sub Custom5</description>
-					<label>$INFO[Skin.String(Menu_Settings_Sub_Custom5.Label)]</label>
-					<onclick>$INFO[Skin.String(Menu_Settings_Sub_Custom5.Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Settings_Sub_Custom5)</visible>
-				</item>
-			</content>
+			<include content="SubMenuButtons">
+				<param name="section" value="Settings"/>
+			</include>
 		</control>
 	</include>
-
-
-	<include name="PlayingVideos">
-		<control type="group">
-			<left>375</left>
-			<top>735</top>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(Favourites)">Conditional</animation>
-			<visible>Player.HasVideo</visible>
-			<control type="image">
-				<description>Cover image</description>
-				<left>1323</left>
-				<top>9</top>
-				<width>204</width>
-				<height>204</height>
-				<texture diffuse="thumb-diffuse.png">$INFO[Player.Art(thumb)]</texture>
-				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="image">
-				<description>Cover image</description>
-				<left>1350</left>
-				<top>24</top>
-				<width>129</width>
-				<height>183</height>
-				<texture>$INFO[Player.Art(thumb)]</texture>
-				<visible>VideoPlayer.Content(Movies)</visible>
-			</control>
-			<control type="image">
-				<left>1350</left>
-				<top>8</top>
-				<width>138</width>
-				<height>213</height>
-				<texture fallback="case-sets.png">case$INFO[VideoPlayer.VideoResolution].png</texture>
-				<visible>VideoPlayer.Content(Movies) + !Skin.HasSetting(HideMovieCase)</visible>
-			</control>
-			<control type="image">
-				<description>Cover image</description>
-				<left>1162</left>
-				<top>6</top>
-				<width>375</width>
-				<height>212</height>
-				<aspectratio align="center" scalediffuse="true">keep</aspectratio>
-				<texture diffuse="video-diffuse.png">$INFO[Player.Art(thumb)]</texture>
-				<visible>VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="label">
-				<description>Year label</description>
-				<left>150</left>
-				<top>22</top>
-				<width>1155</width>
-				<height>45</height>
-				<label>$INFO[VideoPlayer.Year]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<visible>!VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)</visible>
-			</control>
-			<control type="label">
-				<description>Title label</description>
-				<left>0</left>
-				<top>22</top>
-				<width>1155</width>
-				<height>45</height>
-				<label>$VAR[IncludesHomeVideoInfoLabel1]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<visible>VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(LiveTV)</visible>
-			</control>
-			<control type="label">
-				<description>Title label</description>
-				<left>150</left>
-				<top>81</top>
-				<width>1155</width>
-				<height>45</height>
-				<label>$INFO[VideoPlayer.Title]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-30</font>
-				<textcolor>lightblue</textcolor>
-				<animation effect="slide" start="0,0" end="-150,0" time="0" condition="VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(LiveTV)">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Genre label</description>
-				<left>150</left>
-				<top>132</top>
-				<width>1155</width>
-				<height>45</height>
-				<label>$INFO[VideoPlayer.Genre]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<animation effect="slide" start="0,0" end="-150,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
-				<visible>!VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)</visible>
-			</control>
-			<control type="label">
-				<left>150</left>
-				<top>132</top>
-				<width>1155</width>
-				<height>45</height>
-				<label>$VAR[IncludesHomeVideoInfoLabel2]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<visible>VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(Episodes)</visible>
-			</control>
-			<control type="grouplist">
-				<left>150</left>
-				<top>188</top>
-				<height>45</height>
-				<width>1155</width>
-				<align>right</align>
-				<orientation>horizontal</orientation>
-				<animation effect="slide" start="0,0" end="-150,0" time="0" condition="VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(LiveTV)">Conditional</animation>
-				<control type="label">
-					<description>Time Label</description>
-					<height>18</height>
-					<width min="15" max="450">auto</width>
-					<label>$INFO[VideoPlayer.Time]</label>
-					<aligny>center</aligny>
-					<font>font-18</font>
-					<textcolor>lightblue</textcolor>
-				</control>
-				<control type="group">
-					<width>262</width>
-					<height>22</height>
-					<control type="progress">
-						<description>Progressbar Cache</description>
-						<left>0</left>
-						<top>0</top>
-						<width>262</width>
-						<height>22</height>
-						<info>Player.ProgressCache</info>
-						<midtexture border="10,0,10,0">ProgressCache.png</midtexture>
-					</control>
-					<control type="progress">
-						<description>Progressbar</description>
-						<left>0</left>
-						<top>0</top>
-						<width>262</width>
-						<height>22</height>
-						<info>Player.Progress</info>
-					</control>
-					<control type="slider" id="888">
-						<description>Slider</description>
-						<left>0</left>
-						<top>0</top>
-						<width>262</width>
-						<height>22</height>
-						<action>seek</action>
-					</control>
-				</control>
-				<control type="label">
-					<description>Duration Label</description>
-					<height>18</height>
-					<width min="15" max="450">auto</width>
-					<label>$INFO[VideoPlayer.Duration]</label>
-					<aligny>center</aligny>
-					<font>font-18</font>
-					<textcolor>lightblue</textcolor>
-				</control>
-			</control>
-		</control>
-	</include>
-	<include name="PlayingMusic">
-		<control type="group">
-			<left>375</left>
-			<top>735</top>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(Favourites)">Conditional</animation>
-			<visible>Player.HasAudio</visible>
-			<control type="image">
-				<description>cd image</description>
-				<left>1224</left>
-				<top>6</top>
-				<width>213</width>
-				<height>213</height>
-				<texture diffuse="disc_mask.png">disc.png</texture>
-				<include>cdartspinhome</include>
-				<visible>Skin.HasSetting(CDArt)</visible>
-			</control>
-			<include condition="!Skin.HasSetting(CDArt)">cdart-home</include>
-			<control type="image">
-				<description>Cover image</description>
-				<left>1224</left>
-				<top>6</top>
-				<width>213</width>
-				<height>213</height>
-				<texture>$INFO[MusicPlayer.Cover]</texture>
-				<animation effect="fade" start="100" end="0" time="100" delay="200">Hidden</animation>
-				<visible>Player.HasAudio</visible>
-			</control>
-			<control type="image">
-				<left>1200</left>
-				<top>3</top>
-				<width>240</width>
-				<height>219</height>
-				<texture>cdcase.png</texture>
-				<visible>!Skin.HasSetting(HideMusicCase)</visible>
-			</control>
-			<control type="label">
-				<description>Artist label</description>
-				<left>30</left>
-				<top>22</top>
-				<height>45</height>
-				<width>1155</width>
-				<label>$INFO[MusicPlayer.Artist]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-30</font>
-				<textcolor>blue</textcolor>
-			</control>
-			<control type="label">
-				<description>Title label</description>
-				<left>30</left>
-				<top>81</top>
-				<height>45</height>
-				<width>1155</width>
-				<label>$INFO[MusicPlayer.Title]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-30</font>
-				<textcolor>lightblue</textcolor>
-			</control>
-			<control type="label">
-				<description>Album Label</description>
-				<left>30</left>
-				<top>132</top>
-				<height>45</height>
-				<width>1155</width>
-				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-			</control>
-			<control type="grouplist">
-				<left>30</left>
-				<top>183</top>
-				<height>45</height>
-				<width>1155</width>
-				<align>right</align>
-				<orientation>horizontal</orientation>
-				<control type="label">
-					<description>Time Label</description>
-					<height>27</height>
-					<width min="15" max="450">auto</width>
-					<label>$INFO[MusicPlayer.Time]</label>
-					<aligny>center</aligny>
-					<font>font-18</font>
-					<textcolor>lightblue</textcolor>
-				</control>
-				<control type="group">
-					<width>262</width>
-					<height>22</height>
-					<control type="progress">
-						<description>Progressbar</description>
-						<left>0</left>
-						<top>3</top>
-						<width>262</width>
-						<height>22</height>
-						<info>Player.Progress</info>
-					</control>
-					<control type="slider" id="888">
-						<description>Slider</description>
-						<left>0</left>
-						<top>3</top>
-						<width>262</width>
-						<height>22</height>
-						<action>seek</action>
-					</control>
-				</control>
-				<control type="label">
-					<description>Duration Label</description>
-					<height>27</height>
-					<width min="15" max="450">auto</width>
-					<label>$INFO[MusicPlayer.Duration]</label>
-					<aligny>center</aligny>
-					<font>font-18</font>
-					<textcolor>lightblue</textcolor>
-				</control>
-			</control>
-		</control>
-	</include>
-
-
-
-
-
-
 	<include name="RecentlyAddedMovies">
 		<control type="group">
 			<left>0</left>
@@ -1464,7 +418,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[20386][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -1513,7 +467,7 @@
 						<top>60</top>
 						<width>490</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -1522,8 +476,7 @@
 						<top>0</top>
 						<width>495</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -1561,7 +514,7 @@
 						<top>60</top>
 						<width>490</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content limit="10">videodb://recentlyaddedmovies/</content>
@@ -1581,7 +534,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[20387][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -1630,7 +583,7 @@
 						<top>60</top>
 						<width>440</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -1639,8 +592,7 @@
 						<top>0</top>
 						<width>445</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -1678,7 +630,7 @@
 						<top>60</top>
 						<width>440</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content limit="10">videodb://recentlyaddedepisodes/</content>
@@ -1698,7 +650,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[20390][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -1747,7 +699,7 @@
 						<top>60</top>
 						<width>440</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -1756,8 +708,7 @@
 						<top>0</top>
 						<width>445</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -1795,7 +746,7 @@
 						<top>60</top>
 						<width>440</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content limit="10">videodb://recentlyaddedmusicvideos/</content>
@@ -1815,7 +766,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[19157][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 				<visible>!PVR.IsRecording</visible>
 			</control>
 			<control type="label">
@@ -1826,7 +777,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[19158][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 				<visible>PVR.IsRecording</visible>
 			</control>
 			<control type="group">
@@ -1922,7 +873,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[359][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -1971,7 +922,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -1980,8 +931,7 @@
 						<top>0</top>
 						<width>475</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -2019,10 +969,10 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
-				<content limit="10">musicdb://recentlyaddedalbums/</content>
+				<content target="music" limit="10">musicdb://recentlyaddedalbums/</content>
 			</control>
 		</control>
 	</include>
@@ -2039,7 +989,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[31403][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -2057,7 +1007,7 @@
 						<width>60</width>
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="DefaultAlbumCover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultPicture.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="label">
 						<left>75</left>
@@ -2088,7 +1038,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -2097,8 +1047,7 @@
 						<top>0</top>
 						<width>475</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -2107,7 +1056,7 @@
 						<width>60</width>
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="DefaultAlbumCover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultPicture.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="label">
 						<left>75</left>
@@ -2136,7 +1085,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content sortby="lastused" sortorder="descending" limit="10">addons://sources/image/</content>
@@ -2156,7 +1105,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[31402][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -2174,7 +1123,7 @@
 						<width>60</width>
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="DefaultAlbumCover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="label">
 						<left>75</left>
@@ -2205,7 +1154,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -2214,8 +1163,7 @@
 						<top>0</top>
 						<width>475</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -2224,7 +1172,7 @@
 						<width>60</width>
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="DefaultAlbumCover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="label">
 						<left>75</left>
@@ -2253,7 +1201,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content sortby="lastused" sortorder="descending" limit="10">addons://sources/executable/</content>
@@ -2273,7 +1221,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[31404][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -2291,7 +1239,7 @@
 						<width>60</width>
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="DefaultAlbumCover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultGames.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="label">
 						<left>75</left>
@@ -2322,7 +1270,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -2331,8 +1279,7 @@
 						<top>0</top>
 						<width>475</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -2341,7 +1288,7 @@
 						<width>60</width>
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="DefaultAlbumCover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultGames.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="label">
 						<left>75</left>
@@ -2370,7 +1317,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content sortby="lastused" sortorder="descending" limit="10">addons://sources/game/</content>
@@ -2390,7 +1337,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[10508][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="list" id="5044">
 				<orientation>vertical</orientation>
@@ -2439,7 +1386,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="555" height="70">
@@ -2448,8 +1395,7 @@
 						<top>0</top>
 						<width>475</width>
 						<height>53</height>
-						<texture>white.png</texture>
-						<colordiffuse>darkblue</colordiffuse>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
 						<visible>Control.HasFocus(5044)</visible>
 					</control>
 					<control type="image">
@@ -2487,7 +1433,7 @@
 						<top>60</top>
 						<width>470</width>
 						<height>1</height>
-						<texture colordiffuse="fade">white.png</texture>
+						<texture colordiffuse="strongfade">white.png</texture>
 					</control>
 				</focusedlayout>
 				<content>
@@ -2543,7 +1489,7 @@
 				<label>[UPPERCASE][B]$LOCALIZE[10007][/B][/UPPERCASE]</label>
 				<aligny>center</aligny>
 				<font>font-20</font>
-				<textcolor>blue</textcolor>
+				<textcolor>color</textcolor>
 			</control>
 			<control type="group">
 				<control type="image">
@@ -2585,6 +1531,220 @@
 			</control>
 		</control>
 	</include>
+	<include name="PlayingMusic">
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<visible>Player.HasAudio</visible>
+			<control type="label">
+				<left>0</left>
+				<top>3</top>
+				<height>30</height>
+				<width>600</width>
+				<label>[UPPERCASE][B]$LOCALIZE[31400][/B][/UPPERCASE]</label>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>color</textcolor>
+			</control>
+			<control type="group">
+				<control type="image">
+					<left>-19</left>
+					<top>172</top>
+					<width>598</width>
+					<height>1</height>
+					<texture colordiffuse="strongfade">white.png</texture>
+				</control>
+				<control type="image">
+					<description>settings image</description>
+					<left>0</left>
+					<top>40</top>
+					<width>132</width>
+					<height>132</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[MusicPlayer.Cover]</texture>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>57</top>
+					<height>45</height>
+					<width>380</width>
+					<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+					<aligny>center</aligny>
+					<font>font-25</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<left>239</left>
+					<top>108</top>
+					<width>48</width>
+					<height>48</height>
+					<texture colordiffuse="darkcolor">circle-small.png</texture>
+					<animation effect="slide" start="0,0" end="82,0" time="0" condition="Control.HasFocus(6002)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="164,0" time="0" condition="Control.HasFocus(6003)">Conditional</animation>
+					<visible>ControlGroup(5044).HasFocus</visible>
+				</control>
+				<control type="grouplist" id="5044">
+					<left>155</left>
+					<top>116</top>
+					<width>380</width>
+					<itemgap>50</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>5040</onleft>
+					<align>center</align>
+					<control type="togglebutton" id="6001">
+						<width>32</width>
+						<height>32</height>
+						<texturefocus>player-play-small.png</texturefocus>
+						<texturenofocus>player-play-small.png</texturenofocus>
+						<alttexturefocus>player-pause-small.png</alttexturefocus>
+						<alttexturenofocus>player-pause-small.png</alttexturenofocus>
+						<usealttexture>Player.Paused</usealttexture>
+						<onclick>PlayerControl(play)</onclick>
+					</control>
+					<control type="button" id="6002">
+						<width>32</width>
+						<height>32</height>
+						<texturefocus>player-next-small.png</texturefocus>
+						<texturenofocus>player-next-small.png</texturenofocus>
+						<onclick>PlayerControl(next)</onclick>
+					</control>
+					<control type="button" id="6003">
+						<width>32</width>
+						<height>32</height>
+						<texturefocus>player-stop-small.png</texturefocus>
+						<texturenofocus>player-stop-small.png</texturenofocus>
+						<onclick>PlayerControl(stop)</onclick>
+					</control>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>180</top>
+					<height>45</height>
+					<width>570</width>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<aligny>center</aligny>
+					<font>font-20</font>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>215</top>
+					<height>45</height>
+					<width>570</width>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<aligny>center</aligny>
+					<font>font-20</font>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="PlayingVideo">
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<visible>Player.HasVideo</visible>
+			<control type="label">
+				<left>0</left>
+				<top>3</top>
+				<height>30</height>
+				<width>600</width>
+				<label>[UPPERCASE][B]$LOCALIZE[31400][/B][/UPPERCASE]</label>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>color</textcolor>
+			</control>
+			<control type="group">
+				<control type="image">
+					<left>-19</left>
+					<top>172</top>
+					<width>598</width>
+					<height>1</height>
+					<texture colordiffuse="strongfade">white.png</texture>
+				</control>
+				<control type="image">
+					<description>settings image</description>
+					<left>0</left>
+					<top>40</top>
+					<width>132</width>
+					<height>132</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Player.Art(thumb)]</texture>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>57</top>
+					<height>45</height>
+					<width>380</width>
+					<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+					<aligny>center</aligny>
+					<font>font-25</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<left>239</left>
+					<top>108</top>
+					<width>48</width>
+					<height>48</height>
+					<texture colordiffuse="darkcolor">circle-small.png</texture>
+					<animation effect="slide" start="0,0" end="82,0" time="0" condition="Control.HasFocus(6002)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="164,0" time="0" condition="Control.HasFocus(6003)">Conditional</animation>
+					<visible>ControlGroup(5044).HasFocus</visible>
+				</control>
+				<control type="grouplist" id="5044">
+					<left>155</left>
+					<top>116</top>
+					<width>380</width>
+					<itemgap>50</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>5040</onleft>
+					<align>center</align>
+					<control type="togglebutton" id="6001">
+						<width>32</width>
+						<height>32</height>
+						<texturefocus>player-play-small.png</texturefocus>
+						<texturenofocus>player-play-small.png</texturenofocus>
+						<alttexturefocus>player-pause-small.png</alttexturefocus>
+						<alttexturenofocus>player-pause-small.png</alttexturenofocus>
+						<usealttexture>Player.Paused</usealttexture>
+						<onclick>PlayerControl(play)</onclick>
+					</control>
+					<control type="button" id="6002">
+						<width>32</width>
+						<height>32</height>
+						<texturefocus>player-next-small.png</texturefocus>
+						<texturenofocus>player-next-small.png</texturenofocus>
+						<onclick>PlayerControl(next)</onclick>
+					</control>
+					<control type="button" id="6003">
+						<width>32</width>
+						<height>32</height>
+						<texturefocus>player-stop-small.png</texturefocus>
+						<texturenofocus>player-stop-small.png</texturenofocus>
+						<onclick>PlayerControl(stop)</onclick>
+					</control>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>180</top>
+					<height>45</height>
+					<width>570</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<aligny>center</aligny>
+					<font>font-20</font>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>215</top>
+					<height>45</height>
+					<width>570</width>
+					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, - ]</label>
+					<aligny>center</aligny>
+					<font>font-20</font>
+				</control>
+			</control>
+		</control>
+	</include>
 	<include name="RSS">
 		<control type="group">
 			<include>Window_OpenClose_Footer_Animation</include>
@@ -2603,8 +1763,8 @@
 				<height>40</height>
 				<font>font-20</font>
 				<urlset>1</urlset>
-				<textcolor>blue</textcolor>
-				<titlecolor>blue</titlecolor>
+				<textcolor>color</textcolor>
+				<titlecolor>color</titlecolor>
 				<headlinecolor>white</headlinecolor>
 			</control>
 		</control>
@@ -2614,17 +1774,17 @@
 			<onup>5050</onup>
 			<onright>3000</onright>
 			<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
-			<include condition="!Skin.HasSetting(Menu_Movies) + !Skin.HasSetting(Menu_Movies_Sub)">HomeSubMovies</include>
-			<include condition="!Skin.HasSetting(Menu_TVShows) + !Skin.HasSetting(Menu_TVShows_Sub)">HomeSubTVShows</include>
-			<include condition="Skin.HasSetting(Menu_MusicVideos) + !Skin.HasSetting(Menu_MusicVideos_Sub)">HomeSubMusicVideos</include>
-			<include condition="!Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_Sub)">HomeSubVideos</include>
-			<include condition="!Skin.HasSetting(Menu_TV) + !Skin.HasSetting(Menu_TV_Sub)">HomeSubTV</include>
-			<include condition="!Skin.HasSetting(Menu_Music) + !Skin.HasSetting(Menu_Music_Sub)">HomeSubMusic</include>
-			<include condition="!Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_Sub)">HomeSubPictures</include>
-			<include condition="!Skin.HasSetting(Menu_Programs) + Skin.HasSetting(Menu_Programs_Sub)">HomeSubPrograms</include>
-			<include condition="Skin.HasSetting(Menu_Games) + Skin.HasSetting(Menu_Games_Sub)">HomeSubGames</include>
-			<include condition="!Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_Sub)">HomeSubWeather</include>
-			<include condition="!Skin.HasSetting(Menu_Settings) + !Skin.HasSetting(Menu_Settings_Sub)">HomeSubSettings</include>
+			<include condition="!Skin.HasSetting(Menu_Movies) + Skin.HasSetting(MenuMoviesSub)">HomeSubMovies</include>
+			<include condition="!Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(MenuTVShowsSub)">HomeSubTVShows</include>
+			<include condition="Skin.HasSetting(Menu_MusicVideos) + Skin.HasSetting(MenuMusicVideosSub)">HomeSubMusicVideos</include>
+			<include condition="!Skin.HasSetting(Menu_Videos) + Skin.HasSetting(MenuVideosSub)">HomeSubVideos</include>
+			<include condition="Skin.HasSetting(Menu_TV) + Skin.HasSetting(MenuTVSub)">HomeSubTV</include>
+			<include condition="!Skin.HasSetting(Menu_Music) + Skin.HasSetting(MenuMusicSub)">HomeSubMusic</include>
+			<include condition="!Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(MenuPicturesSub)">HomeSubPictures</include>
+			<include condition="!Skin.HasSetting(Menu_Programs) + Skin.HasSetting(MenuProgramsSub)">HomeSubPrograms</include>
+			<include condition="Skin.HasSetting(Menu_Games) + Skin.HasSetting(MenuGamesSub)">HomeSubGames</include>
+			<include condition="!Skin.HasSetting(Menu_Weather) + Skin.HasSetting(MenuWeatherSub)">HomeSubWeather</include>
+			<include condition="!Skin.HasSetting(Menu_Settings) + Skin.HasSetting(MenuSettingsSub)">HomeSubSettings</include>
 			<include>Window_OpenClose_Home_Panel_Animation</include>
 			<visible allowhiddenfocus="true">!Control.HasFocus(9000)</visible>
 		</control>
@@ -2668,8 +1828,7 @@
 				<top>0</top>
 				<width>449</width>
 				<height>88</height>
-				<texture>white.png</texture>
-				<colordiffuse>darkblue</colordiffuse>
+				<texture colordiffuse="darkcolor">button-focus.png</texture>
 				<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(8001)">Conditional</animation>
 			</control>
 			<control type="label">

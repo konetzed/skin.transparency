@@ -17,16 +17,14 @@
 				<top>81</top>
 				<width>3</width>
 				<height>918</height>
-				<texture>white.png</texture>
-				<colordiffuse>grey</colordiffuse>
+				<texture colordiffuse="grey">white.png</texture>
 			</control>
 			<control type="image">
 				<left>121</left>
 				<top>644</top>
 				<width>451</width>
 				<height>3</height>
-				<texture>white.png</texture>
-				<colordiffuse>grey</colordiffuse>
+				<texture colordiffuse="grey">white.png</texture>
 			</control>
 			<control type="group">
 				<left>121</left>
@@ -51,8 +49,7 @@
 							<top>18</top>
 							<width>40</width>
 							<height>40</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<colordiffuse>verylightgrey</colordiffuse>
+							<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -72,8 +69,7 @@
 							<top>0</top>
 							<width>451</width>
 							<height>77</height>
-							<texture>white.png</texture>
-							<colordiffuse>darkblue</colordiffuse>
+							<texture colordiffuse="darkcolor">button-focus.png</texture>
 						</control>
 						<control type="image">
 							<left>18</left>
@@ -163,10 +159,10 @@
 							<onclick>ActivateWindow(AddonBrowser)</onclick>
 						</item>
 						<item id="10">
-							<label>$LOCALIZE[10003]</label>
+							<label>$LOCALIZE[166]</label>
 							<label2>$LOCALIZE[31168]</label2>
-							<icon>settings-file.png</icon>
-							<onclick>ActivateWindow(Filemanager)</onclick>
+							<icon>settings-skin.png</icon>
+							<onclick>ActivateWindow(SkinSettings)</onclick>
 						</item>
 						<item id="11">
 							<label>$LOCALIZE[130]</label>
@@ -184,8 +180,8 @@
 					<texture>big-$INFO[Container(7000).ListItem.Icon]</texture>
 				</control>
 				<control type="label">
-					<left>690</left>
-					<top>600</top>
+					<left>670</left>
+					<top>650</top>
 					<width>1008</width>
 					<height>400</height>
 					<label>$INFO[Container(7000).ListItem.Label2]</label>

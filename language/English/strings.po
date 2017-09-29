@@ -59,7 +59,27 @@ msgctxt "#31010"
 msgid "Power off"
 msgstr ""
 
-#empty strings from id 31011 to 31023
+msgctxt "#31011"
+msgid "General skin settings"
+msgstr ""
+
+msgctxt "#31012"
+msgid "Home screen options"
+msgstr ""
+
+msgctxt "#31013"
+msgid "Media view settings"
+msgstr ""
+
+msgctxt "#31014"
+msgid "Home menu configuration"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Debugging"
+msgstr ""
+
+#empty strings from id 31016 to 31023
 #Page labels
 
 msgctxt "#31024"
@@ -208,7 +228,7 @@ msgid "Home screen options"
 msgstr ""
 
 msgctxt "#31102"
-msgid "Backgrounds"
+msgid "Custom background"
 msgstr ""
 
 msgctxt "#31103"
@@ -348,7 +368,7 @@ msgstr ""
 #empty string with id 31152
 
 msgctxt "#31153"
-msgid "Weather icon"
+msgid "Hide weather icon"
 msgstr ""
 
 msgctxt "#31154"
@@ -364,7 +384,7 @@ msgid "Favourite"
 msgstr ""
 
 msgctxt "#31157"
-msgid "Select favourite:"
+msgid "Select favourite"
 msgstr ""
 
 msgctxt "#31158"
@@ -404,7 +424,7 @@ msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR][CR]• Select a skin[CR]• Set l
 msgstr ""
 
 msgctxt "#31168"
-msgid "[B]OPEN THE FILE MANAGER[/B][CR][CR]• Add sources[CR]• Browse folders[CR]• Copy or move files[CR]• Delete files and folders"
+msgid "[B]CONFIGURE SKIN OPTIONS[/B][CR][CR]• Setup the Transparency! skin[CR]• Add and remove home menu items[CR]• Change skin backgrounds"
 msgstr ""
 
 msgctxt "#31169"
@@ -431,11 +451,9 @@ msgctxt "#31174"
 msgid "Random Items"
 msgstr ""
 
-msgctxt "#31175"
-msgid "Random"
+msgctxt "#31176"
+msgid "Hide widgets"
 msgstr ""
-
-#empty string with id 31176
 
 msgctxt "#31177"
 msgid "Enable touchscreen mode"
@@ -449,7 +467,9 @@ msgctxt "#31179"
 msgid "Next Episode:"
 msgstr ""
 
-#empty string with id 31180
+msgctxt "#31180"
+msgid "SUBMENU"
+msgstr ""
 
 msgctxt "#31181"
 msgid "Show banners in list"
@@ -655,7 +675,7 @@ msgstr ""
 #Home Page labels
 
 msgctxt "#31400"
-msgid "New:"
+msgid "Now playing"
 msgstr ""
 
 msgctxt "#31401"
