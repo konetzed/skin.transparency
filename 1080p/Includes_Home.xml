@@ -1753,7 +1753,7 @@
 				<top>50r</top>
 				<width>1920</width>
 				<height>50</height>
-				<texture flipy="true" border="1">header.png</texture>
+				<texture flipy="true" border="2">header.png</texture>
 			</control>
 			<control type="rss">
 				<description>rss feed</description>

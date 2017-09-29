@@ -32,14 +32,6 @@
 				<height>94</height>
 				<texture>$INFO[MusicPlayer.Cover]</texture>
 			</control>
-			<control type="image">
-				<left>14</left>
-				<top>10</top>
-				<width>106</width>
-				<height>98</height>
-				<texture>cdcase.png</texture>
-				<visible>!Skin.HasSetting(HideMusicCase)</visible>
-			</control>
 			<control type="label">
 				<left>135</left>
 				<top>14</top>

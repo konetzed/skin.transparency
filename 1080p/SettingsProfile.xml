@@ -4,11 +4,8 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
-		<include condition="!Skin.HasSetting(HideVisBackgrounds)">CommonVisualizationBackground</include>
 		<control type="group">
-			<include>ContentFade</include>
 			<include>ContentPanel</include>
-			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="Skin.HasSetting(WideSideMenuButtons) + ControlGroup(9000).HasFocus">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="350">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="350">WindowClose</animation>
 			<control type="panel" id="2">
@@ -132,8 +129,6 @@
 			<include>Window_OpenClose_Left_Panel_Animation</include>
 			<include>CommonNowPlaying</include>
 			<control type="group" id="9000">
-				<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
-				<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
 				<include>SideMenuAnim</include>
 				<control type="radiobutton" id="4">
 					<description>Enable Login screen</description>
@@ -180,8 +175,8 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>82</height>
-				<texture border="1">Header.png</texture>
+				<height>50</height>
+				<texture border="2">header.png</texture>
 			</control>
 			<include>CommonFileCount10</include>
 			<control type="grouplist">
@@ -190,5 +185,6 @@
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
+		<include>ContentFade</include>
 	</controls>
 </window>

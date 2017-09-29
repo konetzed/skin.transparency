@@ -194,7 +194,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
-					<animation effect="slide" start="0,0" end="60,0" time="0" condition="[Container.Content(Movies) + Skin.HasSetting(Enable_Movies_Watched_Flags)] | [Container.Content(Episodes) + Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [Container.Content(Files) + Skin.HasSetting(Enable_Videos_Watched_Flags)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="60,0" time="0" condition="[Container.Content(Movies) + [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [Container.Content(Files)]">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>1260</left>
@@ -203,7 +203,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[PartlyWatched]</texture>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)</visible>
+					<visible>[Container.Content(Movies)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)</visible>
 				</control>
 				<control type="image">
 					<left>1260</left>
@@ -212,7 +212,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)</visible>
+					<visible>[Container.Content(Movies)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="1320" height="44">
@@ -275,7 +275,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
-					<animation effect="slide" start="0,0" end="60,0" time="0" condition="[Container.Content(Movies) + Skin.HasSetting(Enable_Movies_Watched_Flags)] | [Container.Content(Episodes) + Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [Container.Content(Files) + Skin.HasSetting(Enable_Videos_Watched_Flags)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="60,0" time="0" condition="[Container.Content(Movies) + [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [Container.Content(Files)]">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>1260</left>
@@ -284,7 +284,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[PartlyWatched]</texture>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)</visible>
+					<visible>[Container.Content(Movies)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)</visible>
 				</control>
 				<control type="image">
 					<left>1260</left>
@@ -293,7 +293,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)</visible>
+					<visible>[Container.Content(Movies)] | [[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)</visible>
 				</control>
 			</focusedlayout>
 		</control>
@@ -308,7 +308,7 @@
 				<width>939</width>
 				<height>63</height>
 				<texture diffuse="underlay2-diffuse.png" border="4">underlay2.png</texture>
-				<visible>!Skin.HasSetting(Enable_Movies_Media_Flags) + Container.Content(Movies)</visible>
+				<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 				<left>495</left>
@@ -316,7 +316,7 @@
 				<width>939</width>
 				<height>63</height>
 				<texture diffuse="underlay2-diffuse.png" border="4">underlay2.png</texture>
-				<visible>!Skin.HasSetting(Enable_TVShows_Media_Flags) + Container.Content(Episodes)</visible>
+				<visible>Container.Content(Episodes)</visible>
 			</control>
 			<control type="image">
 				<left>495</left>
@@ -324,14 +324,14 @@
 				<width>939</width>
 				<height>63</height>
 				<texture diffuse="underlay2-diffuse.png" border="4">underlay2.png</texture>
-				<visible>!Skin.HasSetting(Enable_MusicVideos_Media_Flags) + Container.Content(MusicVideos)</visible>
+				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="group">
 				<left>555</left>
 				<top>922</top>
 				<width>810</width>
 				<height>72</height>
-				<include condition="!Skin.HasSetting(Enable_Movies_Media_Flags)">VideoMediaFlags</include>
+				<include>VideoMediaFlags</include>
 				<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="group">
@@ -339,7 +339,7 @@
 				<top>922</top>
 				<width>810</width>
 				<height>72</height>
-				<include condition="!Skin.HasSetting(Enable_TVShows_Media_Flags)">VideoMediaFlags</include>
+				<include>VideoMediaFlags</include>
 				<visible>Container.Content(Episodes)</visible>
 			</control>
 			<control type="group">
@@ -347,7 +347,7 @@
 				<top>922</top>
 				<width>810</width>
 				<height>72</height>
-				<include condition="!Skin.HasSetting(Enable_MusicVideos_Flags)">VideoMediaFlags</include>
+				<include>VideoMediaFlags</include>
 				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 		</control>

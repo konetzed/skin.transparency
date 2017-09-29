@@ -1,71 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<controls>
-		<control type="visualisation" id="2">
-			<description>visualisation</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<visible>Player.HasAudio + !Skin.HasSetting(Vis-Visualization) + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum)]</visible>
-		</control>
-		<control type="multiimage">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<imagepath fallback="special://skin/backgrounds/background-music.jpg" background="true">$VAR[ArtistSlide]</imagepath>
-			<aspectratio>keep</aspectratio>
-			<timeperimage>5000</timeperimage>
-			<fadetime>2000</fadetime>
-			<randomize>true</randomize>
-			<animation effect="fade" start="100" end="20" time="0" condition="![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)] + !Skin.HasSetting(Vis-Visualization)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-			<include condition="Skin.HasSetting(Vis-Animation)">backgroundanimation2</include>
-			<visible>Player.HasAudio + Skin.HasSetting(Vis-ArtistSlide)</visible>
-		</control>
-		<include>fanartslideshow-musicvisualisation</include>
-		<control type="multiimage">
-			<description>fallback texture if no fanart is available</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<timeperimage>5000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>2000</fadetime>
-			<imagepath fallback="special://skin/backgrounds/background-music.jpg" background="true">$INFO[Skin.String(Custom_Back_Music_Folder)]</imagepath>
-			<aspectratio>scale</aspectratio>
-			<include condition="Skin.HasSetting(Vis-Animation)">backgroundanimation2</include>
-			<animation effect="fade" start="100" end="20" time="0" condition="![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)] + !Skin.HasSetting(Vis-Visualization)">Conditional</animation>
-			<visible>Player.HasAudio + [!Skin.HasSetting(Vis-Fanart) | [Skin.HasSetting(Vis-Slideshow) + String.IsEmpty(Control.GetLabel(6101))]] + String.IsEmpty(MusicPlayer.Property(Fanart_Image))</visible>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<include>VisibleFadeEffect</include>
-			<include condition="Skin.HasSetting(Vis-Animation)">backgroundanimation2</include>
-			<animation effect="fade" start="100" end="20" time="0" condition="![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)] + !Skin.HasSetting(Vis-Visualization)">Conditional</animation>
-			<visible>Player.HasAudio + [!Skin.HasSetting(Vis-Fanart) | [Skin.HasSetting(Vis-Slideshow) + String.IsEmpty(Control.GetLabel(6101))]]</visible>
-		</control>
-		<include>cdwall-musicvisualisation</include>
-		<include condition="Skin.HasSetting(ArtistLogo)">logo-artists-visualisation</include>
-		<control type="visualisation" id="2">
-			<description>visualisation</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<visible>Player.HasAudio + !Skin.HasSetting(Vis-Visualization) + [String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum)]</visible>
-		</control>
+		<include>DefaultBackground</include>
 		<control type="group">
-			<visible>Skin.HasSetting(Vis-ScrollTitles)</visible>
 			<control type="group">
 				<control type="label">
 					<left>30</left>
@@ -207,7 +144,6 @@
 			</control>
 		</control>
 		<control type="group">
-			<include>ContentFade</include>
 			<control type="textbox">
 				<description>textarea</description>
 				<left>150</left>
@@ -223,7 +159,6 @@
 				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 				<animation effect="fade" start="100" end="0" time="1500">WindowClose</animation>
 				<animation effect="slide" start="0,0" end="0,234" time="300" condition="!Player.ShowInfo + !Window.IsVisible(MusicOSD)">Conditional</animation>
-				<visible>Skin.HasSetting(Music_OSD_Info)</visible>
 			</control>
 			<control type="group">
 				<left>0</left>
@@ -416,7 +351,7 @@
 					<font>font-20</font>
 					<textcolor>lightblue</textcolor>
 				</control>
-				<include condition="!Skin.HasSetting(Enable_Music_Media_Flags)">FullScreenMusicMediaFlags</include>
+				<include>FullScreenMusicMediaFlags</include>
 				<control type="label">
 					<left>832</left>
 					<top>246</top>
@@ -439,18 +374,7 @@
 				<animation effect="slide" start="0,0" end="-480,0" time="300">Hidden</animation>
 				<animation effect="slide" start="-480,0" end="0,0" time="300">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="-480,0" time="300" delay="1200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(CDArt)">cdart-musicvisualisation</include>
-				<control type="image">
-					<description>default cd image</description>
-					<left>52</left>
-					<top>-6</top>
-					<width>300</width>
-					<height>300</height>
-					<texture diffuse="disc_mask.png">disc.png</texture>
-					<aspectratio>keep</aspectratio>
-					<include>cdartspin</include>
-					<visible>Skin.HasSetting(CDArt)</visible>
-				</control>
+				<include>cdart-musicvisualisation</include>
 				<control type="image">
 					<description>cover image</description>
 					<left>48</left>
@@ -460,14 +384,6 @@
 					<texture>$INFO[MusicPlayer.Cover]</texture>
 					<animation effect="fade" start="100" end="0" time="8000">Hidden</animation>
 					<visible>Player.HasAudio</visible>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>344</width>
-					<height>310</height>
-					<texture>cdcase.png</texture>
-					<visible>!Skin.HasSetting(HideMusicCase)</visible>
 				</control>
 			</control>
 		</control>

@@ -210,17 +210,6 @@
 				<align>right</align>
 				<onleft>910</onleft>
 				<onright>901</onright>
-				<control type="button" id="991">
-					<description>Background Settings</description>
-					<width>60</width>
-					<height>60</height>
-					<label></label>
-					<font></font>
-					<texturenofocus>osd-background-nofocus.png</texturenofocus>
-					<texturefocus>osd-background-focus.png</texturefocus>
-					<onclick>ActivateWindow(1112)</onclick>
-					<visible>!Skin.HasSetting(KioskMode)</visible>
-				</control>
 				<control type="button" id="915">
 					<description>Info Button</description>
 					<left>60</left>
@@ -241,7 +230,6 @@
 					<font></font>
 					<texturenofocus>osd-vis-nofocus.png</texturenofocus>
 					<texturefocus>osd-vis-focus.png</texturefocus>
-					<visible>!Skin.HasSetting(KioskMode)</visible>
 				</control>
 				<control type="button" id="912">
 					<description>Visualization Settings</description>
@@ -252,7 +240,6 @@
 					<texturenofocus>osd-preset-nofocus.png</texturenofocus>
 					<texturefocus>osd-preset-focus.png</texturefocus>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-					<visible>!Skin.HasSetting(KioskMode)</visible>
 				</control>
 				<control type="button" id="913">
 					<description>Visualization Presets</description>
@@ -263,7 +250,6 @@
 					<texturenofocus>osd-bookmark-nofocus.png</texturenofocus>
 					<texturefocus>osd-bookmark-focus.png</texturefocus>
 					<onclick>ActivateWindow(VisualisationPresetList)</onclick>
-					<visible>!Skin.HasSetting(KioskMode)</visible>
 				</control>
 				<control type="button" id="914">
 					<description>Audio Menu</description>
@@ -286,28 +272,6 @@
 					<onclick>RunScript(script.cu.lrclyrics)</onclick>
 					<onclick>Dialog.Close(musicosd)</onclick>
 					<visible>System.HasAddon(script.cu.lrclyrics)</visible>
-				</control>
-				<control type="button" id="919">
-					<description>Last.fm love</description>
-					<width>60</width>
-					<height>60</height>
-					<label></label>
-					<font></font>
-					<texturenofocus>osd-love-nofocus.png</texturenofocus>
-					<texturefocus>osd-love-focus.png</texturefocus>
-					<onclick>RunScript(service.scrobbler.lastfm,action=LastFM.Love)</onclick>
-					<visible>!String.IsEmpty(Window(Home).Property(LastFM.CanLove))</visible>
-				</control>
-				<control type="button" id="920">
-					<description>Last.fm ban</description>
-					<width>60</width>
-					<height>60</height>
-					<label></label>
-					<font></font>
-					<texturenofocus>osd-ban-nofocus.png</texturenofocus>
-					<texturefocus>osd-ban-focus.png</texturefocus>
-					<onclick>RunScript(service.scrobbler.lastfm,action=LastFM.Ban)</onclick>
-					<visible>!String.IsEmpty(Window(Home).Property(LastFM.CanBan))</visible>
 				</control>
 				<control type="button" id="921">
 					<description>rds</description>

@@ -7,7 +7,7 @@
 		<control type="group">
 			<include>ContentPanel</include>
 			<include>ContentFade</include>
-			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="Skin.HasSetting(WideSideMenuButtons) + ControlGroup(9000).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="350">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="350">WindowClose</animation>
 			<control type="label" id="40">
@@ -175,12 +175,8 @@
 				<height>24</height>
 				<texture border="0,0,10,0">shadow-top2.png</texture>
 				<animation effect="slide" start="0,0" end="375,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-				<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
-				<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
 			</control>
 			<control type="grouplist" id="9000">
-				<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
-				<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
 				<include>SideMenuAnim2</include>
 				<onleft>5999</onleft>
 				<onright>5999</onright>
@@ -237,8 +233,8 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>82</height>
-				<texture border="1">Header.png</texture>
+				<height>50</height>
+				<texture border="2">header.png</texture>
 			</control>
 			<control type="grouplist">
 				<include>Breadcrumbs</include>

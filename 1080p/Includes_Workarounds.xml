@@ -69,7 +69,7 @@
 			<texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
 			<fadetime>IconCrossfadeTime</fadetime>
 			<animation effect="rotate" start="0" end="15" center="auto" time="0" condition="true">Conditional</animation>
-			<animation effect="fade" start="100" end="20" time="0" condition="![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)] + !Skin.HasSetting(Vis-Visualization)">Conditional</animation>
+			<animation effect="fade" start="100" end="20" time="0" condition="![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)]">Conditional</animation>
 		</control>
 	</include>
 	<include name="logo-movies">
@@ -124,22 +124,5 @@
 	</include>
 	<include name="musicsongsdisc-View_Icons">
 		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[ListItem.Path,,cdart.png]</texture>
-	</include>
-	<include name="thumbs-extra-movies">
-		<animation effect="slide" start="0,0" end="15,300" time="0" condition="Control.IsVisible(50)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="1530,188" time="0" condition="Control.IsVisible(57)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="1560,240" time="0" condition="Control.IsVisible(590)">Conditional</animation>
-		<control type="multiimage">
-			<left>21</left>
-			<top>21</top>
-			<width>318</width>
-			<height>180</height>
-			<imagepath background="true" diffuse="video-diffuse.png">$INFO[ListItem.Path,,extrathumbs/]</imagepath>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-			<timeperimage>4000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>IconCrossfadeTime</fadetime>
-			<visible>!ListItem.IsParentFolder + ![String.Contains(ListItem.Path,plugin://) | String.Contains(ListItem.Path,special://videoplaylists/) | String.Contains(Container.FolderPath,plugin://) | String.Contains(Container.FolderPath,addons://)]</visible>
-		</control>
 	</include>
 </includes>

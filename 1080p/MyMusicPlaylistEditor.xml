@@ -2,10 +2,8 @@
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(HideVideoBackgrounds)">CommonVideoPlayingBackground</include>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>ContentFade</include>
 			<control type="image">
 				<include>Window_OpenClose_Animation</include>
 				<left>717</left>
@@ -69,7 +67,7 @@
 						<width>279</width>
 						<height>255</height>
 						<texture>cdcase.png</texture>
-						<visible>[String.Contains(Container.FolderPath,musicdb://albums/) | String.Contains(Container.FolderPath,musicdb://songs/) | String.Contains(Container.FolderPath,musicdb://recentlyaddedalbums/) | String.Contains(Container.FolderPath,musicdb://recentlyplayedalbums/) | String.Contains(Container.FolderPath,musicdb://compilations/)] + !ListItem.IsParentFolder + !Skin.HasSetting(HideMusicCase)</visible>
+						<visible>[String.Contains(Container.FolderPath,musicdb://albums/) | String.Contains(Container.FolderPath,musicdb://songs/) | String.Contains(Container.FolderPath,musicdb://recentlyaddedalbums/) | String.Contains(Container.FolderPath,musicdb://recentlyplayedalbums/) | String.Contains(Container.FolderPath,musicdb://compilations/)] + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="textbox">
 						<left>732</left>
@@ -91,14 +89,6 @@
 						<width>248</width>
 						<height>248</height>
 						<texture background="true">$INFO[Container(100).ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<left>820</left>
-						<top>68</top>
-						<width>279</width>
-						<height>255</height>
-						<texture>cdcase.png</texture>
-						<visible>!Skin.HasSetting(HideMusicCase)</visible>
 					</control>
 					<control type="textbox">
 						<left>732</left>
@@ -503,14 +493,13 @@
 				</control>
 			</control>
 			<control type="group">
-				<include>ContentFade</include>
 				<include>Window_OpenClose_Header_Animation</include>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
 					<width>1920</width>
-					<height>82</height>
-					<texture border="1">Header.png</texture>
+					<height>50</height>
+					<texture border="2">header.png</texture>
 				</control>
 				<control type="grouplist">
 					<include>Breadcrumbs</include>
@@ -520,5 +509,6 @@
 				<include>CommonFileCount9</include>
 			</control>
 		</control>
+		<include>ContentFade</include>
 	</controls>
 </window>

@@ -12,13 +12,8 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
-			<include condition="!Skin.HasSetting(Fanart_Show_Banners) + !Skin.HasSetting(FanartShort) + !Skin.HasSetting(FanartLong)">FanartNormal</include>
-			<include condition="!Skin.HasSetting(Fanart_Show_Banners) + Skin.HasSetting(FanartShort)">FanartShort</include>
-			<include condition="!Skin.HasSetting(Fanart_Show_Banners) + Skin.HasSetting(FanartLong)">FanartLong</include>
-			<include condition="Skin.HasSetting(Fanart_Show_Banners) + !Skin.HasSetting(FanartShort) + !Skin.HasSetting(FanartLong)">FanartNormalBanners</include>
-			<include condition="Skin.HasSetting(Fanart_Show_Banners) + Skin.HasSetting(FanartShort)">FanartShortBanners</include>
-			<include condition="Skin.HasSetting(Fanart_Show_Banners) + Skin.HasSetting(FanartLong)">FanartLongBanners</include>
-			<itemlayout width="532" height="44" condition="![Container.Content(TVShows) + Skin.HasSetting(Fanart_Show_Banners)]">
+			<include>FanartNormal</include>
+			<itemlayout width="532" height="44">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -46,7 +41,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[PartlyWatched]</texture>
-					<visible>[[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [Container.Content(TVShows) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Seasons) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Episodes) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)]</visible>
+					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
 				</control>
 				<control type="image">
 					<left>488</left>
@@ -55,10 +50,10 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [Container.Content(TVShows) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Seasons) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Episodes) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)</visible>
+					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout width="532" height="44" condition="![Container.Content(TVShows) + Skin.HasSetting(Fanart_Show_Banners)]">
+			<focusedlayout width="532" height="44">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -96,7 +91,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[PartlyWatched]</texture>
-					<visible>[[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [Container.Content(TVShows) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Seasons) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Episodes) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)]</visible>
+					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
 				</control>
 				<control type="image">
 					<left>488</left>
@@ -105,119 +100,7 @@
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>[Container.Content(Movies) + !Skin.HasSetting(Enable_Movies_Watched_Flags)] | [Container.Content(TVShows) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Seasons) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(Episodes) + !Skin.HasSetting(Enable_TVShows_Watched_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Watched_Flags)] | [[Container.Content(Videos) | Container.Content(Files)] + !Skin.HasSetting(Enable_Videos_Watched_Flags)] | Window.IsVisible(VideoPlaylist)</visible>
-				</control>
-			</focusedlayout>
-			<itemlayout width="532" height="130" condition="Container.Content(TVShows) + Skin.HasSetting(Fanart_Show_Banners)">
-				<control type="image">
-					<left>-12</left>
-					<top>0</top>
-					<width>532</width>
-					<height>130</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
-					<left>-12</left>
-					<top>0</top>
-					<width>532</width>
-					<height>130</height>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture fallback="DefaultBanner.png" diffuse="banner-diffuse.png" background="true">$VAR[IconBanner]</texture>
-					<bordertexture border="13">banner-shadow.png</bordertexture>
-					<bordersize>13</bordersize>
-					<visible>!ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
-					<left>450</left>
-					<top>66</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[PartlyWatched]</texture>
-					<visible>!Skin.HasSetting(Enable_TVShows_Watched_Flags)</visible>
-				</control>
-				<control type="image">
-					<left>450</left>
-					<top>66</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>!Skin.HasSetting(Enable_TVShows_Watched_Flags)</visible>
-				</control>
-			</itemlayout>
-			<focusedlayout width="532" height="130" condition="Container.Content(TVShows) + Skin.HasSetting(Fanart_Show_Banners)">
-				<control type="image">
-					<left>-12</left>
-					<top>0</top>
-					<width>532</width>
-					<height>130</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<animation type="focus">
-						<effect type="slide" start="0,0" end="0,0" time="200" />
-						<effect type="zoom" start="100" end="113" center="auto" time="200" />
-					</animation>
-					<animation type="unfocus">
-						<effect type="slide" start="0,0" end="0,0" time="200" />
-						<effect type="zoom" start="113" end="100" center="auto" time="200" />
-					</animation>
-					<visible>ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
-					<left>-12</left>
-					<top>0</top>
-					<width>532</width>
-					<height>130</height>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture fallback="DefaultBanner.png" diffuse="banner-diffuse.png" background="true">$VAR[IconBanner]</texture>
-					<bordertexture border="13">banner-shadow.png</bordertexture>
-					<bordersize>13</bordersize>
-					<animation type="focus">
-						<effect type="slide" start="0,0" end="0,0" time="200" />
-						<effect type="zoom" start="100" end="113" center="auto" time="200" />
-					</animation>
-					<animation type="unfocus">
-						<effect type="slide" start="0,0" end="0,0" time="200" />
-						<effect type="zoom" start="113" end="100" center="auto" time="200" />
-					</animation>
-					<visible>!ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
-					<left>450</left>
-					<top>66</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[PartlyWatched]</texture>
-					<animation type="focus">
-						<effect type="slide" start="0,0" end="27,3" time="200" />
-						<effect type="zoom" start="100" end="109" center="auto" time="200" />
-					</animation>
-					<animation type="unfocus">
-						<effect type="slide" start="27,3" end="0,0" time="200" />
-						<effect type="zoom" start="109" end="100" center="auto" time="200" />
-					</animation>
-					<visible>!Skin.HasSetting(Enable_TVShows_Watched_Flags)</visible>
-				</control>
-				<control type="image">
-					<left>450</left>
-					<top>66</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Overlay]</texture>
-					<animation type="focus">
-						<effect type="slide" start="0,0" end="27,3" time="200" />
-						<effect type="zoom" start="100" end="109" center="auto" time="200" />
-					</animation>
-					<animation type="unfocus">
-						<effect type="slide" start="27,3" end="0,0" time="200" />
-						<effect type="zoom" start="109" end="100" center="auto" time="200" />
-					</animation>
-					<visible>!Skin.HasSetting(Enable_TVShows_Watched_Flags)</visible>
+					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
 				</control>
 			</focusedlayout>
 		</control>
@@ -258,48 +141,7 @@
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<visible>ListItem.IsParentFolder | [!ListItem.IsParentFolder + [[Skin.HasSetting(Enable_Foldericons_Movies_Genre) + String.IsEqual(Container.FolderPath,videodb://movies/genres/)] | [Skin.HasSetting(Enable_Foldericons_TVShows_Genre) + String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)] | [Skin.HasSetting(Enable_Foldericons_MusicVideos_Genre) + String.IsEqual(Container.FolderPath,videodb://musicvideos/genres/)]]] | !Container.Content(Genres)</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>678</top>
-				<width>321</width>
-				<height>398</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder + [[!Skin.HasSetting(Enable_Foldericons_Movies_Genre) + String.IsEqual(Container.FolderPath,videodb://movies/genres/)] | [!Skin.HasSetting(Enable_Foldericons_TVShows_Genre) + String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)] | [!Skin.HasSetting(Enable_Foldericons_MusicVideos_Genre) + String.IsEqual(Container.FolderPath,videodb://musicvideos/genres/)]]</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>678</top>
-				<width>321</width>
-				<height>398</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture diffuse="thumb-diffuse.png" fallback="genre-movies-icon.jpg">$VAR[MovieGenreIcon]</texture>
-				<bordersize>6</bordersize>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Enable_Foldericons_Movies_Genre) + String.IsEqual(Container.FolderPath,videodb://movies/genres/)</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>678</top>
-				<width>321</width>
-				<height>398</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture diffuse="thumb-diffuse.png" fallback="genre-tvshows-icon.jpg">$VAR[MovieGenreIcon]</texture>
-				<bordersize>6</bordersize>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Enable_Foldericons_TVShows_Genre) + String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>678</top>
-				<width>321</width>
-				<height>398</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture diffuse="thumb-diffuse.png" fallback="genre-music-icon.jpg">$VAR[MusicGenreIcon]</texture>
-				<bordersize>6</bordersize>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Enable_Foldericons_MusicVideos_Genre) + String.IsEqual(Container.FolderPath,videodb://musicvideos/genres/)</visible>
+				<visible>ListItem.IsParentFolder | [!ListItem.IsParentFolder + [[String.IsEqual(Container.FolderPath,videodb://movies/genres/)] | [String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)] | [String.IsEqual(Container.FolderPath,videodb://musicvideos/genres/)]]] | !Container.Content(Genres)</visible>
 			</control>
 		</control>
 	</include>
@@ -307,22 +149,12 @@
 		<control type="group">
 			<visible>Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)]</visible>
 			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
-			<animation effect="slide" end="0,52" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>825</top>
 				<width>1312</width>
 				<height>237</height>
 				<texture border="10">underlay.png</texture>
-				<visible>!Skin.HasSetting(Enable_Movies_Media_Flags)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>825</top>
-				<width>1312</width>
-				<height>184</height>
-				<texture border="10">underlay.png</texture>
-				<visible>Skin.HasSetting(Enable_Movies_Media_Flags)</visible>
 			</control>
 			<control type="label">
 				<left>386</left>
@@ -350,7 +182,6 @@
 				<visible>String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
-				<visible>!Skin.HasSetting(FanartShowPlot)</visible>
 				<control type="label">
 					<left>386</left>
 					<top>890</top>
@@ -413,81 +244,26 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(FanartShowPlot)</visible>
-				<control type="textbox">
-					<description>Plot Value for Movies</description>
-					<left>386</left>
-					<top>896</top>
-					<width>735</width>
-					<height>90</height>
-					<font>font-19</font>
-					<align>justify</align>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$VAR[ViewFanartText]</label>
-					<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Control.IsVisible(50) + !Skin.HasSetting(Enable_Movies_Media_Flags) + [Container.Content(Movies) | Window.IsVisible(VideoPlaylist)]</visible>
+				<visible>Control.IsVisible(50) [Container.Content(Movies) | Window.IsVisible(VideoPlaylist)]</visible>
 				<control type="group">
 					<left>378</left>
 					<top>982</top>
 					<width>708</width>
 					<height>72</height>
-					<include condition="!Skin.HasSetting(Enable_Movies_Media_Flags)">VideoMediaFlags</include>
+					<include>VideoMediaFlags</include>
 				</control>
-				<include condition="!Skin.HasSetting(Enable_Movies_Media_Flags)">MovieStudioFlag</include>
+				<include>MovieStudioFlag</include>
 			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)]</visible>
-			<include>Window_OpenClose_Visible_FanartButton_Animation</include>
-			<animation effect="slide" end="-602,0" time="0" condition="Skin.HasSetting(FanartLong)">Conditional</animation>
-			<control type="button" id="7005">
-				<left>1833</left>
-				<top>21</top>
-				<width>60</width>
-				<height>60</height>
-				<label></label>
-				<font></font>
-				<texturefocus>trailer-focus.png</texturefocus>
-				<texturenofocus>trailer-nofocus.png</texturenofocus>
-				<onleft>9000</onleft>
-				<onright>50</onright>
-				<onup>7005</onup>
-				<ondown>7005</ondown>
-				<onclick condition="Skin.HasSetting(Fullscreen_Trailer)">PlayMedia("$INFO[ListItem.Trailer]")</onclick>
-				<onclick condition="!Skin.HasSetting(Fullscreen_Trailer)">PlayMedia("$INFO[ListItem.Trailer]",1)</onclick>
-				<visible>!Skin.HasSetting(Hide_Trailer_Icon) + !String.IsEmpty(Listitem.Trailer)</visible>
-			</control>
-		</control>
-		<control type="videowindow">
-			<description>trailer preview</description>
-			<left>405</left>
-			<top>300</top>
-			<width>867</width>
-			<height>488</height>
-			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<visible>Control.IsVisible(50) + [Player.HasVideo + !!Skin.HasSetting(HideVideoBackgrounds)] + !Skin.HasSetting(Fullscreen_Trailer)</visible>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)]</visible>
 			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="group">
-				<include condition="Skin.HasSetting(MoviesExtraThumbs)">thumbs-extra-movies</include>
-			</control>
-			<animation effect="slide" end="0,60" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
 			<control type="image">
 				<left>27</left>
 				<top>594</top>
 				<width>327</width>
 				<height>465</height>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<animation effect="slide" end="0,-60" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
 				<visible>ListItem.IsParentFolder + !Window.IsVisible(VideoPlaylist)</visible>
 			</control>
 			<control type="image">
@@ -497,7 +273,6 @@
 				<height>465</height>
 				<texture background="true">$VAR[IconPoster]</texture>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<animation effect="slide" end="0,-60" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
@@ -506,8 +281,7 @@
 				<width>351</width>
 				<height>540</height>
 				<texture fallback="case-sets.png">case$INFO[ListItem.VideoResolution].png</texture>
-				<animation effect="slide" end="0,-60" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(HideMovieCase)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
 				<left>168</left>
@@ -515,7 +289,6 @@
 				<width>45</width>
 				<height>27</height>
 				<texture>movieset.png</texture>
-				<animation effect="slide" end="0,-60" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
 				<visible>!ListItem.IsParentFolder + ListItem.IsFolder + !Window.IsVisible(VideoPlaylist) + String.StartsWith(Container.Folderpath,videodb://)</visible>
 			</control>
 			<control type="image">
@@ -524,7 +297,7 @@
 				<width>50</width>
 				<height>18</height>
 				<texture>3d-logo.png</texture>
-				<animation effect="slide" end="0,-60" time="0" condition="Skin.HasSetting(Enable_Movies_Media_Flags)">Conditional</animation>
+				<animation effect="slide" end="0,-60" time="0" condition="true">Conditional</animation>
 				<visible>ListItem.IsStereoScopic</visible>
 			</control>
 		</control>
@@ -563,19 +336,6 @@
 				<label>$VAR[ViewFanartLabel3]</label>
 			</control>
 			<control type="label">
-				<left>60</left>
-				<top>848</top>
-				<width>1178</width>
-				<height>45</height>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054] : ] $INFO[ListItem.Property(TotalEpisodes), - $LOCALIZE[20360] : ] [COLOR=lightblue] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
-				<visible>Skin.HasSetting(TVShowsPosters) + [String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
-			</control>
-			<control type="label">
 				<left>386</left>
 				<top>848</top>
 				<width>900</width>
@@ -586,21 +346,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054] : ]$INFO[ListItem.Property(TotalEpisodes), - $LOCALIZE[20360] : ] [COLOR=lightblue] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
-				<visible>!Skin.HasSetting(TVShowsPosters) | ![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
-			</control>
-			<control type="textbox">
-				<description>Plot Value for TVShow</description>
-				<left>60</left>
-				<top>903</top>
-				<width>1178</width>
-				<height>124</height>
-				<font>font-19</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$INFO[ListItem.Plot]</label>
-				<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>Skin.HasSetting(TVShowsPosters) + [String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
+				<visible>![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
 			</control>
 			<control type="textbox">
 				<description>Plot Value for TVShow</description>
@@ -614,7 +360,7 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<visible>!Skin.HasSetting(TVShowsPosters) | ![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
+				<visible>![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -630,35 +376,14 @@
 			</control>
 			<control type="image">
 				<left>27</left>
-				<top>720</top>
-				<width>327</width>
-				<height>327</height>
-				<aspectratio align="left" aligny="center">keep</aspectratio>
-				<align>left</align>
-				<texture diffuse="banner-diffuse.png" background="true">$VAR[IconBanner]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<animation effect="slide" start="-180,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,0" end="-180,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-				<animation effect="slide" start="-180,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
-				<visible>![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)] + Skin.HasSetting(TVShowsPosters) + !ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>27</left>
 				<top>594</top>
 				<width>327</width>
 				<height>465</height>
 				<texture background="true">$VAR[IconPoster]</texture>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!Skin.HasSetting(TVShowsPosters) + !ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-			<control type="image">
-				<left>27</left>
-				<top>552</top>
-				<width>351</width>
-				<height>540</height>
-				<texture>case-tv.png</texture>
-				<visible>!Skin.HasSetting(TVShowsPosters) + !ListItem.IsParentFolder + !Skin.HasSetting(HideTVShowCase)</visible>
-			</control>
+
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(50) + Container.Content(Seasons)</visible>
@@ -669,23 +394,6 @@
 				<width>1312</width>
 				<height>279</height>
 				<texture border="10">underlay.png</texture>
-			</control>
-			<control type="image">
-				<left>410</left>
-				<top>832</top>
-				<width>850</width>
-				<height>189</height>
-				<texture border="14">banner-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder + Skin.HasSetting(TVShowsPosters)</visible>
-			</control>
-			<control type="image">
-				<left>429</left>
-				<top>852</top>
-				<width>812</width>
-				<height>150</height>
-				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-				<texture fallback="DefaultBanner.png" diffuse="banner-diffuse.png" background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
-				<visible>!ListItem.IsParentFolder + Skin.HasSetting(TVShowsPosters)</visible>
 			</control>
 			<control type="label">
 				<left>360</left>
@@ -711,7 +419,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/UPPERCASE][/B][/COLOR]]</label>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(TVShowsPosters)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<left>360</left>
@@ -724,7 +432,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Property(TotalEpisodes),[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[20360]: [/UPPERCASE][/B][/COLOR]]</label>
-				<animation effect="slide" start="0,0" end="0,-70" time="0" condition="!Skin.HasSetting(TVShowsPosters)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-70" time="0" condition="true">Conditional</animation>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -738,7 +446,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>[COLOR=blue] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(TVShowsPosters)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -761,26 +469,18 @@
 				<fadetime>IconCrossfadeTime</fadetime>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-			<control type="image">
-				<left>27</left>
-				<top>552</top>
-				<width>351</width>
-				<height>540</height>
-				<texture>case-tv.png</texture>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(HideTVShowCase)</visible>
-			</control>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(50) + [Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
-			<animation effect="slide" end="0,52" time="0" condition="Skin.HasSetting(Enable_TVShows_Media_Flags)">Conditional</animation>
+			<animation effect="slide" end="0,52" time="0" condition="true">Conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>783</top>
 				<width>1312</width>
 				<height>279</height>
 				<texture border="10">underlay.png</texture>
-				<visible>[Container.Content(Episodes) + !Skin.HasSetting(Enable_TVShows_Media_Flags)] | [Container.Content(MusicVideos) + !Skin.HasSetting(Enable_MusicVideos_Media_Flags)]</visible>
+				<visible>[Container.Content(Episodes)] | [Container.Content(MusicVideos)]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -788,7 +488,7 @@
 				<width>1312</width>
 				<height>226</height>
 				<texture border="10">underlay.png</texture>
-				<visible>[Container.Content(Episodes) + Skin.HasSetting(Enable_TVShows_Media_Flags)] | [Container.Content(MusicVideos) + Skin.HasSetting(Enable_MusicVideos_Media_Flags)]</visible>
+				<visible>[Container.Content(Episodes)] | [Container.Content(MusicVideos)]</visible>
 			</control>
 			<control type="label">
 				<left>476</left>
@@ -885,16 +585,16 @@
 				<top>982</top>
 				<width>810</width>
 				<height>72</height>
-				<include condition="!Skin.HasSetting(Enable_TVShows_Media_Flags)">VideoMediaFlags</include>
-				<visible>!Skin.HasSetting(Enable_TVShows_Media_Flags) + Container.Content(Episodes)</visible>
+				<include>VideoMediaFlags</include>
+				<visible>Container.Content(Episodes)</visible>
 			</control>
 			<control type="group">
 				<left>466</left>
 				<top>982</top>
 				<width>810</width>
 				<height>72</height>
-				<include condition="!Skin.HasSetting(Enable_TVShows_Media_Flags)">VideoMediaFlags</include>
-				<visible>!Skin.HasSetting(Enable_MusicVideos_Media_Flags) + Container.Content(MusicVideos)</visible>
+				<include>VideoMediaFlags</include>
+				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -1055,9 +755,7 @@
 			<left>300</left>
 			<top>213</top>
 			<width>532</width>
-			<include condition="!Skin.HasSetting(FanartShort) + !Skin.HasSetting(FanartLong)">FanartNormal</include>
-			<include condition="Skin.HasSetting(FanartShort)">FanartShort</include>
-			<include condition="Skin.HasSetting(FanartLong)">FanartLong</include>
+			<include>FanartNormal</include>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<onup>50</onup>
@@ -1158,26 +856,7 @@
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<visible>ListItem.IsParentFolder | ![!Skin.HasSetting(Enable_Foldericons_Music_Genre) + Container.Content(Genres) + String.IsEqual(Container.FolderPath,musicdb://genres/)]</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>678</top>
-				<width>321</width>
-				<height>398</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Enable_Foldericons_Music_Genre) + Container.Content(Genres) + String.IsEqual(Container.FolderPath,musicdb://genres/)</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>678</top>
-				<width>321</width>
-				<height>398</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture diffuse="thumb-diffuse.png" fallback="genre-music-icon.jpg">$VAR[MusicGenreIcon]</texture>
-				<bordersize>6</bordersize>
-				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Enable_Foldericons_Music_Genre) + Container.Content(Genres) + String.IsEqual(Container.FolderPath,musicdb://genres/)</visible>
+				<visible>ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 	</include>
@@ -1266,7 +945,7 @@
 				<height>222</height>
 				<texture border="10">underlay.png</texture>
 			</control>
-			<include condition="!Skin.HasSetting(Enable_Music_Media_Flags)">MusicMediaFlags</include>
+			<include>MusicMediaFlags</include>
 			<control type="label">
 				<left>393</left>
 				<top>866</top>
@@ -1486,24 +1165,6 @@
 				<visible>!ListItem.IsParentFolder + !Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="image">
-				<left>12</left>
-				<top>738</top>
-				<width>368</width>
-				<height>338</height>
-				<texture>cdcase-shadow.png</texture>
-				<description>music fanart view</description>
-				<visible>!ListItem.IsParentFolder + !Container.Content(MusicVideos) + !Skin.HasSetting(HideMusicCase)</visible>
-			</control>
-			<control type="image">
-				<left>18</left>
-				<top>744</top>
-				<width>354</width>
-				<height>321</height>
-				<texture>cdcase.png</texture>
-				<description>music fanart view</description>
-				<visible>!ListItem.IsParentFolder + !Container.Content(MusicVideos) + !Skin.HasSetting(HideMusicCase)</visible>
-			</control>
-			<control type="image">
 				<left>15</left>
 				<top>796</top>
 				<width>447</width>
@@ -1591,9 +1252,7 @@
 			<left>300</left>
 			<top>213</top>
 			<width>532</width>
-			<include condition="!Skin.HasSetting(FanartShort) + !Skin.HasSetting(FanartLong)">FanartNormal</include>
-			<include condition="Skin.HasSetting(FanartShort)">FanartShort</include>
-			<include condition="Skin.HasSetting(FanartLong)">FanartLong</include>
+			<include>FanartNormal</include>
 			<onleft condition="Window.IsVisible(Pictures)">7009</onleft>
 			<onleft condition="Window.IsVisible(Programs) | Window.IsVisible(AddonBrowser)">9000</onleft>
 			<onright>60</onright>

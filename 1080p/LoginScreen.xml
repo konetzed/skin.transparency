@@ -12,7 +12,6 @@
 			<timeperimage>5000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>2000</fadetime>
-			<include condition="Skin.HasSetting(AnimateBackgrounds)">backgroundanimation</include>
 		</control>
 		<control type="group">
 			<include>ContentFade</include>
@@ -118,14 +117,14 @@
 				<include>Window_OpenClose_Footer_Animation</include>
 				<control type="image">
 					<left>0</left>
-					<top>111r</top>
+					<top>50r</top>
 					<width>1920</width>
-					<height>111</height>
-					<texture flipy="true" border="1">Header.png</texture>
+					<height>50</height>
+					<texture flipy="true" border="2">header.png</texture>
 				</control>
 				<control type="label">
 					<left>60</left>
-					<top>1023</top>
+					<top>1033</top>
 					<height>45</height>
 					<width>1800</width>
 					<font>font-20</font>
@@ -141,8 +140,8 @@
 					<left>0</left>
 					<top>0</top>
 					<width>1920</width>
-					<height>82</height>
-					<texture border="1">Header.png</texture>
+					<height>50</height>
+					<texture border="2">header.png</texture>
 				</control>
 				<control type="grouplist">
 					<left>1078</left>

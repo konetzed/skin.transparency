@@ -7,7 +7,6 @@
 	<include file="View-FullList.xml" />
 	<include file="View-Icons.xml" />
 	<include file="View-Item.xml" />
-	<include file="View-Jukebox.xml" />
 	<include file="View-List.xml" />
 	<include file="View-MediaInfo.xml" />
 	<include file="View-PicThumb.xml" />
@@ -17,9 +16,7 @@
 	<include file="View-Thumbnail.xml" />
 	<include file="View-ThumbWall.xml" />
 	<include file="View-Wall.xml" />
-	<include file="View-WideIcon.xml" />
 	<include file="Includes_Animations.xml" />
-	<include file="Includes_CDWall.xml" />
 	<include file="Includes_DebugInfo.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_MediaFlagsMusic.xml" />
@@ -61,39 +58,7 @@
 			<onright>9000</onright>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(50) + !Skin.HasSetting(FanartShort) + !Skin.HasSetting(FanartLong)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>836</left>
-			<top>207</top>
-			<width>30</width>
-			<height>447</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(50) + Skin.HasSetting(FanartShort)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>836</left>
-			<top>207</top>
-			<width>30</width>
-			<height>1012</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(50) + Skin.HasSetting(FanartLong)</visible>
+			<visible>Control.IsVisible(50)</visible>
 		</control>
 		<control type="scrollbar" id="60">
 			<left>1012</left>
@@ -1074,7 +1039,7 @@
 		<control type="group">
 			<left>8</left>
 			<top>820</top>
-			<visible>Player.HasVideo + !!Skin.HasSetting(HideVideoBackgrounds) + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(591) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
+			<visible>Player.HasVideo + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(591) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
 			<include>VisibleFadeEffect2</include>
 			<include>ContentFade</include>
 			<control type="image">
@@ -1225,7 +1190,6 @@
 				<width>248</width>
 				<height>225</height>
 				<texture>cdcase.png</texture>
-				<visible>!Skin.HasSetting(HideMusicCase)</visible>
 			</control>
 			<control type="label">
 				<left>262</left>
@@ -1334,10 +1298,7 @@
 			<height>818</height>
 			<texture border="17">panel.png</texture>
 			<bordersize>25</bordersize>
-			<animation effect="zoom" start="230,132,1464,817" end="230,132,1464,586" time="300" condition="Control.IsVisible(50) + Skin.HasSetting(FanartShort)">Conditional</animation>
-			<animation effect="zoom" start="230,132,1464,817" end="230,132,1464,1230" time="300" condition="Control.IsVisible(50) + Skin.HasSetting(FanartLong)">Conditional</animation>
 			<animation effect="zoom" start="230,132,1464,817" end="0,30,1920,967" time="300" condition="[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(SkinSettings) + [Skin.String(SkinSettings,8) | Skin.String(SkinSettings,9)]">Conditional</animation>
 		</control>
 	</include>
 	<include name="ContentPanel2">
@@ -1495,7 +1456,6 @@
 			<animation effect="slide" start="0,0" end="0,-720" condition="Control.IsVisible(55)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-765" condition="Control.IsVisible(57)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="578,-248" condition="Control.IsVisible(596)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-300,135" condition="Control.IsVisible(50) + Skin.HasSetting(FanartLong)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="150" condition="Control.IsVisible(55) + Control.IsVisible(7031)">Conditional</animation>
 			<visible>!String.IsEmpty(Window(Home).Property(NextAired.Label)) + !ListItem.IsParentFolder + [Container.Content(TVShows) | Container.Content(Seasons) | [Container.Content(Episodes) + [Control.IsVisible(50) | Control.IsVisible(590)]]] + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 			<control type="image">
@@ -1689,9 +1649,7 @@
 			<visible>Container.Scrolling</visible>
 			<animation effect="fade" time="300">Visible</animation>
 			<animation effect="fade" time="300" delay="500">Hidden</animation>
-			<animation effect="slide" end="-390,0" time="0" condition="Control.IsVisible(50) + !Skin.HasSetting(FanartShort) + !Skin.HasSetting(FanartLong)">Conditional</animation>
-			<animation effect="slide" end="-390,-105" time="0" condition="Control.IsVisible(50) + Skin.HasSetting(FanartShort)">Conditional</animation>
-			<animation effect="slide" end="-390,135" time="0" condition="Control.IsVisible(50) + Skin.HasSetting(FanartLong)">Conditional</animation>
+			<animation effect="slide" end="-390,0" time="0" condition="Control.IsVisible(50)">Conditional</animation>
 			<animation effect="slide" end="-300,0" time="0" condition="Control.IsVisible(51)">Conditional</animation>
 			<animation effect="slide" end="-1658,180" time="0" condition="Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(596)">Conditional</animation>
 			<animation effect="slide" end="-1658,322" time="0" condition="Control.IsVisible(56)">Conditional</animation>
@@ -1794,29 +1752,6 @@
 			<selected>Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</selected>
 			<enable>Skin.HasSetting(Menu$PARAM[section]Sub)</enable>
 		</control>
-	</include>
-	<include name="SideMenuAnim">
-		<include condition="!Skin.HasSetting(WideSideMenuButtons)">SideMenuAnimNormal</include>
-		<include condition="Skin.HasSetting(WideSideMenuButtons)">SideMenuAnimWide</include>
-		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
-	</include>
-	<include name="SideMenuAnimNormal">
-		<animation effect="slide" start="0,0" end="266,0" time="400" tween="quadratic" easing="out">VisibleChange</animation>
-	</include>
-	<include name="SideMenuAnimWide">
-		<animation effect="slide" start="0,0" end="378,0" time="400" tween="quadratic" easing="out">VisibleChange</animation>
-	</include>
-	<include name="SideMenuAnim2">
-		<include condition="!Skin.HasSetting(WideSideMenuButtons)">SideMenuAnim2Normal</include>
-		<include condition="Skin.HasSetting(WideSideMenuButtons)">SideMenuAnim2Wide</include>
-		<animation effect="fade" start="100" end="0" time="100" delay="400" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-		<animation effect="fade" start="100" end="100" time="0" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-	</include>
-	<include name="SideMenuAnim2Normal">
-		<animation effect="slide" start="0,0" end="266,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-	</include>
-	<include name="SideMenuAnim2Wide">
-		<animation effect="slide" start="0,0" end="378,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 	</include>
 	<include name="SubMenuButtons">
 		<content>

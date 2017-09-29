@@ -5,7 +5,6 @@
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Right_Panel_Animation</include>
-			<include>ContentFade</include>
 			<include>ContentPanel2</include>
 			<control type="group">
 				<top>68</top>
@@ -306,8 +305,8 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>82</height>
-				<texture border="1">Header.png</texture>
+				<height>50</height>
+				<texture border="2">header.png</texture>
 			</control>
 			<control type="grouplist">
 				<include>Breadcrumbs</include>
@@ -317,5 +316,6 @@
 			<include>CommonFileCount7</include>
 		</control>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControlsHome</include>
+		<include>ContentFade</include>
 	</controls>
 </window>

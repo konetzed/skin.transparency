@@ -45,10 +45,10 @@
 							<texture border="2">button-nofocus.png</texture>
 						</control>
 						<control type="image">
-							<left>18</left>
-							<top>18</top>
-							<width>40</width>
-							<height>40</height>
+							<left>20</left>
+							<top>20</top>
+							<width>36</width>
+							<height>36</height>
 							<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
@@ -72,10 +72,10 @@
 							<texture colordiffuse="darkcolor">button-focus.png</texture>
 						</control>
 						<control type="image">
-							<left>18</left>
-							<top>18</top>
-							<width>40</width>
-							<height>40</height>
+							<left>20</left>
+							<top>20</top>
+							<width>36</width>
+							<height>36</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
@@ -201,7 +201,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>50</height>
-				<texture border="1">header.png</texture>
+				<texture border="2">header.png</texture>
 			</control>
 			<control type="grouplist">
 				<include>Breadcrumbs</include>
