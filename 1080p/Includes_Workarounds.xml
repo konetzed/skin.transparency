@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="cdart-jukebox">
-		<control type="image">
-			<description>dirty hack for showing cdart image</description>
-			<left>810</left>
-			<top>585</top>
-			<width>300</width>
-			<height>300</height>
-			<texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
-			<aspectratio>keep</aspectratio>
-			<include>cdartspinjukebox</include>
-			<visible>Player.HasAudio + ![String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)]</visible>
-		</control>
-		<control type="image">
-			<description>dirty hack for showing cdart image</description>
-			<left>810</left>
-			<top>585</top>
-			<width>300</width>
-			<height>300</height>
-			<texture diffuse="disc_mask.png" background="true">disc.png</texture>
-			<aspectratio>keep</aspectratio>
-			<include>cdartspinjukebox</include>
-			<visible>Player.HasAudio + [String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)]</visible>
-		</control>
-	</include>
 	<include name="cdart-musicvisualisation">
 		<control type="image">
 			<description>dirty hack for showing cdart image</description>
@@ -58,18 +34,6 @@
 			<fadetime>IconCrossfadeTime</fadetime>
 			<animation effect="rotate" start="0" end="15" center="auto" time="0" condition="true">Conditional</animation>
 			<visible>[Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(595)] + ![String.Contains(ListItem.Path,plugin://) | String.Contains(ListItem.Path,special://musicplaylists/) | String.Contains(Container.FolderPath,plugin://) | String.Contains(Container.FolderPath,addons://)]</visible>
-		</control>
-	</include>
-	<include name="logo-artists-visualisation">
-		<control type="image">
-			<left>15</left>
-			<top>45</top>
-			<width>345</width>
-			<height>134</height>
-			<texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
-			<fadetime>IconCrossfadeTime</fadetime>
-			<animation effect="rotate" start="0" end="15" center="auto" time="0" condition="true">Conditional</animation>
-			<animation effect="fade" start="100" end="20" time="0" condition="![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,spectrum) | String.IsEmpty(Visualisation.Name)]">Conditional</animation>
 		</control>
 	</include>
 	<include name="logo-movies">

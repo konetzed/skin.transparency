@@ -9,7 +9,6 @@
 		<control type="group">
 			<include>CoverFlow-Music</include><!-- view id=55 -->
 			<include>Icons-Albums</include><!-- view id=56 -->
-			<include>Jukebox</include><!-- view id=591 -->
 			<include>Wall-Music</include><!-- view id=592 -->
 			<include>Item-Music</include><!-- view id=595 -->
 		</control>

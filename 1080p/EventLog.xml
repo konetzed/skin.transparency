@@ -6,182 +6,172 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>ContentPanel</include>
-			<control type="list" id="570">
-				<left>300</left>
-				<top>213</top>
-				<width>1320</width>
-				<height>682</height>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>570</onup>
-				<ondown>570</ondown>
-				<viewtype label="535">list</viewtype>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<itemlayout width="1320" height="98">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>1320</width>
-						<height>98</height>
-						<texture border="7">list-nofocus.png</texture>
-						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="image">
-						<left>8</left>
-						<top>8</top>
-						<width>82</width>
-						<height>82</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>105</left>
-						<top>0</top>
-						<width>1200</width>
-						<height>45</height>
-						<font>font-20</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>blue</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>105</left>
-						<top>0</top>
-						<width>1200</width>
-						<height>45</height>
-						<font>font-20</font>
-						<textcolor>lightblue</textcolor>
-						<selectedcolor>blue</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-					<control type="textbox">
-						<left>105</left>
-						<top>36</top>
-						<width>1200</width>
-						<height>54</height>
-						<font>font-18</font>
-						<selectedcolor>blue</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(Event.Description)]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout width="1320" height="98">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>1320</width>
-						<height>98</height>
-						<texture border="7">list-nofocus.png</texture>
-						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>1320</width>
-						<height>98</height>
-						<texture border="7">list-focus2.png</texture>
-						<include>VisibleFadeEffect</include>
-						<include>ListFocusScroll</include>
-						<visible>Control.HasFocus(570)</visible>
-					</control>
-					<control type="image">
-						<left>8</left>
-						<top>8</top>
-						<width>82</width>
-						<height>82</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>105</left>
-						<top>0</top>
-						<width>1200</width>
-						<height>45</height>
-						<font>font-20</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>blue</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>105</left>
-						<top>0</top>
-						<width>1200</width>
-						<height>45</height>
-						<font>font-20</font>
-						<textcolor>lightblue</textcolor>
-						<selectedcolor>blue</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-					<control type="textbox">
-						<left>105</left>
-						<top>30</top>
-						<width>1200</width>
-						<height>68</height>
-						<font>font-18</font>
-						<selectedcolor>blue</selectedcolor>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(Event.Description)]</label>
-					</control>
-				</focusedlayout>
+			<left>120</left>
+			<control type="image">
+				<left>0</left>
+				<top>80</top>
+				<width>1680</width>
+				<height>920</height>
+				<texture border="5">panel-light.png</texture>
 			</control>
-			<include>AllViewCommonPageControls</include>
-			<include>ScrollOffsetLabel</include>
-			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="350" delay="350">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="350">WindowClose</animation>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>ContentFade</include>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include>CommonNowPlaying</include>
+			<control type="image">
+				<left>356</left>
+				<top>81</top>
+				<width>3</width>
+				<height>918</height>
+				<texture colordiffuse="grey">white.png</texture>
+			</control>
 			<control type="grouplist" id="9000">
-				<include>SideMenuAnim</include>
-				<onleft>570</onleft>
-				<onright>570</onright>
+				<description>button area</description>
+				<left>1</left>
+				<top>106</top>
+				<width>355</width>
+				<height>675</height>
 				<itemgap>-2</itemgap>
+				<onright>570</onright>
 				<control type="button" id="999">
 					<description>Sort by button</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
+					<width>355</width>
 					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
 					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
 				</control>
 				<control type="button" id="21">
 					<description>Level button</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
+					<width>355</width>
 				</control>
 				<control type="button" id="22">
 					<description>Only show current level</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
+					<width>355</width>
 				</control>
 				<control type="button" id="20">
 					<description>Clear button</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>192</label>
 				</control>
 			</control>
+			<control type="list" id="570">
+				<orientation>vertical</orientation>
+				<left>359</left>
+				<top>106</top>
+				<width>1320</width>
+				<height>868</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>570</onup>
+				<ondown>570</ondown>
+				<pagecontrol>60</pagecontrol>
+				<visible>String.IsEmpty(Window.Property(Options))</visible>
+				<itemlayout width="1320" height="88">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1320</width>
+						<height>88</height>
+						<texture border="2">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>68</width>
+						<height>68</height>
+						<texture> colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<left>100</left>
+						<width>1205</width>
+						<height>50</height>
+						<font>font-25</font>
+						<textcolor>verylightgrey</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<left>100</left>
+						<width>1205</width>
+						<height>88</height>
+						<font>font-22</font>
+						<textcolor>verylightgrey</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>36</top>
+						<width>1205</width>
+						<height>54</height>
+						<font>font-18</font>
+						<textcolor>verylightgrey</textcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(Event.Description)]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1320" height="88">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1320</width>
+						<height>88</height>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>10</top>
+						<width>68</width>
+						<height>68</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>0</top>
+						<width>1205</width>
+						<height>50</height>
+						<font>font-25</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>0</top>
+						<width>1205</width>
+						<height>88</height>
+						<font>font-22</font>
+						<textcolor>white</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>36</top>
+						<width>1205</width>
+						<height>54</height>
+						<font>font-18</font>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(Event.Description)]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1680</left>
+				<top>80</top>
+				<onleft>570</onleft>
+			</control>
 		</control>
 		<control type="group">
-			<include>ContentFade</include>
 			<include>Window_OpenClose_Header_Animation</include>
-			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50)">Conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>

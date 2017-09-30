@@ -5,226 +5,140 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>ContentPanel</include>
-			<include>ContentFade</include>
-			<animation effect="slide" start="0,0" end="112,0" time="200" delay="200" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="350">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="350">WindowClose</animation>
-			<control type="label" id="40">
-				<description>fake filter text label</description>
-				<left>300</left>
-				<top>202</top>
-				<width>1320</width>
-				<height>45</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label></label>
-				<textcolor>blue</textcolor>
-				<font>font-32</font>
+			<left>120</left>
+			<control type="image">
+				<left>0</left>
+				<top>80</top>
+				<width>1680</width>
+				<height>920</height>
+				<texture border="5">panel-light.png</texture>
 			</control>
 			<control type="image">
-				<left>300</left>
-				<top>262</top>
-				<width>1320</width>
-				<height>3</height>
-				<texture>separator.png</texture>
-			</control>
-			<control type="group">
-				<left>300</left>
-				<top>300</top>
-				<control type="label" id="2">
-					<description>Label 2</description>
-					<left>0</left>
-					<top>0</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="3">
-					<description>Label 3</description>
-					<left>0</left>
-					<top>52</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="4">
-					<description>Label 4</description>
-					<left>0</left>
-					<top>105</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="5">
-					<description>Label 5</description>
-					<left>0</left>
-					<top>158</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="6">
-					<description>Label 6</description>
-					<left>0</left>
-					<top>210</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="7">
-					<description>Label 7</description>
-					<left>0</left>
-					<top>262</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="8">
-					<description>Label 8</description>
-					<left>0</left>
-					<top>315</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="9">
-					<description>Label 9</description>
-					<left>0</left>
-					<top>368</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="10">
-					<description>Label 10</description>
-					<left>0</left>
-					<top>420</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="11">
-					<description>Label 11</description>
-					<left>0</left>
-					<top>472</top>
-					<width>1320</width>
-					<label></label>
-					<font>font-20</font>
-				</control>
-				<control type="label" id="52">
-					<description>Kodi Build Version</description>
-					<left>0</left>
-					<top>525</top>
-					<width>1320</width>
-					<label>144</label>
-					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<font>font-20</font>
-				</control>
-				<control type="label">
-					<description>Transparency! Version</description>
-					<left>0</left>
-					<top>555</top>
-					<width>1320</width>
-					<label>$INFO[System.AddonTitle(skin.transparency)]  $INFO[System.AddonVersion(skin.transparency)]</label>
-					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<font>font-20</font>
-				</control>
-			</control>
-			<control type="textbox" id="30">
-				<description>textarea</description>
-				<left>300</left>
-				<top>300</top>
-				<width>1290</width>
-				<height>485</height>
-				<label></label>
-				<font>font-19</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<pagecontrol>61</pagecontrol>
-				<onright>61</onright>
-				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-			<control type="scrollbar" id="61">
-				<left>1620</left>
-				<top>300</top>
-				<width>30</width>
-				<height>485</height>
-				<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-				<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-				<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-				<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-				<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-				<onleft>100</onleft>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-				<visible>Control.IsVisible(30)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include>CommonNowPlaying</include>
-			<include>ContentFade</include>
-			<control type="image">
-				<left>-375</left>
-				<top>141</top>
-				<height>24</height>
-				<texture border="0,0,10,0">shadow-top2.png</texture>
-				<animation effect="slide" start="0,0" end="375,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+				<left>356</left>
+				<top>81</top>
+				<width>3</width>
+				<height>918</height>
+				<texture colordiffuse="grey">white.png</texture>
 			</control>
 			<control type="grouplist" id="9000">
-				<include>SideMenuAnim2</include>
-				<onleft>5999</onleft>
-				<onright>5999</onright>
+				<description>button area</description>
+				<left>1</left>
+				<top>106</top>
+				<width>355</width>
+				<height>675</height>
 				<itemgap>-2</itemgap>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>20</ondown>
 				<control type="button" id="95">
 					<description>Button Default Values</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>20037</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
 				<control type="button" id="94">
 					<description>Button Storage</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>13277</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
 				<control type="button" id="96">
 					<description>Button Network</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>13279</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
 				<control type="button" id="97">
 					<description>Button Video</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>13280</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
 				<control type="button" id="98">
 					<description>Button Hardware</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>13281</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
 				<control type="button" id="99">
 					<description>Button PVR</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>19191</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
 				<control type="button" id="100">
 					<description>Button Policy</description>
-					<include>ButtonCommonValues</include>
+					<width>355</width>
 					<label>12389</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
+			</control>
+			<control type="grouplist">
+				<left>374</left>
+				<top>106</top>
+				<width>1290</width>
+				<height>868</height>
+				<control type="label" id="2">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="3">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="4">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="5">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="6">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="7">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="8">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="9">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="10">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="11">
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="52">
+					<description>Kodi Build Version</description>
+					<label>144</label>
+					<textcolor>blue</textcolor>
+					<visible>!Control.IsVisible(30)</visible>
+				</control>
+				<control type="label">
+					<description>Transparency! Version</description>
+					<label>$INFO[System.AddonTitle(skin.transparency)]  $INFO[System.AddonVersion(skin.transparency)]</label>
+					<textcolor>blue</textcolor>
+					<visible>!Control.IsVisible(30)</visible>
+				</control>
+			</control>
+			<control type="textbox" id="30">
+				<left>374</left>
+				<top>106</top>
+				<width>1290</width>
+				<height>868</height>
+				<font>font-19</font>
+				<align>justify</align>
+				<pagecontrol>61</pagecontrol>
+				<onright>61</onright>
+				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>1680</left>
+				<top>80</top>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<visible>Control.IsVisible(30)</visible>
 			</control>
 		</control>
 		<control type="group">

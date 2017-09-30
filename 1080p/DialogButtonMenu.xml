@@ -24,18 +24,19 @@
 			</control>
 			<control type="label">
 				<left>130</left>
-				<top>34</top>
+				<top>22</top>
 				<width>600</width>
-				<height>25</height>
+				<height>96</height>
 				<label>[B]$LOCALIZE[31010][/B]</label>
 				<font>font-25</font>
+				<aligny>center</aligny>
 			</control>
 			<control type="label">
-				<left>130</left>
-				<top>75</top>
+				<left>30</left>
+				<top>135</top>
 				<width>600</width>
 				<height>18</height>
-				<label>Do you really want to exit Kodi?</label>
+				<label>$LOCALIZE[31016]</label>
 				<font>font-18</font>
 				<wrapmultiline>true</wrapmultiline>
 			</control>

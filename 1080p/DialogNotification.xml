@@ -2,46 +2,44 @@
 <window>
 	<include>dialogeffect</include>
 	<coordinates>
-		<left>660</left>
-		<top>0</top>
+		<left>600</left>
+		<top>50</top>
 	</coordinates>
 	<controls>
 		<control type="group">
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>600</width>
-				<height>52</height>
-				<texture border="16,0,16,0">popup-small.png</texture>
+				<width>720</width>
+				<height>100</height>
+				<texture border="5">panel-body.png</texture>
 			</control>
 			<control type="image" id="400">
 				<description>avatar</description>
-				<left>30</left>
-				<top>3</top>
-				<width>45</width>
-				<height>45</height>
+				<left>18</left>
+				<top>8</top>
+				<width>32</width>
+				<height>32</height>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label" id="401">
 				<description>Line 1 Label</description>
-				<left>75</left>
-				<top>0</top>
-				<width>510</width>
-				<height>24</height>
-				<align>center</align>
+				<left>60</left>
+				<top>10</top>
+				<width>640</width>
+				<height>30</height>
 				<aligny>center</aligny>
-				<font>font-15b</font>
+				<font>font-18b</font>
 			</control>
-			<control type="fadelabel" id="402">
+			<control type="label" id="402">
 				<description>Line 2 Label</description>
-				<left>75</left>
-				<top>22</top>
-				<width>510</width>
-				<height>24</height>
-				<align>center</align>
+				<left>20</left>
+				<top>45</top>
+				<width>680</width>
+				<height>40</height>
 				<aligny>center</aligny>
-				<font>font-15b</font>
-				<scroll>true</scroll>
+				<font>font-17</font>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 		</control>
 	</controls>

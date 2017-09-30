@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include file="defaults.xml" />
+	<include file="Defaults.xml" />
 	<include file="Includes_Variables.xml" />
 	<include file="View-CoverFlow.xml" />
 	<include file="View-Fanart.xml" />
@@ -19,10 +19,7 @@
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_DebugInfo.xml" />
 	<include file="Includes_Home.xml" />
-	<include file="Includes_MediaFlagsMusic.xml" />
-	<include file="Includes_MediaFlagsMusicFullScreen.xml" />
-	<include file="Includes_MediaFlagsVideo.xml" />
-	<include file="Includes_MediaFlagsVideoFullScreen.xml" />
+	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_Weather.xml" />
 	<include file="Includes_Workarounds.xml" />
 	<constant name="FanartCrossfadeTime">300</constant>
@@ -495,18 +492,6 @@
 			<visible>Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)</visible>
 		</control>
 	</include>
-	<include name="Breadcrumbs-TVGuide">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>TVGuide</description>
-			<label>$LOCALIZE[4]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
 	<include name="Breadcrumbs-Videos">
 		<control type="image">
 			<width>44</width>
@@ -574,12 +559,6 @@
 	<include name="ButtonToggleCommonValues">
 		<alttexturefocus border="10">Button_Side_Focus.png</alttexturefocus>
 		<alttexturenofocus border="10">Button_Side_NoFocus.png</alttexturenofocus>
-	</include>
-	<include name="ButtonCommonValuesNormal">
-		<width>274</width>
-	</include>
-	<include name="ButtonCommonValuesWide">
-		<width>387</width>
 	</include>
 	<include name="CommonFileCount">
 		<control type="grouplist">
@@ -1391,18 +1370,6 @@
 		<top>213</top>
 		<height>1016</height>
 	</include>
-	<include name="FanartNormalBanners">
-		<top>213</top>
-		<height>654</height>
-	</include>
-	<include name="FanartLongBanners">
-		<top>213</top>
-		<height>1044</height>
-	</include>
-	<include name="FanartShortBanners">
-		<top>168</top>
-		<height>522</height>
-	</include>
 	<include name="keyboard-charbutton">
 		<left>0</left>
 		<top>0</top>
@@ -1445,112 +1412,6 @@
 		<scroll>true</scroll>
 		<scrollsuffix />
 		<label>$INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     </label>
-	</include>
-	<include name="NextAiredInfo">
-		<control type="group">
-			<left>450</left>
-			<top>930</top>
-			<include>Window_OpenClose_Animation</include>
-			<include>ContentFade</include>
-			<animation effect="slide" start="0,0" end="0,-885" condition="Control.IsVisible(50) | Control.IsVisible(590)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-720" condition="Control.IsVisible(55)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-765" condition="Control.IsVisible(57)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="578,-248" condition="Control.IsVisible(596)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="150" condition="Control.IsVisible(55) + Control.IsVisible(7031)">Conditional</animation>
-			<visible>!String.IsEmpty(Window(Home).Property(NextAired.Label)) + !ListItem.IsParentFolder + [Container.Content(TVShows) | Container.Content(Seasons) | [Container.Content(Episodes) + [Control.IsVisible(50) | Control.IsVisible(590)]]] + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1020</width>
-				<height>150</height>
-				<texture diffuse="underlay-diffuse.png" border="0,10,0,10">underlay4.png</texture>
-			</control>
-			<control type="label">
-				<left>0</left>
-				<top>27</top>
-				<width>1020</width>
-				<height>90</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<label>[COLOR=blue]$LOCALIZE[31179][/COLOR][CR]$INFO[Window(Home).Property(NextAired.NextTitle)][CR]$INFO[Window(Home).Property(NextAired.AirTime)] - $INFO[Window(Home).Property(NextAired.NextDate)]</label>
-			</control>
-		</control>
-	</include>
-	<include name="NextAiredList">
-		<control type="image">
-			<left>6</left>
-			<top>9</top>
-			<width>240</width>
-			<height>60</height>
-			<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-			<aspectratio>keep</aspectratio>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
-		</control>
-		<control type="image">
-			<left>6</left>
-			<top>9</top>
-			<width>240</width>
-			<height>60</height>
-			<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
-			<aspectratio>keep</aspectratio>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-		</control>
-		<control type="label">
-			<left>6</left>
-			<top>69</top>
-			<width>240</width>
-			<height>30</height>
-			<label>$INFO[ListItem.Property(NextDate)]</label>
-			<font>font-18</font>
-			<align>center</align>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1) | String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-		</control>
-		<control type="label">
-			<left>6</left>
-			<top>96</top>
-			<width>240</width>
-			<height>30</height>
-			<label>$INFO[ListItem.Property(ShortTime)]</label>
-			<font>font-18</font>
-			<align>center</align>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1) | String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-		</control>
-		<control type="image">
-			<left>6</left>
-			<top>9</top>
-			<width>81</width>
-			<height>120</height>
-			<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-			<aspectratio>keep</aspectratio>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-		</control>
-		<control type="label">
-			<left>94</left>
-			<top>42</top>
-			<width>158</width>
-			<height>30</height>
-			<label>$INFO[ListItem.Property(NextDate)]</label>
-			<font>font-17</font>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-		</control>
-		<control type="label">
-			<left>94</left>
-			<top>69</top>
-			<width>158</width>
-			<height>30</height>
-			<label>$INFO[ListItem.Property(ShortTime)]</label>
-			<font>font-17</font>
-			<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-		</control>
-		<control type="image">
-			<left>252</left>
-			<top>0</top>
-			<width>1</width>
-			<height>135</height>
-			<texture>separator.png</texture>
-			<colordiffuse>99FFFFFF</colordiffuse>
-		</control>
 	</include>
 	<include name="PVR-Menu">
 		<control type="button" id="901">
@@ -1804,12 +1665,6 @@
 			<visible>Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</visible>
 		</item>
 	</include>
-	<include name="ToggleButtonNormal">
-		<left>236</left>
-	</include>
-	<include name="ToggleButtonWide">
-		<left>346</left>
-	</include>
 	<include name="TouchScreenControls">
 		<control type="group">
 			<left>1540</left>
@@ -1879,14 +1734,6 @@
 				<visible>Player.Playing</visible>
 			</control>
 		</control>
-	</include>
-	<include name="Window_OpenClose_Left_Panel_Position_Normal">
-		<left>-267</left>
-		<top>165</top>
-	</include>
-	<include name="Window_OpenClose_Left_Panel_Position_Wide">
-		<left>-380</left>
-		<top>165</top>
 	</include>
 	<include name="WindowTitleCommons">
 		<width min="15" max="638">auto</width>

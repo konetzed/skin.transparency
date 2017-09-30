@@ -194,7 +194,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
-					<animation effect="slide" start="0,0" end="60,0" time="0" condition="[Container.Content(Movies) + [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [Container.Content(Files)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Files)">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>1260</left>
@@ -275,7 +275,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
-					<animation effect="slide" start="0,0" end="60,0" time="0" condition="[Container.Content(Movies) + [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [Container.Content(Files)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Files)">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>1260</left>

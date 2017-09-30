@@ -7,7 +7,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<visible>!Player.Muted</visible>
+			<visible>![Player.Muted | Window.IsVisible(busydialog)]</visible>
 			<animation effect="fade" start="100" end="0" time="350" delay="2000">Hidden</animation>
 			<control type="image">
 				<left>0</left>
@@ -50,11 +50,11 @@
 			<control type="label">
 				<description>Volume Label</description>
 				<left>0</left>
-				<top>175</top>
+				<top>176</top>
 				<width>256</width>
 				<height>10</height>
 				<label>$LOCALIZE[13376]</label>
-				<font>font-21</font>
+				<font>font-18</font>
 				<textcolor>white</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -63,7 +63,7 @@
 			<control type="label">
 				<description>Passthrough Label</description>
 				<left>0</left>
-				<top>175</top>
+				<top>176</top>
 				<width>256</width>
 				<height>38</height>
 				<label>[B]$LOCALIZE[29802][/B]</label>
@@ -80,8 +80,6 @@
 				<width>192</width>
 				<height>10</height>
 				<info>Player.Volume</info>
-				<texturebg border="4,0,4,0">volumebar-back.png</texturebg>
-				<midtexture border="4,0,4,0">volumebar.png</midtexture>
 				<animation effect="fade" start="50" end="50" time="0" condition="Player.Passthrough">Conditional</animation>
 				<visible>true</visible>
 			</control>

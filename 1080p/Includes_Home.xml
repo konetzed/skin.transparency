@@ -4,6 +4,67 @@
 		<animation effect="slide" start="-675,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="-675,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 	</include>
+	<include name="HomeHeader">
+		<control type="group">
+			<include>Window_OpenClose_Header_Animation</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>50</height>
+				<texture border="2">header.png</texture>
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>5</top>
+				<width>146</width>
+				<height>40</height>
+				<texture>logo.png</texture>
+			</control>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<itemgap>18</itemgap>
+				<align>right</align>
+				<top>10</top>
+				<width>1900</width>
+				<control type="group">
+					<width>36</width>
+					<height>36</height>
+					<control type="image">
+						<top>-3</top>
+						<width>36</width>
+						<height>36</height>
+						<texture>volume-panel.png</texture>
+						<visible>Player.Muted</visible>
+					</control>
+				</control>
+				<control type="label">
+					<description>date label</description>
+					<width min="15" max="750">auto</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<font>font-20</font>
+					<textcolor>white</textcolor>
+					<label>$INFO[System.Date(ddd mmm dd)], $INFO[System.Time]</label>
+				</control>
+				<control type="button" id="20">
+					<description>Power push button</description>
+					<width>30</width>
+					<height>30</height>
+					<label></label>
+					<font></font>
+					<texturenofocus>home-power.png</texturenofocus>
+					<texturefocus colordiffuse="color">home-power.png</texturefocus>
+					<pulseonselect>true</pulseonselect>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
 	<include name="Home_Top_Weather_Icon">
 		<control type="group">
 			<include>Window_OpenClose_Right_Panel_Animation</include>
@@ -65,167 +126,172 @@
 		</control>
 	</include>
 	<include name="HomeMenu">
-		<include>Window_OpenClose_Home_Panel_Animation</include>
-		<control type="image">
+		<control type="group" id="9000">
 			<left>0</left>
-			<top>50</top>
-			<width>450</width>
-			<height>980</height>
-			<texture border="2">menu.png</texture>
-		</control>
-		<control type="list" id="5030">
-			<left>30</left>
-			<top>110</top>
-			<width>390</width>
-			<height>70</height>
-			<orientation>horizontal</orientation>
-			<onup>20</onup>
-			<ondown>5040</ondown>
-			<itemlayout width="130" height="70">
-				<control type="image">
-					<left>30</left>
-					<top>0</top>
-					<width>70</width>
-					<height>70</height>
-					<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
-				</control>
-			</itemlayout>
-			<focusedlayout width="130" height="70">
-				<control type="image">
-					<left>30</left>
-					<top>0</top>
-					<width>70</width>
-					<height>70</height>
-					<texture colordiffuse="darkcolor">circle.png</texture>
-					<visible>Control.HasFocus(5030)</visible>
-				</control>
-				<control type="image">
-					<left>30</left>
-					<top>0</top>
-					<width>70</width>
-					<height>70</height>
-					<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
-					<visible>!Control.HasFocus(5030)</visible>
-				</control>
-				<control type="image">
-					<left>30</left>
-					<top>0</top>
-					<width>70</width>
-					<height>70</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>Control.HasFocus(5030)</visible>
-				</control>
-			</focusedlayout>
-			<content>
-				<item id="1">
-					<label></label>
-					<icon>home-filemanager.png</icon>
-					<onclick>ActivateWindow(Filemanager)</onclick>
-				</item>
-				<item id="2">
-					<label></label>
-					<icon>home-favourites.png</icon>
-					<onclick>ActivateWindow(Favourites)</onclick>
-				</item>
-				<item id="3">
-					<label></label>
-					<icon>home-search.png</icon>
-					<onclick>RunScript(script.globalsearch)</onclick>
-				</item>
-			</content>
-		</control>
-		<include>SubMenu</include>
-		<control type="list" id="5040">
-			<orientation>vertical</orientation>
-			<left>0</left>
-			<top>200</top>
-			<width>450</width>
-			<height>792</height>
-			<onup>5030</onup>
-			<ondown>5040</ondown>
-			<onright>8000</onright>
-			<animation effect="fade" start="100" end="0" time="350" condition="ControlGroup(8000).HasFocus">Conditional</animation>
-			<itemlayout width="449" height="88">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>449</width>
-					<height>88</height>
-					<texture border="2">button-nofocus.png</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>88</width>
-					<height>88</height>
-					<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="label">
-					<top>0</top>
-					<left>90</left>
-					<width>359</width>
-					<height>88</height>
-					<font>font-28c</font>
-					<textcolor>verylightgrey</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout width="449" height="88">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>449</width>
-					<height>88</height>
-					<texture colordiffuse="darkcolor">button-focus.png</texture>
-					<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(5040)">Conditional</animation>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>88</width>
-					<height>88</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="label">
-					<left>90</left>
-					<top>0</top>
-					<width>359</width>
-					<height>88</height>
-					<font>font-28c</font>
-					<textcolor>white</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<scrollspeed>0</scrollspeed>
-					<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<left>420</left>
-					<top>0</top>
-					<width>20</width>
-					<height>88</height>
-					<font>font-21</font>
-					<textcolor>white</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<scrollspeed>0</scrollspeed>
-					<label>&gt;</label>
-				</control>
-			</focusedlayout>
-			<content>
-				<include condition="!Skin.HasSetting(Menu_Movies)">HomeMoviesButton</include>
-				<include condition="!Skin.HasSetting(Menu_TVShows)">HomeTVShowsButton</include>
-				<include condition="Skin.HasSetting(Menu_MusicVideos)">HomeMusicVideosButton</include>
-				<include condition="!Skin.HasSetting(Menu_Videos)">HomeVideosButton</include>
-				<include condition="Skin.HasSetting(Menu_TV)">HomeTVButton</include>
-				<include condition="!Skin.HasSetting(Menu_Music)">HomeMusicButton</include>
-				<include condition="!Skin.HasSetting(Menu_Pictures)">HomePicturesButton</include>
-				<include condition="!Skin.HasSetting(Menu_Programs)">HomeProgramsButton</include>
-				<include condition="Skin.HasSetting(Menu_Games)">HomeGamesButton</include>
-				<include condition="!Skin.HasSetting(Menu_Weather)">HomeWeatherButton</include>
-				<include condition="!Skin.HasSetting(Menu_Settings)">HomeSettingsButton</include>
-			</content>
+			<top>0</top>
+			<height>1080</height>
+			<width>2082</width>
+			<include>Window_OpenClose_Home_Panel_Animation</include>
+			<control type="image">
+				<left>0</left>
+				<top>50</top>
+				<width>450</width>
+				<height>980</height>
+				<texture border="2">menu.png</texture>
+			</control>
+			<control type="list" id="5030">
+				<left>30</left>
+				<top>110</top>
+				<width>390</width>
+				<height>70</height>
+				<orientation>horizontal</orientation>
+				<onup>20</onup>
+				<ondown>5040</ondown>
+				<itemlayout width="130" height="70">
+					<control type="image">
+						<left>30</left>
+						<top>0</top>
+						<width>70</width>
+						<height>70</height>
+						<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout width="130" height="70">
+					<control type="image">
+						<left>30</left>
+						<top>0</top>
+						<width>70</width>
+						<height>70</height>
+						<texture colordiffuse="darkcolor">circle.png</texture>
+						<visible>Control.HasFocus(5030)</visible>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>0</top>
+						<width>70</width>
+						<height>70</height>
+						<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
+						<visible>!Control.HasFocus(5030)</visible>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>0</top>
+						<width>70</width>
+						<height>70</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<visible>Control.HasFocus(5030)</visible>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label></label>
+						<icon>home-filemanager.png</icon>
+						<onclick>ActivateWindow(Filemanager)</onclick>
+					</item>
+					<item id="2">
+						<label></label>
+						<icon>home-favourites.png</icon>
+						<onclick>ActivateWindow(Favourites)</onclick>
+					</item>
+					<item id="3">
+						<label></label>
+						<icon>home-search.png</icon>
+						<onclick>RunScript(script.globalsearch)</onclick>
+					</item>
+				</content>
+			</control>
+			<include>SubMenu</include>
+			<control type="list" id="5040">
+				<left>0</left>
+				<top>200</top>
+				<width>450</width>
+				<height>792</height>
+				<onup>5030</onup>
+				<ondown>5040</ondown>
+				<onright>8000</onright>
+				<animation effect="fade" start="100" end="0" time="350" condition="ControlGroup(8000).HasFocus">Conditional</animation>
+				<itemlayout width="449" height="88">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>449</width>
+						<height>88</height>
+						<texture border="2">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>88</width>
+						<height>88</height>
+						<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<left>90</left>
+						<width>359</width>
+						<height>88</height>
+						<font>font-28c</font>
+						<textcolor>verylightgrey</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="449" height="88">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>449</width>
+						<height>88</height>
+						<texture colordiffuse="darkcolor">button-focus.png</texture>
+						<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(5040)">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>88</width>
+						<height>88</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>90</left>
+						<top>0</top>
+						<width>359</width>
+						<height>88</height>
+						<font>font-28c</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+						<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<left>420</left>
+						<top>0</top>
+						<width>20</width>
+						<height>88</height>
+						<font>font-21</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+						<label>&gt;</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<include condition="!Skin.HasSetting(Menu_Movies)">HomeMoviesButton</include>
+					<include condition="!Skin.HasSetting(Menu_TVShows)">HomeTVShowsButton</include>
+					<include condition="Skin.HasSetting(Menu_MusicVideos)">HomeMusicVideosButton</include>
+					<include condition="!Skin.HasSetting(Menu_Videos)">HomeVideosButton</include>
+					<include condition="Skin.HasSetting(Menu_TV)">HomeTVButton</include>
+					<include condition="!Skin.HasSetting(Menu_Music)">HomeMusicButton</include>
+					<include condition="!Skin.HasSetting(Menu_Pictures)">HomePicturesButton</include>
+					<include condition="!Skin.HasSetting(Menu_Programs)">HomeProgramsButton</include>
+					<include condition="Skin.HasSetting(Menu_Games)">HomeGamesButton</include>
+					<include condition="!Skin.HasSetting(Menu_Weather)">HomeWeatherButton</include>
+					<include condition="!Skin.HasSetting(Menu_Settings)">HomeSettingsButton</include>
+				</content>
+			</control>
 		</control>
 	</include>
 	<include name="HomeMoviesButton">

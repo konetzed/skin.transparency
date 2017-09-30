@@ -7,12 +7,6 @@
 			<size>30</size>
 		</font>
 		<font>
-			<name>font-16d</name>
-			<filename>digital-7.ttf</filename>
-			<style>bold</style>
-			<size>24</size>
-		</font>
-		<font>
 			<name>font-15</name>
 			<filename>teen-normal.ttf</filename>
 			<size>22</size>
@@ -38,6 +32,12 @@
 			<name>font-18</name>
 			<filename>teen-normal.ttf</filename>
 			<size>27</size>
+		</font>
+		<font>
+			<name>font-18b</name>
+			<filename>teen-normal.ttf</filename>
+			<size>27</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font-19</name>
@@ -174,12 +174,6 @@
 			<size>30</size>
 		</font>
 		<font>
-			<name>font-16d</name>
-			<filename>digital-7.ttf</filename>
-			<style>bold</style>
-			<size>24</size>
-		</font>
-		<font>
 			<name>font-15</name>
 			<filename>arial.ttf</filename>
 			<size>22</size>
@@ -193,7 +187,7 @@
 		<font>
 			<name>font-15c</name>
 			<filename>arial.ttf</filename>
-			<size>18</size>
+			<size>22</size>
 			<style>upper</style>
 		</font>
 		<font>
@@ -205,6 +199,12 @@
 			<name>font-18</name>
 			<filename>arial.ttf</filename>
 			<size>27</size>
+		</font>
+		<font>
+			<name>font-18b</name>
+			<filename>arial.ttf</filename>
+			<size>27</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font-19</name>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<default type="button">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="edit">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="fadelabel">
+		<font>font-20</font>
+		<textcolor>white</textcolor>
+	</default>
+	<default type="image">
+		<texture></texture>
+	</default>
+	<default type="label">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20</font>
+		<textcolor>white</textcolor>
+		<scrollsuffix>     -     </scrollsuffix>
+	</default>
+	<default type="mover">
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="progress">
+		<height>12</height>
+		<texturebg border="4,0,4,0">progressbar-back.png</texturebg>
+		<midtexture border="4,0,4,0">progressbar.png</midtexture>
+		<lefttexture></lefttexture>
+		<righttexture></righttexture>
+		<overlaytexture></overlaytexture>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+		<radiowidth>32</radiowidth>
+		<radioheight>32</radioheight>
+		<textureradioonfocus>radiobutton-on.png</textureradioonfocus>
+		<textureradioonnofocus>radiobutton-on.png</textureradioonnofocus>
+		<textureradioofffocus>radiobutton-off.png</textureradioofffocus>
+		<textureradiooffnofocus>radiobutton-off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">radiobutton-off.png</textureradiooffdisabled>
+	</default>
+	<default type="resize">
+		<texturefocus>calibrate-pixelratio-focus.png</texturefocus>
+		<texturenofocus>calibrate-pixelratio.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="scrollbar">
+		<width>12</width>
+		<height>920</height>
+		<texturesliderbackground></texturesliderbackground>
+		<texturesliderbar colordiffuse="strongfade" border="6">scrollbar.png</texturesliderbar>
+		<texturesliderbarfocus colordiffuse="darkcolor" border="6">scrollbar.png</texturesliderbarfocus>
+		<textureslidernib></textureslidernib>
+		<textureslidernibfocus></textureslidernibfocus>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+	</default>
+	<default type="slider">
+		<controloffsetx>75</controloffsetx>
+		<controloffsety>0</controloffsety>
+		<orientation>horizontal</orientation>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="sliderex">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+	</default>
+	<default type="spincontrol">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+		<textureup>spin-up.png</textureup>
+		<texturedown colordiffuse="lightgrey">spin-down.png</texturedown>
+		<textureupfocus colordiffuse="lightgrey">spin-up.png</textureupfocus>
+		<texturedownfocus>spin-down.png</texturedownfocus>
+		<textureupdisabled colordiffuse="40FFFFFF">spin-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">spin-down.png</texturedowndisabled>
+	</default>
+	<default type="spincontrolex">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+		<textureup colordiffuse="lightgrey">spin-up.png</textureup>
+		<texturedown colordiffuse="lightgrey">spin-down.png</texturedown>
+		<textureupfocus>spin-up.png</textureupfocus>
+		<texturedownfocus>spin-down.png</texturedownfocus>
+		<textureupdisabled colordiffuse="40FFFFFF">spin-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">spin-down.png</texturedowndisabled>
+		<spinwidth>32</spinwidth>
+		<spinheight>32</spinheight>
+		<reverse>yes</reverse>
+	</default>
+	<default type="textbox">
+		<width>615</width>
+		<height>320</height>
+		<textcolor>white</textcolor>
+		<font>font-20</font>
+	</default>
+	<default type="togglebutton">
+		<width>1320</width>
+		<height>70</height>
+		<label></label>
+		<font>font-20bc</font>
+		<textcolor>verylightgrey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkgrey</disabledcolor>
+		<invalidcolor>red</invalidcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="darkblue">button-focus.png</texturefocus>
+		<texturenofocus border="2">button-nofocus.png</texturenofocus>
+		<onback>50</onback>
+		<pulseonselect>false</pulseonselect>
+		<alttexturefocus colordiffuse="darkblue">button-focus.png</alttexturefocus>
+		<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
+	</default>
+</includes>

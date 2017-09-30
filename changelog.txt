@@ -1,3 +1,6 @@
+Transparency! v12.0.0
+- redesign
+
 Transparency! v11.0.2
 - fix partly watched icon for videos
 

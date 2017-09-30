@@ -32,11 +32,9 @@
 				<onup>3</onup>
 				<ondown>20</ondown>
 			</control>
-			<control type="togglebutton" id="10">
+			<control type="button" id="10">
 				<description>Default Category Button</description>
-				<alttexturefocus colordiffuse="fadecolor">button-focus.png</alttexturefocus>
-				<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
-				<usealttexture>ControlGroup(5).HasFocus | Control.HasFocus(20) | Control.HasFocus(90)</usealttexture>
+				<width>355</width>
 				<onback>SetFocus(5)</onback>
 			</control>
 			<control type="button" id="20">
@@ -59,12 +57,9 @@
 				<height>32</height>
 				<texture>icon-settings.png</texture>
 			</control>
-		</control>
-		<control type="group">
-			<left>125</left>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<left>354</left>
+				<left>359</left>
 				<top>106</top>
 				<width>1320</width>
 				<height>868</height>
@@ -76,19 +71,10 @@
 				<ondown>5</ondown>
 			</control>
 			<control type="scrollbar" id="90">
-				<left>1675</left>
+				<left>1680</left>
 				<top>80</top>
-				<width>12</width>
-				<height>920</height>
-				<texturesliderbackground></texturesliderbackground>
-				<texturesliderbar colordiffuse="strongfade" border="6">scrollbar.png</texturesliderbar>
-				<texturesliderbarfocus colordiffuse="darkcolor" border="6">scrollbar.png</texturesliderbarfocus>
-				<textureslidernib></textureslidernib>
-				<textureslidernibfocus></textureslidernibfocus>
 				<onleft>5</onleft>
 				<onright>3</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
 			</control>
 		</control>
 		<control type="button" id="7">

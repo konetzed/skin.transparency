@@ -42,8 +42,6 @@
 			<top>348</top>
 			<width>384</width>
 			<height>384</height>
-			<texturefocus>calibrate-pixelratio-focus.png</texturefocus>
-			<texturenofocus>calibrate-pixelratio.png</texturenofocus>
 		</control>
 		<control type="group">
 			<left>60</left>
