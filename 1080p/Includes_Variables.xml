@@ -265,15 +265,6 @@
 		<value condition="[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)">$INFO[VideoPlayer.Studio]</value>
 		<value condition="[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !Control.IsVisible(592) + !Control.IsVisible(598)">$INFO[VideoPlayer.Title]</value>
 	</variable>
-	<variable name="IncludesHomeVideoInfoLabel1">
-		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.TVShowTitle]</value>
-		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Artist]</value>
-		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]</value>
-	</variable>
-	<variable name="IncludesHomeVideoInfoLabel2">
-		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Album]</value>
-		<value condition="VideoPlayer.Content(Episodes)">$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.Episode]</value>
-	</variable>
 	<variable name="IncludesMediaFlagsMusic">
 		<value condition="String.EndsWith(ListItem.Filename,.aac)">flags/music/audiocodec/aac.png</value>
 		<value condition="String.EndsWith(ListItem.Filename,.ac3)">flags/music/audiocodec/ac3.png</value>
@@ -536,37 +527,6 @@
 		<value condition="!VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Genre]</value>
 		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.TVShowTitle]</value>
 	</variable>
-	<variable name="SkinSettingsHeader">
-		<value condition="Skin.String(SkinSettings,1)">$LOCALIZE[31106]</value>
-		<value condition="Skin.String(SkinSettings,2)">$LOCALIZE[31101]</value>
-		<value condition="Skin.String(SkinSettings,3)">$LOCALIZE[31102]</value>
-		<value condition="Skin.String(SkinSettings,4)">$LOCALIZE[536]</value>
-		<value condition="Skin.String(SkinSettings,5)">$LOCALIZE[31200]</value>
-		<value condition="Skin.String(SkinSettings,6)">$LOCALIZE[31138]</value>
-		<value condition="Skin.String(SkinSettings,7)">$LOCALIZE[14018]</value>
-		<value condition="Skin.String(SkinSettings,10)">Transparency!</value>
-	</variable>
-	<variable name="SkinSettingsFanartPath">
-		<value condition="Container(302).HasFocus(2)">[COLOR=blue]$INFO[Skin.String(Custom_Home_Movies_Fanart_Background_Path)][/COLOR]</value>
-		<value condition="Container(302).HasFocus(3)">[COLOR=blue]$INFO[Skin.String(Custom_Home_TVShows_Fanart_Background_Path)][/COLOR]</value>
-		<value condition="Container(302).HasFocus(6)">[COLOR=blue]$INFO[Skin.String(Custom_Home_Music_Fanart_Background_Path)][/COLOR]</value>
-	</variable>
-	<variable name="SkinSettingsShutdownLabel">
-		<value condition="Control.HasFocus(602)">$LOCALIZE[20045]</value>
-		<value condition="Control.HasFocus(603)">$LOCALIZE[20126]</value>
-		<value condition="Control.HasFocus(604)">$LOCALIZE[130]</value>
-		<value condition="Control.HasFocus(605)">$LOCALIZE[7]</value>
-		<value condition="Control.HasFocus(606)">$LOCALIZE[13012] Kodi</value>
-		<value condition="Control.HasFocus(607)">$LOCALIZE[13313] Kodi</value>
-		<value condition="Control.HasFocus(608)">$LOCALIZE[13005]</value>
-		<value condition="Control.HasFocus(609)">$LOCALIZE[20150]</value>
-		<value condition="Control.HasFocus(610)">$LOCALIZE[13011]</value>
-		<value condition="Control.HasFocus(611)">$LOCALIZE[13010]</value>
-		<value condition="Control.HasFocus(612)">$LOCALIZE[1036]</value>
-		<value condition="Control.HasFocus(613)">$LOCALIZE[13013]</value>
-		<value condition="Control.HasFocus(614)">$LOCALIZE[5]</value>
-		<value condition="Control.HasFocus(615)">$LOCALIZE[13391] $LOCALIZE[155]</value>
-	</variable>
 	<variable name="VideoDecoder">
 		<value condition="Player.Process(videohwdecoder)">HW</value>
 		<value>SW</value>
@@ -581,10 +541,6 @@
 	</variable>
 	<variable name="ViewFanartLabel1">
 		<value>$INFO[ListItem.Duration,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[2050]: [/COLOR][/B][/UPPERCASE]]</value>
-	</variable>
-	<variable name="ViewFanartText">
-		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
-		<value condition="String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="ViewFanartLabel2">
 		<value condition="String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>

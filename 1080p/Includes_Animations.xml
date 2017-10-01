@@ -63,9 +63,6 @@
 	<include name="DialogFade3">
 		<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(FileBrowser) | Window.IsVisible(ContentSettings)">Conditional</animation>
 	</include>
-	<include name="DialogFade4">
-		<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(script-XBMC_Lyrics-settings.xml)">Conditional</animation>
-	</include>
 	<include name="DialogFade5">
 		<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(FileBrowser) | Window.IsVisible(AddonSettings) | Window.IsVisible(MusicInformation) | Window.IsVisible(TextViewer)">Conditional</animation>
 	</include>
@@ -142,11 +139,6 @@
 	<include name="ListFocusScroll14">
 		<animation effect="slide" start="0,-44" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(3).OnNext">focus</animation>
 		<animation effect="slide" start="0,44" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(3).OnPrevious">focus</animation>
-		<animation effect="fade" start="70" end="100" time="750" pulse="true" condition="true">Conditional</animation>
-	</include>
-	<include name="ListFocusScroll15">
-		<animation effect="slide" start="0,-44" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(110).OnNext">focus</animation>
-		<animation effect="slide" start="0,44" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(110).OnPrevious">focus</animation>
 		<animation effect="fade" start="70" end="100" time="750" pulse="true" condition="true">Conditional</animation>
 	</include>
 	<include name="ListFocusScroll22">

@@ -6,6 +6,7 @@
 		<include>DefaultBackground</include>
 		<control type="group">
 			<left>120</left>
+			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<left>0</left>
 				<top>80</top>

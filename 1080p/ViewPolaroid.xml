@@ -47,7 +47,7 @@
 				<width>567</width>
 				<height>518</height>
 				<aspectratio>scale</aspectratio>
-				<texture>PolaroidBack.jpg</texture>
+				<texture>polaroid-back.jpg</texture>
 				<animation effect="rotate" end="-24" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				<fadetime>50</fadetime>
 				<visible>String.IsEmpty(ListItem(2).Thumb)</visible>
@@ -68,7 +68,7 @@
 				<width>567</width>
 				<height>518</height>
 				<aspectratio>scale</aspectratio>
-				<texture>PolaroidBack.jpg</texture>
+				<texture>polaroid-back.jpg</texture>
 				<animation effect="rotate" end="-11" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				<fadetime>50</fadetime>
 				<visible>String.IsEmpty(ListItem(1).Thumb)</visible>
@@ -89,7 +89,7 @@
 				<width>567</width>
 				<height>518</height>
 				<aspectratio>scale</aspectratio>
-				<texture>PolaroidBack.jpg</texture>
+				<texture>polaroid-back.jpg</texture>
 				<animation effect="rotate" end="6" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				<fadetime>50</fadetime>
 				<visible>String.IsEmpty(ListItem(0).Thumb)</visible>
@@ -156,7 +156,7 @@
 					<width>567</width>
 					<height>518</height>
 					<aspectratio>scale</aspectratio>
-					<texture>PolaroidBack.jpg</texture>
+					<texture>polaroid-back.jpg</texture>
 					<animation effect="rotate" end="6" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 					<visible>String.IsEmpty(ListItem(-1).Thumb)</visible>
 				</control>
@@ -212,7 +212,7 @@
 				<width>567</width>
 				<height>518</height>
 				<aspectratio>scale</aspectratio>
-				<texture>PolaroidBack.jpg</texture>
+				<texture>polaroid-back.jpg</texture>
 				<animation effect="rotate" end="-24" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				<visible>String.IsEmpty(ListItem(3).Thumb)</visible>
 			</control>
@@ -231,7 +231,7 @@
 				<width>567</width>
 				<height>518</height>
 				<aspectratio>scale</aspectratio>
-				<texture>PolaroidBack.jpg</texture>
+				<texture>polaroid-back.jpg</texture>
 				<animation effect="rotate" end="-11" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				<visible>String.IsEmpty(ListItem(2).Thumb)</visible>
 			</control>
@@ -250,7 +250,7 @@
 				<width>567</width>
 				<height>518</height>
 				<aspectratio>scale</aspectratio>
-				<texture>PolaroidBack.jpg</texture>
+				<texture>polaroid-back.jpg</texture>
 				<animation effect="rotate" end="6" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				<visible>String.IsEmpty(ListItem(1).Thumb)</visible>
 			</control>
@@ -308,7 +308,7 @@
 					<width>567</width>
 					<height>518</height>
 					<aspectratio>scale</aspectratio>
-					<texture>PolaroidBack.jpg</texture>
+					<texture>polaroid-back.jpg</texture>
 					<animation effect="rotate" end="6" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 					<visible>String.IsEmpty(ListItem(0).Thumb)</visible>
 				</control>

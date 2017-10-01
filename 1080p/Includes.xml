@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include file="Defaults.xml" />
-	<include file="Includes_Variables.xml" />
-	<include file="View-CoverFlow.xml" />
-	<include file="View-Fanart.xml" />
-	<include file="View-FullList.xml" />
-	<include file="View-Icons.xml" />
-	<include file="View-Item.xml" />
-	<include file="View-List.xml" />
-	<include file="View-MediaInfo.xml" />
-	<include file="View-PicThumb.xml" />
-	<include file="View-Polaroid.xml" />
-	<include file="View-PVR.xml" />
-	<include file="View-Slide.xml" />
-	<include file="View-Thumbnail.xml" />
-	<include file="View-ThumbWall.xml" />
-	<include file="View-Wall.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_DebugInfo.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_MediaFlags.xml" />
-	<include file="Includes_Weather.xml" />
+	<include file="Includes_Variables.xml" />
 	<include file="Includes_Workarounds.xml" />
+	<include file="ViewCoverFlow.xml" />
+	<include file="ViewFanart.xml" />
+	<include file="ViewFullList.xml" />
+	<include file="ViewIcons.xml" />
+	<include file="ViewItem.xml" />
+	<include file="ViewList.xml" />
+	<include file="ViewMediaInfo.xml" />
+	<include file="ViewPicThumb.xml" />
+	<include file="ViewPolaroid.xml" />
+	<include file="ViewPVR.xml" />
+	<include file="ViewSlide.xml" />
+	<include file="ViewThumbnail.xml" />
+	<include file="ViewThumbWall.xml" />
+	<include file="ViewWall.xml" />
 	<constant name="FanartCrossfadeTime">300</constant>
 	<constant name="IconCrossfadeTime">300</constant>
 	<include name="AllViewCommonPageControls">
@@ -39,7 +38,7 @@
 			<onright>9000</onright>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54)</visible>
+			<visible>Control.IsVisible(52) | Control.IsVisible(53)</visible>
 		</control>
 		<control type="scrollbar" id="60">
 			<left>836</left>
@@ -555,6 +554,16 @@
 			<label>$LOCALIZE[8]</label>
 			<include>WindowTitleCommons</include>
 		</control>
+		<control type="image">
+			<width>44</width>
+			<height>45</height>
+			<texture>dot.png</texture>
+		</control>
+		<control type="label">
+			<description>Location</description>
+			<label>$INFO[Window(Weather).Property(Location)]</label>
+			<include>WindowTitleCommons</include>
+		</control>
 	</include>
 	<include name="ButtonToggleCommonValues">
 		<alttexturefocus border="10">Button_Side_Focus.png</alttexturefocus>
@@ -1018,7 +1027,7 @@
 		<control type="group">
 			<left>8</left>
 			<top>820</top>
-			<visible>Player.HasVideo + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(591) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
+			<visible>Player.HasVideo + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
 			<include>VisibleFadeEffect2</include>
 			<include>ContentFade</include>
 			<control type="image">
@@ -1137,7 +1146,7 @@
 		<control type="group">
 			<left>8</left>
 			<top>820</top>
-			<visible>Player.HasAudio + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(591) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
+			<visible>Player.HasAudio + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
 			<include>VisibleFadeEffect2</include>
 			<include>ContentFade</include>
 			<control type="image">

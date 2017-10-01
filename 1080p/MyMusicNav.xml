@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,52,53,55,56,59,591,592,595,599</views>
+	<views>50,51,52,53,55,56,59,592,595,599</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -117,7 +117,7 @@
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Header_Animation</include>
-			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(591) | Control.IsVisible(595)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(595)">Conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
