@@ -207,7 +207,7 @@
 		<value condition="!String.IsEmpty(ListItem(12).Art(poster))">$INFO[ListItem(12).Art(poster)]</value>
 		<value>$INFO[ListItem(12).Icon]</value>
 	</variable>
-	<variable name="IncludesBreadcrumbsMusicLibrary1">
+	<variable name="BreadcrumbsMusicNode">
 		<value condition="String.StartsWith(Container.FolderPath,musicdb://genres/)">$LOCALIZE[135]</value>
 		<value condition="String.StartsWith(Container.FolderPath,musicdb://artists/)">$LOCALIZE[133]</value>
 		<value condition="String.StartsWith(Container.FolderPath,musicdb://albums/)">$LOCALIZE[132]</value>
@@ -222,7 +222,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,special://musicplaylists/)">$LOCALIZE[136]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
 	</variable>
-	<variable name="IncludesBreadcrumbsMusicLibrary2">
+	<variable name="BreadcrumbsMusicSubNode">
 		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/songs/)">$LOCALIZE[10504]</value>
 		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/albums/)">$LOCALIZE[10505]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/)">$LOCALIZE[135]</value>
@@ -233,7 +233,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/directors/)">$LOCALIZE[20348]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/studios/)">$LOCALIZE[20388]</value>
 	</variable>
-	<variable name="IncludesBreadcrumbsVideos1">
+	<variable name="BreadcrumbsVideoNode">
 		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">$LOCALIZE[342]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://tvshows/)">$LOCALIZE[20343]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
@@ -243,7 +243,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,special://videoplaylists/)">$LOCALIZE[136]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://video/)">$LOCALIZE[1037]</value>
 	</variable>
-	<variable name="IncludesBreadcrumbsVideos2">
+	<variable name="BreadcrumbsVideoSubNode">
 		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.FolderPath,videodb://tvshows/genres/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/)">$LOCALIZE[135]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/titles/) | String.StartsWith(Container.FolderPath,videodb://tvshows/titles/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/titles/)">$LOCALIZE[369]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/years/) | String.StartsWith(Container.FolderPath,videodb://tvshows/years/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/years/)">$LOCALIZE[562]</value>

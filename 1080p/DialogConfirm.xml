@@ -52,14 +52,15 @@
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<orientation>Horizontal</orientation>
+				<visible>Window.IsVisible(yesnodialog)</visible>
 				<control type="button" id="11">
 					<description>yes</description>
 					<width>424</width>
 					<height>60</height>
 					<font>font-18</font>
 					<align>center</align>
-					<texturefocus border="6">button-left-focus.png</texturefocus>
-					<texturenofocus border="6">button-left.png</texturenofocus>
+					<texturefocus colordiffuse="darkcolor" border="6">button-left.png</texturefocus>
+					<texturenofocus colordiffuse="buttongrey" border="6">button-left.png</texturenofocus>
 				</control>
 				<control type="image" id="300">
 					<description>separator</description>
@@ -73,8 +74,27 @@
 					<height>60</height>
 					<font>font-18</font>
 					<align>center</align>
-					<texturefocus border="6">button-right-focus.png</texturefocus>
-					<texturenofocus border="6">button-right.png</texturenofocus>
+					<texturefocus colordiffuse="darkcolor" border="6">button-right.png</texturefocus>
+					<texturenofocus colordiffuse="buttongrey" border="6">button-right.png</texturenofocus>
+				</control>
+			</control>
+			<control type="grouplist">
+				<left>1</left>
+				<top>289</top>
+				<width>849</width>
+				<height>60</height>
+				<itemgap>0</itemgap>
+				<align>center</align>
+				<orientation>Horizontal</orientation>
+				<visible>!Window.IsVisible(yesnodialog)</visible>
+				<control type="button" id="11">
+					<description>yes</description>
+					<width>849</width>
+					<height>60</height>
+					<font>font-18</font>
+					<align>center</align>
+					<texturefocus colordiffuse="darkcolor" border="6">button-leftright.png</texturefocus>
+					<texturenofocus colordiffuse="buttongrey" border="6">button-leftright.png</texturenofocus>
 				</control>
 			</control>
 			<control type="button">

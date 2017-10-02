@@ -17,9 +17,16 @@
 			<control type="image">
 				<left>20</left>
 				<top>5</top>
-				<width>146</width>
+				<width>40</width>
 				<height>40</height>
-				<texture>logo.png</texture>
+				<texture colordiffuse="darkcolor">kodi-icon.png</texture>
+			</control>
+			<control type="image">
+				<left>60</left>
+				<top>5</top>
+				<width>106</width>
+				<height>40</height>
+				<texture>kodi-logo.png</texture>
 			</control>
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
@@ -200,7 +207,7 @@
 					</item>
 				</content>
 			</control>
-			<include>SubMenu</include>
+			<include>HomeSubMenu</include>
 			<control type="list" id="5040">
 				<left>0</left>
 				<top>200</top>
@@ -375,8 +382,8 @@
 	<include name="HomeSubMovies">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(1)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Movies"/>
 			</include>
 		</control>
@@ -384,8 +391,8 @@
 	<include name="HomeSubTVShows">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(2)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="TVShows"/>
 			</include>
 		</control>
@@ -393,8 +400,8 @@
 	<include name="HomeSubMusicVideos">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(3)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="MusicVideos"/>
 			</include>
 		</control>
@@ -402,8 +409,8 @@
 	<include name="HomeSubVideos">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(4)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Videos"/>
 			</include>
 		</control>
@@ -411,8 +418,8 @@
 	<include name="HomeSubTV">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(5)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="TV"/>
 			</include>
 		</control>
@@ -420,8 +427,8 @@
 	<include name="HomeSubMusic">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(6)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Music"/>
 			</include>
 		</control>
@@ -429,8 +436,8 @@
 	<include name="HomeSubPictures">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(7)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Pictures"/>
 			</include>
 		</control>
@@ -438,8 +445,8 @@
 	<include name="HomeSubPrograms">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(8)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Programs"/>
 			</include>
 		</control>
@@ -447,8 +454,8 @@
 	<include name="HomeSubGames">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(9)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Games"/>
 			</include>
 		</control>
@@ -456,8 +463,8 @@
 	<include name="HomeSubWeather">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(10)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Weather"/>
 			</include>
 		</control>
@@ -465,11 +472,62 @@
 	<include name="HomeSubSettings">
 		<control type="fixedlist" id="8001">
 			<visible>Container(5040).HasFocus(11)</visible>
-			<include>SubMenuLayout</include>
-			<include content="SubMenuButtons">
+			<include>HomeSubMenuLayout</include>
+			<include content="HomeSubMenuButtons">
 				<param name="section" value="Settings"/>
 			</include>
 		</control>
+	</include>
+	<include name="HomeSubMenuButtons">
+		<content>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="01"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="02"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="03"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="04"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="05"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="06"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="07"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="08"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="09"/>
+			</include>
+			<include content="HomeSubMenuButton">
+				<param name="section" value="$PARAM[section]"/>
+				<param name="id" value="10"/>
+			</include>
+		</content>
+	</include>
+	<include name="HomeSubMenuButton">
+		<item id="81$PARAM[id]">
+			<label>$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Label)]</label>
+			<onclick>$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Path)]</onclick>
+			<visible>Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</visible>
+		</item>
 	</include>
 	<include name="RecentlyAddedMovies">
 		<control type="group">
@@ -1835,7 +1893,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="SubMenu">
+	<include name="HomeSubMenu">
 		<control type="group" id="8000">
 			<onup>5050</onup>
 			<onright>3000</onright>
@@ -1855,7 +1913,7 @@
 			<visible allowhiddenfocus="true">!Control.HasFocus(9000)</visible>
 		</control>
 	</include>
-	<include name="SubMenuLayout">
+	<include name="HomeSubMenuLayout">
 		<orientation>vertical</orientation>
 		<left>0</left>
 		<top>200</top>

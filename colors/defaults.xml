@@ -7,6 +7,7 @@
 	<color name="lightgrey">FF999999</color>
 	<color name="grey">FF787878</color>
 	<color name="darkgrey">FF505050</color>
+	<color name="buttongrey">FF2E3436</color>
 
 	<!-- deprecated -->
 	<color name="lightblue">FF99D8FF</color>

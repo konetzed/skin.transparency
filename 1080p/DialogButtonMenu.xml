@@ -55,8 +55,8 @@
 					<label>$LOCALIZE[20126]</label>
 					<font>font-18</font>
 					<align>center</align>
-					<texturefocus border="6">button-left-focus.png</texturefocus>
-					<texturenofocus border="6">button-left.png</texturenofocus>
+					<texturefocus colordiffuse="darkcolor" border="6">button-left.png</texturefocus>
+					<texturenofocus colordiffuse="buttongrey" border="6">button-left.png</texturenofocus>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>System.LogOff</onclick>
 				</control>
@@ -67,8 +67,8 @@
 					<label>$LOCALIZE[13313]</label>
 					<font>font-18</font>
 					<align>center</align>
-					<texturefocus border="6">button-center-focus.png</texturefocus>
-					<texturenofocus border="6">button-center.png</texturenofocus>
+					<texturefocus colordiffuse="darkcolor" border="6">button-center.png</texturefocus>
+					<texturenofocus colordiffuse="buttongrey" border="6">button-center.png</texturenofocus>
 					<onclick>Reboot</onclick>
 				</control>
 				<control type="button" id="103">
@@ -78,8 +78,8 @@
 					<label>$LOCALIZE[31010]</label>
 					<font>font-18</font>
 					<align>center</align>
-					<texturefocus border="6">button-right-focus.png</texturefocus>
-					<texturenofocus border="6">button-right.png</texturenofocus>
+					<texturefocus colordiffuse="darkcolor" border="6">button-right.png</texturefocus>
+					<texturenofocus colordiffuse="buttongrey" border="6">button-right.png</texturenofocus>
 					<onclick>ShutDown</onclick>
 				</control>
 			</control>

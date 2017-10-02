@@ -3,6 +3,10 @@
 	<defaultcontrol>3</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<controls>
+		<control type="label" id="2">
+			<font></font>
+			<visible>false</visible>
+		</control>
 		<include>DefaultBackground</include>
 		<control type="group">
 			<left>120</left>
@@ -98,29 +102,7 @@
 			<height>3</height>
 			<texture colordiffuse="grey">white.png</texture>
 		</control>
-		<control type="group">
-			<include>Window_OpenClose_Header_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture border="2">header.png</texture>
-			</control>
-			<control type="label" id="2">
-				<description>Fake Label</description>
-				<left>0</left>
-				<top>0</top>
-				<width>0</width>
-				<height>0</height>
-				<font></font>
-				<visible>false</visible>
-			</control>
-			<control type="grouplist">
-				<include>Breadcrumbs</include>
-				<include>Breadcrumbs-Settings-Catagory</include>
-			</control>
-		</control>
+		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include>ContentFade</include>
 	</controls>

@@ -65,8 +65,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12311</label>
 				<onleft>21</onleft>
 				<onright>12</onright>
@@ -82,8 +82,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12312</label>
 				<onleft>11</onleft>
 				<onright>13</onright>
@@ -99,8 +99,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12313</label>
 				<onleft>12</onleft>
 				<onright>14</onright>
@@ -116,8 +116,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12314</label>
 				<onleft>13</onleft>
 				<onright>15</onright>
@@ -133,8 +133,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12315</label>
 				<onleft>14</onleft>
 				<onright>16</onright>
@@ -150,8 +150,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12316</label>
 				<onleft>15</onleft>
 				<onright>17</onright>
@@ -167,8 +167,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12317</label>
 				<onleft>16</onleft>
 				<onright>18</onright>
@@ -184,8 +184,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12318</label>
 				<onleft>17</onleft>
 				<onright>19</onright>
@@ -201,8 +201,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12319</label>
 				<onleft>18</onleft>
 				<onright>10</onright>
@@ -218,8 +218,8 @@
 				<font>font-23</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>12310</label>
 				<onleft>19</onleft>
 				<onright>20</onright>
@@ -236,8 +236,8 @@
 				<label>&lt;&lt;</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<onleft>10</onleft>
 				<onright>22</onright>
 				<onup>15</onup>
@@ -253,8 +253,8 @@
 				<label>&gt;&gt;</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<onleft>20</onleft>
 				<onright>23</onright>
 				<onup>16</onup>
@@ -269,8 +269,8 @@
 				<font>font-20</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-special-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="grey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>20181</label>
 				<onleft>22</onleft>
 				<onright>21</onright>
@@ -286,8 +286,8 @@
 				<font>font-20</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="10">key-special-nofocus.png</texturenofocus>
-				<texturefocus border="10">key-focus.png</texturefocus>
+				<texturenofocus colordiffuse="grey">white.png</texturenofocus>
+				<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 				<label>20177</label>
 				<onleft>23</onleft>
 				<onright>11</onright>

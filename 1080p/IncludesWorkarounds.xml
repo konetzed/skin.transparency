@@ -24,31 +24,6 @@
 			<visible>String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)</visible>
 		</control>
 	</include>
-	<include name="logo-artists">
-		<control type="image">
-			<left>15</left>
-			<top>45</top>
-			<width>345</width>
-			<height>134</height>
-			<texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist,,/logo.png]</texture>
-			<fadetime>IconCrossfadeTime</fadetime>
-			<animation effect="rotate" start="0" end="15" center="auto" time="0" condition="true">Conditional</animation>
-			<visible>[Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(595)] + ![String.Contains(ListItem.Path,plugin://) | String.Contains(ListItem.Path,special://musicplaylists/) | String.Contains(Container.FolderPath,plugin://) | String.Contains(Container.FolderPath,addons://)]</visible>
-		</control>
-	</include>
-	<include name="logo-movies">
-		<control type="image">
-			<left>15</left>
-			<top>45</top>
-			<width>345</width>
-			<height>134</height>
-			<texture background="true">$INFO[ListItem.Path,,logo.png]</texture>
-			<fadetime>IconCrossfadeTime</fadetime>
-			<animation effect="rotate" start="0" end="15" center="auto" time="0" condition="true">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,38" time="0" condition="Control.IsVisible(57)">Conditional</animation>
-			<visible>[Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(590) | Control.IsVisible(596)] + Container.Content(Movies) + ![String.Contains(ListItem.Path,plugin://) | String.Contains(ListItem.Path,special://videoplaylists/) | String.Contains(Container.FolderPath,plugin://) | String.Contains(Container.FolderPath,addons://)]</visible>
-		</control>
-	</include>
 	<include name="moviedisc-dvd-View_Icons">
 		<texture fallback="disc-dvd.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,disc.png]</texture>
 		<visible>!ListItem.IsParentFolder</visible>

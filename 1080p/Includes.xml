@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include file="Defaults.xml" />
-	<include file="Includes_Animations.xml" />
-	<include file="Includes_DebugInfo.xml" />
-	<include file="Includes_Home.xml" />
-	<include file="Includes_MediaFlags.xml" />
-	<include file="Includes_Variables.xml" />
-	<include file="Includes_Workarounds.xml" />
+	<include file="IncludesAnimations.xml" />
+	<include file="IncludesDebugInfo.xml" />
+	<include file="IncludesHome.xml" />
+	<include file="IncludesMediaFlags.xml" />
+	<include file="IncludesVariables.xml" />
+	<include file="IncludesWorkarounds.xml" />
 	<include file="ViewCoverFlow.xml" />
 	<include file="ViewFanart.xml" />
 	<include file="ViewFullList.xml" />
@@ -23,472 +23,30 @@
 	<include file="ViewWall.xml" />
 	<constant name="FanartCrossfadeTime">300</constant>
 	<constant name="IconCrossfadeTime">300</constant>
-	<include name="AllViewCommonPageControls">
-		<control type="scrollbar" id="60">
-			<left>1624</left>
-			<top>207</top>
-			<width>30</width>
-			<height>666</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>52</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(52) | Control.IsVisible(53)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>836</left>
-			<top>207</top>
-			<width>30</width>
-			<height>666</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(50)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>1012</left>
-			<top>207</top>
-			<width>30</width>
-			<height>666</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(51)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>1624</left>
-			<top>202</top>
-			<width>30</width>
-			<height>486</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>58</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(58) | Control.IsVisible(599)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>1624</left>
-			<top>207</top>
-			<width>30</width>
-			<height>666</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(59) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>1624</left>
-			<top>202</top>
-			<width>30</width>
-			<height>495</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<visible>Control.IsVisible(59) + ![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>-1208</left>
-			<top>1078</top>
-			<width>1011</width>
-			<height>30</height>
-			<texturesliderbackground border="10,0,10,0">scrollbar-hor-back.png</texturesliderbackground>
-			<texturesliderbar border="10,0,10,0">scrollbar-hor-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="10,0,10,0">scrollbar-hor-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-hor-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-hor-nib.png</textureslidernibfocus>
-			<onup>50</onup>
-			<ondown>9000</ondown>
-			<showonepage>false</showonepage>
-			<orientation>horizontal</orientation>
-			<animation effect="slide" start="0,0" end="0,-27" time="200" condition="Control.HasFocus(60)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!Control.HasFocus(60)">Conditional</animation>
-			<visible>Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(590) | Control.IsVisible(592) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Control.IsVisible(598)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<left>255</left>
-			<top>207</top>
-			<width>30</width>
-			<height>666</height>
-			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
-			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
-			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
-			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
-			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<animation effect="slide" start="0,0" end="-27,0" time="200" condition="Control.HasFocus(60)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!Control.HasFocus(60)">Conditional</animation>
-			<visible>Control.IsVisible(589)</visible>
-		</control>
-	</include>
-	<include name="Breadcrumbs">
-		<left>0</left>
-		<top>0</top>
-		<width>682</width>
-		<height>45</height>
-		<orientation>horizontal</orientation>
-		<itemgap>0</itemgap>
-	</include>
-	<include name="Breadcrumbs-Filemanager">
+	<include name="Breadcrumbs-Music">
 		<control type="image">
 			<width>44</width>
 			<height>45</height>
 			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Filemanager</description>
-			<label>$LOCALIZE[7]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Music-Library">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Music Library</description>
-			<label>$LOCALIZE[31027]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-			<animation effect="fade" start="0" end="100" center="0,15" time="400">Visible</animation>
-			<animation effect="fade" start="100" end="0" center="0,15" time="400">Hidden</animation>
 			<visible>Control.IsVisible(1101)</visible>
 		</control>
 		<control type="label" id="1101">
 			<description>Genres</description>
-			<label>$VAR[IncludesBreadcrumbsMusicLibrary1]</label>
-			<include>WindowTitleCommons</include>
+			<label>$VAR[BreadcrumbsMusicNode]</label>
+			<include>BreadcrumbLabel</include>
 			<visible>String.StartsWith(Container.FolderPath,musicdb://) | String.StartsWith(Container.FolderPath,addons://) | String.StartsWith(Container.FolderPath,plugin://) | String.StartsWith(Container.FolderPath,special://musicplaylists/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/)</visible>
 		</control>
 		<control type="image">
 			<width>44</width>
 			<height>45</height>
 			<texture>dot.png</texture>
-			<animation effect="fade" start="0" end="100" center="0,15" time="400">Visible</animation>
-			<animation effect="fade" start="100" end="0" center="0,15" time="400">Hidden</animation>
 			<visible>Control.IsVisible(1102)</visible>
 		</control>
 		<control type="label" id="1102">
 			<description>Top 100 Songs</description>
-			<label>$VAR[IncludesBreadcrumbsMusicLibrary2]</label>
-			<include>WindowTitleCommons</include>
+			<label>$VAR[BreadcrumbsMusicSubNode]</label>
+			<include>BreadcrumbLabel</include>
 			<visible>String.StartsWith(Container.FolderPath,musicdb://top100/songs/) | String.StartsWith(Container.FolderPath,musicdb://top100/albums/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/titles/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/years/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/artists/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/directors/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/studios/)</visible>
-		</control>
-	</include>
-	<include name="Breadcrumbs-MusicPlaylist">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>MusicPlaylist</description>
-			<label>$LOCALIZE[20011]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-MusicPlaylistEditor">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>MusicPlaylistEditor</description>
-			<label>$LOCALIZE[10503]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Pictures">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Pictures</description>
-			<label>$LOCALIZE[1]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Programs">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Programs</description>
-			<label>$LOCALIZE[24001]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Games">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Programs</description>
-			<label>$LOCALIZE[15016]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings-Addons">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label" id="1101">
-			<description>Addons</description>
-			<label>$LOCALIZE[24001]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings-Catagory">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label" id="1101">
-			<description>Catagory</description>
-			<label>$INFO[Control.GetLabel(2)]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings-Logging">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Catagory</description>
-			<label>$LOCALIZE[13000]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Catagory</description>
-			<label>$LOCALIZE[14111]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings-Profile">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label" id="1101">
-			<description>Profiles</description>
-			<label>$LOCALIZE[13200]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings-SkinSettings">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label" id="1101">
-			<description>SkinSettings</description>
-			<label>$LOCALIZE[20077]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Settings-SystemInfo">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Settings</description>
-			<label>$LOCALIZE[10004]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label" id="1101">
-			<description>SystemInfo</description>
-			<label>$LOCALIZE[138]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-TV">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>TV</description>
-			<label>$LOCALIZE[19020]</label>
-			<include>WindowTitleCommons</include>
-			<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
-		</control>
-		<control type="label">
-			<description>Radio</description>
-			<label>$LOCALIZE[19021]</label>
-			<include>WindowTitleCommons</include>
-			<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Channels</description>
-			<label>$LOCALIZE[19019]</label>
-			<include>WindowTitleCommons</include>
-			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)</visible>
-		</control>
-		<control type="label">
-			<description>Guide</description>
-			<label>$LOCALIZE[22020]</label>
-			<include>WindowTitleCommons</include>
-			<visible>Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)</visible>
-		</control>
-		<control type="label">
-			<description>Recordings</description>
-			<label>$LOCALIZE[19163]</label>
-			<include>WindowTitleCommons</include>
-			<visible>Window.IsVisible(TVRecordings) | Window.IsVisible(TVRecordings)</visible>
-		</control>
-		<control type="label">
-			<description>Search</description>
-			<label>$LOCALIZE[137]</label>
-			<include>WindowTitleCommons</include>
-			<visible>Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch)</visible>
-		</control>
-		<control type="label">
-			<description>Timers</description>
-			<label>$LOCALIZE[19040]</label>
-			<include>WindowTitleCommons</include>
-			<visible>Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers)</visible>
-		</control>
-		<control type="label">
-			<description>Timers</description>
-			<label>$LOCALIZE[19138]</label>
-			<include>WindowTitleCommons</include>
-			<visible>Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)</visible>
 		</control>
 	</include>
 	<include name="Breadcrumbs-Videos">
@@ -496,78 +54,34 @@
 			<width>44</width>
 			<height>45</height>
 			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Video Library</description>
-			<label>$LOCALIZE[31026]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-			<animation effect="fade" start="0" end="100" center="0,15" time="400">Visible</animation>
-			<animation effect="fade" start="100" end="0" center="0,15" time="400">Hidden</animation>
 			<visible>Control.IsVisible(1101)</visible>
 		</control>
 		<control type="label" id="1101">
 			<description>Movies</description>
-			<label>$VAR[IncludesBreadcrumbsVideos1]</label>
-			<include>WindowTitleCommons</include>
+			<label>$VAR[BreadcrumbsVideoNode]</label>
+			<include>BreadcrumbLabel</include>
 			<visible>String.StartsWith(Container.FolderPath,videodb://) | String.StartsWith(Container.FolderPath,special://videoplaylists/) | String.StartsWith(Container.FolderPath,addons://video/) | String.StartsWith(Container.FolderPath,plugin://video/)</visible>
 		</control>
 		<control type="image">
 			<width>44</width>
 			<height>45</height>
 			<texture>dot.png</texture>
-			<animation effect="fade" start="0" end="100" center="0,15" time="400">Visible</animation>
-			<animation effect="fade" start="100" end="0" center="0,15" time="400">Hidden</animation>
-			<visible>!String.IsEqual(Container.FolderPath,videodb://movies/) + !String.IsEqual(Container.FolderPath,videodb://tvshows/) + !String.IsEqual(Container.FolderPath,videodb://musicvideos/) + !String.IsEmpty(Container.FolderPath)</visible>
+			<visible>Control.IsVisible(1101) + !String.IsEmpty(Container.FolderPath)</visible>
 		</control>
 		<control type="label" id="1102">
 			<description>Genres</description>
-			<label>$VAR[IncludesBreadcrumbsVideos2]</label>
-			<include>WindowTitleCommons</include>
+			<label>$VAR[BreadcrumbsVideoSubNode]</label>
+			<include>BreadcrumbLabel</include>
 			<visible>!String.IsEqual(Container.FolderPath,videodb://movies/) + !String.IsEqual(Container.FolderPath,videodb://tvshows/) + !String.IsEqual(Container.FolderPath,videodb://musicvideos/)</visible>
 		</control>
 	</include>
-	<include name="Breadcrumbs-VideoPlaylist">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>VideoPlaylist</description>
-			<label>$LOCALIZE[20012]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="Breadcrumbs-Weather">
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Weather</description>
-			<label>$LOCALIZE[8]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-		<control type="image">
-			<width>44</width>
-			<height>45</height>
-			<texture>dot.png</texture>
-		</control>
-		<control type="label">
-			<description>Location</description>
-			<label>$INFO[Window(Weather).Property(Location)]</label>
-			<include>WindowTitleCommons</include>
-		</control>
-	</include>
-	<include name="ButtonToggleCommonValues">
-		<alttexturefocus border="10">Button_Side_Focus.png</alttexturefocus>
-		<alttexturenofocus border="10">Button_Side_NoFocus.png</alttexturenofocus>
+	<include name="BreadcrumbLabel">
+		<width min="15" max="638">auto</width>
+		<height>45</height>
+		<font>font-24c</font>
+		<textcolor>white</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
 	</include>
 	<include name="CommonFileCount">
 		<control type="grouplist">
@@ -1023,280 +537,13 @@
 			</control>
 		</control>
 	</include>
-	<include name="CommonNowPlaying">
-		<control type="group">
-			<left>8</left>
-			<top>820</top>
-			<visible>Player.HasVideo + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
-			<include>VisibleFadeEffect2</include>
-			<include>ContentFade</include>
-			<control type="image">
-				<left>-8</left>
-				<top>75</top>
-				<width>900</width>
-				<height>135</height>
-				<texture border="3">gradient2.png</texture>
-				<visible>[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)</visible>
-			</control>
-			<control type="image">
-				<left>-8</left>
-				<top>135</top>
-				<width>900</width>
-				<height>75</height>
-				<texture border="3">gradient2.png</texture>
-				<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !Control.IsVisible(592) + !Control.IsVisible(598)</visible>
-			</control>
-			<control type="videowindow">
-				<left>8</left>
-				<top>75</top>
-				<width>240</width>
-				<height>135</height>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>82</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$VAR[IncludesCommonNowPlayingVideoLabel1]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>112</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$VAR[IncludesCommonNowPlayingVideoLabel2]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-19</font>
-				<textcolor>lightblue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>142</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$VAR[IncludesCommonNowPlayingVideoLabel3]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-19</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="grouplist">
-				<left>262</left>
-				<top>180</top>
-				<width>900</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<control type="label">
-					<width min="15" max="300">auto</width>
-					<height>18</height>
-					<label>$INFO[VideoPlayer.Time]</label>
-					<aligny>center</aligny>
-					<font>font-17</font>
-					<textcolor>lightblue</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="group">
-					<width>300</width>
-					<height>22</height>
-					<control type="progress">
-						<description>Progressbar Cache</description>
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>22</height>
-						<info>Player.ProgressCache</info>
-						<midtexture border="10,0,10,0">ProgressCache.png</midtexture>
-					</control>
-					<control type="progress">
-						<description>Progressbar</description>
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>22</height>
-						<info>Player.Progress</info>
-					</control>
-					<control type="slider" id="888">
-						<description>Slider</description>
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>22</height>
-						<action>seek</action>
-					</control>
-				</control>
-				<control type="label">
-					<width min="15" max="300">auto</width>
-					<height>18</height>
-					<label>$INFO[VideoPlayer.Duration]</label>
-					<aligny>center</aligny>
-					<font>font-17</font>
-					<textcolor>lightblue</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<left>8</left>
-			<top>820</top>
-			<visible>Player.HasAudio + ![Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Window.IsVisible(SkinSettings)]</visible>
-			<include>VisibleFadeEffect2</include>
-			<include>ContentFade</include>
-			<control type="image">
-				<left>-8</left>
-				<top>75</top>
-				<width>900</width>
-				<height>135</height>
-				<texture border="3">gradient2.png</texture>
-				<visible>[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)</visible>
-			</control>
-			<control type="image">
-				<left>-8</left>
-				<top>135</top>
-				<width>900</width>
-				<height>75</height>
-				<texture border="3">gradient2.png</texture>
-				<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !Control.IsVisible(592) + !Control.IsVisible(598)</visible>
-			</control>
-			<control type="image">
-				<left>22</left>
-				<top>-3</top>
-				<width>218</width>
-				<height>216</height>
-				<texture>$INFO[MusicPlayer.Cover]</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>-8</top>
-				<width>248</width>
-				<height>225</height>
-				<texture>cdcase.png</texture>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>82</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$INFO[MusicPlayer.Artist]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)</visible>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>112</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$INFO[MusicPlayer.Title]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-19</font>
-				<textcolor>lightblue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)</visible>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>142</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$INFO[MusicPlayer.Album]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-19</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)</visible>
-			</control>
-			<control type="label">
-				<left>262</left>
-				<top>142</top>
-				<width>1395</width>
-				<height>30</height>
-				<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !Control.IsVisible(592) + !Control.IsVisible(598)</visible>
-			</control>
-			<control type="grouplist">
-				<left>262</left>
-				<top>180</top>
-				<width>900</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<control type="label">
-					<width min="15" max="300">auto</width>
-					<height>18</height>
-					<label>$INFO[MusicPlayer.Time]</label>
-					<aligny>center</aligny>
-					<font>font-17</font>
-					<textcolor>lightblue</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="group">
-					<width>300</width>
-					<height>22</height>
-					<control type="progress">
-						<description>Progressbar</description>
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>22</height>
-						<info>Player.Progress</info>
-					</control>
-					<control type="slider" id="888">
-						<description>Slider</description>
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>22</height>
-						<action>seek</action>
-					</control>
-				</control>
-				<control type="label">
-					<width min="15" max="300">auto</width>
-					<height>18</height>
-					<label>$INFO[MusicPlayer.Duration]</label>
-					<aligny>center</aligny>
-					<font>font-17</font>
-					<textcolor>lightblue</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-		</control>
-	</include>
 	<include name="ContentPanel">
 		<control type="image">
-			<left>230</left>
-			<top>132</top>
-			<width>1464</width>
-			<height>818</height>
-			<texture border="17">panel.png</texture>
-			<bordersize>25</bordersize>
-			<animation effect="zoom" start="230,132,1464,817" end="0,30,1920,967" time="300" condition="[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)">Conditional</animation>
-		</control>
-	</include>
-	<include name="ContentPanel2">
-		<control type="image">
-			<left>80</left>
-			<top>132</top>
-			<width>1764</width>
-			<height>900</height>
-			<texture border="17">panel.png</texture>
-			<bordersize>25</bordersize>
+			<left>120</left>
+			<top>80</top>
+			<width>1680</width>
+			<height>920</height>
+			<texture border="5">panel-light.png</texture>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -1367,39 +614,71 @@
 			<visible>Player.HasAudio</visible>
 		</control>
 	</include>
-	<include name="FanartNormal">
-		<top>213</top>
-		<height>662</height>
+	<include name="Header">
+		<control type="group">
+			<include>Window_OpenClose_Header_Animation</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>50</height>
+				<texture border="2">header.png</texture>
+			</control>
+			<include>CommonFileCount</include>
+			<control type="grouplist">
+				<left>0</left>
+				<top>0</top>
+				<width>682</width>
+				<height>45</height>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<control type="image">
+					<width>44</width>
+					<height>45</height>
+					<texture>dot.png</texture>
+				</control>
+				<control type="label">
+					<description>MusicPlaylist</description>
+					<label>$INFO[System.CurrentWindow]</label>
+					<include>BreadcrumbLabel</include>
+				</control>
+				<include condition="Window.IsVisible(Videos)">Breadcrumbs-Videos</include>
+				<include condition="Window.IsVisible(Music)">Breadcrumbs-Music</include>
+			</control>
+		</control>
 	</include>
-	<include name="FanartShort">
-		<top>213</top>
-		<height>442</height>
-	</include>
-	<include name="FanartLong">
-		<top>213</top>
-		<height>1016</height>
-	</include>
-	<include name="keyboard-charbutton">
+	<include name="KeyboardCharButton">
 		<left>0</left>
 		<top>0</top>
 		<width>72</width>
 		<height>72</height>
-		<texturenofocus border="10">key-nofocus.png</texturenofocus>
-		<texturefocus border="10">key-focus.png</texturefocus>
+		<texturenofocus colordiffuse="lightgrey">white.png</texturenofocus>
+		<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font-20</font>
 	</include>
-	<include name="keyboard-digitbutton">
+	<include name="KeyboardDigitButton">
 		<left>0</left>
 		<top>0</top>
 		<width>72</width>
 		<height>72</height>
-		<texturenofocus border="10">key-digit-nofocus.png</texturenofocus>
-		<texturefocus border="10">key-focus.png</texturefocus>
+		<texturenofocus colordiffuse="darkgrey">white.png</texturenofocus>
+		<texturefocus colordiffuse="darkcolor">white.png</texturefocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font-20</font>
+	</include>
+	<include name="Logo">
+		<control type="image">
+			<left>15</left>
+			<top>45</top>
+			<width>345</width>
+			<height>134</height>
+			<texture background="true">$INFO[ListItem.Art(logo)]</texture>
+			<fadetime>IconCrossfadeTime</fadetime>
+			<animation effect="rotate" start="0" end="15" center="auto" time="0" condition="true">Conditional</animation>
+		</control>
 	</include>
 	<include name="MusicPlayerAlbum">
 		<font>font-40</font>
@@ -1422,99 +701,197 @@
 		<scrollsuffix />
 		<label>$INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     $INFO[MusicPlayer.Title]     </label>
 	</include>
+	<include name="PageControls">
+		<control type="scrollbar" id="60">
+			<left>1624</left>
+			<top>207</top>
+			<width>30</width>
+			<height>666</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>52</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(52) | Control.IsVisible(53)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>836</left>
+			<top>207</top>
+			<width>30</width>
+			<height>666</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>1012</left>
+			<top>207</top>
+			<width>30</width>
+			<height>666</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>1624</left>
+			<top>202</top>
+			<width>30</width>
+			<height>486</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>58</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(58) | Control.IsVisible(599)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>1624</left>
+			<top>207</top>
+			<width>30</width>
+			<height>666</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(59) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>1624</left>
+			<top>202</top>
+			<width>30</width>
+			<height>495</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(59) + ![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>-1208</left>
+			<top>1078</top>
+			<width>1011</width>
+			<height>30</height>
+			<texturesliderbackground border="10,0,10,0">scrollbar-hor-back.png</texturesliderbackground>
+			<texturesliderbar border="10,0,10,0">scrollbar-hor-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="10,0,10,0">scrollbar-hor-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-hor-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-hor-nib.png</textureslidernibfocus>
+			<onup>50</onup>
+			<ondown>9000</ondown>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+			<animation effect="slide" start="0,0" end="0,-27" time="200" condition="Control.HasFocus(60)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!Control.HasFocus(60)">Conditional</animation>
+			<visible>Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(590) | Control.IsVisible(592) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Control.IsVisible(598)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>255</left>
+			<top>207</top>
+			<width>30</width>
+			<height>666</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="slide" start="0,0" end="-27,0" time="200" condition="Control.HasFocus(60)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" delay="200" condition="!Control.HasFocus(60)">Conditional</animation>
+			<visible>Control.IsVisible(589)</visible>
+		</control>
+	</include>
 	<include name="PVR-Menu">
 		<control type="button" id="901">
 			<description>Channels</description>
-			<include>ButtonCommonValues</include>
+			<width>355</width>
+			<include>PVR-Nav</include>
 			<label>$LOCALIZE[19019]</label>
-			<onleft condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onleft>
-			<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-			<onleft condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onleft>
-			<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-			<onleft condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onleft>
-			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-			<onleft condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onleft>
-			<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
 		</control>
 		<control type="button" id="902">
 			<description>Guide</description>
-			<include>ButtonCommonValues</include>
+			<width>355</width>
+			<include>PVR-Nav</include>
 			<label>$LOCALIZE[22020]</label>
-			<onleft condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onleft>
-			<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-			<onleft condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onleft>
-			<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-			<onleft condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onleft>
-			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-			<onleft condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onleft>
-			<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
 		</control>
 		<control type="button" id="903">
 			<description>Recordings</description>
-			<include>ButtonCommonValues</include>
+			<width>355</width>
+			<include>PVR-Nav</include>
 			<label>$LOCALIZE[19163]</label>
-			<onleft condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onleft>
-			<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-			<onleft condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onleft>
-			<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-			<onleft condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onleft>
-			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-			<onleft condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onleft>
-			<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
 		</control>
 		<control type="button" id="904">
 			<description>Search</description>
-			<include>ButtonCommonValues</include>
+			<width>355</width>
+			<include>PVR-Nav</include>
 			<label>$LOCALIZE[137]</label>
-			<onleft condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onleft>
-			<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-			<onleft condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onleft>
-			<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-			<onleft condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onleft>
-			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-			<onleft condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onleft>
-			<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 		</control>
 		<control type="button" id="905">
 			<description>Timers</description>
-			<include>ButtonCommonValues</include>
+			<width>355</width>
+			<include>PVR-Nav</include>
 			<label>$LOCALIZE[19040]</label>
-			<onleft condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onleft>
-			<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-			<onleft condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onleft>
-			<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-			<onleft condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onleft>
-			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-			<onleft condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onleft>
-			<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
 		</control>
 		<control type="button" id="906">
 			<description>Rules</description>
-			<include>ButtonCommonValues</include>
+			<width>355</width>
+			<include>PVR-Nav</include>
 			<label>$LOCALIZE[19138]</label>
-			<onleft condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onleft>
-			<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-			<onleft condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onleft>
-			<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-			<onleft condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onleft>
-			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-			<onleft condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onleft>
-			<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
 		</control>
 	</include>
-	<include name="ScrollOffsetLabel">
+	<include name="PVR-Nav">
+		<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
+		<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
+		<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+		<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
+	</include>
+	<include name="ScrollLabel">
 		<control type="group">
 			<visible>Container.Scrolling</visible>
 			<animation effect="fade" time="300">Visible</animation>
@@ -1623,56 +1000,100 @@
 			<enable>Skin.HasSetting(Menu$PARAM[section]Sub)</enable>
 		</control>
 	</include>
-	<include name="SubMenuButtons">
-		<content>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="01"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="02"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="03"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="04"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="05"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="06"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="07"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="08"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="09"/>
-			</include>
-			<include content="SubMenuButton">
-				<param name="section" value="$PARAM[section]"/>
-				<param name="id" value="10"/>
-			</include>
-		</content>
-	</include>
-	<include name="SubMenuButton">
-		<item id="81$PARAM[id]">
-			<label>$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Label)]</label>
-			<onclick>$INFO[Skin.String(Menu$PARAM[section]Sub_Custom$PARAM[id].Path)]</onclick>
-			<visible>Skin.HasSetting(Menu$PARAM[section]Sub_Custom$PARAM[id])</visible>
-		</item>
+	<include name="SideMenu">
+		<control type="group">
+			<include>VisibleFadeEffect</include>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+			<control type="image">
+				<left>356</left>
+				<top>81</top>
+				<width>3</width>
+				<height>918</height>
+				<texture colordiffuse="grey">white.png</texture>
+			</control>
+			<control type="grouplist" id="9000">
+				<description>button area</description>
+				<left>1</left>
+				<top>106</top>
+				<width>355</width>
+				<height>675</height>
+				<itemgap>-2</itemgap>
+				<onright>50</onright>
+				<control type="button" id="2">
+					<description>View As button</description>
+					<include>ButtonCommonValues</include>
+					<label></label>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>ButtonCommonValues</include>
+					<include>ButtonToggleCommonValues</include>
+					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
+					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
+				</control>
+				<control type="button" id="8">
+					<description>Search</description>
+					<include>ButtonCommonValues</include>
+					<label>137</label>
+				</control>
+				<control type="edit" id="19">
+					<description>Filter</description>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<visible>!Container.CanFilterAdvanced</visible>
+				</control>
+				<control type="radiobutton" id="621">
+					<description>Advanced Filter</description>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<onclick>right</onclick>
+					<onclick>Filter</onclick>
+					<selected>Container.Filtered</selected>
+					<visible>Container.CanFilterAdvanced</visible>
+				</control>
+				<control type="togglebutton" id="20">
+					<description>Update Library</description>
+					<include>ButtonCommonValues</include>
+					<include>ButtonToggleCommonValues</include>
+					<label>653</label>
+					<altlabel>13353</altlabel>
+					<alttexturefocus border="5">button-focus.png</alttexturefocus>
+					<alttexturenofocus></alttexturenofocus>
+					<usealttexture>library.isscanningmusic</usealttexture>
+				</control>
+				<control type="radiobutton" id="16">
+					<description>PartyMode</description>
+					<include>ButtonCommonValues</include>
+					<label>589</label>
+				</control>
+				<control type="button" id="622">
+					<description>Get more</description>
+					<include>ButtonCommonValues</include>
+					<label>21452</label>
+					<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
+					<visible>Container.Content(addons)</visible>
+				</control>
+				<control type="button" id="610">
+					<description>PlayerControls</description>
+					<include>ButtonCommonValues</include>
+					<label>16003</label>
+					<onclick>ActivateWindow(playercontrols)</onclick>
+					<visible>Player.HasAudio | Player.HasVideo</visible>
+				</control>
+				<control type="button" id="22">
+					<description>now playing</description>
+					<include>ButtonCommonValues</include>
+					<label>13350</label>
+					<onclick>ActivateWindow(musicplaylist)</onclick>
+					<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
+				</control>
+			</control>
+		</control>
 	</include>
 	<include name="TouchScreenControls">
 		<control type="group">
@@ -1743,15 +1164,5 @@
 				<visible>Player.Playing</visible>
 			</control>
 		</control>
-	</include>
-	<include name="WindowTitleCommons">
-		<width min="15" max="638">auto</width>
-		<height>45</height>
-		<font>font-24c</font>
-		<textcolor>white</textcolor>
-		<align>left</align>
-		<aligny>center</aligny>
-		<animation effect="zoom" start="1" end="100" center="0,22" time="400" tween="back" easing="out">Visible</animation>
-		<animation effect="zoom" start="100" end="1" center="0,22" time="400" tween="back" easing="in">Hidden</animation>
 	</include>
 </includes>

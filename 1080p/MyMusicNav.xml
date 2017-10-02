@@ -5,134 +5,32 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
-		<include condition="Skin.HasSetting(ArtistLogo)">logo-artists</include>
+		<include>Logo</include>
 		<control type="group">
-			<include>CoverFlow-Music</include><!-- view id=55 -->
-			<include>Icons-Albums</include><!-- view id=56 -->
-			<include>Wall-Music</include><!-- view id=592 -->
-			<include>Item-Music</include><!-- view id=595 -->
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Right_Panel_Animation</include>
+			<include>Window_OpenClose_Animation</include>
+			<include>ContentPanel</include>
+			<include>SideMenu</include>
 			<control type="group">
-				<include>ContentPanel</include>
+				<include>CoverFlow-Music</include><!-- view id=55 -->
+				<include>Icons-Albums</include><!-- view id=56 -->
+				<include>Wall-Music</include><!-- view id=592 -->
+				<include>Item-Music</include><!-- view id=595 -->
 				<include>FullList-Music</include><!-- view id=52 -->
 				<include>List-Music</include><!-- view id=51 -->
 				<include>Thumbnail</include><!-- view id=53 -->
 				<include>Fanart-Music</include><!-- view id=50 -->
 				<include>MediaInfo-Music</include><!-- view id=59 -->
 				<include>MediaInfo-AddOns</include><!-- view id=599 -->
-				<include>AllViewCommonPageControls</include>
-				<include>ScrollOffsetLabel</include>
+				<include>Fanart-Music_Root_Extras</include>
+				<include>Fanart-Artists_Extras</include>
+				<include>Fanart-AlbumsSongs_Extras</include>
+				<include>PageControls</include>
+				<include>ScrollLabel</include>
 			</control>
 		</control>
-		<control type="group">
-			<include>Fanart-Music_Root_Extras</include>
-			<include>Fanart-Artists_Extras</include>
-			<include>Fanart-AlbumsSongs_Extras</include>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include>CommonNowPlaying</include>
-			<control type="grouplist" id="9000">
-				<include>SideMenuAnim</include>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<itemgap>-2</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
-					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
-				</control>
-				<control type="button" id="8">
-					<description>Search</description>
-					<include>ButtonCommonValues</include>
-					<label>137</label>
-				</control>
-				<control type="edit" id="19">
-					<description>Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<visible>!Container.CanFilterAdvanced</visible>
-				</control>
-				<control type="radiobutton" id="621">
-					<description>Advanced Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<onclick>right</onclick>
-					<onclick>Filter</onclick>
-					<selected>Container.Filtered</selected>
-					<visible>Container.CanFilterAdvanced</visible>
-				</control>
-				<control type="togglebutton" id="20">
-					<description>Update Library</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>653</label>
-					<altlabel>13353</altlabel>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
-					<alttexturenofocus></alttexturenofocus>
-					<usealttexture>library.isscanningmusic</usealttexture>
-				</control>
-				<control type="radiobutton" id="16">
-					<description>PartyMode</description>
-					<include>ButtonCommonValues</include>
-					<label>589</label>
-				</control>
-				<control type="button" id="622">
-					<description>Get more</description>
-					<include>ButtonCommonValues</include>
-					<label>21452</label>
-					<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
-					<visible>Container.Content(addons)</visible>
-				</control>
-				<control type="button" id="610">
-					<description>PlayerControls</description>
-					<include>ButtonCommonValues</include>
-					<label>16003</label>
-					<onclick>ActivateWindow(playercontrols)</onclick>
-					<visible>Player.HasAudio | Player.HasVideo</visible>
-				</control>
-				<control type="button" id="22">
-					<description>now playing</description>
-					<include>ButtonCommonValues</include>
-					<label>13350</label>
-					<onclick>ActivateWindow(musicplaylist)</onclick>
-					<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Header_Animation</include>
-			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(595)">Conditional</animation>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture border="2">header.png</texture>
-			</control>
-			<include>CommonFileCount</include>
-			<control type="grouplist">
-				<include>Breadcrumbs</include>
-				<include>Breadcrumbs-Music-Library</include>
-			</control>
-		</control>
+		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
-		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
+		<include condition="Skin.HasSetting(DebugMode)">DebugInfo</include>
 		<include>ContentFade</include>
 	</controls>
 </window>

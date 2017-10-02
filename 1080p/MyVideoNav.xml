@@ -5,6 +5,7 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
+		<include>Logo</include>
 		<control type="group">
 			<include>CoverFlow-Movies</include><!-- view id=55 -->
 			<include>Icons-Movies</include><!-- view id=57 -->

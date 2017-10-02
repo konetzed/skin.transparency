@@ -67,7 +67,7 @@
 					<top>0</top>
 					<width>740</width>
 					<height>30</height>
-					<textcolor>blue</textcolor>
+					<textcolor>color</textcolor>
 					<font>font-23</font>
 					<label>[B]$INFO[Window.Property(Location)][/B]</label>
 				</control>
@@ -77,7 +77,7 @@
 					<width>720</width>
 					<height>30</height>
 					<align>right</align>
-					<textcolor>lightblue</textcolor>
+					<textcolor>lightcolor</textcolor>
 					<font>font-18</font>
 					<label>$INFO[Window.Property(Updated)]</label>
 				</control>
@@ -105,7 +105,7 @@
 						<height>60</height>
 						<font>font-30</font>
 						<align>center</align>
-						<textcolor>lightblue</textcolor>
+						<textcolor>lightcolor</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<label fallback="-">$INFO[Window.Property(Current.Condition)]</label>
 					</control>
@@ -129,7 +129,7 @@
 							<height>38</height>
 							<font>font-23</font>
 							<aligny>center</aligny>
-							<textcolor>lightblue</textcolor>
+							<textcolor>lightcolor</textcolor>
 							<selectedcolor>white</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -154,7 +154,7 @@
 							<height>38</height>
 							<font>font-23</font>
 							<aligny>center</aligny>
-							<textcolor>lightblue</textcolor>
+							<textcolor>lightcolor</textcolor>
 							<selectedcolor>white</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -228,7 +228,7 @@
 								<height>38</height>
 								<font>font-23</font>
 								<aligny>center</aligny>
-								<textcolor>lightblue</textcolor>
+								<textcolor>lightcolor</textcolor>
 								<selectedcolor>white</selectedcolor>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
@@ -253,7 +253,7 @@
 								<height>38</height>
 								<font>font-23</font>
 								<aligny>center</aligny>
-								<textcolor>lightblue</textcolor>
+								<textcolor>lightcolor</textcolor>
 								<selectedcolor>white</selectedcolor>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
@@ -327,7 +327,7 @@
 							<width>240</width>
 							<height>30</height>
 							<align>center</align>
-							<textcolor>blue</textcolor>
+							<textcolor>color</textcolor>
 							<font>font-20c</font>
 							<label fallback="-">[B]$INFO[ListItem.Label][/B]</label>
 						</control>
@@ -337,7 +337,7 @@
 							<width>240</width>
 							<height>30</height>
 							<align>center</align>
-							<textcolor>lightblue</textcolor>
+							<textcolor>lightcolor</textcolor>
 							<font>font-20</font>
 							<label fallback="-">$INFO[ListItem.Label2]</label>
 						</control>
@@ -374,7 +374,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<wrapmultiline>true</wrapmultiline>
-							<textcolor>lightblue</textcolor>
+							<textcolor>lightcolor</textcolor>
 							<font>font-18</font>
 							<label fallback="-">$INFO[ListItem.Property(Outlook)]</label>
 						</control>
@@ -386,7 +386,7 @@
 							<width>240</width>
 							<height>30</height>
 							<align>center</align>
-							<textcolor>blue</textcolor>
+							<textcolor>color</textcolor>
 							<font>font-20c</font>
 							<label fallback="-">[B]$INFO[ListItem.Label][/B]</label>
 						</control>
@@ -396,7 +396,7 @@
 							<width>240</width>
 							<height>30</height>
 							<align>center</align>
-							<textcolor>lightblue</textcolor>
+							<textcolor>lightcolor</textcolor>
 							<font>font-20</font>
 							<label fallback="-">$INFO[ListItem.Label2]</label>
 						</control>
@@ -433,7 +433,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<wrapmultiline>true</wrapmultiline>
-							<textcolor>lightblue</textcolor>
+							<textcolor>lightcolor</textcolor>
 							<font>font-18</font>
 							<label fallback="-">$INFO[ListItem.Property(Outlook)]</label>
 						</control>
