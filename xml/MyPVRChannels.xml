@@ -6,80 +6,19 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Right_Panel_Animation</include>
+			<include>Window_OpenClose_Animation</include>
+			<include>ContentPanel</include>
 			<control type="group">
-				<animation effect="slide" start="0,0" end="1045,174" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50)">Conditional</animation>
-				<include>ContentPanel</include>
 				<include>Fanart-PVRChannels</include>
-				<include>ScrollOffsetLabel</include>
-				<include>AllViewCommonPageControls</include>
+				<include>Fanart-PVRChannels_Extras</include>
+				<include>PageControls</include>
+				<include>ScrollLabel</include>
 			</control>
+			<include>SideMenu</include>
 		</control>
-		<control type="group">
-			<include>Fanart-PVRChannels_Extras</include>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<control type="grouplist" id="9000">
-				<include>SideMenuAnim2</include>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<itemgap>-2</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
-					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
-				</control>
-				<control type="button" id="28">
-					<description>Change Channel Groups</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="radiobutton" id="31">
-					<description>Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>$LOCALIZE[587]</label>
-				</control>
-				<control type="radiobutton" id="6">
-					<description>Show hidden channels</description>
-					<include>ButtonCommonValues</include>
-					<label>$LOCALIZE[19051]</label>
-				</control>
-				<include>PVR-Menu</include>
-			</control>
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Header_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture border="2">header.png</texture>
-			</control>
-			<control type="group">
-				<include>CommonFileCount</include>
-			</control>
-			<control type="grouplist">
-				<include>Breadcrumbs</include>
-				<include>Breadcrumbs-TV</include>
-			</control>
-		</control>
+		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
-		<include>ContentFade</include>
+		<include>PageFade</include>
 	</controls>
 </window>

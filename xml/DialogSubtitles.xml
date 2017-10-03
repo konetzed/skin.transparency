@@ -396,7 +396,6 @@
 			<font>font-20</font>
 			<textcolor>white</textcolor>
 		</control>
-		<include>CommonFileCount14</include>
 		<control type="button" id="8999">
 			<description>Fake button for mouse control</description>
 			<left>0</left>

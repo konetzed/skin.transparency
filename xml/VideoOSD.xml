@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">903</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>ContentFade</include>
+			<include>PageFade</include>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog)">conditional</animation>
 			<visible>Player.HasMedia</visible>
 			<control type="group">

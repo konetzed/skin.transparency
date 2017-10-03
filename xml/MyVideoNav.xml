@@ -7,18 +7,16 @@
 		<include>DefaultBackground</include>
 		<include>Logo</include>
 		<control type="group">
-			<include>CoverFlow-Movies</include><!-- view id=55 -->
-			<include>Icons-Movies</include><!-- view id=57 -->
-			<include>Item</include><!-- view id=590 -->
-			<include>Slide</include><!-- view id=596 -->
-			<include>Wall-Movies</include><!-- view id=592 -->
-			<include>Wall-Episodes</include><!-- view id=598 -->
-			<include>Thumbwall-Videos</include><!-- view id=589 -->
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Right_Panel_Animation</include>
+			<include>Window_OpenClose_Animation</include>
+			<include>ContentPanel</include>
 			<control type="group">
-				<include>ContentPanel</include>
+				<include>CoverFlow-Movies</include><!-- view id=55 -->
+				<include>Icons-Movies</include><!-- view id=57 -->
+				<include>Item</include><!-- view id=590 -->
+				<include>Slide</include><!-- view id=596 -->
+				<include>Wall-Movies</include><!-- view id=592 -->
+				<include>Wall-Episodes</include><!-- view id=598 -->
+				<include>Thumbwall-Videos</include><!-- view id=589 -->
 				<include>FullList-Videos</include><!-- view id=52 -->
 				<include>List-Videos</include><!-- view id=51 -->
 				<include>Thumbnail-Videos</include><!-- view id=53 -->
@@ -26,135 +24,21 @@
 				<include>MediaInfo-Movies</include><!-- view id=58 -->
 				<include>MediaInfo-TVShows</include><!-- view id=59 -->
 				<include>MediaInfo-AddOns</include><!-- view id=599 -->
-				<include>AllViewCommonPageControls</include>
-				<include>ScrollOffsetLabel</include>
+				<include>FullList_Extras</include>
+				<include>List_Extras</include>
+				<include>Thumbnail-Videos_Extras</include>
+				<include>Icons-Movies_Extras</include>
+				<include>MediaInfo-Movies_Extras</include>
+				<include>Fanart-Videos_Root_Extras</include>
+				<include>Fanart-Videos_Extras</include>
+				<include>PageControls</include>
+				<include>ScrollLabel</include>
 			</control>
+			<include>SideMenu</include>
 		</control>
-		<control type="group">
-			<include>FullList_Extras</include>
-			<include>List_Extras</include>
-			<include>Thumbnail-Videos_Extras</include>
-			<include>Icons-Movies_Extras</include>
-			<include>MediaInfo-Movies_Extras</include>
-			<include>Fanart-Videos_Root_Extras</include>
-			<include>Fanart-Videos_Extras</include>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include>CommonNowPlaying</include>
-			<control type="grouplist" id="9000">
-				<width>387</width>
-				<height>910</height>
-				<include>SideMenuAnim</include>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<itemgap>-2</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
-					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
-				</control>
-				<control type="button" id="10">
-					<description>Watched Toggle</description>
-					<include>ButtonCommonValues</include>
-					<label>20367</label>
-				</control>
-				<control type="button" id="8">
-					<description>Search</description>
-					<include>ButtonCommonValues</include>
-					<label>137</label>
-				</control>
-				<control type="edit" id="19">
-					<description>Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-				</control>
-				<control type="radiobutton" id="621">
-					<description>Advanced Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<onclick>right</onclick>
-					<onclick>Filter</onclick>
-					<selected>Container.Filtered</selected>
-					<visible>Container.CanFilterAdvanced</visible>
-				</control>
-				<control type="togglebutton" id="20">
-					<description>Update Library</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>653</label>
-					<altlabel>13353</altlabel>
-				</control>
-				<control type="radiobutton" id="16">
-					<description>PartyMode</description>
-					<include>ButtonCommonValues</include>
-					<label>589</label>
-					<visible>Container.Content(MusicVideos)</visible>
-				</control>
-				<control type="radiobutton" id="11">
-					<description>Unlock Shares</description>
-					<include>ButtonCommonValues</include>
-					<label>12333</label>
-					<pulseonselect>no</pulseonselect>
-					<onclick>Xbmc.MasterMode</onclick>
-					<selected>System.IsMaster</selected>
-					<visible>System.HasLocks</visible>
-				</control>
-				<control type="button" id="622">
-					<description>Get more</description>
-					<include>ButtonCommonValues</include>
-					<label>21452</label>
-					<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
-					<visible>Container.Content(addons)</visible>
-				</control>
-				<control type="button" id="610">
-					<description>PlayerControls</description>
-					<include>ButtonCommonValues</include>
-					<label>16003</label>
-					<onclick>ActivateWindow(playercontrols)</onclick>
-					<visible>Player.HasAudio | Player.HasVideo</visible>
-				</control>
-				<control type="button" id="22">
-					<description>now playing</description>
-					<include>ButtonCommonValues</include>
-					<label>13350</label>
-					<onclick>ActivateWindow(videoplaylist)</onclick>
-					<visible>!String.IsEqual(Playlist.Length(video),0)</visible>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Header_Animation</include>
-			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(596)">Conditional</animation>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture border="2">header.png</texture>
-			</control>
-			<include>CommonFileCount</include>
-			<control type="grouplist">
-				<include>Breadcrumbs</include>
-				<include>Breadcrumbs-Videos</include>
-			</control>
-		</control>
+		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
-		<include>ContentFade</include>
+		<include>PageFade</include>
 	</controls>
 </window>

@@ -27,17 +27,6 @@
 		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
 		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
 	</include>
-	<include name="ContentFade">
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>shade.png</texture>
-			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
-			<visible>System.HasActiveModalDialog + ! [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)]</visible>
-		</control>
-	</include>
 	<include name="dialogeffect">
 		<animation effect="fade" time="300">WindowOpen</animation>
 		<animation effect="fade" time="300">WindowClose</animation>
@@ -247,6 +236,17 @@
 		<animation type="UnFocus" reversible="true">
 			<effect type="zoom" start="-10,10,402,351" end="48,60,288,252" time="250" />
 		</animation>
+	</include>
+	<include name="PageFade">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>shade.png</texture>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<visible>System.HasActiveModalDialog + ! [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)]</visible>
+		</control>
 	</include>
 	<include name="Video-Icons-CaseAnimation1">
 		<animation type="focus" reversible="false">

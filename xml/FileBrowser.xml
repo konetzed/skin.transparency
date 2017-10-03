@@ -71,8 +71,6 @@
 				<textcolor>lightblue</textcolor>
 				<haspath>true</haspath>
 			</control>
-			<include>CommonFileCount4</include>
-			<include>CommonFileCount5</include>
 			<control type="group" id="9000">
 				<control type="button" id="413">
 					<description>OK button</description>

@@ -6,9 +6,9 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>ContentPanel</include>
 			<control type="group">
-				<include>Window_OpenClose_Right_Panel_Animation</include>
-				<include>ContentPanel</include>
 				<include condition="Window.IsVisible(MusicPlaylist)">FullList-Music</include>
 				<include condition="Window.IsVisible(MusicPlaylist)">List-Music</include>
 				<include condition="Window.IsVisible(MusicPlaylist)">MediaInfo-Music</include>
@@ -17,77 +17,14 @@
 				<include condition="Window.IsVisible(VideoPlaylist)">List-Videos</include>
 				<include condition="Window.IsVisible(VideoPlaylist)">Fanart-Videos</include>
 				<include condition="Window.IsVisible(VideoPlaylist)">MediaInfo-Movies</include>
-				<include>AllViewCommonPageControls</include>
-				<include>ScrollOffsetLabel</include>
+				<include>PageControls</include>
+				<include>ScrollLabel</include>
 			</control>
+			<include>SideMenu</include>
 		</control>
-		<control type="group">
-			<top>34</top>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include>CommonNowPlaying</include>
-			<control type="grouplist" id="9000">
-				<include>SideMenuAnim</include>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<itemgap>-2</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<left>0</left>
-					<top>0</top>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="radiobutton" id="20">
-					<description>Shuffle button</description>
-					<left>0</left>
-					<top>68</top>
-					<include>ButtonCommonValues</include>
-					<label>191</label>
-				</control>
-				<control type="button" id="26">
-					<description>Repeat button</description>
-					<left>0</left>
-					<top>135</top>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="21">
-					<description>Save button</description>
-					<left>0</left>
-					<top>202</top>
-					<label>190</label>
-					<include>ButtonCommonValues</include>
-				</control>
-				<control type="button" id="610">
-					<description>PlayerControls</description>
-					<left>0</left>
-					<top>270</top>
-					<include>ButtonCommonValues</include>
-					<label>16003</label>
-					<onclick>ActivateWindow(playercontrols)</onclick>
-					<visible>Player.HasAudio | Player.HasVideo</visible>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Header_Animation</include>
-			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(50)">Conditional</animation>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture border="2">header.png</texture>
-			</control>
-			<include>CommonFileCount</include>
-			<control type="grouplist">
-				<include>Breadcrumbs</include>
-				<include condition="Window.IsVisible(MusicPlaylist)">Breadcrumbs-MusicPlaylist</include>
-				<include condition="Window.IsVisible(VideoPlaylist)">Breadcrumbs-VideoPlaylist</include>
-			</control>
-		</control>
+		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
-		<include>ContentFade</include>
+		<include>PageFade</include>
 	</controls>
 </window>

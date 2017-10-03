@@ -676,13 +676,13 @@
 		</control>
 	</include>
 	<include name="MediaInfo-PVRRecordings">
-		<control type="list" id="58">
+		<control type="list" id="50">
 			<left>300</left>
 			<top>213</top>
 			<width>1320</width>
 			<height>654</height>
-			<onup>58</onup>
-			<ondown>58</ondown>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<viewtype label="535">list</viewtype>
@@ -746,7 +746,7 @@
 					<width>1320</width>
 					<height>45</height>
 					<texture border="7">list-focus2.png</texture>
-					<visible>Control.HasFocus(58)</visible>
+					<visible>Control.HasFocus(50)</visible>
 					<include>VisibleFadeEffect</include>
 					<include>ListFocusScroll</include>
 				</control>
@@ -787,7 +787,7 @@
 		<control type="group">
 			<left>300</left>
 			<top>202</top>
-			<visible>Control.IsVisible(58)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>518</top>
@@ -807,17 +807,17 @@
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
 			<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			<visible>Control.IsVisible(58)</visible>
+			<visible>Control.IsVisible(50)</visible>
 		</control>
 	</include>
 	<include name="FullList-PVRSearch">
-		<control type="list" id="52">
+		<control type="list" id="50">
 			<left>300</left>
 			<top>213</top>
 			<width>1320</width>
 			<height>654</height>
-			<onup>52</onup>
-			<ondown>52</ondown>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<viewtype label="535">list</viewtype>
@@ -911,7 +911,7 @@
 					<texture border="7">list-focus2.png</texture>
 					<include>VisibleFadeEffect</include>
 					<include>ListFocusScroll</include>
-					<visible>Control.HasFocus(52)</visible>
+					<visible>Control.HasFocus(50)</visible>
 				</control>
 				<control type="image">
 					<left>15</left>
@@ -977,13 +977,13 @@
 		</control>
 	</include>
 	<include name="FullList-PVRTimers">
-		<control type="list" id="52">
+		<control type="list" id="50">
 			<left>300</left>
 			<top>213</top>
 			<width>1320</width>
 			<height>654</height>
-			<onup>52</onup>
-			<ondown>52</ondown>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<viewtype label="535">list</viewtype>
@@ -1050,7 +1050,7 @@
 					<width>1320</width>
 					<height>45</height>
 					<texture border="7">list-focus2.png</texture>
-					<visible>Control.HasFocus(52)</visible>
+					<visible>Control.HasFocus(50)</visible>
 					<include>VisibleFadeEffect</include>
 					<include>ListFocusScroll</include>
 				</control>
@@ -1095,7 +1095,7 @@
 	</include>
 	<include name="FullList-PVRTimers_Extras">
 		<control type="group">
-			<visible>Control.IsVisible(52)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<include>Window_OpenClose_Visible_MediaFlags_Animation</include>
 			<control type="image">
 				<left>495</left>
@@ -1110,7 +1110,7 @@
 				<left>450</left>
 				<top>934</top>
 				<width>1020</width>
-				<height>52</height>
+				<height>50</height>
 				<font>font-20</font>
 				<align>center</align>
 				<aligny>center</aligny>

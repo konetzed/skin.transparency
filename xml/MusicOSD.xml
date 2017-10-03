@@ -5,7 +5,7 @@
 	<animation effect="fade" time="300">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<include>ContentFade</include>
+			<include>PageFade</include>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">Conditional</animation>
 			<left>0</left>
 			<top>0</top>

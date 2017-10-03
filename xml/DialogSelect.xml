@@ -240,8 +240,6 @@
 			<orientation>vertical</orientation>
 			<visible>Control.IsVisible(6)</visible>
 		</control>
-		<include>CommonFileCount3</include>
-		<include>CommonFileCount13</include>
 		<control type="grouplist" id="9001">
 			<left>158</left>
 			<top>855</top>

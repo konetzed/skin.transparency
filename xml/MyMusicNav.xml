@@ -9,7 +9,6 @@
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
-			<include>SideMenu</include>
 			<control type="group">
 				<include>CoverFlow-Music</include><!-- view id=55 -->
 				<include>Icons-Albums</include><!-- view id=56 -->
@@ -27,10 +26,11 @@
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>
+			<include>SideMenu</include>
 		</control>
 		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include condition="Skin.HasSetting(DebugMode)">DebugInfo</include>
-		<include>ContentFade</include>
+		<include>PageFade</include>
 	</controls>
 </window>

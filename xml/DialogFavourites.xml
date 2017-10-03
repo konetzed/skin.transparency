@@ -136,7 +136,6 @@
 				<texture fallback="DefaultFolder.png" diffuse="thumb-diffuse.png" background="true">$INFO[Container(450).ListItem.Icon]</texture>
 				<fadetime>IconCrossfadeTime</fadetime>
 			</control>
-			<include>CommonFileCount2</include>
 		</control>
 	</controls>
 </window>

@@ -2,7 +2,7 @@
 <window>
 	<controls>
 		<control type="group">
-			<include>ContentFade</include>
+			<include>PageFade</include>
 			<visible>!Window.IsVisible(VideoOSD)</visible>
 			<control type="group">
 				<top>780</top>

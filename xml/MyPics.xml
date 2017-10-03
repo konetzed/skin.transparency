@@ -6,117 +6,24 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>Polaroid</include>
-			<include>PicThumb</include>
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Right_Panel_Animation</include>
+			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
-			<include>FullList</include>
-			<include>List</include>
-			<include>Thumbnail</include>
-			<include>MediaInfo-AddOns</include>
-			<include>AllViewCommonPageControls</include>
-			<include>ScrollOffsetLabel</include>
-		</control>
-		<control type="group">
-			<include>Fanart-Pictures-Extras</include>
-		</control>
-		<control type="group">
-			<top>34</top>
-			<include>Window_OpenClose_Left_Panel_Animation</include>
-			<include>CommonNowPlaying</include>
-			<control type="grouplist" id="9000">
-				<include>SideMenuAnim</include>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<itemgap>-2</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<left>0</left>
-					<top>0</top>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<left>0</left>
-					<top>68</top>
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
-					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
-				</control>
-				<control type="edit" id="19">
-					<description>Filter</description>
-					<left>0</left>
-					<top>135</top>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-				</control>
-				<control type="button" id="6">
-					<description>Slideshow</description>
-					<left>0</left>
-					<top>202</top>
-					<include>ButtonCommonValues</include>
-					<label>108</label>
-				</control>
-				<control type="button" id="7">
-					<description>Recursive Slideshow</description>
-					<left>0</left>
-					<top>270</top>
-					<include>ButtonCommonValues</include>
-					<label>361</label>
-				</control>
-				<control type="radiobutton" id="9">
-					<description>Randomize Toggle</description>
-					<left>0</left>
-					<top>338</top>
-					<include>ButtonCommonValues</include>
-					<label>13319</label>
-					<visible>!Control.IsVisible(597)</visible>
-				</control>
-				<control type="button" id="622">
-					<description>Get more</description>
-					<include>ButtonCommonValues</include>
-					<label>21452</label>
-					<onclick>ActivateWindow(addonbrowser,addons://more/image/,return)</onclick>
-					<visible>Container.Content(addons)</visible>
-				</control>
-				<control type="button" id="610">
-					<description>PlayerControls</description>
-					<left>0</left>
-					<top>405</top>
-					<include>ButtonCommonValues</include>
-					<label>16003</label>
-					<onclick>ActivateWindow(playercontrols)</onclick>
-					<visible>Player.HasAudio | Player.HasVideo</visible>
-				</control>
+			<control type="group">
+				<include>Polaroid</include>
+				<include>PicThumb</include>
+				<include>ContentPanel</include>
+				<include>FullList</include>
+				<include>List</include>
+				<include>Thumbnail</include>
+				<include>MediaInfo-AddOns</include>
+				<include>PageControls</include>
+				<include>ScrollLabel</include>
 			</control>
+			<include>SideMenu</include>
 		</control>
-		<control type="group">
-			<include>Window_OpenClose_Header_Animation</include>
-			<animation effect="slide" start="0,0" end="0,-82" time="300" tween="quadratic" easing="out" condition="Control.IsVisible(594) | Control.IsVisible(50)">Conditional</animation>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture border="2">header.png</texture>
-			</control>
-			<include>CommonFileCount</include>
-			<control type="grouplist">
-				<include>Breadcrumbs</include>
-				<include>Breadcrumbs-Pictures</include>
-			</control>
-		</control>
+		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
-		<include>ContentFade</include>
+		<include>PageFade</include>
 	</controls>
 </window>

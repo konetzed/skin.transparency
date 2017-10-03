@@ -91,6 +91,15 @@
 			<height>920</height>
 			<texture border="5">panel-light.png</texture>
 		</control>
+		<control type="image">
+			<left>476</left>
+			<top>81</top>
+			<width>3</width>
+			<height>918</height>
+			<texture colordiffuse="grey">white.png</texture>
+			<animation effect="slide" start="0,0" end="97,0" time="0" condition="Window.IsVisible(Settings)">Conditional</animation>
+			<visible>Window.IsVisible(Settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings) | Window.IsVisible(SystemInfo) | Window.IsVisible(Profiles)</visible>
+		</control>
 	</include>
 	<include name="DefaultBackground">
 		<control type="image">
@@ -169,6 +178,7 @@
 			<align>right</align>
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
+			<visible>!String.IsEmpty(Container.NumPages)</visible>
 			<control type="label">
 				<description>Page Count Label</description>
 				<width min="15" max="375">auto</width>
@@ -245,6 +255,74 @@
 			</control>
 		</control>
 	</include>
+	<include name="Footer">
+		<include>Window_OpenClose_Footer_Animation</include>
+		<visible>![Window.IsVisible(Addons) + String.IsEmpty(ListItem.AddonBroken)]</visible>
+		<control type="image">
+			<left>0</left>
+			<top>50r</top>
+			<width>1920</width>
+			<height>50</height>
+			<texture flipy="true" border="2">header.png</texture>
+		</control>
+		<include condition="Window.IsVisible(Addons)">FooterAddons</include>
+		<include condition="Window.IsVisible(Home)">FooterHome</include>
+		<include condition="Window.IsVisible(LoginScreen)">FooterLogin</include>
+		<include condition="Window.IsVisible(Weather)">FooterWeather</include>
+	</include>
+	<include name="FooterAddons">
+		<control type="label">
+			<left>60</left>
+			<top>1020</top>
+			<width>1800</width>
+			<height>90</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[ListItem.AddonBroken]</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<font>font-20</font>
+		</control>
+	</include>
+	<include name="FooterHome">
+		<control type="rss">
+			<description>rss feed</description>
+			<left>0</left>
+			<top>42r</top>
+			<width>1920</width>
+			<height>40</height>
+			<font>font-20</font>
+			<urlset>1</urlset>
+			<textcolor>color</textcolor>
+			<titlecolor>color</titlecolor>
+			<headlinecolor>white</headlinecolor>
+		</control>
+	</include>
+	<include name="FooterLogin">
+		<control type="label">
+			<left>60</left>
+			<top>1033</top>
+			<height>45</height>
+			<width>1800</width>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[B]$INFO[ListItem.label2][/B]</label>
+		</control>
+	</include>
+	<include name="FooterWeather">
+		<control type="label">
+			<left>20</left>
+			<top>1044</top>
+			<width>1880</width>
+			<height>30</height>
+			<label>[B]$LOCALIZE[31605] $INFO[Window(Weather).Property(WeatherProvider)][/B]</label>
+			<font>font-15</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+		</control>
+	</include>
 	<include name="Header">
 		<control type="group">
 			<include>Window_OpenClose_Header_Animation</include>
@@ -274,14 +352,74 @@
 			</include>
 			<include content="FileCountCustom" condition="Window.IsVisible(musicplaylisteditor)">
 				<param name="id" value="100"/>
-				<param name="visible" value="Control.HasFocus(50)"/>
+				<param name="visible" value="Control.HasFocus(100)"/>
 			</include>
+			<control type="group">
+				<visible>Window.IsVisible(Home) | Window.IsVisible(LoginScreen)</visible>
+				<control type="image">
+					<left>20</left>
+					<top>5</top>
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="darkcolor">kodi-icon.png</texture>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>5</top>
+					<width>106</width>
+					<height>40</height>
+					<texture>kodi-logo.png</texture>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<itemgap>18</itemgap>
+					<align>right</align>
+					<top>10</top>
+					<width>1900</width>
+					<control type="group">
+						<width>36</width>
+						<height>36</height>
+						<control type="image">
+							<top>-3</top>
+							<width>36</width>
+							<height>36</height>
+							<texture>volume-panel.png</texture>
+							<visible>Player.Muted</visible>
+						</control>
+					</control>
+					<control type="label">
+						<description>date label</description>
+						<width min="15" max="750">auto</width>
+						<height>30</height>
+						<aligny>center</aligny>
+						<font>font-20</font>
+						<textcolor>white</textcolor>
+						<label>$INFO[System.Date(ddd mmm dd)], $INFO[System.Time]</label>
+					</control>
+					<control type="button" id="20">
+						<description>Power push button</description>
+						<width>30</width>
+						<height>30</height>
+						<label></label>
+						<font></font>
+						<texturenofocus>home-power.png</texturenofocus>
+						<texturefocus colordiffuse="color">home-power.png</texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+						<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					</control>
+				</control>
+			</control>
 			<control type="grouplist">
 				<left>0</left>
 				<top>0</top>
 				<width>682</width>
 				<height>45</height>
 				<orientation>horizontal</orientation>
+				<visible>![Window.IsVisible(Home) | Window.IsVisible(LoginScreen)]</visible>
 				<itemgap>0</itemgap>
 				<control type="image">
 					<width>44</width>
@@ -485,62 +623,6 @@
 			<visible>Control.IsVisible(589)</visible>
 		</control>
 	</include>
-	<include name="PVR-Menu">
-		<control type="button" id="901">
-			<description>Channels</description>
-			<width>355</width>
-			<include>PVR-Nav</include>
-			<label>$LOCALIZE[19019]</label>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-		</control>
-		<control type="button" id="902">
-			<description>Guide</description>
-			<width>355</width>
-			<include>PVR-Nav</include>
-			<label>$LOCALIZE[22020]</label>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-		</control>
-		<control type="button" id="903">
-			<description>Recordings</description>
-			<width>355</width>
-			<include>PVR-Nav</include>
-			<label>$LOCALIZE[19163]</label>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-		</control>
-		<control type="button" id="904">
-			<description>Search</description>
-			<width>355</width>
-			<include>PVR-Nav</include>
-			<label>$LOCALIZE[137]</label>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-		</control>
-		<control type="button" id="905">
-			<description>Timers</description>
-			<width>355</width>
-			<include>PVR-Nav</include>
-			<label>$LOCALIZE[19040]</label>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-		</control>
-		<control type="button" id="906">
-			<description>Rules</description>
-			<width>355</width>
-			<include>PVR-Nav</include>
-			<label>$LOCALIZE[19138]</label>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
-		</control>
-	</include>
-	<include name="PVR-Nav">
-		<onright condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">50</onright>
-		<onright condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">58</onright>
-		<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
-		<onright condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">52</onright>
-	</include>
 	<include name="ScrollLabel">
 		<control type="group">
 			<visible>Container.Scrolling</visible>
@@ -653,96 +735,362 @@
 	<include name="SideMenu">
 		<control type="group">
 			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>shade.png</texture>
+			</control>
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
 			<control type="image">
 				<left>356</left>
 				<top>81</top>
-				<width>3</width>
+				<width>1</width>
 				<height>918</height>
-				<texture colordiffuse="grey">white.png</texture>
+				<texture colordiffuse="strongfade">white.png</texture>
 			</control>
 			<control type="grouplist" id="9000">
 				<description>button area</description>
 				<left>1</left>
 				<top>106</top>
 				<width>355</width>
-				<height>675</height>
+				<height>840</height>
 				<itemgap>-2</itemgap>
 				<onright>50</onright>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<include>ButtonCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
-					<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
-				</control>
-				<control type="button" id="8">
-					<description>Search</description>
-					<include>ButtonCommonValues</include>
-					<label>137</label>
-				</control>
-				<control type="edit" id="19">
-					<description>Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<visible>!Container.CanFilterAdvanced</visible>
-				</control>
-				<control type="radiobutton" id="621">
-					<description>Advanced Filter</description>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<onclick>right</onclick>
-					<onclick>Filter</onclick>
-					<selected>Container.Filtered</selected>
-					<visible>Container.CanFilterAdvanced</visible>
-				</control>
-				<control type="togglebutton" id="20">
-					<description>Update Library</description>
-					<include>ButtonCommonValues</include>
-					<include>ButtonToggleCommonValues</include>
-					<label>653</label>
-					<altlabel>13353</altlabel>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
-					<alttexturenofocus></alttexturenofocus>
-					<usealttexture>library.isscanningmusic</usealttexture>
-				</control>
-				<control type="radiobutton" id="16">
-					<description>PartyMode</description>
-					<include>ButtonCommonValues</include>
-					<label>589</label>
-				</control>
-				<control type="button" id="622">
-					<description>Get more</description>
-					<include>ButtonCommonValues</include>
-					<label>21452</label>
-					<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
-					<visible>Container.Content(addons)</visible>
-				</control>
-				<control type="button" id="610">
+				<include condition="!Window.IsVisible(Weather)">SideMenuCommon</include>
+				<include condition="Window.IsVisible(AddonBrowser)">SideMenuAddons</include>
+				<include condition="Window.IsVisible(EventLog)">SideMenuEventLog</include>
+				<include condition="Window.IsVisible(Music)">SideMenuMusic</include>
+				<include condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)">SideMenuPlaylists</include>
+				<include condition="Window.IsVisible(Pictures)">SideMenuPictures</include>
+				<include condition="Window.IsVisible(Programs)">SideMenuPrograms</include>
+				<include condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)">SideMenuPVRChannels</include>
+				<include condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioChannelsGuide)">SideMenuPVRGuide</include>
+				<include condition="Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings)">SideMenuPVRRecordings</include>
+				<include condition="Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch)">SideMenuPVRSearch</include>
+				<include condition="Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">SideMenuPVRTimers</include>
+				<include condition="Window.IsVisible(Videos)">SideMenuVideos</include>
+				<include condition="Window.IsVisible(Weather)">SideMenuWeather</include>
+				<control type="button" id="699">
 					<description>PlayerControls</description>
-					<include>ButtonCommonValues</include>
-					<label>16003</label>
+					<width>355</width>
+					<label>$LOCALIZE[16003]</label>
+					<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
 					<onclick>ActivateWindow(playercontrols)</onclick>
 					<visible>Player.HasAudio | Player.HasVideo</visible>
 				</control>
-				<control type="button" id="22">
-					<description>now playing</description>
-					<include>ButtonCommonValues</include>
-					<label>13350</label>
-					<onclick>ActivateWindow(musicplaylist)</onclick>
-					<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
-				</control>
 			</control>
+		</control>
+	</include>
+	<include name="SideMenuCommon">
+		<control type="button" id="2">
+			<description>View As button</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<width>355</width>
+			<label>$LOCALIZE[103]</label>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<width>355</width>
+			<label>$LOCALIZE[31412] $LOCALIZE[584]</label>
+			<altlabel>$LOCALIZE[31412] $LOCALIZE[585]</altlabel>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+		</control>
+		<control type="edit" id="19">
+			<description>Filter</description>
+			<width>355</width>
+			<label>$LOCALIZE[587]</label>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<visible>!Container.CanFilterAdvanced</visible>
+		</control>
+		<control type="radiobutton" id="601">
+			<description>Advanced Filter</description>
+			<width>355</width>
+			<label>$LOCALIZE[587]</label>
+			<onclick>right</onclick>
+			<onclick>Filter</onclick>
+			<selected>Container.Filtered</selected>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<visible>Container.CanFilterAdvanced</visible>
+		</control>
+	</include>
+	<include name="SideMenuAddons">
+		<control type="button" id="5">
+			<description>Addon settings</description>
+			<width>355</width>
+			<label>$LOCALIZE[10004]</label>
+		</control>
+		<control type="button" id="9">
+			<description>Manual update</description>
+			<width>355</width>
+			<label>$LOCALIZE[24034]</label>
+		</control>
+		<control type="radiobutton" id="7">
+			<description>Hide foreign</description>
+			<width>355</width>
+			<label>$LOCALIZE[25001]</label>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Hide broken</description>
+			<width>355</width>
+			<label>$LOCALIZE[24999]</label>
+		</control>
+	</include>
+	<include name="SideMenuEventlog">
+		<control type="button" id="21">
+			<description>Level button</description>
+			<width>355</width>
+		</control>
+		<control type="button" id="22">
+			<description>Only show current level</description>
+			<width>355</width>
+		</control>
+		<control type="button" id="20">
+			<description>Clear button</description>
+			<width>355</width>
+			<label>$LOCALIZE[192]</label>
+		</control>
+	</include>
+	<include name="SideMenuMusic">
+		<control type="button" id="8">
+			<description>Search</description>
+			<width>355</width>
+			<label>$LOCALIZE[137]</label>
+		</control>
+		<control type="togglebutton" id="20">
+			<description>Update Library</description>
+			<width>355</width>
+			<label>$LOCALIZE[653]</label>
+			<altlabel>$LOCALIZE[13353]</altlabel>
+			<usealttexture>library.isscanningmusic</usealttexture>
+		</control>
+		<control type="radiobutton" id="16">
+			<description>PartyMode</description>
+			<width>355</width>
+			<label>$LOCALIZE[589]</label>
+		</control>
+		<control type="button" id="602">
+			<description>Get more</description>
+			<width>355</width>
+			<label>$LOCALIZE[21452]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
+			<visible>Container.Content(addons)</visible>
+		</control>
+		<control type="button" id="603">
+			<description>now playing</description>
+			<width>355</width>
+			<label>$LOCALIZE[13350]</label>
+			<onclick>ActivateWindow(musicplaylist)</onclick>
+			<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
+		</control>
+	</include>
+	<include name="SideMenuPictures">
+		<control type="button" id="6">
+			<description>Slideshow</description>
+			<width>355</width>
+			<label>$LOCALIZE[108]</label>
+		</control>
+		<control type="button" id="7">
+			<description>Recursive Slideshow</description>
+			<width>355</width>
+			<label>$LOCALIZE[361]</label>
+		</control>
+		<control type="radiobutton" id="9">
+			<description>Randomize Toggle</description>
+			<width>355</width>
+			<label>$LOCALIZE[13319]</label>
+		</control>
+		<control type="button" id="602">
+			<description>Get more</description>
+			<width>355</width>
+			<label>$LOCALIZE[21452]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://more/image/,return)</onclick>
+			<visible>Container.Content(addons)</visible>
+		</control>
+	</include>
+	<include name="SideMenuPlaylists">
+		<control type="radiobutton" id="20">
+			<description>Shuffle button</description>
+			<width>355</width>
+			<label>$LOCALIZE[191]</label>
+		</control>
+		<control type="button" id="26">
+			<description>Repeat button</description>
+			<width>355</width>
+		</control>
+		<control type="button" id="21">
+			<description>Save button</description>
+			<width>355</width>
+			<label>$LOCALIZE[190]</label>
+		</control>
+	</include>
+	<include name="SideMenuPVRChannels">
+		<control type="button" id="28">
+			<description>Change Channel Groups</description>
+			<width>355</width>
+		</control>
+		<control type="radiobutton" id="6">
+			<description>Show hidden channels</description>
+			<width>355</width>
+			<label>$LOCALIZE[19051]</label>
+		</control>
+		<include>SideMenuPVRCommon</include>
+	</include>
+	<include name="SideMenuPVRGuide">
+		<control type="button" id="28">
+			<description>Change Channel Groups</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+		</control>
+		<include>SideMenuPVRCommon</include>
+	</include>
+	<include name="SideMenuPVRRecordings">
+		<control type="radiobutton" id="5">
+			<description>Group items</description>
+			<width>355</width>
+			<label>$LOCALIZE[19270]</label>
+		</control>
+		<control type="radiobutton" id="7">
+			<description>Show deleted recordings</description>
+			<width>355</width>
+			<label>$LOCALIZE[19184]</label>
+		</control>
+		<include>SideMenuPVRCommon</include>
+	</include>
+	<include name="SideMenuPVRSearch">
+		<include>SideMenuPVRCommon</include>
+	</include>
+	<include name="SideMenuPVRTimers">
+		<control type="radiobutton" id="8">
+			<description>Hidden disabled timers</description>
+			<width>355</width>
+			<label>$LOCALIZE[19077]</label>
+		</control>
+		<include>SideMenuPVRCommon</include>
+	</include>
+	<include name="SideMenuPrograms">
+		<control type="button" id="602">
+			<description>Get more</description>
+			<width>355</width>
+			<label>$LOCALIZE[21452]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://more/executable/,return)</onclick>
+			<visible>Container.Content(addons)</visible>
+		</control>
+	</include>
+	<include name="SideMenuVideos">
+		<control type="button" id="8">
+			<description>Search</description>
+			<width>355</width>
+			<label>$LOCALIZE[137]</label>
+		</control>
+		<control type="button" id="10">
+			<description>Watched Toggle</description>
+			<width>355</width>
+			<label>$LOCALIZE[20367]</label>
+		</control>
+		<control type="togglebutton" id="20">
+			<description>Update Library</description>
+			<width>355</width>
+			<label>$LOCALIZE[653]</label>
+			<altlabel>$LOCALIZE[13353]</altlabel>
+		</control>
+		<control type="radiobutton" id="16">
+			<description>PartyMode</description>
+			<width>355</width>
+			<label>$LOCALIZE[589]</label>
+			<visible>Container.Content(MusicVideos)</visible>
+		</control>
+		<control type="button" id="602">
+			<description>Get more</description>
+			<width>355</width>
+			<label>$LOCALIZE[21452]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
+			<visible>Container.Content(addons)</visible>
+		</control>
+		<control type="button" id="22">
+			<description>now playing</description>
+			<width>355</width>
+			<label>$LOCALIZE[13350]</label>
+			<onclick>ActivateWindow(videoplaylist)</onclick>
+			<visible>!String.IsEqual(Playlist.Length(video),0)</visible>
+		</control>
+	</include>
+	<include name="SideMenuWeather">
+		<control type="button" id="3">
+			<description>change location button</description>
+			<width>355</width>
+			<label>$LOCALIZE[21873]</label>
+			<onclick>Weather.LocationNext</onclick>
+		</control>
+		<control type="button" id="2">
+			<description>Refresh button</description>
+			<width>355</width>
+		</control>
+	</include>
+	<include name="SideMenuPVRCommon">
+		<control type="button" id="901">
+			<description>Channels</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[19019]</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+		</control>
+		<control type="button" id="902">
+			<description>Guide</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[22020]</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+		</control>
+		<control type="button" id="903">
+			<description>Recordings</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[19163]</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+		</control>
+		<control type="button" id="904">
+			<description>Search</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[137]</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+		</control>
+		<control type="button" id="905">
+			<description>Timers</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[19040]</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+		</control>
+		<control type="button" id="906">
+			<description>Rules</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[19138]</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+		</control>
+		<control type="togglebutton" id="907">
+			<description>TV/Radio</description>
+			<width>355</width>
+			<onright condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">10</onright>
+			<label>$LOCALIZE[19021]</label>
+			<altlabel>$LOCALIZE[19020]</altlabel>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+			<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 		</control>
 	</include>
 	<include name="TouchScreenControls">

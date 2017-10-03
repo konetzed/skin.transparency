@@ -4,15 +4,13 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<control type="group">
-				<include condition="!Skin.HasSetting(HideHomeWidgets)">HomeWidgets</include>
-				<include>HomeMenu</include>
-				<include condition="!Skin.HasSetting(HideWeatherIcon)">Home_Top_Weather_Icon</include>
-			</control>
-			<include>HomeHeader</include>
-			<include condition="system.getbool(lookandfeel.enablerssfeeds)">RSS</include>
+			<include>HomeMenu</include>
+			<include condition="!Skin.HasSetting(HideWeatherIcon)">Home_Top_Weather_Icon</include>
+			<include condition="!Skin.HasSetting(HideHomeWidgets)">HomeWidgets</include>
 		</control>
+		<include>Header</include>
+		<include condition="system.getbool(lookandfeel.enablerssfeeds)">Footer</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControlsHome</include>
-		<include>ContentFade</include>
+		<include>PageFade</include>
 	</controls>
 </window>
