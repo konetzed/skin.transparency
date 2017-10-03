@@ -83,460 +83,6 @@
 		<align>left</align>
 		<aligny>center</aligny>
 	</include>
-	<include name="CommonFileCount">
-		<control type="grouplist">
-			<left>682</left>
-			<top>0</top>
-			<width>1215</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container.NumItems] $LOCALIZE[31025]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-				<visible>!String.IsEmpty(Container.TotalTime)</visible>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[555]: $INFO[Container.TotalTime]</label>
-				<visible>!String.IsEmpty(Container.TotalTime)</visible>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount2">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>862</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<animation effect="slide" start="0,0" end="0,105" time="0" condition="Window.IsVisible(Favourites)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-248,75" time="0" condition="Window.IsVisible(custom_DialogFavourites.xml)">Conditional</animation>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(450).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount3">
-		<control type="grouplist">
-			<left>402</left>
-			<top>798</top>
-			<width>450</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>Control.IsVisible(3)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(3).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount4">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>862</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>!Control.IsVisible(451)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(450).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount5">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>862</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>Control.IsVisible(451)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(451).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount6">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>0</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>Control.HasFocus(20) | Control.HasFocus(30)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(20).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount7">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>0</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>Control.HasFocus(21) | Control.HasFocus(31)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(21).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount8">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>0</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>!Control.HasFocus(100)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(50).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount9">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>0</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>Control.HasFocus(100)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(100).CurrentPage]/$INFO[Container(100).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(100).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount10">
-		<control type="grouplist">
-			<left>1148</left>
-			<top>0</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(2).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount11">
-		<control type="grouplist">
-			<left>378</left>
-			<top>68</top>
-			<width>750</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(11).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount13">
-		<control type="grouplist">
-			<left>402</left>
-			<top>798</top>
-			<width>450</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<visible>Control.IsVisible(6)</visible>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages]</label>
-			</control>
-			<control type="image">
-				<width>44</width>
-				<height>45</height>
-				<texture>dot.png</texture>
-			</control>
-			<control type="label">
-				<description>Item Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Container(6).NumItems] $LOCALIZE[31025]</label>
-			</control>
-		</control>
-	</include>
-	<include name="CommonFileCount14">
-		<control type="grouplist">
-			<left>675</left>
-			<top>690</top>
-			<width>450</width>
-			<height>45</height>
-			<align>right</align>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<control type="label">
-				<description>Page Count Label</description>
-				<width min="15" max="375">auto</width>
-				<height>45</height>
-				<aligny>center</aligny>
-				<font>font-20</font>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[31024] $INFO[Container(120).CurrentPage]/$INFO[Container(120).NumPages]</label>
-			</control>
-		</control>
-	</include>
 	<include name="ContentPanel">
 		<control type="image">
 			<left>120</left>
@@ -614,6 +160,91 @@
 			<visible>Player.HasAudio</visible>
 		</control>
 	</include>
+	<include name="FileCount">
+		<control type="grouplist">
+			<left>682</left>
+			<top>0</top>
+			<width>1215</width>
+			<height>45</height>
+			<align>right</align>
+			<orientation>horizontal</orientation>
+			<itemgap>0</itemgap>
+			<control type="label">
+				<description>Page Count Label</description>
+				<width min="15" max="375">auto</width>
+				<height>45</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
+			</control>
+			<control type="image">
+				<width>44</width>
+				<height>45</height>
+				<texture>dot.png</texture>
+			</control>
+			<control type="label">
+				<description>Item Count Label</description>
+				<width min="15" max="375">auto</width>
+				<height>45</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[Container.NumItems] $LOCALIZE[31025]</label>
+			</control>
+			<control type="image">
+				<width>44</width>
+				<height>45</height>
+				<texture>dot.png</texture>
+				<visible>!String.IsEmpty(Container.TotalTime)</visible>
+			</control>
+			<control type="label">
+				<description>Item Count Label</description>
+				<width min="15" max="375">auto</width>
+				<height>45</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[555]: $INFO[Container.TotalTime]</label>
+				<visible>!String.IsEmpty(Container.TotalTime)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="FileCountCustom">
+		<control type="grouplist">
+			<left>682</left>
+			<top>0</top>
+			<width>1215</width>
+			<height>45</height>
+			<align>right</align>
+			<orientation>horizontal</orientation>
+			<itemgap>0</itemgap>
+			<visible>$PARAM[visible]</visible>
+			<control type="label">
+				<description>Page Count Label</description>
+				<width min="15" max="375">auto</width>
+				<height>45</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[31024] $INFO[Container($PARAM[id]).CurrentPage]/$INFO[Container($PARAM[id]).NumPages]</label>
+			</control>
+			<control type="image">
+				<width>44</width>
+				<height>45</height>
+				<texture>dot.png</texture>
+			</control>
+			<control type="label">
+				<description>Item Count Label</description>
+				<width min="15" max="375">auto</width>
+				<height>45</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[Container($PARAM[id]).NumItems] $LOCALIZE[31025]</label>
+			</control>
+		</control>
+	</include>
 	<include name="Header">
 		<control type="group">
 			<include>Window_OpenClose_Header_Animation</include>
@@ -624,7 +255,27 @@
 				<height>50</height>
 				<texture border="2">header.png</texture>
 			</control>
-			<include>CommonFileCount</include>
+			<include condition="![Window.IsVisible(profiles) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)]">FileCount</include>
+			<include content="FileCountCustom" condition="Window.IsVisible(profiles)">
+				<param name="id" value="2"/>
+				<param name="visible" value="true"/>
+			</include>
+			<include content="FileCountCustom" condition="Window.IsVisible(filemanager)">
+				<param name="id" value="20"/>
+				<param name="visible" value="Control.HasFocus(20)"/>
+			</include>
+			<include content="FileCountCustom" condition="Window.IsVisible(filemanager)">
+				<param name="id" value="21"/>
+				<param name="visible" value="Control.HasFocus(21)"/>
+			</include>
+			<include content="FileCountCustom" condition="Window.IsVisible(musicplaylisteditor)">
+				<param name="id" value="50"/>
+				<param name="visible" value="Control.HasFocus(50)"/>
+			</include>
+			<include content="FileCountCustom" condition="Window.IsVisible(musicplaylisteditor)">
+				<param name="id" value="100"/>
+				<param name="visible" value="Control.HasFocus(50)"/>
+			</include>
 			<control type="grouplist">
 				<left>0</left>
 				<top>0</top>
@@ -638,7 +289,6 @@
 					<texture>dot.png</texture>
 				</control>
 				<control type="label">
-					<description>MusicPlaylist</description>
 					<label>$INFO[System.CurrentWindow]</label>
 					<include>BreadcrumbLabel</include>
 				</control>
