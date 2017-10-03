@@ -10,7 +10,7 @@
 		<import addon="script.globalsearch" version="5.0.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="1" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p"/>
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="be">Transparency! a fanart skin for Kodi</summary>
