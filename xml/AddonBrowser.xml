@@ -9,11 +9,12 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
+				<include>Fanart-ProgramsPicturesAddons</include>
 				<include>List</include>
 				<include>FullList</include>
 				<include>Thumbnail</include>
 				<include>MediaInfo-AddOns</include>
-				<include>Fanart-ProgramsPicturesAddons</include>
+				<include>Fanart-Programs-Extras</include>
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

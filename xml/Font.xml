@@ -72,12 +72,6 @@
 			<size>34</size>
 		</font>
 		<font>
-			<name>font-23c</name>
-			<filename>teen-normal.ttf</filename>
-			<size>34</size>
-			<style>upper</style>
-		</font>
-		<font>
 			<name>font-24c</name>
 			<filename>teen-normal.ttf</filename>
 			<size>36</size>
@@ -122,19 +116,9 @@
 			<size>52</size>
 		</font>
 		<font>
-			<name>font-40</name>
-			<filename>teen-normal.ttf</filename>
-			<size>60</size>
-		</font>
-		<font>
 			<name>font-80</name>
 			<filename>teen-normal.ttf</filename>
 			<size>120</size>
-		</font>
-		<font>
-			<name>font-160</name>
-			<filename>teen-normal.ttf</filename>
-			<size>240</size>
 		</font>
 	</fontset>
 	<fontset id="Arial" idlock="31702">
@@ -209,23 +193,11 @@
 			<size>34</size>
 		</font>
 		<font>
-			<name>font-23c</name>
-			<filename>arial.ttf</filename>
-			<size>30</size>
-			<style>upper</style>
-		</font>
-		<font>
 			<name>font-24c</name>
 			<filename>arial.ttf</filename>
 			<size>36</size>
 			<style>upper</style>
 			<aspect>0.84</aspect>
-		</font>
-		<font>
-			<name>font-25c</name>
-			<filename>arial.ttf</filename>
-			<size>33</size>
-			<style>upper</style>
 		</font>
 		<font>
 			<name>font-28</name>
@@ -260,19 +232,9 @@
 			<size>52</size>
 		</font>
 		<font>
-			<name>font-40</name>
-			<filename>arial.ttf</filename>
-			<size>60</size>
-		</font>
-		<font>
 			<name>font-80</name>
 			<filename>arial.ttf</filename>
 			<size>120</size>
-		</font>
-		<font>
-			<name>font-160</name>
-			<filename>arial.ttf</filename>
-			<size>240</size>
 		</font>
 	</fontset>
 </fonts>

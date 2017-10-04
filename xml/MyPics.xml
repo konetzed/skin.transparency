@@ -9,13 +9,14 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
+				<include>Fanart-ProgramsPicturesAddons</include>
 				<include>Polaroid</include>
 				<include>PicThumb</include>
-				<include>ContentPanel</include>
 				<include>FullList</include>
 				<include>List</include>
 				<include>Thumbnail</include>
 				<include>MediaInfo-AddOns</include>
+				<include>Fanart-Pictures_Extras</include>
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

@@ -133,7 +133,7 @@
 				<height>285</height>
 				<camera x="225" y="120" />
 				<animation effect="rotatey" start="0" end="30" condition="true" center="auto">Conditional</animation>
-				<visible>[VideoPlayer.Content(Episodes) | String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)] + Window.IsVisible(FullscreenVideo) + !Window.IsVisible(FullscreenInfo) + !Window.IsVisible(VideoOSD)] | [VideoPlayer.Content(Movies) + [String.StartsWith(Player.FileNameAndPath,http) | String.StartsWith(Player.FileNameAndPath,mms) | String.StartsWith(Player.FileNameAndPath,rtmp)]]</visible>
+				<visible>[[VideoPlayer.Content(Episodes) | String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)] + Window.IsVisible(FullscreenVideo) + !Window.IsVisible(FullscreenInfo) + !Window.IsVisible(VideoOSD)] | [VideoPlayer.Content(Movies) + [String.StartsWith(Player.FileNameAndPath,http) | String.StartsWith(Player.FileNameAndPath,mms) | String.StartsWith(Player.FileNameAndPath,rtmp)]]</visible>
 				<control type="image">
 					<left>-78</left>
 					<top>66</top>

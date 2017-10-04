@@ -8,6 +8,7 @@
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
+			<control type="group">
 				<include>FullList-PVRTimers</include>
 				<include>FullList-PVRTimers_Extras</include>
 				<include>PageControls</include>

@@ -255,16 +255,6 @@
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/artists/)">$LOCALIZE[133]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/)">$LOCALIZE[132]</value>
 	</variable>
-	<variable name="IncludesCommonNowPlayingVideoLabel1">
-		<value condition="[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)">$INFO[VideoPlayer.Title]</value>
-	</variable>
-	<variable name="IncludesCommonNowPlayingVideoLabel2">
-		<value condition="[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)">$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, - ]</value>
-	</variable>
-	<variable name="IncludesCommonNowPlayingVideoLabel3">
-		<value condition="[!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(MusicVideos)] | Control.IsVisible(592) | Control.IsVisible(598)">$INFO[VideoPlayer.Studio]</value>
-		<value condition="[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !Control.IsVisible(592) + !Control.IsVisible(598)">$INFO[VideoPlayer.Title]</value>
-	</variable>
 	<variable name="IncludesMediaFlagsMusic">
 		<value condition="String.EndsWith(ListItem.Filename,.aac)">flags/music/audiocodec/aac.png</value>
 		<value condition="String.EndsWith(ListItem.Filename,.ac3)">flags/music/audiocodec/ac3.png</value>
@@ -509,10 +499,6 @@
 	</variable>
 	<variable name="MusicGenreIconThumbnail">
 		<value>$INFO[ListItem.Label,resource://resource.images.musicgenreicons.poster/,.jpg]</value>
-	</variable>
-	<variable name="MusicVisualisation">
-		<value condition="!String.IsEmpty(MusicPlayer.Property(Artist_Description))">[CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR][B]$INFO[MusicPlayer.Property(Artist_Description)][CR] [CR] [CR]$INFO[MusicPlayer.Property(Album_Description)][/B][CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR] </value>
-		<value condition="String.IsEmpty(MusicPlayer.Property(Artist_Description))">[CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR][B]$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography)][/B][CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR] [CR] </value>
 	</variable>
 	<variable name="PartlyWatched">
 		<value condition="Integer.IsGreater(ListItem.PercentPlayed,0) + !Integer.IsGreater(ListItem.PercentPlayed,19)">OverlayPartlywatched1.png</value>
