@@ -7,11 +7,11 @@
 			<width>1360</width>
 			<height>744</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>53</onup>
 			<ondown>53</ondown>
 			<viewtype label="21371">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="272" height="248" condition="!Container.Content(Albums) + !Container.Content(Songs) + !Container.Content(MusicVideos)">
@@ -424,11 +424,11 @@
 			<width>1320</width>
 			<height>705</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>53</onup>
 			<ondown>53</ondown>
 			<viewtype label="21371">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="264" height="352" condition="!Container.Content(Movies) + !Container.Content(Sets) + ![Container.Content(TVShows) + !Skin.HasSetting(TVShowsPosters)] + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(MusicVideos)">

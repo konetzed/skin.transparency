@@ -587,9 +587,9 @@
 			<onleft>592</onleft>
 			<onright>592</onright>
 			<onup>9000</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<viewtype label="31038">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<preloaditems>2</preloaditems>
@@ -1239,9 +1239,9 @@
 			<onleft>592</onleft>
 			<onright>592</onright>
 			<onup>9000</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<viewtype label="31038">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<preloaditems>2</preloaditems>
@@ -1836,9 +1836,9 @@
 			<onleft>592</onleft>
 			<onright>592</onright>
 			<onup>9000</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<viewtype label="31038">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<preloaditems>2</preloaditems>

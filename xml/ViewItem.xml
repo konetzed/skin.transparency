@@ -587,11 +587,11 @@
 			<width>1920</width>
 			<height>645</height>
 			<onup>7026</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<onleft>590</onleft>
 			<onright>590</onright>
 			<viewtype label="31039">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<preloaditems>2</preloaditems>
@@ -1080,11 +1080,11 @@
 			<width>1920</width>
 			<height>645</height>
 			<onup>9000</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<onleft>595</onleft>
 			<onright>595</onright>
 			<viewtype label="31039">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<preloaditems>2</preloaditems>

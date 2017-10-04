@@ -123,17 +123,14 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<label></label>
 						<icon>home-filemanager.png</icon>
 						<onclick>ActivateWindow(Filemanager)</onclick>
 					</item>
 					<item id="2">
-						<label></label>
 						<icon>home-favourites.png</icon>
 						<onclick>ActivateWindow(Favourites)</onclick>
 					</item>
 					<item id="3">
-						<label></label>
 						<icon>home-search.png</icon>
 						<onclick>RunScript(script.globalsearch)</onclick>
 					</item>
@@ -1630,48 +1627,53 @@
 					<textcolor>white</textcolor>
 					<align>center</align>
 				</control>
-				<control type="image">
-					<left>239</left>
+				<control type="list" id="5044">
+					<left>232</left>
 					<top>108</top>
-					<width>48</width>
-					<height>48</height>
-					<texture colordiffuse="darkcolor">circle-small.png</texture>
-					<animation effect="slide" start="0,0" end="82,0" time="0" condition="Control.HasFocus(6002)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="164,0" time="0" condition="Control.HasFocus(6003)">Conditional</animation>
-					<visible>ControlGroup(5044).HasFocus</visible>
-				</control>
-				<control type="grouplist" id="5044">
-					<left>155</left>
-					<top>116</top>
 					<width>380</width>
-					<itemgap>50</itemgap>
+					<height>48</height>
 					<orientation>horizontal</orientation>
 					<onleft>5040</onleft>
-					<align>center</align>
-					<control type="togglebutton" id="6001">
-						<width>32</width>
-						<height>32</height>
-						<texturefocus>player-play-small.png</texturefocus>
-						<texturenofocus>player-play-small.png</texturenofocus>
-						<alttexturefocus>player-pause-small.png</alttexturefocus>
-						<alttexturenofocus>player-pause-small.png</alttexturenofocus>
-						<usealttexture>Player.Paused</usealttexture>
-						<onclick>PlayerControl(play)</onclick>
-					</control>
-					<control type="button" id="6002">
-						<width>32</width>
-						<height>32</height>
-						<texturefocus>player-next-small.png</texturefocus>
-						<texturenofocus>player-next-small.png</texturenofocus>
-						<onclick>PlayerControl(next)</onclick>
-					</control>
-					<control type="button" id="6003">
-						<width>32</width>
-						<height>32</height>
-						<texturefocus>player-stop-small.png</texturefocus>
-						<texturenofocus>player-stop-small.png</texturenofocus>
-						<onclick>PlayerControl(stop)</onclick>
-					</control>
+					<itemlayout width="85" height="48">
+						<control type="image">
+							<left>8</left>
+							<top>8</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout width="85" height="48">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>48</width>
+							<height>48</height>
+							<texture colordiffuse="darkcolor">circle-small.png</texture>
+							<visible>Control.HasFocus(5044)</visible>
+						</control>
+						<control type="image">
+							<left>8</left>
+							<top>8</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<icon>$VAR[PlayerSmallPlayIcon]</icon>
+							<onclick>PlayerControl(play)</onclick>
+						</item>
+						<item id="2">
+							<icon>player-small-next.png</icon>
+							<onclick>PlayerControl(next)</onclick>
+						</item>
+						<item id="3">
+							<icon>player-small-stop.png</icon>
+							<onclick>PlayerControl(stop)</onclick>
+						</item>
+					</content>
 				</control>
 				<control type="label">
 					<left>0</left>

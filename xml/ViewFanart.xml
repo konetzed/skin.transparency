@@ -5,11 +5,11 @@
 			<left>300</left>
 			<width>532</width>
 			<onleft>7005</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="31030">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>FanartNormal</include>
@@ -757,11 +757,11 @@
 			<width>532</width>
 			<include>FanartNormal</include>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="31030">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="532" height="44">
@@ -1255,11 +1255,11 @@
 			<include>FanartNormal</include>
 			<onleft condition="Window.IsVisible(Pictures)">7009</onleft>
 			<onleft condition="Window.IsVisible(Programs) | Window.IsVisible(AddonBrowser)">9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="31030">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="532" height="44">

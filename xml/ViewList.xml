@@ -7,11 +7,11 @@
 			<width>705</width>
 			<height>662</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>51</onup>
 			<ondown>51</ondown>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="705" height="44">
@@ -122,11 +122,11 @@
 			<width>705</width>
 			<height>662</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>51</onup>
 			<ondown>51</ondown>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="705" height="44">
@@ -697,11 +697,11 @@
 			<width>705</width>
 			<height>662</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>51</onup>
 			<ondown>51</ondown>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="705" height="44">

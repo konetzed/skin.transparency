@@ -527,6 +527,27 @@
 		<value condition="!VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Genre]</value>
 		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.TVShowTitle]</value>
 	</variable>
+	<variable name="PlayerSmallPlayIcon">
+		<value condition="!Player.Paused">player-small-pause.png</value>
+		<value condition="Player.Paused">player-small-play.png</value>
+	</variable>
+	<variable name="PlayerPlayIcon">
+		<value condition="!Player.Paused">player-pause.png</value>
+		<value condition="Player.Paused">player-play.png</value>
+	</variable>
+	<variable name="PlayerRandomIcon">
+		<value condition="!Playlist.IsRandom">player-random-off.png</value>
+		<value condition="Playlist.IsRandom">player-random-on.png</value>
+	</variable>
+	<variable name="PlayerRecordIcon">
+		<value condition="!Player.Recording">player-record-off.png</value>
+		<value condition="Player.Recording">player-record-on.png</value>
+	</variable>
+	<variable name="PlayerRepeatIcon">
+		<value condition="![Playlist.IsRepeat | Playlist.IsRepeatOne]">player-repeat-off.png</value>
+		<value condition="Playlist.IsRepeatOne">player-repeat-one.png</value>
+		<value condition="Playlist.IsRepeat">player-repeat-all.png</value>
+	</variable>
 	<variable name="VideoDecoder">
 		<value condition="Player.Process(videohwdecoder)">HW</value>
 		<value>SW</value>

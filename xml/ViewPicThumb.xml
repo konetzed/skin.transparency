@@ -58,9 +58,9 @@
 			<onleft>594</onleft>
 			<onright>594</onright>
 			<onup>7009</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<viewtype label="31033">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>

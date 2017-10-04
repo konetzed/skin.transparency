@@ -9,11 +9,11 @@
 			<include condition="Skin.HasSetting(FanartShort)">FanartShort</include>
 			<include condition="Skin.HasSetting(FanartLong)">FanartLong</include>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="31030">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="532" height="44">
@@ -153,11 +153,11 @@
 			<width>1792</width>
 			<height>765</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>10</onup>
 			<ondown>999</ondown>
 			<viewtype label="19069">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>350</scrolltime>
 			<timeblocks>40</timeblocks>
 			<rulerunit>6</rulerunit>
@@ -684,9 +684,9 @@
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="1320" height="44">
@@ -819,9 +819,9 @@
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="1320" height="44">
@@ -985,9 +985,9 @@
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout width="1320" height="44">
 				<control type="image">

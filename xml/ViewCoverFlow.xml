@@ -1235,9 +1235,9 @@
 			<onleft>55</onleft>
 			<onright>55</onright>
 			<onup>7024</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<viewtype label="31032">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<focusposition>3</focusposition>
@@ -2895,9 +2895,9 @@
 			<onleft>55</onleft>
 			<onright>55</onright>
 			<onup>9000</onup>
-			<ondown>60</ondown>
+			<ondown>90</ondown>
 			<viewtype label="31032">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<focusposition>3</focusposition>

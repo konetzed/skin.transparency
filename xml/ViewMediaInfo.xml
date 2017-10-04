@@ -8,11 +8,11 @@
 			<width>945</width>
 			<height>486</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>58</onup>
 			<ondown>58</ondown>
 			<viewtype label="544">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="945" height="44">
@@ -442,11 +442,11 @@
 			<width>630</width>
 			<height>662</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>59</onup>
 			<ondown>59</ondown>
 			<viewtype label="$LOCALIZE[544]">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="630" height="44">
@@ -790,11 +790,11 @@
 			<width>945</width>
 			<height>486</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>59</onup>
 			<ondown>59</ondown>
 			<viewtype label="544">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="945" height="44">
@@ -1335,11 +1335,11 @@
 			<width>945</width>
 			<height>486</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>90</onright>
 			<onup>599</onup>
 			<ondown>599</ondown>
 			<viewtype label="544">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout width="945" height="44">
