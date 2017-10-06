@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">403</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<include>dialogeffect7</include>
 	<visible>[System.HasMediaDVD | Player.HasMedia] + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<coordinates>
@@ -246,198 +246,79 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">
-			<left>126</left>
+		<control type="list" id="9000">
+			<left>105</left>
 			<top>442</top>
-			<width>600</width>
-			<height>60</height>
-			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="System.HasMediaDVD">Conditional</animation>
-			<control type="button" id="400">
-				<left>0</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-previous-focus.png</texturefocus>
-				<texturenofocus>osdplayer-previous-nofocus.png</texturenofocus>
-				<onleft>409</onleft>
-				<onright>401</onright>
-				<onup>400</onup>
-				<ondown>400</ondown>
-				<onclick>PlayerControl(Previous)</onclick>
-			</control>
-			<control type="button" id="401">
-				<left>60</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-rewind-focus.png</texturefocus>
-				<texturenofocus>osdplayer-rewind-nofocus.png</texturenofocus>
-				<onleft>400</onleft>
-				<onright>402</onright>
-				<onup>401</onup>
-				<ondown>401</ondown>
-				<onclick>PlayerControl(Rewind)</onclick>
-			</control>
-			<control type="button" id="402">
-				<left>120</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-stop-focus.png</texturefocus>
-				<texturenofocus>osdplayer-stop-nofocus.png</texturenofocus>
-				<onleft>401</onleft>
-				<onright>403</onright>
-				<onup>402</onup>
-				<ondown>402</ondown>
-				<onclick>PlayerControl(Stop)</onclick>
-			</control>
-			<control type="togglebutton" id="403">
-				<left>180</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-pause-focus.png</texturefocus>
-				<texturenofocus>osdplayer-pause-nofocus.png</texturenofocus>
-				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>osdplayer-play-focus.png</alttexturefocus>
-				<alttexturenofocus>osdplayer-play-nofocus.png</alttexturenofocus>
-				<onleft>402</onleft>
-				<onright>404</onright>
-				<onup>403</onup>
-				<ondown>403</ondown>
-				<onclick>PlayerControl(Play)</onclick>
-			</control>
-			<control type="button" id="404">
-				<left>240</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-forward-focus.png</texturefocus>
-				<texturenofocus>osdplayer-forward-nofocus.png</texturenofocus>
-				<onleft>403</onleft>
-				<onright>405</onright>
-				<onup>404</onup>
-				<ondown>404</ondown>
-				<onclick>PlayerControl(Forward)</onclick>
-			</control>
-			<control type="button" id="405">
-				<left>300</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-next-focus.png</texturefocus>
-				<texturenofocus>osdplayer-next-nofocus.png</texturenofocus>
-				<onleft>404</onleft>
-				<onright>406</onright>
-				<onup>405</onup>
-				<ondown>405</ondown>
-				<onclick>PlayerControl(Next)</onclick>
-			</control>
-			<control type="button" id="406">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus></texturefocus>
-				<texturenofocus></texturenofocus>
-				<onclick>PlayerControl(Repeat)</onclick>
-				<onleft>405</onleft>
-				<onright>407</onright>
-				<onup>406</onup>
-				<ondown>406</ondown>
-			</control>
-			<control type="image">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texture>osdplayer-repeat-nofocus.png</texture>
-				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(406)</visible>
-			</control>
-			<control type="image">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texture>osdplayer-repeat-focus.png</texture>
-				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(406)</visible>
-			</control>
-			<control type="image">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texture>osdplayer-repeatone-nofocus.png</texture>
-				<visible>Playlist.IsRepeatOne + !Control.HasFocus(406)</visible>
-			</control>
-			<control type="image">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texture>osdplayer-repeatone-focus.png</texture>
-				<visible>Playlist.IsRepeatOne + Control.HasFocus(406)</visible>
-			</control>
-			<control type="image">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texture>osdplayer-repeatall-nofocus.png</texture>
-				<visible>Playlist.IsRepeat + !Control.HasFocus(406)</visible>
-			</control>
-			<control type="image">
-				<left>360</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texture>osdplayer-repeatall-focus.png</texture>
-				<visible>Playlist.IsRepeat + Control.HasFocus(406)</visible>
-			</control>
-			<control type="togglebutton" id="407">
-				<left>420</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-random-focus.png</texturefocus>
-				<texturenofocus>osdplayer-random-nofocus.png</texturenofocus>
-				<usealttexture>Playlist.IsRandom</usealttexture>
-				<alttexturefocus>osdplayer-randomselected-focus.png</alttexturefocus>
-				<alttexturenofocus>osdplayer-randomselected-nofocus.png</alttexturenofocus>
-				<onclick>PlayerControl(Random)</onclick>
-				<onleft>406</onleft>
-				<onright>408</onright>
-				<onup>407</onup>
-				<ondown>407</ondown>
-			</control>
-			<control type="button" id="408">
-				<left>480</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-fullscreen-focus.png</texturefocus>
-				<texturenofocus>osdplayer-fullscreen-nofocus.png</texturenofocus>
-				<onleft>407</onleft>
-				<onright>409</onright>
-				<onup>408</onup>
-				<ondown>408</ondown>
-				<onclick>Close</onclick>
-				<onclick>FullScreen</onclick>
-			</control>
-			<control type="button" id="409">
-				<left>540</left>
-				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<texturefocus>osdplayer-disc-focus.png</texturefocus>
-				<texturenofocus>osdplayer-disc-nofocus.png</texturenofocus>
-				<onleft>408</onleft>
-				<onright>400</onright>
-				<onup>409</onup>
-				<ondown>409</ondown>
-				<onclick>PlayDVD()</onclick>
-				<visible>System.HasMediaDVD</visible>
-			</control>
+			<width>585</width>
+			<height>58</height>
+			<orientation>horizontal</orientation>
+			<onleft>noop</onleft>
+			<onright>9001</onright>
+			<itemlayout width="65" height="58">
+				<control type="image">
+					<left>5</left>
+					<top>5</top>
+					<width>48</width>
+					<height>48</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout width="65" height="58">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>58</width>
+					<height>58</height>
+					<texture colordiffuse="darkcolor">circle-small.png</texture>
+					<visible>Control.HasFocus(9000)</visible>
+				</control>
+				<control type="image">
+					<left>5</left>
+					<top>5</top>
+					<width>48</width>
+					<height>48</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<icon>player-previous.png</icon>
+					<onclick>PlayerControl(previous)</onclick>
+				</item>
+				<item id="2">
+					<icon>player-rewind.png</icon>
+					<onclick>PlayerControl(rewind)</onclick>
+				</item>
+				<item id="3">
+					<icon>$VAR[PlayerPlayIcon]</icon>
+					<onclick>PlayerControl(play)</onclick>
+				</item>
+				<item id="4">
+					<icon>player-forward.png</icon>
+					<onclick>PlayerControl(forward)</onclick>
+				</item>
+				<item id="5">
+					<icon>player-next.png</icon>
+					<onclick>PlayerControl(next)</onclick>
+				</item>
+				<item id="6">
+					<icon>player-stop.png</icon>
+					<onclick>PlayerControl(stop)</onclick>
+				</item>
+				<item id="7">
+					<icon>$VAR[PlayerRepeatIcon]</icon>
+					<onclick>PlayerControl(repeat)</onclick>
+				</item>
+				<item id="8">
+					<icon>$VAR[PlayerRandomIcon]</icon>
+					<onclick>PlayerControl(random)</onclick>
+				</item>
+				<item id="9">
+					<icon>player-dvd.png</icon>
+					<onclick>PlayDVD()</onclick>
+					<visible>System.HasMediaDVD</visible>
+				</item>
+			</content>
 		</control>
 	</controls>
 </window>

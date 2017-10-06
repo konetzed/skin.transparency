@@ -47,6 +47,7 @@
 		<label></label>
 		<font>font-20</font>
 		<textcolor>white</textcolor>
+		<selectedcolor>lightcolor</selectedcolor>
 		<scrollsuffix>     -     </scrollsuffix>
 	</default>
 	<default type="mover">
@@ -98,7 +99,7 @@
 		<texturesliderbar colordiffuse="strongfade" border="6">scrollbar.png</texturesliderbar>
 		<texturesliderbarfocus colordiffuse="darkcolor" border="6">scrollbar.png</texturesliderbarfocus>
 		<textureslidernib></textureslidernib>
-		<textureslidernibfocus></textureslidernibfocus>
+		<textureslidernibfocus>scrollbar-nib-v.png</textureslidernibfocus>
 		<showonepage>false</showonepage>
 		<orientation>vertical</orientation>
 	</default>

@@ -10,6 +10,11 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
+				<include>Fanart</include><!-- view id=50 -->
+				<include>List</include><!-- view id=51 -->
+				<include>FullList</include><!-- view id=52 -->
+				<include>Thumbnail</include><!-- view id=53 -->
+
 				<include>CoverFlow-Movies</include><!-- view id=55 -->
 				<include>Icons-Movies</include><!-- view id=57 -->
 				<include>Item</include><!-- view id=590 -->
@@ -17,16 +22,10 @@
 				<include>Wall-Movies</include><!-- view id=592 -->
 				<include>Wall-Episodes</include><!-- view id=598 -->
 				<include>Thumbwall-Videos</include><!-- view id=589 -->
-				<include>FullList-Videos</include><!-- view id=52 -->
-				<include>List-Videos</include><!-- view id=51 -->
-				<include>Thumbnail-Videos</include><!-- view id=53 -->
-				<include>Fanart-Videos</include><!-- view id=50 -->
 				<include>MediaInfo-Movies</include><!-- view id=58 -->
 				<include>MediaInfo-TVShows</include><!-- view id=59 -->
 				<include>MediaInfo-AddOns</include><!-- view id=599 -->
-				<include>FullList_Extras</include>
-				<include>List_Extras</include>
-				<include>Thumbnail-Videos_Extras</include>
+
 				<include>Icons-Movies_Extras</include>
 				<include>MediaInfo-Movies_Extras</include>
 				<include>Fanart-Videos_Root_Extras</include>
@@ -37,6 +36,7 @@
 			<include>SideMenu</include>
 		</control>
 		<include>Header</include>
+		<include>Footer</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
 		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
 		<include>PageFade</include>

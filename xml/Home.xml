@@ -9,7 +9,7 @@
 			<include condition="!Skin.HasSetting(HideHomeWidgets)">HomeWidgets</include>
 		</control>
 		<include>Header</include>
-		<include condition="system.getbool(lookandfeel.enablerssfeeds)">Footer</include>
+		<include>Footer</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControlsHome</include>
 		<include>PageFade</include>
 	</controls>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="Fanart-Videos">
+	<include name="Fanart">
 		<control type="list" id="50">
-			<left>300</left>
-			<width>532</width>
-			<onleft>7005</onleft>
+			<left>1313</left>
+			<top>384</top>
+			<width>607</width>
+			<height>696</height>
+			<onleft>9000</onleft>
 			<onright>90</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
@@ -13,169 +15,138 @@
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>FanartNormal</include>
-			<itemlayout width="532" height="44">
+			<itemlayout width="607" height="87">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>532</width>
-					<height>45</height>
-					<texture border="7">list-nofocus.png</texture>
-					<include>VisibleFadeEffect</include>
+					<width>607</width>
+					<height>87</height>
+					<texture border="2">button-nofocus.png</texture>
 				</control>
 				<control type="label">
-					<left>15</left>
-					<top>0</top>
-					<width>458</width>
-					<height>45</height>
-					<font>font-20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>blue</selectedcolor>
+					<left>20</left>
+					<top>2</top>
+					<width>540</width>
+					<height>50</height>
+					<font>font-22</font>
+					<textcolor>verylightgrey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
-				<control type="image">
-					<left>488</left>
-					<top>0</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[PartlyWatched]</texture>
-					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
+				<control type="label">
+					<left>20</left>
+					<top>50</top>
+					<width>540</width>
+					<height>25</height>
+					<font>font-18</font>
+					<textcolor>verylightgrey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2,• ]</label>
 				</control>
 				<control type="image">
-					<left>488</left>
-					<top>0</top>
-					<width>45</width>
-					<height>45</height>
+					<left>565</left>
+					<top>15</top>
+					<width>24</width>
+					<height>24</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[PartlyWatched]</texture>
+				</control>
+				<control type="image">
+					<left>565</left>
+					<top>15</top>
+					<width>24</width>
+					<height>24</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout width="532" height="44">
+			<focusedlayout width="607" height="87">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>532</width>
-					<height>45</height>
-					<texture border="7">list-nofocus.png</texture>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>532</width>
-					<height>45</height>
-					<texture border="7">list-focus2.png</texture>
-					<visible>Control.HasFocus(50)</visible>
-					<include>VisibleFadeEffect</include>
-					<include>ListFocusScroll</include>
+					<width>607</width>
+					<height>87</height>
+					<texture colordiffuse="darkcolor">button-focus.png</texture>
+					<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
 				</control>
 				<control type="label">
-					<left>15</left>
-					<top>0</top>
-					<width>458</width>
-					<height>45</height>
-					<font>font-20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>blue</selectedcolor>
+					<left>20</left>
+					<top>2</top>
+					<width>540</width>
+					<height>50</height>
+					<font>font-22</font>
 					<align>left</align>
 					<aligny>center</aligny>
+					<scrollspeed>0</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
-				<control type="image">
-					<left>488</left>
-					<top>0</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[PartlyWatched]</texture>
-					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
+				<control type="label">
+					<left>20</left>
+					<top>50</top>
+					<width>540</width>
+					<height>25</height>
+					<font>font-18</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2,• ]</label>
 				</control>
 				<control type="image">
-					<left>488</left>
-					<top>0</top>
-					<width>45</width>
-					<height>45</height>
+					<left>565</left>
+					<top>15</top>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[PartlyWatched]</texture>
+				</control>
+				<control type="image">
+					<left>565</left>
+					<top>15</top>
+					<width>24</width>
+					<height>24</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>[[Container.Content(Movies)] | [Container.Content(TVShows)] | [Container.Content(Seasons)] | [Container.Content(Episodes)] | [Container.Content(MusicVideos)] | [[Container.Content(Videos) | Container.Content(Files)]] | Window.IsVisible(VideoPlaylist)]</visible>
 				</control>
 			</focusedlayout>
 		</control>
-	</include>
-	<include name="Fanart-Videos_Root_Extras">
 		<control type="group">
-			<visible>Control.IsVisible(50) + ![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(AddOns) | Container.Content(LiveTV)]</visible>
-			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
+			<visible>Control.IsVisible(50)</visible>
 			<control type="image">
 				<left>0</left>
-				<top>825</top>
+				<top>875</top>
 				<width>1312</width>
-				<height>237</height>
-				<texture border="10">underlay.png</texture>
+				<height>205</height>
+				<texture flipy="true" border="2">header.png</texture>
 			</control>
-			<control type="label">
-				<left>386</left>
-				<top>921</top>
-				<width>825</width>
-				<height>45</height>
-				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.label]</label>
+			<control type="image">
+				<left>25</left>
+				<top>558</top>
+				<width>335</width>
+				<height>502</height>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<fadetime>IconCrossfadeTime</fadetime>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + ![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(AddOns) | Container.Content(LiveTV)]</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>15</left>
-				<top>720</top>
-				<width>321</width>
-				<height>321</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<visible>ListItem.IsParentFolder | [!ListItem.IsParentFolder + [[String.IsEqual(Container.FolderPath,videodb://movies/genres/)] | [String.IsEqual(Container.FolderPath,videodb://tvshows/genres/)] | [String.IsEqual(Container.FolderPath,videodb://musicvideos/genres/)]]] | !Container.Content(Genres)</visible>
-			</control>
-		</control>
-	</include>
-	<include name="Fanart-Videos_Extras">
-		<control type="group">
-			<visible>Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)]</visible>
-			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>825</top>
-				<width>1312</width>
-				<height>237</height>
-				<texture border="10">underlay.png</texture>
-			</control>
 			<control type="label">
-				<left>386</left>
-				<top>852</top>
+				<left>385</left>
+				<top>890</top>
 				<width>926</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Title]</label>
 			</control>
 			<control type="label">
-				<left>386</left>
-				<top>852</top>
+				<left>385</left>
+				<top>890</top>
 				<width>926</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.label]</label>
@@ -183,124 +154,61 @@
 			</control>
 			<control type="group">
 				<control type="label">
-					<left>386</left>
-					<top>890</top>
+					<left>385</left>
+					<top>930</top>
 					<width>915</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/COLOR][/B][/UPPERCASE]]</label>
+					<label>$INFO[ListItem.Genre,[B][COLOR=lightcolor]$LOCALIZE[515]: [/COLOR][/B]]</label>
 				</control>
 				<control type="label">
-					<left>386</left>
-					<top>920</top>
+					<left>385</left>
+					<top>960</top>
 					<width>750</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[ViewFanartLabel1]</label>
 				</control>
 				<control type="label">
-					<left>386</left>
-					<top>950</top>
+					<left>385</left>
+					<top>990</top>
 					<width>240</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[345]: [/COLOR][/B][/UPPERCASE]]</label>
+					<label>$INFO[ListItem.Year,[B][COLOR=lightcolor]$LOCALIZE[345]: [/COLOR][/B]]</label>
 				</control>
 				<control type="label">
 					<left>630</left>
-					<top>950</top>
+					<top>990</top>
 					<width>240</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Rating,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[563]: [/COLOR][/B][/UPPERCASE]]</label>
+					<label>$INFO[ListItem.Rating,[B][COLOR=lightcolor]$LOCALIZE[563]: [/COLOR][/B]]</label>
 				</control>
-				<control type="label">
-					<left>873</left>
-					<top>950</top>
-					<width>255</width>
-					<height>45</height>
-					<font>font-20</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Top250,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[31052]: [/COLOR][/B][/UPPERCASE]]</label>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Control.IsVisible(50) [Container.Content(Movies) | Window.IsVisible(VideoPlaylist)]</visible>
-				<control type="group">
-					<left>378</left>
-					<top>982</top>
-					<width>708</width>
-					<height>72</height>
-					<include>VideoMediaFlags</include>
-				</control>
-				<include>MovieStudioFlag</include>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)]</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>27</left>
-				<top>594</top>
-				<width>327</width>
-				<height>465</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder + !Window.IsVisible(VideoPlaylist)</visible>
 			</control>
 			<control type="image">
-				<left>27</left>
-				<top>594</top>
-				<width>327</width>
-				<height>465</height>
-				<texture background="true">$VAR[IconPoster]</texture>
+				<left>1179</left>
+				<top>970</top>
+				<width>96</width>
+				<height>65</height>
+				<texture>$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</texture>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>27</left>
-				<top>552</top>
-				<width>351</width>
-				<height>540</height>
-				<texture fallback="case-sets.png">case$INFO[ListItem.VideoResolution].png</texture>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>168</left>
-				<top>562</top>
-				<width>45</width>
-				<height>27</height>
-				<texture>movieset.png</texture>
-				<visible>!ListItem.IsParentFolder + ListItem.IsFolder + !Window.IsVisible(VideoPlaylist) + String.StartsWith(Container.Folderpath,videodb://)</visible>
-			</control>
-			<control type="image">
-				<left>45</left>
-				<top>567</top>
-				<width>50</width>
-				<height>18</height>
-				<texture>3d-logo.png</texture>
-				<animation effect="slide" end="0,-60" time="0" condition="true">Conditional</animation>
-				<visible>ListItem.IsStereoScopic</visible>
 			</control>
 		</control>
+	</include>
+	<include name="Fxanart-Videos_Extras">
 		<control type="group">
 			<visible>Control.IsVisible(50) + Container.Content(TVShows)</visible>
 			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
@@ -309,7 +217,7 @@
 				<top>783</top>
 				<width>1312</width>
 				<height>279</height>
-				<texture border="10">underlay.png</texture>
+				<texture flipy="true" border="2">header.png</texture>
 			</control>
 			<control type="label">
 				<left>60</left>
@@ -317,8 +225,7 @@
 				<width>1178</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel2]</label>
@@ -329,8 +236,7 @@
 				<width>900</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel3]</label>
@@ -342,10 +248,9 @@
 				<height>45</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054] : ]$INFO[ListItem.Property(TotalEpisodes), - $LOCALIZE[20360] : ] [COLOR=lightblue] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
+				<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054] : ]$INFO[ListItem.Property(TotalEpisodes), - $LOCALIZE[20360] : ] [COLOR=lightcolor] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
 				<visible>![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
 			</control>
 			<control type="textbox">
@@ -357,33 +262,10 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]</visible>
 			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(TVShows)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>57</left>
-				<top>627</top>
-				<width>297</width>
-				<height>432</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>27</left>
-				<top>594</top>
-				<width>327</width>
-				<height>465</height>
-				<texture background="true">$VAR[IconPoster]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(50) + Container.Content(Seasons)</visible>
@@ -393,7 +275,7 @@
 				<top>783</top>
 				<width>1312</width>
 				<height>279</height>
-				<texture border="10">underlay.png</texture>
+				<texture flipy="true" border="2">header.png</texture>
 			</control>
 			<control type="label">
 				<left>360</left>
@@ -401,8 +283,7 @@
 				<width>950</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -415,10 +296,9 @@
 				<height>45</height>
 				<font>font-23</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.Genre,[B][COLOR=lightcolor]$LOCALIZE[515]: [/B][/COLOR]]</label>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -428,10 +308,9 @@
 				<height>45</height>
 				<font>font-23</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Property(TotalEpisodes),[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[20360]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.Property(TotalEpisodes),[B][COLOR=lightcolor]$LOCALIZE[20360]: [/B][/COLOR]]</label>
 				<animation effect="slide" start="0,0" end="0,-70" time="0" condition="true">Conditional</animation>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
@@ -442,31 +321,9 @@
 				<height>45</height>
 				<font>font-23</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>[COLOR=blue] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(Seasons)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>27</left>
-				<top>594</top>
-				<width>327</width>
-				<height>465</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>27</left>
-				<top>594</top>
-				<width>327</width>
-				<height>465</height>
-				<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Thumb]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
+				<label>[COLOR=color] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
@@ -496,8 +353,7 @@
 				<width>810</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel4]</label>
@@ -508,8 +364,7 @@
 				<width>810</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel5]</label>
@@ -521,7 +376,6 @@
 				<height>45</height>
 				<font>font-30</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Artist]</label>
@@ -536,7 +390,6 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>Container.Content(Episodes)</visible>
@@ -548,10 +401,9 @@
 				<height>30</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.album,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[558]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.album,[B][COLOR=lightcolor]$LOCALIZE[558]: [/B][/COLOR]]</label>
 				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="label">
@@ -561,10 +413,9 @@
 				<height>30</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.studio,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[572]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.studio,[B][COLOR=lightcolor]$LOCALIZE[572]: [/B][/COLOR]]</label>
 				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="label">
@@ -574,10 +425,9 @@
 				<height>30</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[562]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.year,[B][COLOR=lightcolor]$LOCALIZE[562]: [/B][/COLOR]]</label>
 				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="group">
@@ -595,30 +445,6 @@
 				<height>72</height>
 				<include>VideoMediaFlags</include>
 				<visible>Container.Content(MusicVideos)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + [Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>57</left>
-				<top>627</top>
-				<width>297</width>
-				<height>432</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>796</top>
-				<width>447</width>
-				<height>252</height>
-				<aspectratio scalediffuse="true" aligny="center">keep</aspectratio>
-				<texture diffuse="video-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="9">video-shadow.png</bordertexture>
-				<bordersize>8</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -637,8 +463,7 @@
 				<width>954</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -654,39 +479,7 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(AddOns)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -705,8 +498,7 @@
 				<width>954</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label2]</label>
@@ -722,215 +514,7 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(LiveTV)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-		</control>
-	</include>
-	<include name="Fanart-Music">
-		<control type="list" id="50">
-			<left>300</left>
-			<top>213</top>
-			<width>532</width>
-			<include>FanartNormal</include>
-			<onleft>9000</onleft>
-			<onright>90</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<viewtype label="31030">list</viewtype>
-			<pagecontrol>90</pagecontrol>
-			<scrolltime>200</scrolltime>
-			<preloaditems>2</preloaditems>
-			<itemlayout width="532" height="44">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>532</width>
-					<height>45</height>
-					<texture border="7">list-nofocus.png</texture>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="label">
-					<left>15</left>
-					<top>0</top>
-					<width>502</width>
-					<height>45</height>
-					<font>font-20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>blue</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout width="532" height="44">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>532</width>
-					<height>45</height>
-					<texture border="7">list-nofocus.png</texture>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>532</width>
-					<height>45</height>
-					<texture border="7">list-focus2.png</texture>
-					<visible>Control.HasFocus(50)</visible>
-					<include>VisibleFadeEffect</include>
-					<include>ListFocusScroll</include>
-				</control>
-				<control type="label">
-					<left>15</left>
-					<top>0</top>
-					<width>502</width>
-					<height>45</height>
-					<font>font-20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>blue</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-		</control>
-	</include>
-	<include name="Fanart-Music_Root_Extras">
-		<control type="group">
-			<visible>Control.IsVisible(50) + ![Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(MusicVideos) | Container.Content(AddOns)]</visible>
-			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>840</top>
-				<width>1312</width>
-				<height>222</height>
-				<texture border="10">underlay.png</texture>
-			</control>
-			<control type="label">
-				<left>386</left>
-				<top>921</top>
-				<width>825</width>
-				<height>45</height>
-				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.label]</label>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + ![Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(MusicVideos) | Container.Content(AddOns)]</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>15</left>
-				<top>720</top>
-				<width>321</width>
-				<height>321</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-		</control>
-	</include>
-	<include name="Fanart-Artists_Extras">
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(Artists)</visible>
-			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>840</top>
-				<width>1312</width>
-				<height>222</height>
-				<texture border="10">underlay.png</texture>
-			</control>
-			<control type="label">
-				<left>338</left>
-				<top>858</top>
-				<width>954</width>
-				<height>45</height>
-				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="textbox">
-				<description>Description Value for Artist</description>
-				<left>338</left>
-				<top>910</top>
-				<width>954</width>
-				<height>124</height>
-				<font>font-19</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<label>$INFO[ListItem.Property(Artist_Description)]</label>
-				<autoscroll time="2000" delay="10000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.IsVisible(50) + Container.Content(Artists)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(Artists)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="keep">scale</aspectratio>
-				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 	</include>
@@ -952,8 +536,7 @@
 				<width>920</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[Listitem.Artist]</label>
@@ -965,8 +548,7 @@
 				<width>765</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel6]</label>
@@ -977,8 +559,7 @@
 				<width>300</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Duration]</label>
@@ -991,8 +572,7 @@
 				<width>225</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[MusicPlayer.Time]</label>
@@ -1004,8 +584,7 @@
 				<width>920</width>
 				<height>45</height>
 				<font>font-25</font>
-				<textcolor>lightblue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>lightcolor</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel10]</label>
@@ -1017,7 +596,6 @@
 				<height>45</height>
 				<font>font-30</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel7]</label>
@@ -1029,7 +607,6 @@
 				<height>45</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel9]</label>
@@ -1041,7 +618,6 @@
 				<height>45</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$VAR[ViewFanartLabel8]</label>
@@ -1083,8 +659,7 @@
 				<width>810</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Title]</label>
@@ -1097,7 +672,6 @@
 				<height>45</height>
 				<font>font-30</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Artist]</label>
@@ -1110,10 +684,9 @@
 				<height>30</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.album,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[558]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.album,[B][COLOR=lightcolor]$LOCALIZE[558]: [/B][/COLOR]]</label>
 				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="label">
@@ -1123,10 +696,9 @@
 				<height>30</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.studio,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[572]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.studio,[B][COLOR=lightcolor]$LOCALIZE[572]: [/B][/COLOR]]</label>
 				<visible>Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="label">
@@ -1136,45 +708,10 @@
 				<height>30</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[562]: [/UPPERCASE][/B][/COLOR]]</label>
+				<label>$INFO[ListItem.year,[B][COLOR=lightcolor]$LOCALIZE[562]: [/B][/COLOR]]</label>
 				<visible>Container.Content(MusicVideos)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(MusicVideos) | Window.IsVisible(MusicPlaylist)]</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>51</left>
-				<top>748</top>
-				<width>312</width>
-				<height>312</height>
-				<aspectratio scalediffuse="keep">scale</aspectratio>
-				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>51</left>
-				<top>748</top>
-				<width>312</width>
-				<height>312</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder + !Container.Content(MusicVideos)</visible>
-			</control>
-			<control type="image">
-				<left>15</left>
-				<top>796</top>
-				<width>447</width>
-				<height>252</height>
-				<aspectratio scalediffuse="true" aligny="center">keep</aspectratio>
-				<texture diffuse="video-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="9">video-shadow.png</bordertexture>
-				<bordersize>8</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder + Container.Content(MusicVideos)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -1193,8 +730,7 @@
 				<width>954</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -1210,39 +746,7 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(AddOns)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 	</include>
@@ -1278,7 +782,7 @@
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
-					<selectedcolor>blue</selectedcolor>
+					<selectedcolor>color</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
@@ -1318,7 +822,7 @@
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
-					<selectedcolor>blue</selectedcolor>
+					<selectedcolor>color</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
@@ -1351,8 +855,7 @@
 				<width>954</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -1368,7 +871,6 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 			<control type="textbox">
@@ -1381,50 +883,8 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>String.IsEmpty(ListItem.AddonDescription) + !String.IsEmpty(ListItem.Plot)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>747</top>
-				<width>330</width>
-				<height>330</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>747</top>
-				<width>330</width>
-				<height>330</height>
-				<aspectratio scalediffuse="true">keep</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
-				<align>center</align>
-				<aligny>center</aligny>
-				<bordertexture border="7">thumb-shadow.png</bordertexture>
-				<bordersize>9</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder + !Container.Content(Addons)</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>747</top>
-				<width>330</width>
-				<height>330</height>
-				<aspectratio scalediffuse="true">keep</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-				<align>center</align>
-				<aligny>center</aligny>
-				<bordertexture border="7">thumb-shadow.png</bordertexture>
-				<bordersize>9</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder + Container.Content(Addons)</visible>
 			</control>
 		</control>
 	</include>
@@ -1445,8 +905,7 @@
 				<width>825</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>[B]$INFO[ListItem.label][/B]</label>
@@ -1459,10 +918,9 @@
 				<height>45</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.PictureResolution,[UPPERCASE][COLOR=lightblue]$LOCALIZE[21805]: [/COLOR][/UPPERCASE]]</label>
+				<label>$INFO[ListItem.PictureResolution,[COLOR=lightcolor]$LOCALIZE[21805]: [/COLOR]]</label>
 			</control>
 			<control type="label">
 				<left>370</left>
@@ -1471,10 +929,9 @@
 				<height>45</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.PictureDateTime,[UPPERCASE][COLOR=lightblue]$LOCALIZE[21820]: [/COLOR][/UPPERCASE]]</label>
+				<label>$INFO[ListItem.PictureDateTime,[COLOR=lightcolor]$LOCALIZE[21820]: [/COLOR]]</label>
 			</control>
 			<control type="label">
 				<left>370</left>
@@ -1483,10 +940,9 @@
 				<height>45</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label2,[UPPERCASE][COLOR=lightblue]$LOCALIZE[21802]: [/COLOR][/UPPERCASE]]</label>
+				<label>$INFO[ListItem.Label2,[COLOR=lightcolor]$LOCALIZE[21802]: [/COLOR]]</label>
 			</control>
 			<control type="button" id="7009">
 				<left>1245</left>
@@ -1501,27 +957,6 @@
 				<onleft>9000</onleft>
 				<onright>50</onright>
 				<visible>!String.IsEmpty(ListItem.FileName) + !String.IsEmpty(Container.FolderPath)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + !Container.Content(AddOns)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image" id="7010">
-				<left>75</left>
-				<top>765</top>
-				<width>234</width>
-				<height>315</height>
-				<texture>$VAR[DialogPictureInfoImage]</texture>
-				<visible>!String.IsEmpty(Container.FolderName)</visible>
-			</control>
-			<control type="image">
-				<left>24</left>
-				<top>736</top>
-				<width>327</width>
-				<height>327</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>ListItem.IsParentFolder | !Control.IsVisible(7010)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -1540,8 +975,7 @@
 				<width>825</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>[B]$INFO[ListItem.label][/B]</label>
@@ -1554,42 +988,10 @@
 				<height>60</height>
 				<font>font-20</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.AddonSummary]</label>
 				<wrapmultiline>true</wrapmultiline>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50) + Container.Content(AddOns)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
@@ -1611,8 +1013,7 @@
 				<width>954</width>
 				<height>45</height>
 				<font>font-30</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>color</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -1628,7 +1029,6 @@
 				<font>font-19</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 			<control type="label">
@@ -1642,40 +1042,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>String.IsEqual(ListItem.Path,addons://)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>ListItem.IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<texture>thumb-shadow.png</texture>
-				<visible>!ListItem.IsParentFolder + !ListItem.IsFolder</visible>
-			</control>
-			<control type="image">
-				<left>12</left>
-				<top>758</top>
-				<width>315</width>
-				<height>315</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="thumb-diffuse.png" background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-				<bordersize>6</bordersize>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 	</include>

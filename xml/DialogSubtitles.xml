@@ -162,7 +162,7 @@
 						<top>16</top>
 						<width>92</width>
 						<height>14</height>
-						<texture>icon_rating_$INFO[ListItem.ActualIcon].png</texture>
+						<texture>ratings/rating$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
@@ -236,7 +236,7 @@
 						<top>16</top>
 						<width>92</width>
 						<height>14</height>
-						<texture>icon_rating_$INFO[ListItem.ActualIcon].png</texture>
+						<texture>ratings/rating$INFO[ListItem.ActualIcon].png</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
