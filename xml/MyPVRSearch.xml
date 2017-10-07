@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol>50</defaultcontrol>
-	<views>50</views>
+	<defaultcontrol>52</defaultcontrol>
+	<views>52</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -9,7 +9,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
-				<include>FullList-PVRSearch</include>
+				<include>FullList</include>
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

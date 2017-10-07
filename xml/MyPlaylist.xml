@@ -2,21 +2,17 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<views>50,51,52,58,59</views>
+	<views>50,51,52,58</views>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
-				<include condition="Window.IsVisible(MusicPlaylist)">FullList-Music</include>
-				<include condition="Window.IsVisible(MusicPlaylist)">List-Music</include>
-				<include condition="Window.IsVisible(MusicPlaylist)">MediaInfo-Music</include>
-				<include condition="Window.IsVisible(MusicPlaylist)">Fanart-Music</include>
-				<include condition="Window.IsVisible(VideoPlaylist)">FullList-Videos</include>
-				<include condition="Window.IsVisible(VideoPlaylist)">List-Videos</include>
-				<include condition="Window.IsVisible(VideoPlaylist)">Fanart-Videos</include>
-				<include condition="Window.IsVisible(VideoPlaylist)">MediaInfo-Movies</include>
+				<include>Fanart</include><!-- view id=50 -->
+				<include>List</include><!-- view id=51 -->
+				<include>FullList</include><!-- view id=52 -->
+				<include>MediaInfo</include><!-- view id=58 -->
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

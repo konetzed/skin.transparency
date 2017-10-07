@@ -9,13 +9,13 @@
 	<include file="ViewCoverFlow.xml" />
 	<include file="ViewFanart.xml" />
 	<include file="ViewFullList.xml" />
+	<include file="ViewGuide.xml" />
 	<include file="ViewIcons.xml" />
 	<include file="ViewItem.xml" />
 	<include file="ViewList.xml" />
 	<include file="ViewMediaInfo.xml" />
 	<include file="ViewPicThumb.xml" />
 	<include file="ViewPolaroid.xml" />
-	<include file="ViewPVR.xml" />
 	<include file="ViewSlide.xml" />
 	<include file="ViewThumbnail.xml" />
 	<include file="ViewThumbWall.xml" />
@@ -82,6 +82,52 @@
 		<align>left</align>
 		<aligny>center</aligny>
 	</include>
+	<include name="ButtonsOK">
+		<control type="button" id="11">
+			<width>849</width>
+			<height>60</height>
+			<font>font-18</font>
+			<align>center</align>
+			<texturefocus colordiffuse="darkcolor" border="6">button-leftright.png</texturefocus>
+			<texturenofocus colordiffuse="buttongrey" border="6">button-leftright.png</texturenofocus>
+		</control>
+	</include>
+	<include name="ButtonsProgress">
+		<control type="button" id="10">
+			<width>849</width>
+			<height>60</height>
+			<font>font-18</font>
+			<align>center</align>
+			<texturefocus colordiffuse="darkcolor" border="6">button-leftright.png</texturefocus>
+			<texturenofocus colordiffuse="buttongrey" border="6">button-leftright.png</texturenofocus>
+		</control>
+	</include>
+	<include name="ButtonsYesNo">
+		<control type="button" id="11">
+			<description>yes</description>
+			<width>424</width>
+			<height>60</height>
+			<font>font-18</font>
+			<align>center</align>
+			<texturefocus colordiffuse="darkcolor" border="6">button-left.png</texturefocus>
+			<texturenofocus colordiffuse="buttongrey" border="6">button-left.png</texturenofocus>
+		</control>
+		<control type="image" id="300">
+			<description>separator</description>
+			<width>1</width>
+			<height>60</height>
+			<texture colordiffuse="FF000000">white.png</texture>
+		</control>
+		<control type="button" id="10">
+			<description>no</description>
+			<width>424</width>
+			<height>60</height>
+			<font>font-18</font>
+			<align>center</align>
+			<texturefocus colordiffuse="darkcolor" border="6">button-right.png</texturefocus>
+			<texturenofocus colordiffuse="buttongrey" border="6">button-right.png</texturenofocus>
+		</control>
+	</include>
 	<include name="ContentPanel">
 		<control type="image">
 			<left>120</left>
@@ -89,7 +135,8 @@
 			<width>1680</width>
 			<height>920</height>
 			<texture border="5">panel-light.png</texture>
-			<animation effect="slide" start="0,0" end="1192,278" time="0" condition="Control.IsVisible(50) + ![Window.IsVisible(Settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings) | Window.IsVisible(SystemInfo) | Window.IsVisible(Profiles) | Window.IsVisible(FileManager) | Window.IsVisible(MusicPlaylistEditor)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="1192,278" time="0" condition="Control.IsVisible(50) + ![Window.IsVisible(Settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings) | Window.IsVisible(SystemInfo) | Window.IsVisible(Profiles) | Window.IsVisible(FileManager) | Window.IsVisible(MusicPlaylistEditor) | Window.IsVisible(Weather)]">Conditional</animation>
+			<animation effect="zoom" start="120,80,1680,920" end="60,80,1802,1000" time="0" condition="Window.IsVisible(MyPVRGuide.xml)">Conditional</animation>
 		</control>
 		<control type="image">
 			<left>476</left>
@@ -128,7 +175,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>VisibleFadeEffect</include>
 			<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
-			<visible>Window.IsVisible(Pictures)</visible>
+			<visible>Window.IsVisible(Pictures) + Control.IsVisible(50)</visible>
 		</control>
 		<control type="videowindow">
 			<left>0</left>
@@ -322,7 +369,7 @@
 			<height>50</height>
 			<align>center</align>
 			<orientation>horizontal</orientation>
-			<visible>!ListItem.IsParentFolder</visible>
+			<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !ListItem.IsParentFolder</visible>
 			<itemgap>20</itemgap>
 			<control type="image">
 				<width>113</width>

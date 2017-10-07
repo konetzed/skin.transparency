@@ -9,10 +9,10 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
-				<include>Fanart-ProgramsPicturesAddons</include>
-				<include>List</include>
-				<include>FullList</include>
-				<include>Thumbnail</include>
+				<include>Fanart</include><!-- view id=50 -->
+				<include>List</include><!-- view id=51 -->
+				<include>FullList</include><!-- view id=52 -->
+				<include>Thumbnail</include><!-- view id=53 -->
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

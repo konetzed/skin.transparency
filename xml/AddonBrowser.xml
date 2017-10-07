@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">599</defaultcontrol>
-	<views>599,50,51,52,53</views>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<views>50,51,52,53,58</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -9,12 +9,11 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
-				<include>Fanart-ProgramsPicturesAddons</include>
-				<include>List</include>
-				<include>FullList</include>
-				<include>Thumbnail</include>
-				<include>MediaInfo-AddOns</include>
-				<include>Fanart-Programs-Extras</include>
+				<include>Fanart</include><!-- view id=50 -->
+				<include>List</include><!-- view id=51 -->
+				<include>FullList</include><!-- view id=52 -->
+				<include>Thumbnail</include><!-- view id=53 -->
+				<include>MediaInfo</include><!-- view id=58 -->
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

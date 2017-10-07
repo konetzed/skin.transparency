@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="Guide">
+		<control type="epggrid" id="10">
+			<description>EPG Grid</description>
+			<left>61</left>
+			<top>106</top>
+			<width>1798</width>
+			<height>765</height>
+			<onleft>9000</onleft>
+			<onright>90</onright>
+			<onup>10</onup>
+			<ondown>999</ondown>
+			<viewtype label="19069">list</viewtype>
+			<scrolltime>350</scrolltime>
+			<timeblocks>40</timeblocks>
+			<rulerunit>6</rulerunit>
+			<progresstexture colordiffuse="color" border="0,3,8,3">epg-marker.png</progresstexture>
+			<rulerlayout height="44" width="60">
+				<control type="image" id="1">
+					<left>0</left>
+					<top>0</top>
+					<width>60</width>
+					<height>44</height>
+					<texture colordiffuse="50000000">white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>315</width>
+					<height>42</height>
+					<texture colordiffuse="darkgrey">white.png</texture>
+					<visible>ListItem.Property(DateLabel)</visible>
+				</control>
+				<control type="label" id="2">
+					<left>15</left>
+					<top>0</top>
+					<width>51</width>
+					<height>44</height>
+					<font>font-19</font>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</rulerlayout>
+			<channellayout height="90" width="315">
+				<control type="image" id="1">
+					<left>0</left>
+					<top>0</top>
+					<width>315</width>
+					<height>90</height>
+					<texture colordiffuse="50000000">white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>90</top>
+					<width>315</width>
+					<height>1</height>
+					<texture colordiffuse="lightgrey">white.png</texture>
+				</control>
+				<control type="image">
+					<left>3</left>
+					<top>15</top>
+					<width>60</width>
+					<height>60</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="1">
+					<left>72</left>
+					<top>1</top>
+					<width>240</width>
+					<height>90</height>
+					<font>font-20bc</font>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.ChannelNumberLabel,,.] $INFO[ListItem.ChannelName]</label>
+					<scroll>false</scroll>
+				</control>
+			</channellayout>
+			<focusedchannellayout height="90" width="315">
+				<control type="image" id="1">
+					<left>0</left>
+					<top>0</top>
+					<width>315</width>
+					<height>90</height>
+					<texture colordiffuse="50000000">white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>90</top>
+					<width>315</width>
+					<height>1</height>
+					<texture colordiffuse="lightgrey">white.png</texture>
+				</control>
+				<control type="image" id="1">
+					<left>0</left>
+					<top>0</top>
+					<width>315</width>
+					<height>90</height>
+					<texture colordiffuse="strongfade">white.png</texture>
+				</control>
+				<control type="image">
+					<left>3</left>
+					<top>15</top>
+					<width>60</width>
+					<height>60</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="1">
+					<left>72</left>
+					<top>1</top>
+					<width>240</width>
+					<height>90</height>
+					<font>font-20bc</font>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.ChannelNumberLabel,,.] $INFO[ListItem.ChannelName]</label>
+					<scroll>false</scroll>
+				</control>
+			</focusedchannellayout>
+			<itemlayout width="60" height="90">
+				<control type="image" id="2">
+					<width>60</width>
+					<height>90</height>
+					<left>0</left>
+					<top>0</top>
+					<texture>$INFO[ListItem.Property(GenreType),epg-,.png]</texture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="label" id="1">
+					<left>9</left>
+					<top>0</top>
+					<width>45</width>
+					<height>90</height>
+					<font>font-20</font>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+				</control>
+				<control type="image">
+					<left>8</left>
+					<top>58</top>
+					<width>30</width>
+					<height>30</height>
+					<texture>Overlaywatched.png</texture>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<left>8</left>
+					<top>58</top>
+					<width>30</width>
+					<height>30</height>
+					<texture>OverlayUnwatched.png</texture>
+					<visible>ListItem.HasTimer</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout width="60" height="90">
+				<control type="image" id="2">
+					<width>60</width>
+					<height>90</height>
+					<left>0</left>
+					<top>0</top>
+					<texture>$INFO[ListItem.Property(GenreType),epg-,.png]</texture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="image" id="2">
+					<width>60</width>
+					<height>90</height>
+					<left>0</left>
+					<top>0</top>
+					<texture colordiffuse="lightcolor">white.png</texture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="label" id="1">
+					<left>9</left>
+					<top>0</top>
+					<width>45</width>
+					<height>90</height>
+					<font>font-20</font>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+				</control>
+				<control type="image">
+					<left>8</left>
+					<top>58</top>
+					<width>30</width>
+					<height>30</height>
+					<texture>Overlaywatched.png</texture>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<left>8</left>
+					<top>58</top>
+					<width>30</width>
+					<height>30</height>
+					<texture>OverlayUnwatched.png</texture>
+					<visible>ListItem.HasTimer</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(10)</visible>
+			<control type="label">
+				<left>60</left>
+				<top>880</top>
+				<width>1800</width>
+				<height>45</height>
+				<font>font-23</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>lightblue</textcolor>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<top>920</top>
+				<width>1800</width>
+				<height>45</height>
+				<font>font-23</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[ListItem.Date]  -  $INFO[ListItem.ChannelName][/B]</label>
+			</control>
+			<control type="textbox">
+				<left>300</left>
+				<top>970</top>
+				<width>1320</width>
+				<height>100</height>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll time="3000" delay="10000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+		</control>
+	</include>
+</includes>

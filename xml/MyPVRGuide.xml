@@ -9,8 +9,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
-				<include>Grid-PVRGuideEPG</include>
-				<include>Grid-PVRGuideEPG_Extras</include>
+				<include>Guide</include>
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

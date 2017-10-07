@@ -29,8 +29,6 @@
 					<height>50</height>
 					<font>font-25</font>
 					<textcolor>verylightgrey</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
@@ -40,9 +38,27 @@
 					<height>25</height>
 					<font>font-20</font>
 					<textcolor>verylightgrey</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2,• ]</label>
+					<label>$VAR[ViewFullListLabel1]</label>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>50</top>
+					<width>1598</width>
+					<height>25</height>
+					<font>font-20</font>
+					<textcolor>verylightgrey</textcolor>
+					<label>$INFO[ListItem.Comment]</label>
+					<visible>Window.IsVisible(MyPVRTimers.xml)</visible>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>50</top>
+					<width>1598</width>
+					<height>25</height>
+					<font>font-20</font>
+					<textcolor>verylightgrey</textcolor>
+					<label>$VAR[ViewFullListLabel2]</label>
+					<visible>Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml)</visible>
 				</control>
 				<control type="image">
 					<left>1628</left>
@@ -76,8 +92,6 @@
 					<width>1598</width>
 					<height>50</height>
 					<font>font-25</font>
-					<align>left</align>
-					<aligny>center</aligny>
 					<scrollspeed>0</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -87,9 +101,16 @@
 					<width>1598</width>
 					<height>25</height>
 					<font>font-20</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2,• ]</label>
+					<label>$VAR[ViewFullListLabel1]</label>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>50</top>
+					<width>1598</width>
+					<height>25</height>
+					<font>font-20</font>
+					<label>$VAR[ViewFullListLabel2]</label>
+					<visible>Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml)</visible>
 				</control>
 				<control type="image">
 					<left>1628</left>

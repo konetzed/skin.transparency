@@ -9,7 +9,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
-				<include>MediaInfo-PVRRecordings</include>
+				<include>Fanart</include><!-- view id=50 -->
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

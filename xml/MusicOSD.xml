@@ -162,7 +162,7 @@
 					</item>
 					<item id="3">
 						<icon>player-vis-select.png</icon>
-						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+						<onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick>
 					</item>
 					<item id="4">
 						<icon>player-vis-settings.png</icon>

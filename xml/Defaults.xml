@@ -46,6 +46,8 @@
 		<height>70</height>
 		<label></label>
 		<font>font-20</font>
+		<align>left</align>
+		<aligny>center</aligny>
 		<textcolor>white</textcolor>
 		<selectedcolor>lightcolor</selectedcolor>
 		<scrollsuffix>     -     </scrollsuffix>

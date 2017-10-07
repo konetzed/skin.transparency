@@ -29,8 +29,6 @@
 					<height>50</height>
 					<font>font-25</font>
 					<textcolor>verylightgrey</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
@@ -40,8 +38,6 @@
 					<height>25</height>
 					<font>font-20</font>
 					<textcolor>verylightgrey</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2,• ]</label>
 				</control>
 				<control type="image">
@@ -76,8 +72,6 @@
 					<width>820</width>
 					<height>50</height>
 					<font>font-25</font>
-					<align>left</align>
-					<aligny>center</aligny>
 					<scrollspeed>0</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -87,8 +81,6 @@
 					<width>820</width>
 					<height>25</height>
 					<font>font-20</font>
-					<align>left</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2,• ]</label>
 				</control>
 				<control type="image">
@@ -126,13 +118,6 @@
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<fadetime>IconCrossfadeTime</fadetime>
-			</control>
-			<control type="group">
-				<left>555</left>
-				<top>922</top>
-				<width>810</width>
-				<height>72</height>
-				<include>VideoMediaFlags</include>
 			</control>
 		</control>
 	</include>

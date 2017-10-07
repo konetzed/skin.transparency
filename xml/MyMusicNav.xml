@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,52,53,55,56,59,592,595,599</views>
+	<views>50,51,52,53,55,56,58,592,595</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -10,19 +10,19 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
+				<include>Fanart</include><!-- view id=50 -->
+				<include>List</include><!-- view id=51 -->
+				<include>FullList</include><!-- view id=52 -->
+				<include>Thumbnail</include><!-- view id=53 -->
+				<include>MediaInfo</include><!-- view id=58 -->
+
+
 				<include>CoverFlow-Music</include><!-- view id=55 -->
 				<include>Icons-Albums</include><!-- view id=56 -->
 				<include>Wall-Music</include><!-- view id=592 -->
 				<include>Item-Music</include><!-- view id=595 -->
-				<include>FullList-Music</include><!-- view id=52 -->
-				<include>List-Music</include><!-- view id=51 -->
-				<include>Thumbnail</include><!-- view id=53 -->
-				<include>Fanart-Music</include><!-- view id=50 -->
-				<include>MediaInfo-Music</include><!-- view id=59 -->
-				<include>MediaInfo-AddOns</include><!-- view id=599 -->
-				<include>Fanart-Music_Root_Extras</include>
-				<include>Fanart-Artists_Extras</include>
-				<include>Fanart-AlbumsSongs_Extras</include>
+
+
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>

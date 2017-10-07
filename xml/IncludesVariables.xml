@@ -59,16 +59,16 @@
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
 	</variable>
 	<variable name="DialogPlotLabel2">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre),[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/COLOR][/B][/UPPERCASE]]</value>
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre),[UPPERCASE][B][COLOR=lightcolor]$LOCALIZE[515]: [/COLOR][/B][/UPPERCASE]]</value>
 		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Album]</value>
 	</variable>
 	<variable name="DialogPlotLabel3">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Mood),[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[175]: [/COLOR][/B][/UPPERCASE]]</value>
-		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/COLOR][/B][/UPPERCASE]]</value>
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Mood),[UPPERCASE][B][COLOR=lightcolor]$LOCALIZE[175]: [/COLOR][/B][/UPPERCASE]]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightcolor]$LOCALIZE[515]: [/COLOR][/B][/UPPERCASE]]</value>
 	</variable>
 	<variable name="DialogPlotLabel4">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Style),[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[176]: [/COLOR][/B][/UPPERCASE]]</value>
-		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[562]: [/COLOR][/B][/UPPERCASE]]</value>
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Style),[UPPERCASE][B][COLOR=lightcolor]$LOCALIZE[176]: [/COLOR][/B][/UPPERCASE]]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Year,[UPPERCASE][B][COLOR=lightcolor]$LOCALIZE[562]: [/COLOR][/B][/UPPERCASE]]</value>
 	</variable>
 	<variable name="DialogPVRChannelManagerHeader">
 		<value condition="String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19023]</value>
@@ -325,44 +325,40 @@
 		<value condition="Container.Content(Songs)">[B]$INFO[ListItem.Label2][/B]</value>
 	</variable>
 	<variable name="ViewFanartLabel1">
-		<value>$INFO[ListItem.Duration,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[2050]: [/COLOR][/B][/UPPERCASE]]</value>
+		<value condition="String.IsEmpty(ListItem.Title)">$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Title]</value>
 	</variable>
 	<variable name="ViewFanartLabel2">
-		<value condition="String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
-		<value condition="[String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]">$INFO[ListItem.Title]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.PictureResolution,[COLOR=lightcolor]$LOCALIZE[21805]: [/COLOR]]</value>
+		<value>$INFO[ListItem.Genre,[B][COLOR=lightcolor]$LOCALIZE[515]: [/COLOR][/B]]</value>
 	</variable>
 	<variable name="ViewFanartLabel3">
-		<value condition="String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
-		<value condition="![String.Contains(Container.FolderPath,videodb://tvshows/) | String.Contains(Container.FolderPath,special://)]">$INFO[ListItem.Title]</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Property(TotalSeasons),[B][COLOR=lightcolor]$LOCALIZE[33054] : [/COLOR][/B], • ]$INFO[ListItem.Property(TotalEpisodes),[B][COLOR=lightcolor]$LOCALIZE[20360] : [/COLOR][/B]]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.PictureDateTime,[COLOR=lightcolor]$LOCALIZE[21820]: [/COLOR]]</value>
+		<value>$INFO[ListItem.Duration,[B][COLOR=lightcolor]$LOCALIZE[2050]: [/COLOR][/B]]</value>
 	</variable>
 	<variable name="ViewFanartLabel4">
-		<value condition="Container.Content(Episodes)">$INFO[ListItem.Title]</value>
-		<value condition="Container.Content(Episodes) + String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.Size,[COLOR=lightcolor]$LOCALIZE[21802]: [/COLOR]]</value>
+		<value>$INFO[ListItem.Year,[B][COLOR=lightcolor]$LOCALIZE[345]: [/COLOR][/B]]</value>
 	</variable>
 	<variable name="ViewFanartLabel5">
-		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Title]</value>
-		<value condition="Container.Content(MusicVideos) + String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Rating,[B][COLOR=lightcolor]$LOCALIZE[563]: [/COLOR][/B]]</value>
 	</variable>
 	<variable name="ViewFanartLabel6">
-		<value condition="Container.Content(Songs) + !ListItem.IsParentFolder + !Window.IsVisible(MusicPlaylist)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
-		<value condition="Window.IsVisible(MusicPlaylist)">$INFO[MusicPlayer.Title]</value>
-		<value condition="Window.IsVisible(MusicPlaylist) + !Player.HasAudio">$INFO[ListItem.Title]</value>
+		<value condition="Window.IsVisible(AddonBrowser) | Window.IsVisible(Programs)">$INFO[ListItem.AddonDescription]</value>
+		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="ViewFanartLabel7">
-		<value condition="Container.Content(Songs) + ![Window.IsVisible(MusicPlaylist) + Player.HasAudio]">$INFO[ListItem.Artist]</value>
-		<value condition="Window.IsVisible(MusicPlaylist)">$INFO[MusicPlayer.Artist]</value>
+		<value condition="Window.IsVisible(Music)">$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</value>
+		<value condition="Window.IsVisible(Videos)">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
 	</variable>
-	<variable name="ViewFanartLabel8">
-		<value condition="![Window.IsVisible(MusicPlaylist) + Player.HasAudio]">$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/UPPERCASE][/B][/COLOR]]</value>
-		<value condition="Window.IsVisible(MusicPlaylist)">$INFO[MusicPlayer.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/UPPERCASE][/B][/COLOR]]</value>
+	<variable name="ViewFullListLabel1">
+		<value condition="Window.IsVisible(MyPVRTimers.xml)">$INFO[ListItem.Date,• ]</value>
+		<value>$INFO[ListItem.Label2,• ]</value>
 	</variable>
-	<variable name="ViewFanartLabel9">
-		<value condition="![Window.IsVisible(MusicPlaylist) + Player.HasAudio]">$INFO[ListItem.Year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[562]: [/UPPERCASE][/B][/COLOR]]</value>
-		<value condition="Window.IsVisible(MusicPlaylist)">$INFO[MusicPlayer.Year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[562]: [/UPPERCASE][/B][/COLOR]]</value>
-	</variable>
-	<variable name="ViewFanartLabel10">
-		<value condition="![Window.IsVisible(MusicPlaylist) + Player.HasAudio]">$INFO[ListItem.Album]</value>
-		<value condition="Window.IsVisible(MusicPlaylist)">$INFO[MusicPlayer.Album]</value>
+	<variable name="ViewFullListLabel2">
+		<value condition="Window.IsVisible(MyPVRTimers.xml)">$INFO[ListItem.Comment]</value>
+		<value condition="Window.IsVisible(MyPVRSearch.xml)">$INFO[ListItem.ChannelName]</value>
 	</variable>
 	<variable name="ViewItemLabel1">
 		<value condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[20339]:[/B][/UPPERCASE]</value>
@@ -522,120 +518,42 @@
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel1">
-		<value condition="Container.Content(Episodes) + !ListItem.IsParentFolder">[UPPERCASE][B]$LOCALIZE[552]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(MusicVideos) + !ListItem.IsParentFolder">[UPPERCASE][B]$LOCALIZE[515]:[/UPPERCASE][/B]</value>
+		<value condition="Container.Content(Addons)">$INFO[ListItem.AddonDescription]</value>
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
+		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel2">
-		<value condition="Container.Content(Episodes) + !ListItem.IsParentFolder">$INFO[ListItem.Date]</value>
-		<value condition="Container.Content(MusicVideos) + !ListItem.IsParentFolder">$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(Addons)">$INFO[ListItem.AddonCreator,[COLOR=lightcolor][B]$LOCALIZE[21863]: [/B][/COLOR][CR]]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.Size,[COLOR=lightcolor][B]$LOCALIZE[21802]: [/B][/COLOR][CR]]</value>
+		<value>$INFO[ListItem.Genre,[COLOR=lightcolor][B]$LOCALIZE[515]: [/B][/COLOR][CR]]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel3">
-		<value condition="Container.Content(Episodes) + !ListItem.IsParentFolder">[UPPERCASE][B]$LOCALIZE[2050]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(MusicVideos) + !ListItem.IsParentFolder">[UPPERCASE][B]$LOCALIZE[552]:[/UPPERCASE][/B]</value>
+		<value condition="Container.Content(Addons)">$INFO[ListItem.AddonType,[COLOR=lightcolor][B]$LOCALIZE[146] [/B][/COLOR][CR]]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.PictureCamMake,[COLOR=lightcolor][B]$LOCALIZE[21823]: [/B][/COLOR][CR]] $INFO[ListItem.PictureCamModel]</value>
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Born))">$INFO[ListItem.Property(Artist_Born),[COLOR=lightcolor][B]$LOCALIZE[21893]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed),[COLOR=lightcolor][B]$LOCALIZE[21894]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Artist,[COLOR=lightcolor][B]$LOCALIZE[557]: [/B][/COLOR][CR]]</value>
+		<value condition="String.IsEmpty(ListItem.Date)">$INFO[ListItem.Year,[COLOR=lightcolor][B]$LOCALIZE[562]: [/B][/COLOR][CR]]</value>
+		<value>$INFO[ListItem.Date,[COLOR=lightcolor][B]$LOCALIZE[552]: [/B][/COLOR][CR]]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel4">
-		<value condition="Container.Content(Episodes) + !ListItem.IsParentFolder">$INFO[ListItem.Duration]</value>
-		<value condition="Container.Content(MusicVideos) + !ListItem.IsParentFolder">$INFO[ListItem.Date]</value>
+		<value condition="Container.Content(Addons)">$INFO[ListItem.AddonVersion,[COLOR=lightcolor][B]$LOCALIZE[24051] [/B][/COLOR][CR]]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.PictureResolution,[COLOR=lightcolor][B]$LOCALIZE[21805]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Died))">$INFO[ListItem.Property(Artist_Born),[COLOR=lightcolor][B]$LOCALIZE[21897]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Disbanded))">$INFO[ListItem.Property(Artist_Formed),[COLOR=lightcolor][B]$LOCALIZE[21896]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Label),[COLOR=lightcolor][B]$LOCALIZE[21899]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Property(UserRating),[COLOR=lightcolor][B]$LOCALIZE[38018]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Album,[COLOR=lightcolor][B]$LOCALIZE[558]: [/B][/COLOR][CR]]</value>
+		<value>$INFO[ListItem.Studio,[COLOR=lightcolor][B]$LOCALIZE[572]: [/B][/COLOR][CR]]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel5">
-		<value condition="Container.Content(TVShows) + !ListItem.IsParentFolder">[UPPERCASE][B]$LOCALIZE[20416]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Seasons) + !ListItem.IsParentFolder">[UPPERCASE][B]$LOCALIZE[572]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel6">
-		<value condition="Container.Content(TVShows) + !ListItem.IsParentFolder">$INFO[ListItem.Date]</value>
-		<value condition="Container.Content(Seasons) + !ListItem.IsParentFolder">$INFO[ListItem.Studio]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel7">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[515]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[557]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel8">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Artist]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel9">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[175]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[558]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel10">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
-		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Album]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel11">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[176]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[562]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel12">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Style)]</value>
-		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Year]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel13">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21893]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[515]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel14">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Born)]</value>
-		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Genre]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel15">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[515]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[557]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel16">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Genre]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Artist]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel17">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[175]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[558]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel18">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Mood)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Album]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel19">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[176]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[369]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel20">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Style)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel21">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[21895]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[515]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel22">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Theme)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Genre]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel23">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[562]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[554]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel24">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Year]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.TrackNumber]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel25">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[21899]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[562]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel26">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Label)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Year]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel27">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[564]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[180]:[/UPPERCASE][/B]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel28">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Type)]</value>
-		<value condition="Container.Content(Songs)">$INFO[Container.Totaltime]</value>
-	</variable>
-	<variable name="ViewMediaInfoLabel29">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[563]:[/UPPERCASE][/B]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[563]:[/UPPERCASE][/B]</value>
+		<value condition="Window.IsVisible(Pictures)">$INFO[ListItem.PictureDateTime,[COLOR=lightcolor][B]$LOCALIZE[21820]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive),[COLOR=lightcolor][B]$LOCALIZE[21898]: [/B][/COLOR][CR]]</value>
+		<value condition="Container.Content(Seasons)">$INFO[ListItem.Property(TotalEpisodes),[COLOR=lightcolor][B]$LOCALIZE[20360]: [/B][/COLOR][CR]]</value>
+		<value condition="String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Rating,[COLOR=lightcolor][B]$LOCALIZE[563]: [/B][/COLOR][CR]]</value>
+		<value>$INFO[ListItem.Duration,[COLOR=lightcolor][B]$LOCALIZE[2050]: [/B][/COLOR][CR]]</value>
 	</variable>
 	<variable name="ViewIconsLabel1">
 		<value condition="Container.Content(Albums)">[B]$INFO[ListItem.Label2][/B]</value>
