@@ -4,6 +4,54 @@
 		<value condition="String.EndsWith(Window(Visualisation).Property(ArtistSlideshow),transparent)">$INFO[MusicPlayer.Property(Fanart_Image)]</value>
 		<value>$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 	</variable>
+	<variable name="BreadcrumbsMusicNode">
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://genres/)">$LOCALIZE[135]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://artists/)">$LOCALIZE[133]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://albums/)">$LOCALIZE[132]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://songs/)">$LOCALIZE[134]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/)">$LOCALIZE[271]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://recentlyaddedalbums/)">$LOCALIZE[359]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://recentlyplayedalbums/)">$LOCALIZE[517]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://compilations/)">$LOCALIZE[521]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://years/)">$LOCALIZE[652]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://singles/)">$LOCALIZE[1050]</value>
+		<value condition="String.StartsWith(Container.FolderPath,addons://) | String.StartsWith(Container.FolderPath,plugin://)">$LOCALIZE[1038]</value>
+		<value condition="String.StartsWith(Container.FolderPath,special://musicplaylists/)">$LOCALIZE[136]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
+	</variable>
+	<variable name="BreadcrumbsMusicSubNode">
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/songs/)">$LOCALIZE[10504]</value>
+		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/albums/)">$LOCALIZE[10505]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/)">$LOCALIZE[135]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/titles/)">$LOCALIZE[369]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/years/)">$LOCALIZE[562]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/artists/)">$LOCALIZE[133]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/)">$LOCALIZE[132]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/directors/)">$LOCALIZE[20348]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/studios/)">$LOCALIZE[20388]</value>
+	</variable>
+	<variable name="BreadcrumbsVideoNode">
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">$LOCALIZE[342]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://tvshows/)">$LOCALIZE[20343]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedmovies/)">$LOCALIZE[20386]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$LOCALIZE[20387]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedmusicvideos/)">$LOCALIZE[20390]</value>
+		<value condition="String.StartsWith(Container.FolderPath,special://videoplaylists/)">$LOCALIZE[136]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://video/)">$LOCALIZE[1037]</value>
+	</variable>
+	<variable name="BreadcrumbsVideoSubNode">
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.FolderPath,videodb://tvshows/genres/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/)">$LOCALIZE[135]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/titles/) | String.StartsWith(Container.FolderPath,videodb://tvshows/titles/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/titles/)">$LOCALIZE[369]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/years/) | String.StartsWith(Container.FolderPath,videodb://tvshows/years/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/years/)">$LOCALIZE[562]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/actors/) | String.StartsWith(Container.FolderPath,videodb://tvshows/actors/)">$LOCALIZE[344]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/directors/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/directors/)">$LOCALIZE[20348]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/studios/) | String.StartsWith(Container.FolderPath,videodb://tvshows/studios/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/studios/)">$LOCALIZE[20388]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/sets/)">$LOCALIZE[20434]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/countries/)">$LOCALIZE[20451]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/artists/)">$LOCALIZE[133]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/)">$LOCALIZE[132]</value>
+	</variable>
 	<variable name="ConfirmIcon">
 		<value condition="Window.IsVisible(yesnodialog)">notification-icon.png</value>
 		<value condition="Window.IsVisible(okdialog)">ok-icon.png</value>
@@ -117,150 +165,6 @@
 	<variable name="IconBanner">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
-	</variable>
-	<variable name="IconPoster">
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
-	<variable name="Icon(-10)Poster">
-		<value condition="!String.IsEmpty(ListItem(-10).Art(poster))">$INFO[ListItem(-10).Art(poster)]</value>
-		<value>$INFO[ListItem(-10).Icon]</value>
-	</variable>
-	<variable name="Icon(-9)Poster">
-		<value condition="!String.IsEmpty(ListItem(-9).Art(poster))">$INFO[ListItem(-9).Art(poster)]</value>
-		<value>$INFO[ListItem(-9).Icon]</value>
-	</variable>
-	<variable name="Icon(-8)Poster">
-		<value condition="!String.IsEmpty(ListItem(-8).Art(poster))">$INFO[ListItem(-8).Art(poster)]</value>
-		<value>$INFO[ListItem(-8).Icon]</value>
-	</variable>
-	<variable name="Icon(-7)Poster">
-		<value condition="!String.IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
-		<value>$INFO[ListItem(-7).Icon]</value>
-	</variable>
-	<variable name="Icon(-6)Poster">
-		<value condition="!String.IsEmpty(ListItem(-6).Art(poster))">$INFO[ListItem(-6).Art(poster)]</value>
-		<value>$INFO[ListItem(-6).Icon]</value>
-	</variable>
-	<variable name="Icon(-5)Poster">
-		<value condition="!String.IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
-		<value>$INFO[ListItem(-5).Icon]</value>
-	</variable>
-	<variable name="Icon(-4)Poster">
-		<value condition="!String.IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
-		<value>$INFO[ListItem(-4).Icon]</value>
-	</variable>
-	<variable name="Icon(-3)Poster">
-		<value condition="!String.IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
-		<value>$INFO[ListItem(-3).Icon]</value>
-	</variable>
-	<variable name="Icon(-2)Poster">
-		<value condition="!String.IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
-		<value>$INFO[ListItem(-2).Icon]</value>
-	</variable>
-	<variable name="Icon(-1)Poster">
-		<value condition="!String.IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
-		<value>$INFO[ListItem(-1).Icon]</value>
-	</variable>
-	<variable name="Icon(0)Poster">
-		<value condition="!String.IsEmpty(ListItem(0).Art(poster))">$INFO[ListItem(0).Art(poster)]</value>
-		<value>$INFO[ListItem(0).Icon]</value>
-	</variable>
-	<variable name="Icon(1)Poster">
-		<value condition="!String.IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
-		<value>$INFO[ListItem(1).Icon]</value>
-	</variable>
-	<variable name="Icon(2)Poster">
-		<value condition="!String.IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
-		<value>$INFO[ListItem(2).Icon]</value>
-	</variable>
-	<variable name="Icon(3)Poster">
-		<value condition="!String.IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
-		<value>$INFO[ListItem(3).Icon]</value>
-	</variable>
-	<variable name="Icon(4)Poster">
-		<value condition="!String.IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
-		<value>$INFO[ListItem(4).Icon]</value>
-	</variable>
-	<variable name="Icon(5)Poster">
-		<value condition="!String.IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
-		<value>$INFO[ListItem(5).Icon]</value>
-	</variable>
-	<variable name="Icon(6)Poster">
-		<value condition="!String.IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
-		<value>$INFO[ListItem(6).Icon]</value>
-	</variable>
-	<variable name="Icon(7)Poster">
-		<value condition="!String.IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
-		<value>$INFO[ListItem(7).Icon]</value>
-	</variable>
-	<variable name="Icon(8)Poster">
-		<value condition="!String.IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
-		<value>$INFO[ListItem(8).Icon]</value>
-	</variable>
-	<variable name="Icon(9)Poster">
-		<value condition="!String.IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
-		<value>$INFO[ListItem(9).Icon]</value>
-	</variable>
-	<variable name="Icon(10)Poster">
-		<value condition="!String.IsEmpty(ListItem(10).Art(poster))">$INFO[ListItem(10).Art(poster)]</value>
-		<value>$INFO[ListItem(10).Icon]</value>
-	</variable>
-	<variable name="Icon(11)Poster">
-		<value condition="!String.IsEmpty(ListItem(11).Art(poster))">$INFO[ListItem(11).Art(poster)]</value>
-		<value>$INFO[ListItem(11).Icon]</value>
-	</variable>
-	<variable name="Icon(12)Poster">
-		<value condition="!String.IsEmpty(ListItem(12).Art(poster))">$INFO[ListItem(12).Art(poster)]</value>
-		<value>$INFO[ListItem(12).Icon]</value>
-	</variable>
-	<variable name="BreadcrumbsMusicNode">
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://genres/)">$LOCALIZE[135]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://artists/)">$LOCALIZE[133]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://albums/)">$LOCALIZE[132]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://songs/)">$LOCALIZE[134]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/)">$LOCALIZE[271]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://recentlyaddedalbums/)">$LOCALIZE[359]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://recentlyplayedalbums/)">$LOCALIZE[517]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://compilations/)">$LOCALIZE[521]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://years/)">$LOCALIZE[652]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://singles/)">$LOCALIZE[1050]</value>
-		<value condition="String.StartsWith(Container.FolderPath,addons://) | String.StartsWith(Container.FolderPath,plugin://)">$LOCALIZE[1038]</value>
-		<value condition="String.StartsWith(Container.FolderPath,special://musicplaylists/)">$LOCALIZE[136]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
-	</variable>
-	<variable name="BreadcrumbsMusicSubNode">
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/songs/)">$LOCALIZE[10504]</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://top100/albums/)">$LOCALIZE[10505]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/)">$LOCALIZE[135]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/titles/)">$LOCALIZE[369]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/years/)">$LOCALIZE[562]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/artists/)">$LOCALIZE[133]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/)">$LOCALIZE[132]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/directors/)">$LOCALIZE[20348]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/studios/)">$LOCALIZE[20388]</value>
-	</variable>
-	<variable name="BreadcrumbsVideoNode">
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">$LOCALIZE[342]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://tvshows/)">$LOCALIZE[20343]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedmovies/)">$LOCALIZE[20386]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$LOCALIZE[20387]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedmusicvideos/)">$LOCALIZE[20390]</value>
-		<value condition="String.StartsWith(Container.FolderPath,special://videoplaylists/)">$LOCALIZE[136]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://video/)">$LOCALIZE[1037]</value>
-	</variable>
-	<variable name="BreadcrumbsVideoSubNode">
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.FolderPath,videodb://tvshows/genres/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/genres/)">$LOCALIZE[135]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/titles/) | String.StartsWith(Container.FolderPath,videodb://tvshows/titles/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/titles/)">$LOCALIZE[369]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/years/) | String.StartsWith(Container.FolderPath,videodb://tvshows/years/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/years/)">$LOCALIZE[562]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/actors/) | String.StartsWith(Container.FolderPath,videodb://tvshows/actors/)">$LOCALIZE[344]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/directors/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/directors/)">$LOCALIZE[20348]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/studios/) | String.StartsWith(Container.FolderPath,videodb://tvshows/studios/) | String.StartsWith(Container.FolderPath,videodb://musicvideos/studios/)">$LOCALIZE[20388]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/sets/)">$LOCALIZE[20434]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/countries/)">$LOCALIZE[20451]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/artists/)">$LOCALIZE[133]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/)">$LOCALIZE[132]</value>
 	</variable>
 	<variable name="IncludesMediaFlagsMusic">
 		<value condition="String.EndsWith(ListItem.Filename,.aac)">flags/audiocodec/aac.png</value>
@@ -384,161 +288,153 @@
 		<value condition="Window.IsVisible(MyPVRSearch.xml)">$INFO[ListItem.ChannelName]</value>
 	</variable>
 	<variable name="ViewItemLabel1">
+		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[557]:[/B][/UPPERCASE]</value>
+		<value>[UPPERCASE][B]$LOCALIZE[572]:[/B][/UPPERCASE]</value>
+	</variable>
+	<variable name="ViewItemLabel2">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Artist]</value>
+		<value>$INFO[ListItem.Studio]</value>
+	</variable>
+	<variable name="ViewItemLabel3">
+		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[175]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[558]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[20339]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(TVShows)">[UPPERCASE][B]$LOCALIZE[20416]:[/B][/UPPERCASE]</value>
 	</variable>
-	<variable name="ViewItemLabel2">
+	<variable name="ViewItemLabel4">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Mood)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Album]$INFO[ListItem.DiscNumber, ($LOCALIZE[427]: ,)]</value>
 		<value condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)">$INFO[ListItem.Director]</value>
 		<value condition="Container.Content(TVShows)">$INFO[ListItem.Premiered]</value>
 	</variable>
-	<variable name="ViewItemLabel3">
+	<variable name="ViewItemLabel5">
+		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[176]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[554]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(Movies) | Container.Content(Episodes)">[UPPERCASE][B]$LOCALIZE[20417]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">[UPPERCASE][B]$LOCALIZE[20074]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[558]:[/B][/UPPERCASE]</value>
 	</variable>
-	<variable name="ViewItemLabel4">
+	<variable name="ViewItemLabel6">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Style)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Style)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.TrackNumber]</value>
 		<value condition="Container.Content(Movies) | Container.Content(Episodes)">$INFO[ListItem.Writer]</value>
 		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Mpaa]</value>
 		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Album]</value>
 	</variable>
-	<variable name="ViewItemLabel5">
+	<variable name="ViewItemLabel7">
+		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[21892]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[567]:[/B][/UPPERCASE]</value>
 		<value condition="!Container.Content(Episodes)">[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(Episodes)">[UPPERCASE][B]$LOCALIZE[552]:[/B][/UPPERCASE]</value>
 	</variable>
-	<variable name="ViewItemLabel6">
+	<variable name="ViewItemLabel8">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Instrument)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Theme)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.PlayCount]$INFO[ListItem.LastPlayed, ($LOCALIZE[568]: ,)]</value>
 		<value condition="!Container.Content(Episodes)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Date]</value>
 	</variable>
-	<variable name="ViewItemLabel7">
-		<value condition="[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">$INFO[ListItem.Duration]</value>
+	<variable name="ViewItemLabel9">
+		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21893]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)">[UPPERCASE][B]$LOCALIZE[2050]:[/B][/UPPERCASE]</value>
 	</variable>
-	<variable name="ViewItemLabel8">
+	<variable name="ViewItemLabel10">
+		<value condition="Container.Content(TVShows)">[UPPERCASE][B]$LOCALIZE[33054]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[21899]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</value>
+	</variable>
+	<variable name="ViewItemLabel11">
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">[UPPERCASE][B]$LOCALIZE[20360]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21897]:[/B][/UPPERCASE]</value>
+	</variable>
+	<variable name="ViewItemLabel12">
+		<value condition="[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">$INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Born)]</value>
+	</variable>
+	<variable name="ViewItemLabel13">
+		<value condition="Container.Content(TVShows)">$INFO[ListItem.Property(TotalSeasons)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Label)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Genre]</value>
+	</variable>
+	<variable name="ViewItemLabel14">
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Property(TotalEpisodes)]</value>
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Died)]</value>
+	</variable>
+	<variable name="ViewItemLabel15">
+		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21894]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[562]:[/B][/UPPERCASE]</value>
 		<value condition="!Container.Content(Seasons)">[UPPERCASE][B]$LOCALIZE[345]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(Seasons)">[UPPERCASE][B]$LOCALIZE[16102]:[/B][/UPPERCASE]</value>
 	</variable>
-	<variable name="ViewItemLabel9">
+	<variable name="ViewItemLabel16">
+		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21896]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[563]:[/B][/UPPERCASE]</value>
 		<value condition="![Container.Content(Seasons) | Container.Content(MusicVideos)]">[UPPERCASE][B]$LOCALIZE[563]:[/B][/UPPERCASE]</value>
 		<value condition="Container.Content(Seasons)">[UPPERCASE][B]$LOCALIZE[16101]:[/B][/UPPERCASE]</value>
 	</variable>
-	<variable name="ViewItemLabel10">
+	<variable name="ViewItemLabel17">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Formed)]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Year]</value>
 		<value condition="!Container.Content(Seasons)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(Seasons)">$INFO[ListItem.Property(WatchedEpisodes)]</value>
 	</variable>
-	<variable name="ViewItemLabel11">
+	<variable name="ViewItemLabel18">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Disbanded)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Rating)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Rating]</value>
 		<value condition="![Container.Content(Seasons) | Container.Content(MusicVideos)]">$INFO[ListItem.Rating]</value>
 		<value condition="Container.Content(Seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
 	</variable>
-	<variable name="ViewItemLabel12">
+	<variable name="ViewItemLabel19">
+		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21887]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[183]:[/B][/UPPERCASE]</value>
+		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[569]:[/B][/UPPERCASE]</value>
+		<value>[UPPERCASE][B]$LOCALIZE[207]:[/B][/UPPERCASE]</value>
+	</variable>
+	<variable name="ViewItemLabel20">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
+		<value condition="!Container.Content(Seasons)">$INFO[ListItem.Plot]</value>
+		<value condition="Container.Content(Seasons)">$INFO[Container.ShowPlot]</value>
+	</variable>
+	<variable name="ViewItemLabel21">
+		<value condition="!String.IsEmpty(ListItem.Artist)">[B]$INFO[ListItem.Artist][/B]</value>
+		<value condition="String.IsEmpty(ListItem.Artist)">[B]$INFO[ListItem.Label][/B]</value>
 		<value condition="!Container.Content(Episodes) + !String.IsEmpty(ListItem.Title)">[B]$INFO[ListItem.Title][/B]</value>
 		<value condition="!Container.Content(Episodes) + String.IsEmpty(ListItem.Title)">[B]$INFO[ListItem.Label][/B]</value>
 		<value condition="Container.Content(Episodes)">[B]$INFO[ListItem.Episode,,.] $INFO[ListItem.Title][/B]</value>
 		<value condition="String.IsEmpty(ListItem.Title)">[B]$INFO[ListItem.Label][/B]</value>
 	</variable>
-	<variable name="ViewItemLabel13">
+	<variable name="ViewItemLabel22">
+		<value condition="Container.Content(Artists)">[B]$INFO[ListItem.Property(Artist_Born)][/B]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">[B]$INFO[ListItem.Album][/B]</value>
 		<value condition="![Container.Content(Seasons) | Container.Content(Episodes)]">[B]$INFO[ListItem.Year] $INFO[ListItem.Duration, - ][/B]</value>
 		<value condition="Container.Content(Episodes)">[B]$INFO[ListItem.Date] $INFO[ListItem.Duration, - ][/B]</value>
 		<value condition="Container.Content(Seasons)">[B]$INFO[ListItem.Mpaa][/B]</value>
 	</variable>
-	<variable name="ViewItemLabel14">
-		<value condition="!Container.Content(Episodes)">[B]$INFO[ListItem.Genre][/B]</value>
-		<value condition="Container.Content(Episodes)">[B]$INFO[ListItem.Rating][/B]</value>
-	</variable>
-	<variable name="ViewItemLabel15">
-		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[557]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel16">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Genre]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Artist]</value>
-	</variable>
-	<variable name="ViewItemLabel17">
-		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[175]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[558]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel18">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Mood)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Album]$INFO[ListItem.DiscNumber, ($LOCALIZE[427]: ,)]</value>
-	</variable>
-	<variable name="ViewItemLabel19">
-		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[176]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[554]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel20">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Style)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Style)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.TrackNumber]</value>
-	</variable>
-	<variable name="ViewItemLabel21">
-		<value condition="Container.Content(Artists) | Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[21892]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[567]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel22">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Instrument)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Theme)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.PlayCount]$INFO[ListItem.LastPlayed, ($LOCALIZE[568]: ,)]</value>
-	</variable>
 	<variable name="ViewItemLabel23">
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[21899]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel24">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Label)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Genre]</value>
-	</variable>
-	<variable name="ViewItemLabel25">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21894]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Albums) | Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[562]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel26">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Formed)]</value>
-		<value condition="Container.Content(Albums) | Container.Content(Songs)">$INFO[ListItem.Year]</value>
-	</variable>
-	<variable name="ViewItemLabel27">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21896]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Albums) | Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[563]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel28">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Disbanded)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Rating)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Rating]</value>
-	</variable>
-	<variable name="ViewItemLabel29">
-		<value condition="Container.Content(Artists)">[UPPERCASE][B]$LOCALIZE[21887]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Albums)">[UPPERCASE][B]$LOCALIZE[183]:[/B][/UPPERCASE]</value>
-		<value condition="Container.Content(Songs)">[UPPERCASE][B]$LOCALIZE[569]:[/B][/UPPERCASE]</value>
-	</variable>
-	<variable name="ViewItemLabel30">
-		<value condition="!String.IsEmpty(ListItem.Artist)">[B]$INFO[ListItem.Artist][/B]</value>
-		<value condition="String.IsEmpty(ListItem.Artist)">[B]$INFO[ListItem.Label][/B]</value>
-	</variable>
-	<variable name="ViewItemLabel31">
-		<value condition="Container.Content(Artists)">[B]$INFO[ListItem.Property(Artist_Born)][/B]</value>
-		<value condition="Container.Content(Albums) | Container.Content(Songs)">[B]$INFO[ListItem.Album][/B]</value>
-	</variable>
-	<variable name="ViewItemLabel32">
 		<value condition="Container.Content(Artists)">[B]$INFO[ListItem.Property(Artist_Mood)][/B]</value>
 		<value condition="Container.Content(Albums)">[B]$INFO[ListItem.Property(Album_Label)][/B]</value>
 		<value condition="Container.Content(Songs)">[B]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/B]</value>
+		<value>[B]$INFO[ListItem.Studio][/B]</value>
 	</variable>
-	<variable name="ViewItemLabel33">
+	<variable name="ViewItemLabel24">
 		<value condition="Container.Content(Artists)">[B]$INFO[ListItem.Property(Artist_Style)][/B]</value>
 		<value condition="Container.Content(Albums)">[B]$INFO[ListItem.Year][/B]</value>
 		<value condition="Container.Content(Songs)">[B]$INFO[ListItem.Duration][/B]</value>
+		<value condition="!Container.Content(Episodes)">[B]$INFO[ListItem.Genre][/B]</value>
+		<value condition="Container.Content(Episodes)">[B]$INFO[ListItem.Rating][/B]</value>
 	</variable>
-	<variable name="ViewItemLabel34">
+	<variable name="ViewItemLabel25">
 		<value condition="Container.Content(Artists)">[B]$INFO[ListItem.Property(Artist_Genre)][/B]</value>
 		<value condition="Container.Content(Albums) | Container.Content(Songs)">[B]$INFO[ListItem.Genre][/B]</value>
-	</variable>
-	<variable name="ViewItemText1">
-		<value condition="!Container.Content(Seasons)">$INFO[ListItem.Plot]</value>
-		<value condition="Container.Content(Seasons)">$INFO[Container.ShowPlot]</value>
-	</variable>
-	<variable name="ViewItemText2">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
+		<value condition="Container.Content(Movies)">[B]$INFO[ListItem.TagLine][/B]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel1">
 		<value condition="Container.Content(Addons)">$INFO[ListItem.AddonDescription]</value>

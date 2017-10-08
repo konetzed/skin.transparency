@@ -6,7 +6,6 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="list" id="50">
 				<orientation>vertical</orientation>

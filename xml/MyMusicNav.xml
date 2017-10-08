@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,52,53,55,57,58,592,595</views>
+	<views>50,51,52,53,55,57,58,54,56</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
 		<include>Logo</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
 				<include>Fanart</include><!-- view id=50 -->
@@ -16,13 +15,9 @@
 				<include>Thumbnail</include><!-- view id=53 -->
 				<include>MediaInfo</include><!-- view id=58 -->
 				<include>CoverFlow</include><!-- view id=55 -->
-
 				<include>Icons</include><!-- view id=57 -->
-
-				<include>Wall-Music</include><!-- view id=592 -->
-				<include>Item-Music</include><!-- view id=595 -->
-
-
+				<include>Item</include><!-- view id=54 -->
+				<include>Wall-Music</include><!-- view id=56 -->
 				<include>PageControls</include>
 				<include>ScrollLabel</include>
 			</control>
@@ -30,7 +25,7 @@
 		</control>
 		<include>Header</include>
 		<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>
-		<include condition="Skin.HasSetting(DebugMode)">DebugInfo</include>
+		<include condition="Skin.HasSetting(DebugMode)">debuginfo</include>
 		<include>PageFade</include>
 	</controls>
 </window>

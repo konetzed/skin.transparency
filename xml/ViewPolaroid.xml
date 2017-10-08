@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="Polaroid">
-		<control type="list" id="597">
+		<control type="list" id="59">
 			<left>24</left>
 			<top>360</top>
 			<width>1701</width>
 			<height>518</height>
-			<onleft>597</onleft>
-			<onright>597</onright>
+			<onleft>59</onleft>
+			<onright>59</onright>
 			<onup>9000</onup>
 			<ondown>90</ondown>
 			<viewtype label="31036">icon</viewtype>
@@ -29,7 +29,7 @@
 			</focusedlayout>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(597)</visible>
+			<visible>Control.IsVisible(59)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<left>702</left>
@@ -134,7 +134,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(597) + Container.OnNext</visible>
+			<visible>Control.IsVisible(59) + Container.OnNext</visible>
 			<animation effect="slide" end="-1500,375" time="800" reversible="false">Hidden</animation>
 			<control type="group">
 				<visible>Container.OnNext</visible>
@@ -191,7 +191,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(597) + Container.OnPrevious</visible>
+			<visible>Control.IsVisible(59) + Container.OnPrevious</visible>
 			<animation effect="rotate" start="0" end="0" center="auto" time="600" reversible="false">Hidden</animation>
 			<control type="image">
 				<left>702</left>
@@ -282,7 +282,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(597) + Container.OnPrevious</visible>
+			<visible>Control.IsVisible(59) + Container.OnPrevious</visible>
 			<animation effect="slide" end="1500,-375" time="600" reversible="false">Hidden</animation>
 			<control type="group">
 				<visible>Container.OnPrevious</visible>

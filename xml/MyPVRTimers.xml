@@ -6,7 +6,6 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
 			<control type="group">
 				<include>FullList</include><!-- view id=52 -->

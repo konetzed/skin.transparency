@@ -24,44 +24,4 @@
 			<visible>String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)</visible>
 		</control>
 	</include>
-	<include name="moviedisc-dvd-View_Icons">
-		<texture fallback="disc-dvd.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,disc.png]</texture>
-		<visible>!ListItem.IsParentFolder</visible>
-	</include>
-	<include name="moviedisc-bluray-View_Icons">
-		<texture fallback="disc-bluray.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,disc.png]</texture>
-		<visible>!ListItem.IsParentFolder</visible>
-	</include>
-	<include name="movienodisc-View_Icons">
-		<texture>disc.png</texture>
-	</include>
-	<include name="moviedisc-dvd-View_Item">
-		<texture fallback="disc-dvd.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,disc.png]</texture>
-		<visible>!ListItem.IsParentFolder</visible>
-	</include>
-	<include name="moviedisc-bluray-View_Item">
-		<texture fallback="disc-bluray.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,disc.png]</texture>
-		<visible>!ListItem.IsParentFolder</visible>
-	</include>
-	<include name="movienodisc-View_Item">
-		<texture diffuse="disc_mask.png">disc-dvd.png</texture>
-	</include>
-	<include name="musicalbumsnodisc-View_Icons">
-		<texture>disc.png</texture>
-	</include>
-	<include name="musicalbumsdisc-View_Icons">
-		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]$INFO[ListItem.Album,/,/cdart.png]</texture>
-	</include>
-	<include name="musicalbumsdisc0-View_Icons">
-		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem(-1).Artist]$INFO[ListItem(-1).Album,/,/cdart.png]</texture>
-	</include>
-	<include name="musicalbumsdisc1-View_Icons">
-		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem(1).Artist]$INFO[ListItem(1).Album,/,/cdart.png]</texture>
-	</include>
-	<include name="musicsongsnodisc-View_Icons">
-		<texture>disc.png</texture>
-	</include>
-	<include name="musicsongsdisc-View_Icons">
-		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[ListItem.Path,,cdart.png]</texture>
-	</include>
 </includes>

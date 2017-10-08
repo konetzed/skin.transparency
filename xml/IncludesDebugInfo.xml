@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="DebugInfo">
+	<include name="debuginfo">
 		<control type="group">
 			<left>30</left>
 			<top>150</top>
