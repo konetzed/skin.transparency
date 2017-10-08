@@ -73,14 +73,6 @@ msgctxt "#31025"
 msgid "Items"
 msgstr ""
 
-msgctxt "#31026"
-msgid "Video Library"
-msgstr ""
-
-msgctxt "#31027"
-msgid "Music Library"
-msgstr ""
-
 msgctxt "#31030"
 msgid "Fanart"
 msgstr ""
@@ -141,11 +133,6 @@ msgctxt "#31050"
 msgid "Finish Time"
 msgstr ""
 
-
-msgctxt "#31052"
-msgid "IMDB"
-msgstr ""
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr ""
@@ -164,10 +151,6 @@ msgstr ""
 
 msgctxt "#31059"
 msgid "Current playlist"
-msgstr ""
-
-msgctxt "#31061"
-msgid "Last updated:"
 msgstr ""
 
 msgctxt "#31102"
@@ -247,46 +230,6 @@ msgctxt "#31180"
 msgid "SUBMENU"
 msgstr ""
 
-msgctxt "#31183"
-msgid "TV timer rules"
-msgstr ""
-
-msgctxt "#31191"
-msgid "TV guide"
-msgstr ""
-
-msgctxt "#31192"
-msgid "Radio guide"
-msgstr ""
-
-msgctxt "#31193"
-msgid "TV recordings"
-msgstr ""
-
-msgctxt "#31194"
-msgid "Radio recordings"
-msgstr ""
-
-msgctxt "#31195"
-msgid "TV search"
-msgstr ""
-
-msgctxt "#31196"
-msgid "Radio search"
-msgstr ""
-
-msgctxt "#31197"
-msgid "TV timers"
-msgstr ""
-
-msgctxt "#31198"
-msgid "Radio timers"
-msgstr ""
-
-msgctxt "#31199"
-msgid "Radio timer rules"
-msgstr ""
-
 msgctxt "#31215"
 msgid "Hide GlobalSearch button"
 msgstr ""
@@ -335,20 +278,8 @@ msgctxt "#31404"
 msgid "Favourite game add-ons"
 msgstr ""
 
-msgctxt "#31405"
-msgid "PVR timers"
-msgstr ""
-
-msgctxt "#31409"
-msgid "Player Controls"
-msgstr ""
-
 msgctxt "#31412"
 msgid "Sort:"
-msgstr ""
-
-msgctxt "#31600"
-msgid "Daily"
 msgstr ""
 
 msgctxt "#31605"

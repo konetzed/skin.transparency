@@ -84,7 +84,6 @@
 					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<scrollspeed>0</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">

@@ -14,11 +14,8 @@
 	<include file="ViewItem.xml" />
 	<include file="ViewList.xml" />
 	<include file="ViewMediaInfo.xml" />
-	<include file="ViewPicThumb.xml" />
 	<include file="ViewPolaroid.xml" />
-	<include file="ViewSlide.xml" />
 	<include file="ViewThumbnail.xml" />
-	<include file="ViewThumbWall.xml" />
 	<include file="ViewWall.xml" />
 	<constant name="FanartCrossfadeTime">300</constant>
 	<constant name="IconCrossfadeTime">300</constant>
@@ -137,6 +134,8 @@
 			<texture border="5">panel-light.png</texture>
 			<animation effect="slide" start="0,0" end="1192,278" time="0" condition="Control.IsVisible(50) + ![Window.IsVisible(Settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings) | Window.IsVisible(SystemInfo) | Window.IsVisible(Profiles) | Window.IsVisible(FileManager) | Window.IsVisible(MusicPlaylistEditor) | Window.IsVisible(Weather)]">Conditional</animation>
 			<animation effect="zoom" start="120,80,1680,920" end="60,80,1802,1000" time="0" condition="Window.IsVisible(MyPVRGuide.xml)">Conditional</animation>
+			<animation effect="zoom" start="120,80,1680,920" end="0,80,1920,950" time="0" condition="Control.IsVisible(55)">Conditional</animation>
+			<animation effect="zoom" start="120,80,1680,920" end="420,80,1080,310" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 		</control>
 		<control type="image">
 			<left>476</left>
@@ -146,6 +145,140 @@
 			<texture colordiffuse="grey">white.png</texture>
 			<animation effect="slide" start="0,0" end="97,0" time="0" condition="Window.IsVisible(Settings)">Conditional</animation>
 			<visible>Window.IsVisible(Settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings) | Window.IsVisible(SystemInfo) | Window.IsVisible(Profiles)</visible>
+		</control>
+	</include>
+	<include name="CoverFlowIcon">
+		<control type="group">
+			<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
+			<control type="image">
+				<left>30</left>
+				<top>645</top>
+				<width>390</width>
+				<height>555</height>
+				<texture flipy="true" diffuse="diffuse_mirror2.png" background="true">$VAR[Icon($PARAM[id])Poster]</texture>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>606</top>
+				<width>417</width>
+				<height>642</height>
+				<texture flipy="true" diffuse="diffuse_mirror_case.png" >case-sd.png</texture>
+				<visible>Container.Content(Movies) + ![String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>606</top>
+				<width>417</width>
+				<height>642</height>
+				<texture flipy="true" diffuse="diffuse_mirror_case.png" >case-hd.png</texture>
+				<visible>Container.Content(Movies) + [String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>606</top>
+				<width>417</width>
+				<height>642</height>
+				<texture flipy="true" diffuse="diffuse_mirror_case.png" >case-4k.png</texture>
+				<visible>Container.Content(Movies) + String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K) +  !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>606</top>
+				<width>417</width>
+				<height>642</height>
+				<texture flipy="true" diffuse="diffuse_mirror_case.png">case-sets.png</texture>
+				<visible>Container.Content(Sets) + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>606</top>
+				<width>417</width>
+				<height>642</height>
+				<texture flipy="true" diffuse="diffuse_mirror_case.png">case-tv.png</texture>
+				<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>66</top>
+				<width>390</width>
+				<height>555</height>
+				<texture background="true">$VAR[Icon($PARAM[id])Poster]</texture>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>18</top>
+				<width>417</width>
+				<height>642</height>
+				<texture>case-sd.png</texture>
+				<visible>Container.Content(Movies) + ![String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>18</top>
+				<width>417</width>
+				<height>642</height>
+				<texture>case-hd.png</texture>
+				<visible>Container.Content(Movies) + [String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>18</top>
+				<width>417</width>
+				<height>642</height>
+				<texture>case-4k.png</texture>
+				<visible>Container.Content(Movies) + String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K) +  !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>18</top>
+				<width>417</width>
+				<height>642</height>
+				<texture>case-sets.png</texture>
+				<visible>Container.Content(Sets) + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>18</top>
+				<width>417</width>
+				<height>642</height>
+				<texture>case-tv.png</texture>
+				<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)</visible>
+			<control type="image">
+				<left>51</left>
+				<top>519</top>
+				<width>477</width>
+				<height>477</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="thumb-diffuse-mirror.png" background="true">$INFO[ListItem($PARAM[id]).Icon]</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>525</top>
+				<width>540</width>
+				<height>490</height>
+				<texture flipy="true" diffuse="diffuse_mirror2.png">cdcase.png</texture>
+				<visible>[Container.Content(Albums) | Container.Content(Songs)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>51</left>
+				<top>42</top>
+				<width>477</width>
+				<height>477</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" diffuse="thumb-diffuse.png">$INFO[ListItem($PARAM[id]).Icon]</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>34</top>
+				<width>540</width>
+				<height>490</height>
+				<texture diffuse="cdcase-diffuse.png">cdcase.png</texture>
+				<visible>[Container.Content(Albums) | Container.Content(Songs)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+			</control>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -311,7 +444,7 @@
 				<width>1920</width>
 				<height>50</height>
 				<texture flipy="true" border="2">header.png</texture>
-				<visible>![Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(Addons)]] + ![Window.IsVisible(Addons) + String.IsEmpty(ListItem.AddonBroken)]</visible>
+				<visible>![Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(Addons)]] + ![Window.IsVisible(Addons) + String.IsEmpty(ListItem.AddonBroken)] + !Control.IsVisible(57)</visible>
 			</control>
 			<include condition="Window.IsVisible(Addons)">FooterAddons</include>
 			<include condition="Window.IsVisible(Home) + system.getbool(lookandfeel.enablerssfeeds)">FooterHome</include>
@@ -369,6 +502,7 @@
 			<height>50</height>
 			<align>center</align>
 			<orientation>horizontal</orientation>
+			<animation effect="slide" start="0,0" end="600,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 			<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !ListItem.IsParentFolder</visible>
 			<itemgap>20</itemgap>
 			<control type="image">
@@ -565,7 +699,7 @@
 			<left>1800</left>
 			<top>80</top>
 			<onleft>50</onleft>
-			<visible>!Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(Addons)]</visible>
+			<visible>!Control.IsVisible(57) + !Control.IsVisible(55) + [!Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(Addons)]]</visible>
 		</control>
 		<control type="scrollbar" id="90">
 			<left>1908</left>
@@ -573,6 +707,16 @@
 			<height>692</height>
 			<onleft>50</onleft>
 			<visible>Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(Addons)]</visible>
+		</control>
+		<control type="scrollbar" id="90">
+			<left>160</left>
+			<top>1015</top>
+			<width>1600</width>
+			<height>12</height>
+			<textureslidernibfocus>scrollbar-nib-h.png</textureslidernibfocus>
+			<orientation>horizontal</orientation>
+			<onup>50</onup>
+			<visible>Control.IsVisible(55) | Control.IsVisible(57)</visible>
 		</control>
 	</include>
 	<include name="ScrollLabel">

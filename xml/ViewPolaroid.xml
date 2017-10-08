@@ -118,7 +118,6 @@
 				<font>font-23</font>
 				<textcolor>black</textcolor>
 				<align>center</align>
-				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
@@ -130,7 +129,6 @@
 				<font>font-23</font>
 				<textcolor>black</textcolor>
 				<align>center</align>
-				<aligny>center</aligny>
 				<label>[I]$INFO[ListItem.Date][/I]</label>
 				<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
@@ -176,7 +174,6 @@
 					<font>font-23</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem(-1).Label]</label>
 					<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				</control>
@@ -188,7 +185,6 @@
 					<font>font-23</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>[I]$INFO[ListItem(-1).Date][/I]</label>
 					<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				</control>
@@ -270,7 +266,6 @@
 				<font>font-23</font>
 				<textcolor>black</textcolor>
 				<align>center</align>
-				<aligny>center</aligny>
 				<label>$INFO[ListItem(1).Label]</label>
 				<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
@@ -282,7 +277,6 @@
 				<font>font-23</font>
 				<textcolor>black</textcolor>
 				<align>center</align>
-				<aligny>center</aligny>
 				<label>[I]$INFO[ListItem(1).Date][/I]</label>
 				<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
@@ -329,7 +323,6 @@
 					<font>font-23</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem(0).Label]</label>
 					<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				</control>
@@ -341,7 +334,6 @@
 					<font>font-23</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>[I]$INFO[ListItem(0).Date][/I]</label>
 					<animation effect="rotate" end="5" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 				</control>

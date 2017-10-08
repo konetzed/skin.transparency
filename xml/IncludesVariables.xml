@@ -107,6 +107,13 @@
 		<value condition="!Control.IsVisible(50)">[UPPERCASE][B]$LOCALIZE[207]:[/B][/UPPERCASE]</value>
 		<value condition="Control.HasFocus(50)">[B]$INFO[Container(50).Listitem.Label]$INFO[Container(50).Listitem.Label2, (,)][/B]</value>
 	</variable>
+	<variable name="DiscArt">
+		<value condition="!String.IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">disc.png</value>
+		<value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)]">disc-dvd.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)">disc-bluray.png</value>
+		<value>disc.png</value>
+	</variable>
 	<variable name="IconBanner">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -256,27 +263,20 @@
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/albums/)">$LOCALIZE[132]</value>
 	</variable>
 	<variable name="IncludesMediaFlagsMusic">
-		<value condition="String.EndsWith(ListItem.Filename,.aac)">flags/music/audiocodec/aac.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.ac3)">flags/music/audiocodec/ac3.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.aif) + ![String.EndsWith(ListItem.Filename,.aifc) | String.EndsWith(ListItem.Filename,.aiff)]">flags/music/audiocodec/aif.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.aifc)">flags/music/audiocodec/aifc.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.aiff)">flags/music/audiocodec/aiff.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.avs)">flags/music/audiocodec/avs.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.ape)">flags/music/audiocodec/ape.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.cdda)">flags/music/audiocodec/cdda.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.dts)">flags/music/audiocodec/dts.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.flac)">flags/music/audiocodec/flac.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.m4a)">flags/music/audiocodec/m4a.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.mlp)">flags/music/audiocodec/mlp.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.mp2)">flags/music/audiocodec/mp2.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.mp3)">flags/music/audiocodec/mp3.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.mpc)">flags/music/audiocodec/mpc.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.ogg)">flags/music/audiocodec/ogg.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.ra)">flags/music/audiocodec/ra.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.shn)">flags/music/audiocodec/shn.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.wav)">flags/music/audiocodec/wav.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.wma)">flags/music/audiocodec/wma.png</value>
-		<value condition="String.EndsWith(ListItem.Filename,.wv)">flags/music/audiocodec/wv.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.aac)">flags/audiocodec/aac.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.ac3)">flags/audiocodec/ac3.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.aif) + ![String.EndsWith(ListItem.Filename,.aifc) | String.EndsWith(ListItem.Filename,.aiff)]">flags/audiocodec/aif.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.aifc)">flags/audiocodec/aifc.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.aiff)">flags/audiocodec/aiff.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.ape)">flags/audiocodec/ape.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.cdda)">flags/audiocodec/cdda.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.dts)">flags/audiocodec/dts.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.flac)">flags/audiocodec/flac.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.mp2)">flags/audiocodec/mp2.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.mp3)">flags/audiocodec/mp3.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.ogg)">flags/audiocodec/ogg.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.wav)">flags/audiocodec/wav.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.wma)">flags/audiocodec/wma.png</value>
 	</variable>
 	<variable name="PartlyWatched">
 		<value condition="Integer.IsGreater(ListItem.PercentPlayed,0) + !Integer.IsGreater(ListItem.PercentPlayed,19)">OverlayPartlywatched1.png</value>
@@ -311,6 +311,29 @@
 		<value condition="![Playlist.IsRepeat | Playlist.IsRepeatOne]">player-repeat-off.png</value>
 		<value condition="Playlist.IsRepeatOne">player-repeat-one.png</value>
 		<value condition="Playlist.IsRepeat">player-repeat-all.png</value>
+	</variable>
+	<variable name="VideoCase">
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">case-cd.png</value>
+		<value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)]">case-sd.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)">case-hd.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">case-4k.png</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">case-tv.png</value>
+		<value>case-sets.png</value>
+	</variable>
+	<variable name="VideoColor">
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">30FFFFFF</value>
+		<value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)]">FF7C7063</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)">FF4EA3F8</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">FFCF474B</value>
+		<value>FFD3C179</value>
+	</variable>
+	<variable name="VideoCaseInside">
+		<value condition="Container.Content(Albums) | Container.Content(Songs)">case-cd-inside.png</value>
+		<value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)]">case-sd-inside.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)">case-hd-inside.png</value>
+		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">case-hd-inside.png</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">case-tv.png</value>
+		<value>case-sets-inside.png</value>
 	</variable>
 	<variable name="VideoDecoder">
 		<value condition="Player.Process(videohwdecoder)">HW</value>
@@ -522,6 +545,7 @@
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
+		<value condition="Container.Content(Pictures)">$INFO[ListItem.PictureComment]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="ViewMediaInfoLabel2">
