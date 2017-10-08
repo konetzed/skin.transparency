@@ -236,20 +236,12 @@
 		<value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)]">case-sd-inside.png</value>
 		<value condition="String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)">case-hd-inside.png</value>
 		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">case-hd-inside.png</value>
-		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">case-tv.png</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">case-tv-inside.png</value>
 		<value>case-sets-inside.png</value>
 	</variable>
 	<variable name="VideoDecoder">
 		<value condition="Player.Process(videohwdecoder)">HW</value>
 		<value>SW</value>
-	</variable>
-	<variable name="ViewCoverFlowLabel1">
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Label2]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Label]</value>
-	</variable>
-	<variable name="ViewCoverFlowLabel2">
-		<value condition="Container.Content(Albums)">[B]$INFO[ListItem.Label][/B]</value>
-		<value condition="Container.Content(Songs)">[B]$INFO[ListItem.Label2][/B]</value>
 	</variable>
 	<variable name="ViewFanartLabel1">
 		<value condition="String.IsEmpty(ListItem.Title)">$INFO[ListItem.Label]</value>
@@ -474,22 +466,6 @@
 		<value condition="Container.Content(Seasons)">$INFO[ListItem.Property(TotalEpisodes),[COLOR=lightcolor][B]$LOCALIZE[20360]: [/B][/COLOR][CR]]</value>
 		<value condition="String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Rating,[COLOR=lightcolor][B]$LOCALIZE[563]: [/B][/COLOR][CR]]</value>
 		<value>$INFO[ListItem.Duration,[COLOR=lightcolor][B]$LOCALIZE[2050]: [/B][/COLOR][CR]]</value>
-	</variable>
-	<variable name="ViewIconsLabel1">
-		<value condition="Container.Content(Albums)">[B]$INFO[ListItem.Label2][/B]</value>
-		<value condition="Container.Content(Songs)">[B]$INFO[ListItem.Label][/B]</value>
-	</variable>
-	<variable name="ViewIconsLabel2">
-		<value condition="Container.Content(Albums)">[B]$INFO[ListItem.Label][/B]</value>
-		<value condition="Container.Content(Songs)">[B]$INFO[ListItem.Label2][/B]</value>
-	</variable>
-	<variable name="ViewSlideLabel1">
-		<value condition="!Container.Content(TVShows)">$INFO[ListItem.Duration]</value>
-	</variable>
-	<variable name="ViewSlideLabel2">
-		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
-		<value condition="!String.IsEmpty(ListItem.TagLine)">$INFO[ListItem.TagLine]</value>
 	</variable>
 	<variable name="ViewWallLabel1">
 		<value condition="Container.Content(Artists) + !ListItem.IsParentFolder">[B]$INFO[ListItem.Label][/B]</value>

@@ -200,38 +200,6 @@
 			<effect type="rotatey" center="48" start="75" end="0" time="250" />
 		</animation>
 	</include>
-	<include name="Music-Icons-CaseNoAnimation1">
-		<animation type="focus" reversible="false">
-			<effect type="zoom" start="75,316,252,243" end="27,366,352,339" time="250" />
-		</animation>
-		<animation type="UnFocus" reversible="true">
-			<effect type="zoom" end="75,316,252,243" start="-27,366,352,339" time="250" />
-		</animation>
-	</include>
-	<include name="Music-Icons-CaseNoAnimation2">
-		<animation type="focus" reversible="false">
-			<effect type="zoom" start="48,312,288,252" end="-10,363,402,351" time="250" />
-		</animation>
-		<animation type="UnFocus" reversible="true">
-			<effect type="zoom" end="48,312,288,252" start="-10,363,402,351" time="250" />
-		</animation>
-	</include>
-	<include name="Music-Icons-CaseNoAnimation3">
-		<animation type="focus" reversible="false">
-			<effect type="zoom" start="75,64,252,243" end="27,16,352,339" time="250" />
-		</animation>
-		<animation type="UnFocus" reversible="true">
-			<effect type="zoom" end="75,64,252,243" start="27,16,352,339" time="250" />
-		</animation>
-	</include>
-	<include name="Music-Icons-CaseNoAnimation4">
-		<animation type="focus" reversible="false">
-			<effect type="zoom" start="48,60,288,252" end="-10,10,402,351" time="250" />
-		</animation>
-		<animation type="UnFocus" reversible="true">
-			<effect type="zoom" start="-10,10,402,351" end="48,60,288,252" time="250" />
-		</animation>
-	</include>
 	<include name="PageFade">
 		<control type="image">
 			<left>0</left>
@@ -306,12 +274,6 @@
 	<include name="VisibleFadeEffect">
 		<animation effect="fade" time="200">Visible</animation>
 		<animation effect="fade" time="200">Hidden</animation>
-	</include>
-	<include name="VisibleFadeEffect3">
-		<animation effect="fade" time="400">Visible</animation>
-		<animation effect="fade" time="400">Hidden</animation>
-		<animation effect="fade" time="400">WindowOpen</animation>
-		<animation effect="fade" time="400">WindowClose</animation>
 	</include>
 	<include name="Window_OpenClose_Animation">
 		<animation effect="fade" time="200">WindowOpen</animation>

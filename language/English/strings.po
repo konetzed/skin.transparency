@@ -85,20 +85,8 @@ msgctxt "#31032"
 msgid "Cover flow"
 msgstr ""
 
-msgctxt "#31033"
-msgid "Pic thumb"
-msgstr ""
-
-msgctxt "#31035"
-msgid "Slide"
-msgstr ""
-
 msgctxt "#31036"
 msgid "Polaroid"
-msgstr ""
-
-msgctxt "#31037"
-msgid "ThumbWall"
 msgstr ""
 
 msgctxt "#31038"
