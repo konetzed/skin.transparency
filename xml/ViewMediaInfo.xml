@@ -8,8 +8,8 @@
 			<height>522</height>
 			<onleft>9000</onleft>
 			<onright>90</onright>
-			<onup>54</onup>
-			<ondown>54</ondown>
+			<onup>58</onup>
+			<ondown>58</ondown>
 			<viewtype label="544">list</viewtype>
 			<pagecontrol>90</pagecontrol>
 			<scrolltime>200</scrolltime>

@@ -268,7 +268,7 @@
 			<include>Window_OpenClose_Visible_ItemIcon_Animation</include>
 			<animation effect="rotatey" start="60" end="60" center="auto" time="0" condition="true">Conditional</animation>
 			<camera x="1260" y="540" />
-			<visible>Control.IsVisible(54) + Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
+			<visible>Control.IsVisible(54) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 			<control type="image">
 				<left>465</left>
 				<top>126</top>
@@ -286,7 +286,7 @@
 			<include>Window_OpenClose_Visible_ItemIcon_Animation</include>
 			<animation effect="rotatey" start="60" end="60" center="auto" time="0" condition="true">Conditional</animation>
 			<camera x="1410" y="540" />
-			<visible>Control.IsVisible(54) + Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)</visible>
+			<visible>Control.IsVisible(54) + [Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)]</visible>
 			<control type="image">
 				<left>465</left>
 				<top>126</top>

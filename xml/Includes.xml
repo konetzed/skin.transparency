@@ -445,7 +445,7 @@
 				<width>1920</width>
 				<height>50</height>
 				<texture flipy="true" border="2">header.png</texture>
-				<visible>![Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(Addons)]] + ![Window.IsVisible(Addons) + String.IsEmpty(ListItem.AddonBroken)] + !Control.IsVisible(54) + !Control.IsVisible(57)</visible>
+				<visible>![Control.IsVisible(50) + [Window.IsVisible(Videos) | Window.IsVisible(Music) | Window.IsVisible(Pictures) | Window.IsVisible(Programs) | Window.IsVisible(AddonBrowser)]] + ![Window.IsVisible(Addons) + String.IsEmpty(ListItem.AddonBroken)] + !Control.IsVisible(54) + !Control.IsVisible(57)</visible>
 			</control>
 			<include condition="Window.IsVisible(Addons)">FooterAddons</include>
 			<include condition="Window.IsVisible(Home) + system.getbool(lookandfeel.enablerssfeeds)">FooterHome</include>

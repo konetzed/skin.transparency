@@ -30,7 +30,6 @@
 				<height>70</height>
 				<textoffsetx>70</textoffsetx>
 				<font>font-20</font>
-				<texturefocus colordiffuse="darkcolor">button-focus.png</texturefocus>
 				<texturenofocus border="2">dialogbutton-nofocus.png</texturenofocus>
 				<onup>3</onup>
 				<ondown>3</ondown>
@@ -65,7 +64,6 @@
 		<control type="button" id="10">
 			<description>Default Category Button</description>
 			<width>355</width>
-			<onback>SetFocus(5)</onback>
 		</control>
 		<control type="button" id="7">
 		</control>

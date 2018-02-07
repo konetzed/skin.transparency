@@ -148,7 +148,7 @@
 					<visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="label">
-					<description>Chapter Pos No</description>
+					<description>Channel info</description>
 					<left>1148</left>
 					<top>232</top>
 					<width>735</width>

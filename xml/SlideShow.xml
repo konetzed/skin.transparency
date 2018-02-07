@@ -38,11 +38,7 @@
 				<width>600</width>
 				<height>30</height>
 				<label>$INFO[MusicPlayer.Title]</label>
-				<align>left</align>
-				<aligny>center</aligny>
 				<font>font-19</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
 				<left>135</left>
@@ -51,10 +47,7 @@
 				<height>30</height>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 				<align>left</align>
-				<aligny>center</aligny>
 				<font>font-19</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
 				<left>120</left>
@@ -63,10 +56,7 @@
 				<height>30</height>
 				<label>$INFO[MusicPlayer.Time]</label>
 				<align>right</align>
-				<aligny>center</aligny>
 				<font>font-19</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="progress">
 				<description>progress control</description>
@@ -90,11 +80,8 @@
 				<width>105</width>
 				<height>30</height>
 				<label>$INFO[MusicPlayer.Duration]</label>
-				<align>left</align>
-				<aligny>center</aligny>
 				<font>font-19</font>
 				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
 	</controls>

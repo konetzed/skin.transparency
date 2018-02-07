@@ -14,10 +14,8 @@
 				<width>355</width>
 				<height>675</height>
 				<itemgap>-2</itemgap>
-				<onleft>5</onleft>
-				<onright>5</onright>
-				<onup>3</onup>
-				<ondown>20</ondown>
+				<onleft>90</onleft>
+				<onright>90</onright>
 				<control type="button" id="95">
 					<description>Button Default Values</description>
 					<width>355</width>
@@ -66,7 +64,7 @@
 				<left>494</left>
 				<top>106</top>
 				<width>1290</width>
-				<height>868</height>
+				<height>875</height>
 				<control type="label" id="2">
 					<wrapmultiline>true</wrapmultiline>
 				</control>
@@ -114,7 +112,7 @@
 				<left>494</left>
 				<top>106</top>
 				<width>1290</width>
-				<height>868</height>
+				<height>875</height>
 				<font>font-19</font>
 				<align>justify</align>
 				<pagecontrol>90</pagecontrol>
