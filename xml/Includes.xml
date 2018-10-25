@@ -153,97 +153,17 @@
 			<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
 			<control type="image">
 				<left>30</left>
-				<top>645</top>
+				<top>619</top>
 				<width>390</width>
 				<height>555</height>
-				<texture flipy="true" diffuse="diffuse_mirror2.png" background="true">$INFO[ListItem($PARAM[id]).Icon]</texture>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>606</top>
-				<width>417</width>
-				<height>642</height>
-				<texture flipy="true" diffuse="diffuse_mirror_case.png" >case-sd.png</texture>
-				<visible>Container.Content(Movies) + ![String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K)] + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>606</top>
-				<width>417</width>
-				<height>642</height>
-				<texture flipy="true" diffuse="diffuse_mirror_case.png" >case-hd.png</texture>
-				<visible>Container.Content(Movies) + [String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080)] + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>606</top>
-				<width>417</width>
-				<height>642</height>
-				<texture flipy="true" diffuse="diffuse_mirror_case.png" >case-4k.png</texture>
-				<visible>Container.Content(Movies) + String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K) +  !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>606</top>
-				<width>417</width>
-				<height>642</height>
-				<texture flipy="true" diffuse="diffuse_mirror_case.png">case-sets.png</texture>
-				<visible>Container.Content(Sets) + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>606</top>
-				<width>417</width>
-				<height>642</height>
-				<texture flipy="true" diffuse="diffuse_mirror_case.png">case-tv.png</texture>
-				<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+				<texture flipy="true" diffuse="thumb-diffuse-mirror.png" background="true">$INFO[ListItem($PARAM[id]).Icon]</texture>
 			</control>
 			<control type="image">
 				<left>30</left>
 				<top>66</top>
 				<width>390</width>
 				<height>555</height>
-				<texture background="true">$INFO[ListItem($PARAM[id]).Icon]</texture>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>18</top>
-				<width>417</width>
-				<height>642</height>
-				<texture>case-sd.png</texture>
-				<visible>Container.Content(Movies) + ![String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K)] + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>18</top>
-				<width>417</width>
-				<height>642</height>
-				<texture>case-hd.png</texture>
-				<visible>Container.Content(Movies) + [String.IsEqual(ListItem($PARAM[id]).VideoResolution,720) | String.IsEqual(ListItem($PARAM[id]).VideoResolution,1080)] + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>18</top>
-				<width>417</width>
-				<height>642</height>
-				<texture>case-4k.png</texture>
-				<visible>Container.Content(Movies) + String.IsEqual(ListItem($PARAM[id]).VideoResolution,4K) +  !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>18</top>
-				<width>417</width>
-				<height>642</height>
-				<texture>case-sets.png</texture>
-				<visible>Container.Content(Sets) + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>18</top>
-				<width>417</width>
-				<height>642</height>
-				<texture>case-tv.png</texture>
-				<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !ListItem($PARAM[id]).IsParentFolder</visible>
+				<texture background="true" diffuse="cover-diffuse2.png">$INFO[ListItem($PARAM[id]).Icon]</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -257,28 +177,12 @@
 				<texture flipy="true" diffuse="thumb-diffuse-mirror.png" background="true">$INFO[ListItem($PARAM[id]).Icon]</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>525</top>
-				<width>540</width>
-				<height>490</height>
-				<texture flipy="true" diffuse="diffuse_mirror2.png">cdcase.png</texture>
-				<visible>[Container.Content(Albums) | Container.Content(Songs)] + !ListItem($PARAM[id]).IsParentFolder</visible>
-			</control>
-			<control type="image">
 				<left>51</left>
 				<top>42</top>
 				<width>477</width>
 				<height>477</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<texture background="true" diffuse="thumb-diffuse.png">$INFO[ListItem($PARAM[id]).Icon]</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>34</top>
-				<width>540</width>
-				<height>490</height>
-				<texture diffuse="cdcase-diffuse.png">cdcase.png</texture>
-				<visible>[Container.Content(Albums) | Container.Content(Songs)] + !ListItem($PARAM[id]).IsParentFolder</visible>
 			</control>
 		</control>
 	</include>
@@ -891,6 +795,26 @@
 			<width>355</width>
 			<label>$LOCALIZE[103]</label>
 		</control>
+
+
+
+		<control type="button" id="35">
+			<width>355</width>
+			<label>lastplayed</label>
+			<onclick>Container.SetSortMethod(41)</onclick>
+		</control>
+		<control type="button" id="36">
+			<width>355</width>
+			<label>channel</label>
+			<onclick>Container.SetSortMethod(46)</onclick>
+		</control>
+		<control type="button" id="37">
+			<width>355</width>
+			<label>channelnumber</label>
+			<onclick>Container.SetSortMethod(47)</onclick>
+		</control>
+
+
 		<control type="togglebutton" id="4">
 			<description>Sort asc</description>
 			<width>355</width>
@@ -1247,5 +1171,233 @@
 				<visible>Player.Playing</visible>
 			</control>
 		</control>
+	</include>
+	<include name="VideoInfoMovie">
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20339]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Director]</label2>
+			<onclick>SendClick(2003,13)</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20417]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Writer]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[572]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Studio]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[562]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[574]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Country]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[2050]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Duration]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[567]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.PlayCount]$INFO[ListItem.LastPlayed, ($LOCALIZE[568]: ,)]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[563]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.RatingAndVotes]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[38018]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.UserRating]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[202]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.TagLine]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20074]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.mpaa]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[15311][/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<onclick>noop</onclick>
+		</item>
+	</include>
+	<include name="VideoInfoTVShow">
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[33054]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Property(TotalSeasons)]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20360]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Property(TotalEpisodes)] [COLOR=grey] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102] - ]$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101])][/COLOR]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20416]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Premiered]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[562]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[563]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Rating]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[38018]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.UserRating]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20074]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.mpaa]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[15311][/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<onclick>noop</onclick>
+		</item>
+	</include>
+	<include name="VideoInfoEpisode">
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20364]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.TVShowTitle]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20359]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Season,,.]$INFO[ListItem.Episode]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[552]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Premiered]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[572]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Studio]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20339]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Director]</label2>
+			<onclick>SendClick(2003,13)</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20417]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Writer]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[562]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[2050]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Duration]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[567]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.PlayCount]$INFO[ListItem.LastPlayed, ($LOCALIZE[568]: ,)]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[563]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Rating]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[38018]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.UserRating]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[15311][/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<onclick>noop</onclick>
+		</item>
+	</include>
+	<include name="VideoInfoMusicVideo">
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[557]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Artist]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[558]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Album]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[515]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[572]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Studio]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[20339]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Director]</label2>
+			<onclick>SendClick(2003,13)</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[562]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Year]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[2050]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.Duration]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[567]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.PlayCount]$INFO[ListItem.LastPlayed, ($LOCALIZE[568]: ,)]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[38018]:[/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.UserRating]</label2>
+			<onclick>noop</onclick>
+		</item>
+		<item>
+			<label>[UPPERCASE][B]$LOCALIZE[15311][/B][/UPPERCASE]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<onclick>noop</onclick>
+		</item>
 	</include>
 </includes>
