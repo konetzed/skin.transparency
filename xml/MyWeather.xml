@@ -10,7 +10,7 @@
 			<onleft>9000</onleft>
 		</control>
 		<include>DefaultBackground</include>
-			<include>ContentPanel</include>
+		<include>ContentPanel</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<include>ContentPanel</include>
