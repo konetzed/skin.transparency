@@ -266,6 +266,10 @@ msgctxt "#31404"
 msgid "Favourite game add-ons"
 msgstr ""
 
+msgctxt "#31405"
+msgid "PVR"
+msgstr ""
+
 msgctxt "#31412"
 msgid "Sort:"
 msgstr ""

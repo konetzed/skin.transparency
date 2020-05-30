@@ -79,25 +79,24 @@
 				<texture border="2">menu.png</texture>
 			</control>
 			<control type="list" id="5030">
-				<left>30</left>
+				<left>5</left>
 				<top>110</top>
-				<width>390</width>
+				<width>450</width>
 				<height>70</height>
 				<orientation>horizontal</orientation>
-				<onup>20</onup>
 				<ondown>5040</ondown>
-				<itemlayout width="130" height="70">
+				<itemlayout width="110" height="70">
 					<control type="image">
-						<left>30</left>
+						<left>20</left>
 						<top>0</top>
 						<width>70</width>
 						<height>70</height>
 						<texture colordiffuse="verylightgrey">$INFO[ListItem.Icon]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout width="130" height="70">
+				<focusedlayout width="110" height="70">
 					<control type="image">
-						<left>30</left>
+						<left>20</left>
 						<top>0</top>
 						<width>70</width>
 						<height>70</height>
@@ -105,7 +104,7 @@
 						<visible>Control.HasFocus(5030)</visible>
 					</control>
 					<control type="image">
-						<left>30</left>
+						<left>20</left>
 						<top>0</top>
 						<width>70</width>
 						<height>70</height>
@@ -113,7 +112,7 @@
 						<visible>!Control.HasFocus(5030)</visible>
 					</control>
 					<control type="image">
-						<left>30</left>
+						<left>20</left>
 						<top>0</top>
 						<width>70</width>
 						<height>70</height>
@@ -123,14 +122,18 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
+						<icon>home-power.png</icon>
+						<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					</item>
+					<item id="2">
 						<icon>home-filemanager.png</icon>
 						<onclick>ActivateWindow(Filemanager)</onclick>
 					</item>
-					<item id="2">
+					<item id="3">
 						<icon>home-favourites.png</icon>
 						<onclick>ActivateWindow(Favourites)</onclick>
 					</item>
-					<item id="3">
+					<item id="4">
 						<icon>home-search.png</icon>
 						<onclick>RunScript(script.globalsearch)</onclick>
 					</item>

@@ -527,21 +527,6 @@
 						<textcolor>white</textcolor>
 						<label>$INFO[System.Date(ddd mmm dd)], $INFO[System.Time]</label>
 					</control>
-					<control type="button" id="20">
-						<description>Power push button</description>
-						<width>30</width>
-						<height>30</height>
-						<label></label>
-						<font></font>
-						<texturenofocus>home-power.png</texturenofocus>
-						<texturefocus colordiffuse="color">home-power.png</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<onleft>10</onleft>
-						<onright>10</onright>
-						<onup>9000</onup>
-						<ondown>9000</ondown>
-						<onclick>ActivateWindow(ShutdownMenu)</onclick>
-					</control>
 				</control>
 			</control>
 			<control type="grouplist">
