@@ -502,7 +502,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -514,7 +513,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.Year][/I]</label>
 					</control>
@@ -618,7 +616,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Title][/B]</label>
 					</control>
@@ -630,7 +627,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.TVShowTitle][/I]</label>
 					</control>
@@ -734,7 +730,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -746,7 +741,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.Artist][/I]</label>
 					</control>
@@ -957,7 +951,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -969,7 +962,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.Artist][/I]</label>
 					</control>
@@ -1073,7 +1065,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -1085,7 +1076,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.AddonVersion][/I]</label>
 					</control>
@@ -1189,7 +1179,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -1201,7 +1190,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.AddonVersion][/I]</label>
 					</control>
@@ -1305,7 +1293,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -1317,7 +1304,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.AddonVersion][/I]</label>
 					</control>
@@ -1421,7 +1407,6 @@
 						<font>font-19</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -1433,7 +1418,6 @@
 						<font>font-17</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
-						<scroll>true</scroll>
 						<scrollspeed>0</scrollspeed>
 						<label>[I]$INFO[ListItem.Label2][/I]</label>
 					</control>

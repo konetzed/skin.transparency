@@ -105,7 +105,7 @@
 					<width>1112</width>
 					<height>22</height>
 					<info>Player.ProgressCache</info>
-					<midtexture border="10,0,10,0">ProgressCache.png</midtexture>
+					<midtexture>ProgressCache.png</midtexture>
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>

@@ -113,7 +113,7 @@
 				<width>335</width>
 				<height>502</height>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$VAR[Icon]</texture>
 				<fadetime>IconCrossfadeTime</fadetime>
 			</control>
 			<control type="label">

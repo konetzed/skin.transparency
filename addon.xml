@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="skin.transparency" version="12.0.0" name="Transparency!" provider-name="ronie">
 	<requires>
-		<import	addon="xbmc.gui" version="5.14.0"/>
+		<import	addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.images.recordlabels.white" version="0.0.5"/>
 		<import addon="resource.images.studios.white" version="0.0.5"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.4"/>

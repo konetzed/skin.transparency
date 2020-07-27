@@ -57,8 +57,8 @@
 	</default>
 	<default type="progress">
 		<height>12</height>
-		<texturebg border="4,0,4,0">progressbar-back.png</texturebg>
-		<midtexture border="4,0,4,0">progressbar.png</midtexture>
+		<texturebg>progressbar-back.png</texturebg>
+		<midtexture>progressbar.png</midtexture>
 		<lefttexture></lefttexture>
 		<righttexture></righttexture>
 		<overlaytexture></overlaytexture>
@@ -98,8 +98,8 @@
 		<width>12</width>
 		<height>920</height>
 		<texturesliderbackground></texturesliderbackground>
-		<texturesliderbar colordiffuse="strongfade" border="6">scrollbar.png</texturesliderbar>
-		<texturesliderbarfocus colordiffuse="darkcolor" border="6">scrollbar.png</texturesliderbarfocus>
+		<texturesliderbar colordiffuse="strongfade">scrollbar.png</texturesliderbar>
+		<texturesliderbarfocus colordiffuse="darkcolor">scrollbar.png</texturesliderbarfocus>
 		<textureslidernib></textureslidernib>
 		<textureslidernibfocus>scrollbar-nib-v.png</textureslidernibfocus>
 		<showonepage>false</showonepage>
