@@ -6,3 +6,8 @@ My hope is to learn how to do a skin for Kodi and get this updated and included 
 
 Thank you again Ronie for all the years of working on this skin.
 
+
+Note on how to build zip archive for kodi install 
+
+git archive --format zip -v --prefix skin.transparency/ -o ../skin.transparency.zip HEAD
+
