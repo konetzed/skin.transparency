@@ -31,7 +31,7 @@
 			<top>585</top>
 			<width>300</width>
 			<height>300</height>
-            <texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,discart.png]</texture>
+			<texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,discart.png]</texture>
 			<aspectratio>keep</aspectratio>
 			<include>cdartspinjukebox</include>
 			<visible>Player.HasAudio + ![String.Contains(Player.FolderPath,pvr://) | String.Contains(Player.FolderPath,http://) | String.Contains(Player.FolderPath,https://) | String.Contains(Player.FolderPath,htsp://)]</visible>
@@ -447,7 +447,7 @@
 		<visible>!ListItem.IsParentFolder</visible>
 	</include>
 	<include name="moviedisc-bluray-View_Item">
-        <texture fallback="disc-bluray.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,discart.png]</texture>
+		<texture fallback="disc-bluray.png" diffuse="disc_mask.png" background="true">$INFO[ListItem.Path,,discart.png]</texture>
 		<visible>!ListItem.IsParentFolder</visible>
 	</include>
 	<include name="movienodisc-View_Item">
@@ -457,7 +457,7 @@
 		<texture>disc.png</texture>
 	</include>
 	<include name="musicalbumsdisc-View_Icons">
-	    <texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]$INFO[ListItem.Album,/,/discart.png]</texture>	
+		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]$INFO[ListItem.Album,/,/discart.png]</texture>
 	</include>
 	<include name="musicalbumsdisc0-View_Icons">
 		<texture diffuse="disc_mask.png" fallback="disc.png" background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem(-1).Artist]$INFO[ListItem(-1).Album,/,/discart.png]</texture>
