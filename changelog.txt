@@ -1,3 +1,9 @@
+Transparency! v11.1.1
+- imported lots of Karellens fixes from the forum
+
+Transparency! v11.1.0
+- initial check in to git hub with some nexus fixes
+
 Transparency! v11.0.9
 - support AS v3.0.0
 

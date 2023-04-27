@@ -1,4 +1,4 @@
-<addon id="skin.transparency" name="Transparency!" provider-name="ronie, konetzed" version="11.1.0">
+<addon id="skin.transparency" name="Transparency!" provider-name="ronie, konetzed" version="11.1.1">
 
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
