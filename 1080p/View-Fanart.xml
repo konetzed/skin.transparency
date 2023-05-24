@@ -354,7 +354,7 @@
 				<control type="label">
 					<left>386</left>
 					<top>890</top>
-					<width>915</width>
+					<width>514</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
@@ -364,9 +364,9 @@
 					<label>$INFO[ListItem.Genre,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[515]: [/COLOR][/B][/UPPERCASE]]</label>
 				</control>
 				<control type="label">
-					<left>725</left>
+					<left>900</left>
 					<top>890</top>
-					<width>915</width>
+					<width>750</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
@@ -388,9 +388,9 @@
 					<label>$VAR[ViewFanartLabel1]</label>
 				</control>
 				<control type="label">
-					<left>725</left>
+					<left>900</left>
 					<top>920</top>
-					<width>915</width>
+					<width>750</width>
 					<height>45</height>
 					<font>font-20</font>
 					<textcolor>white</textcolor>
@@ -412,7 +412,7 @@
 					<label>$INFO[ListItem.Year,[UPPERCASE][B][COLOR=lightblue]$LOCALIZE[345]: [/COLOR][/B][/UPPERCASE]]</label>
 				</control>
 				<control type="label">
-					<left>725</left>
+					<left>900</left>
 					<top>950</top>
 					<width>240</width>
 					<height>45</height>
